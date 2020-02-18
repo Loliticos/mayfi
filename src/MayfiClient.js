@@ -13,6 +13,7 @@ module.exports = class MayfiClient extends Client {
   }
 
   initializeListeners(path = "../src/listeners") {
+    console.log(__dirname)
     readdir(path, (err, files) => {
       if(err) return console.log(err)
 

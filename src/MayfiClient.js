@@ -12,7 +12,7 @@ module.exports = class MayfiClient extends Client {
     	return super.login(token);
   }
 
-  initializeListeners(path = "src/listeners") {
+  initializeListeners(path = "./src/listeners") {
     readdir(path, (err, files) => {
       if(err) return console.log(err)
 

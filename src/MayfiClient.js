@@ -1,5 +1,7 @@
 const { Client } = require("discord.js")
 const { readdir } = require("fs")
+const path = require('path');
+const dirPath = path.join(__dirname, '/listeners');
 
 module.exports = class MayfiClient extends Client {
 	constructor(CLIENT_OPTIONS = {}) {
@@ -12,7 +14,7 @@ module.exports = class MayfiClient extends Client {
     	return super.login(token);
   }
 
-  initializeListeners(path = "../src/listeners") {
+  initializeListeners(path = dirPath) {
     console.log(__dirname)
     readdir(path, (err, files) => {
       if(err) return console.log(err)

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "The multi-purpose Discord bot",
   "main": "index.js",
-   "engines": {
-    "node": "12.16.0"
+  "engines": {
+    "node": "10.12.0"
   },
   "scripts": {
     "start": "node index.js",
@@ -17,9 +17,6 @@
     "env": [
       "mocha"
     ]
-  },
-  "engines": {
-    "node": "10.12.0"
   },
   "repository": {
     "type": "git",

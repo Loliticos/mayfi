@@ -1,0 +1,107 @@
+{
+  "name": "mayfi",
+  "version": "1.0.0",
+  "description": "The multi-purpose Discord bot",
+  "main": "index.js",
+   "engines": {
+    "node": "12.16.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon --exec node -r dotenv/config index.js",
+    "test": "mocha src/test --recursive",
+    "fix": "standard --fix",
+    "crowdin": "crowdin upload sources"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "engines": {
+    "node": "10.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Loliticos/mayfi.git"
+  },
+  "keywords": [
+    "discord"
+  ],
+  "author": "Loliticos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Loliticos/mayfi/issues"
+  },
+  "homepage": "https://github.com/Loliticos/mayfi#readme",
+  "dependencies": {
+    "@hapi/joi": "^16.1.7",
+    "abort-controller": "^2.0.3",
+    "bufferutil": "^4.0.1",
+    "chalk": "^3.0.0",
+    "cheerio": "^1.0.0-rc.2",
+    "cldr-core": "^34.0.0",
+    "cldr-localenames-modern": "^34.0.0",
+    "cors": "^2.8.5",
+    "cows": "^2.1.0",
+    "cowsay": "^1.4.0",
+    "crowdin-without-vulnerability": "^1.0.0",
+    "discord.js": "^11.4.2",
+    "discord.js-lavalink": "^2.2.2",
+    "express": "^4.16.4",
+    "figlet": "^1.2.1",
+    "fuse.js": "^3.4.5",
+    "gifencoder": "^2.0.1",
+    "googleapis": "^39.1.0",
+    "i18n-iso-countries": "^3.7.8",
+    "i18next": "^15.0.7",
+    "i18next-node-fs-backend": "^2.1.3",
+    "icecast-parser": "^3.0.0",
+    "intl": "^1.2.5",
+    "jsonwebtoken": "^8.5.0",
+    "lodash": "^4.17.15",
+    "mal-scraper": "^2.5.0",
+    "mathjs": "^5.7.0",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.2.2",
+    "moment-timezone": "^0.5.23",
+    "mongoose": "^5.7.5",
+    "morgan": "^1.9.1",
+    "ms": "^2.1.2",
+    "node-fetch": "^2.3.0",
+    "node-spotify-api": "^1.0.7",
+    "pirate-speak": "^1.0.1",
+    "rss-parser": "^3.7.0",
+    "runeterra": "0.0.6",
+    "samp-query": "latest",
+    "search-npm-registry": "^2.0.3",
+    "steamapi": "^2.0.7",
+    "steamladder": "^1.0.4",
+    "transform-props": "^1.0.1",
+    "superagent": "^5.2.1"
+  },
+  "devDependencies": {
+    "auto-install": "^1.7.4",
+    "dotenv": "^7.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.2.1",
+    "mocha-standard": "^1.0.0",
+    "nodemon": "^1.18.10",
+    "standard": "^12.0.1"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "locales/*"
+    ]
+  },
+  "optionalDependencies": {
+    "@discordjs/uws": "^11.149.1",
+    "canvas": "^2.5.0",
+    "erlpack": "github:discordapp/erlpack",
+    "node-opus": "^0.3.1"
+  }
+}

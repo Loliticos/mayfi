@@ -18,9 +18,9 @@ module.exports = class ListenerLoader {
   }
 
   initializeEvents () {
-    let eventsFiles = readdirSync('src/events')
+    let eventsFiles = readdirSync('src/listeners')
     for (let file of eventsFiles) {
-        const event = new(require('../events/'+file))(this.client)
+        const event = new(require('../listeners/'+file))(this.client)
         this.client.events.set(event.name, event)
     }
     this.addListener()

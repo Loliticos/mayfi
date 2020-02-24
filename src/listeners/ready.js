@@ -7,6 +7,8 @@ module.exports = class ClientOnReady extends EventHandler {
 
     run(client) {
       const PRESENCE_INTERVAL = 60 * 1000
+
+      console.log("Connection between Discord estabilished.")
       
         const presences = [
           {

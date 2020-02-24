@@ -9,7 +9,5 @@ module.exports = class ClientOnMessage extends EventHandler {
 
       if(message.author == "bot") return
 
-      console.log(this)
-
     }
 };

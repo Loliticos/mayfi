@@ -1,3 +1,4 @@
 module.exports = {
-  ListenerLoader: require('./ListenerLoader.js')
+  ListenerLoader: require('./ListenerLoader.js'),
+  LocaleLoader: require("./LocaleLoader.js")
 }

@@ -10,16 +10,16 @@ module.exports = class MayfiClient extends Client {
 	}
 
 	login (token = process.env.DISCORD_TOKEN) {
-    	return super.login(token);
+    	return super.login(token)
   }
 
   initializeLoaders () {
-    for (let name in Loaders) {
+    for (let Loader in Loaders) {
       try {
-        let Loader = new Loaders[name](this)
-        Loader.load()
+        let loader = new Loaders[Loader](this)
+        loader.load()
       } catch (err) {
-        console.error(err)
+        console.log(`There was an error while initializing the Loaders\n${err}`)
       }
     }
   }

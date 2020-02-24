@@ -8,7 +8,7 @@ module.exports = class ListenerLoader {
 
   load () {
     try {
-      console.log(chalk.green("Events are initializing"))
+      console.log("Events are initializing")
       this.client.events = new Collection();
       this.initializeEvents()
       return true

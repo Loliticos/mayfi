@@ -12,10 +12,8 @@ module.exports = class CommandContext {
     this.command = options.command
     this.aliase = options.aliase
     this.prefix = options.prefix
-    this.defaultPrefix = options.defaultPrefix
 
     this.t = () => { throw new Error('Invalid FixedT') }
-    this.flags = {}
   }
 
 }

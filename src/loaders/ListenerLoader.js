@@ -8,10 +8,10 @@ module.exports = class ListenerLoader {
   }
 
   async load() {
-    readdir("../src/listeners/", (err, files) => {
+    readdir("../listeners/", (err, files) => {
         if (err) return console.error(err);
         files.forEach(file => {
-          const event = require(`../src/listeners/${file}`);
+          const event = require(`../listeners/${file}`);
           let eventName = file.split(".")[0];
           this.client.on(eventName, event.bind(null, client));
       })

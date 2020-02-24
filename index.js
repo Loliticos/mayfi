@@ -10,7 +10,7 @@ const CLIENT_OPTIONS = {
 const Mayfi = require('./src/MayfiClient.js')
 const client = new Mayfi(CLIENT_OPTIONS)
 
-console.log(readFileSync('bigtitle.txt', 'utf8').toString())
+console.log(readFileSync('Mayfi.txt', 'utf8').toString())
 
 client.login().then(() => {
 	console.log("[DISCORD] Logged succesfuly")

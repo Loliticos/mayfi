@@ -1,3 +1,5 @@
+const EventHandler = require('../structures/EventHandler');
+
 module.exports = class {
     constructor(client) {
         this.client = client;

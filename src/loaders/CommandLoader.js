@@ -10,8 +10,8 @@ module.exports = class EventLoader  {
     load () {
         try {
             console.log(chalk.green("Commands are initializing"))
-            this.client.commands = new Collection();
-            this.client.alias = new Collection();
+            this.client.commands = new Collection()
+            this.client.alias = new Collection()
             this.initializeCommands()
             return true
         } catch (err) {

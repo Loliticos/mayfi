@@ -1,5 +1,4 @@
-const { Command } = require("../../");
-//const AyaneEmbed = require('../../structures/AyaneEmbed')
+const { Command, MayfiEmbed } = require("../../");
 
 module.exports = class PingCommand extends Command {
   constructor(client) {

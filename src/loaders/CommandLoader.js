@@ -20,6 +20,7 @@ module.exports = class CommandLoader  {
     }
     
     initializeCommands () {
+        console.log(this.client)
         let commandsCategory = readdirSync('src/commands')
         for (let category of commandsCategory) {
             let commandFile = readdirSync(`src/commands/${category}`)

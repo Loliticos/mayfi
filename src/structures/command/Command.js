@@ -1,7 +1,7 @@
 const { handleRequirements } = require('./CommandRequirements')
 const MayfiEmbed = require("../MayfiEmbed.js")
 
-module.exports = class CommandHandler {
+module.exports = class Command {
     constructor(client, options) {
         let {
             name,

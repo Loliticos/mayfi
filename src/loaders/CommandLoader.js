@@ -2,7 +2,7 @@ const { Collection } = require('discord.js');
 const { readdirSync } = require('fs');
 const chalk = require('chalk')
 
-module.exports = class EventLoader  {
+module.exports = class CommandLoader  {
     constructor(client) {
         this.client = client
     }

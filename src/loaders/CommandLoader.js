@@ -26,7 +26,7 @@ module.exports = class CommandLoader  {
             for (let name of commandFile) {
                 console.log(name)
                 const command = new(require(`src/commands/${category}/${name.split('.js')[0]}`)(this.client)
-                this.client.commands.set(command.name, command)
+                client.commands.set(command.name, command)
                 command.alias.forEach(a => this.client.alias.set(a, command.name))
             }
         }

@@ -17,9 +17,7 @@ module.exports = class ClientOnMessage extends EventHandler {
 
         if(!command) return
 
-        let t;
-        const setFixedT = function (translate) { t = translate }
-        setFixedT(i18next.getFixedT('pt-BR'))
+        const t = i18next.getFixedT('pt-BR')
 
         const context = new CommandContext({ 
             client: this.client,

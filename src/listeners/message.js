@@ -15,7 +15,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         let commandname = args.shift().toLowerCase()
         let cmd = this.client.commands.get(commandname) || this.client.commands.get(this.client.alias.get(commandname))
 
-        if(!command) return
+        if(!cmd) return
 
         const context = new CommandContext({ 
             client: this.client,

@@ -22,7 +22,7 @@ module.exports = class Help extends Command {
 
     console.log(cmd)
 
-    if (cmd) {
+    if (cmd.toString()) {
       const command = this.client.commands.get(cmd.toString())
 
       if (!command) {

@@ -23,10 +23,6 @@ module.exports = class StringParameter extends Parameter {
       arg = arg.substring(0, this.maxLength)
     }
 
-    if(typeof arg == "object") {
-      arg = arg.join(' ')
-    }
-
-    return arg
+    return arg.toString()
   }
 }

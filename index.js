@@ -14,5 +14,4 @@ console.log(readFileSync('Mayfi.txt', 'utf8').toString())
 
 client.login().then(() => {
 	console.log("[DISCORD] Logged succesfuly")
-	.catch((err) => console.error(err))
 })

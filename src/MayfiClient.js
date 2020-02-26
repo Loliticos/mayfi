@@ -1,6 +1,6 @@
 const { Client } = require("discord.js")
 const { readdir } = require("fs")
-const { Loaders  } = require("./")
+const Loaders = require('./loaders')
 
 module.exports = class MayfiClient extends Client {
 	constructor(CLIENT_OPTIONS = {}) {
@@ -13,11 +13,11 @@ module.exports = class MayfiClient extends Client {
     	return super.login(token)
   }
 
-  initializeLoaders () {
+  async initializeLoaders () {
     for (let Loader in Loaders) {
+      let loader = new Loaders[Loader](this)
       try {
-        let loader = new Loaders[Loader](this)
-        loader.load()
+        await loader.load()
       } catch (err) {
         console.log(`There was an error while initializing the Loaders\n${err}`)
       }

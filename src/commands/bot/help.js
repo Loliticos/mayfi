@@ -28,8 +28,17 @@ module.exports = class Help extends Command {
         throw new CommandError(t("commands:help.commandNotFound"))
       }
 
-      const commandUsage = t(`commands:${command.name}.commandUsage`) ? `\`${t(`commands:${command.name}.commandUsage`)}\`` : `\`${prefix}${this.name}\``
-      const commandDescription = t(`commands:${command.name}.commandDescription`) ? t(`commands:${command.name}.commandDescription`) : t("commands:help.noDescription")
+      let commandUsage = `\`${t(`commands:${command.name}.commandUsage`)}\``
+      let commandDescription = t(`commands:${command.name}.commandDescription`)
+      
+      if(!commandUsage) {
+        commandUsage = `\`${prefix}${this.name}\``
+      }
+
+      if(!commandDescription) {
+        commandDescription = t("commands:help.noDescription")
+      }
+
       embed
         .setTitle(command.name)
         .setDescription(`

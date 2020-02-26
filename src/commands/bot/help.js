@@ -38,7 +38,7 @@ module.exports = class Help extends Command {
         .setDescription(`
           ${t([`commands:${command.name}.commandDescription`, "commands:help.noDescriptionProvided"])}
 
-          **${t("commons:usage")}:** \`${command.usage(t, prefix)}\`
+          ${command.usage(t, prefix)}
 
           `)
         channel.send(embed)

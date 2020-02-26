@@ -9,7 +9,7 @@ module.exports = class Ping extends Command {
         onlyGuild: false
       },
       parameters: [{
-        type: 'string', full: true, missingError: 'commands:ping.noArguments', required: false
+        type: 'string', full: true, required: false
       }]
     });
   }

@@ -20,12 +20,14 @@ module.exports = class Help extends Command {
     const embed = new MayfiEmbed(author)
     const validCommands = this.client.commands.filter(c => !c.hidden)
 
+    console.log(cmd)
+
     if (cmd) {
       const command = this.client.commands.get(cmd.toString())
 
-      /*if (!command) {
+      if (!command) {
         throw new CommandError(t("commands:help.commandNotFound"))
-      }*/
+      }
 
       const description = [
         t([`commands:${command.name}.commandDescription`, "commands:help.noDescriptionProvided"]),

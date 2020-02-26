@@ -1,5 +1,6 @@
 {
   "ping": {
+  	"commandDescription": "Veja o meu ping",
   	"noArguments": "sem argumentos"
   }
 }

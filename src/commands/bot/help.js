@@ -17,12 +17,12 @@ module.exports = class Help extends Command {
   }
 
   async run ({ t, author, channel, guild, prefix }, cmd) {
-    console.log(cmd)
+    console.log(cmd.toString())
     const embed = new MayfiEmbed(author)
     const validCommands = this.client.commands.filter(c => !c.hidden)
 
     if (cmd) {
-      const command = this.client.commands.get(cmd)
+      const command = this.client.commands.get(cmd.toString())
 
       console.log(command.name)
 

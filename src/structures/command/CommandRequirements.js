@@ -16,12 +16,17 @@ const handle = function({ t, author, channel, client, command, guild, member, vo
   if (opt.onlyGuild && channel.type === "dm") throw new CommandError(t('permissions:guildOnly'))
   if (opt.onlyDevs && !process.env.owners.toString().includes(author.id)) throw new CommandError(t('permissions:onlyDevelopers'))
 
-  if (opt.botPermissions && !client.hasPermission(opt.botPermissions)) throw new CommandError(t('permissions:meWithoutPermission', {
-    perms: opt.botPermissions.map(a => new Permissions(a).toArray()[0]).join(', ')
-  }))
   if (opt.permissions && !member.hasPermission(opt.permissions)) throw new CommandError(t('permissions:missingPermissions', {
     perms: opt.permissions.map(a => new Permissions(a).toArray()[0]).join(', ')
   }))
+
+  if (opts.botPermissions && opts.botPermissions.length > 0) {
+    if (!channel.permissionsFor(guild.me).has(opts.permissions)) {
+      const permission = opts.botPermissions.map(p => t(`permissions:${p}`)).map(p => `**"${p}"**`).join(', ')
+      const sentence = opts.botPermissions.length >= 1 ? 'errors:botMissingOnePermission' : 'errors:botMissingMultiplePermissions'
+      throw new CommandError(t(sentence, { permission }))
+    }
+  }
 }
 module.exports = {
   handle

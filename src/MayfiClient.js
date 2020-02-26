@@ -1,6 +1,6 @@
 const { Client } = require("discord.js")
 const { readdir } = require("fs")
-const Loaders = require('./loaders/')
+const Loaders = require('./src/loaders/')
 const i18next = require('i18next')
 
 module.exports = class MayfiClient extends Client {

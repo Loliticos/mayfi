@@ -8,6 +8,9 @@ module.exports = {
   CommandError: CommandStructures.CommandError,
   CommandRequirements: CommandStructures.CommandRequirements,
 
+  // Loaders
+  Loaders: require('loaders/')
+
   // Utils
-  MayfiEmbed: require('./structures/MayfiEmbed.js'),
+  MayfiEmbed: require('structures/MayfiEmbed.js'),
 }

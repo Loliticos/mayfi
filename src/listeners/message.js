@@ -17,7 +17,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const language = "pt-BR"
 
         if(usedPrefix) {
-            const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => !spacePrefix || a)
+            const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => !prefix || a)
             const args = fullCmd.slice(1)
             if (!fullCmd.length) return
             const cmd = this.client.commands.get(commandname) || this.client.commands.get(this.client.alias.get(commandname))

@@ -18,6 +18,8 @@ module.exports = class Command {
         this.requirements = options.optional('requirements')
         this.parameters = options.optional('parameters')
 
+        this.client = client
+
     }
     async _run (context, args) {
         try {

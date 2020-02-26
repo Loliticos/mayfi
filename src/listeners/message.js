@@ -25,7 +25,6 @@ module.exports = class ClientOnMessage extends EventHandler {
             client: this.client,
             message,
             command,
-            language,
             t
         })
 

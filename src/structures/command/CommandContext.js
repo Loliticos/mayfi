@@ -1,6 +1,6 @@
 module.exports = class CommandContext {
     constructor(options = {}) {
-        this.client = client
+        this.client = options.client
 
         this.message = options.message
         this.author = options.message.author

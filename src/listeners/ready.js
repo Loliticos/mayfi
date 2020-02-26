@@ -5,7 +5,7 @@ module.exports = class ClientOnReady extends EventHandler {
         super(client, 'ready')
     }
 
-    run(client) {
+    run() {
       const PRESENCE_INTERVAL = 60 * 1000
 
       console.log("Connection between Discord estabilished.")
@@ -19,7 +19,7 @@ module.exports = class ClientOnReady extends EventHandler {
 
         setInterval(() => {
           const presence = presences[Math.floor(Math.random() * presences.length)]
-          client.user.setPresence({ game: presence })
+          this.client.user.setPresence({ game: presence })
           console.log(` Changed presence to "${presence.name}", type "${presence.type}"`)
         }, PRESENCE_INTERVAL)
     }

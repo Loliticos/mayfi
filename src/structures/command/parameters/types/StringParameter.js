@@ -23,6 +23,6 @@ module.exports = class StringParameter extends Parameter {
       arg = arg.substring(0, this.maxLength)
     }
 
-    return arg.
+    return arg
   }
 }

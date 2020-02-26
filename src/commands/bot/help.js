@@ -17,7 +17,6 @@ module.exports = class Help extends Command {
   }
 
   async run ({ t, author, channel, guild, prefix }, cmd) {
-    console.log(prefix)
     const embed = new MayfiEmbed(author)
     const validCommands = this.client.commands.filter(c => !c.hidden)
 
@@ -39,7 +38,7 @@ module.exports = class Help extends Command {
         .setDescription(`
           ${t([`commands:${command.name}.commandDescription`, "commands:help.noDescriptionProvided"])}
 
-          **${t("commons:usage")}:** ${commandUsage}
+          **${t("commons:usage")}:** \`${t([`commands:${command.name}.commandUsage`, "commands:help.noUsage"])}\`
 
           `)
         channel.send(embed)

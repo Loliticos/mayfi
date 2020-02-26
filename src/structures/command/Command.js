@@ -29,6 +29,10 @@ module.exports = class Command {
         this.run(context, args)
     }
 
+    setT (t) {
+        return this.t = t;
+    }
+
     handleRequirements(context, args) {
         return this.requirements ? CommandRequirements.handle(context, this.requirements, args) : true
     }

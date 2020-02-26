@@ -19,12 +19,12 @@ module.exports = class CommandLoader  {
         }
     }
     
-    initializeCommands () {
-        let commandsCategory = readdirSync('src/commands')
+    initializeCommands (dirPath = 'src/commands') {
+        let commandsCategory = readdirSync(dirPath)
         for (let category of commandsCategory) {
-            let commandFile = readdirSync(`src/commands/${category}`)
+            let commandFile = readdirSync(`${dirPath}/${category}`)
             for (let name of commandFile) {
-                const command = new(require('../commands/'+category+'/'+name.split('.js')[0]))(this.client)
+                const command = new(require(dirPath+'/'+category+'/'+name.split('.js')[0]))(this.client)
                 this.client.commands.set(command.name, command)
                 command.alias.forEach(a => this.client.alias.set(a, command.name))
             }

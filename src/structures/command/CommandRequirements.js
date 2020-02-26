@@ -33,7 +33,7 @@ module.exports = class CommandRequirements {
       throw new CommandError(t("permissions:onlyDevelopers"))
     }
 
-    if(opts.permissions && !member.hasPermission(opt.permissions)) {
+    if(opts.permissions && !member.hasPermission(opts.permissions)) {
       throw new CommandError(t("errors:missingPermissions", {
         permissions: opts.permissions.map(a => new Permissions(a).toArray()[0]).join(', ')
       }))

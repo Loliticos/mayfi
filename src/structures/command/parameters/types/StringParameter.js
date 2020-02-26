@@ -23,7 +23,7 @@ module.exports = class StringParameter extends Parameter {
       arg = arg.substring(0, this.maxLength)
     }
 
-    if(typeof arg == "array") {
+    if(typeof arg == "object") {
       arg = arg.join(' ')
     }
 

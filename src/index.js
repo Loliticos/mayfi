@@ -1,4 +1,4 @@
-const CommandStructures = require('./structures/command')
+const CommandStructures = require('./structures/command/')
 
 module.exports = {
   // Command Structures
@@ -8,5 +8,6 @@ module.exports = {
   CommandError: CommandStructures.CommandError,
   CommandRequirements: CommandStructures.CommandRequirements,
 
+  // Utils
   MayfiEmbed: require('./structures/MayfiEmbed.js'),
 }

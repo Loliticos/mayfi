@@ -9,6 +9,10 @@
   	"noDescriptionProvided": "Nenhuma descrição dada.",
   	"footer": "<> = Obrigatorio, [] = opcional",
   	"permissions": "Permissões",
-  	"botPermissions": "Permissões do bot"
+  	"botPermissions": "Permissões do bot",
+  	"title": "Comandos",
+  	"prefix": "Meu prefixo é `{{botPrefix}}`",
+  	"youCanUse": "mas você também pode usar {{- botMention}} como um prefixo.",
+  	"specificInformation": "Digite {{helpString}} para mais informações."
   }
 }

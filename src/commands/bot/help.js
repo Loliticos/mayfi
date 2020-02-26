@@ -20,8 +20,6 @@ module.exports = class Help extends Command {
     const embed = new MayfiEmbed(author)
     const validCommands = this.client.commands.filter(c => !c.hidden)
 
-    console.log(cmd)
-
     if (cmd.toString()) {
       const command = this.client.commands.get(cmd.toString())
 
@@ -47,7 +45,7 @@ module.exports = class Help extends Command {
     } else {
       embed
         .setTitle(t("commands:help.title"))
-        .setDescription(t("commands:help.description"))
+        .setDescription(`${t("commands:help.prefix", { botPrefix: prefix })}, ${t("comands:help.youCanUse", { botMention: this.client.user })}`)
         .setFooter(t('commands:help.specificInformation', { helpString: `${prefix}${this.name} ${t('commands:help.commandUsage')}` }))
         const categories = validCommands.map(c => c.category).filter((v, i, a) => a.indexOf(v) === i)
         categories

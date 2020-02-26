@@ -13,18 +13,19 @@ module.exports = class StringParameter extends Parameter {
   }
 
   static parse (arg, { t, message }) {
-    console.log(arg)
     arg = arg ? (typeof arg === 'string' ? arg : String(arg)) : undefined
     if (!arg) return
+    console.log(`Testando -> ${console.log(arg)}`)
 
     if (this.clean) arg = DiscordUtils.cleanContent(arg, message)
+
+    console.log(`Testando (this.clean) -> ${console.log(arg)}`)
 
     if (this.maxLength > 0 && arg.length > this.maxLength) {
       if (!this.truncate) throw new CommandError(t('errors:needSmallerString', { number: this.maxLength }))
       arg = arg.substring(0, this.maxLength)
     }
 
-    console.log(arg.split())
 
     return arg
   }

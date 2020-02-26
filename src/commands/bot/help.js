@@ -29,20 +29,15 @@ module.exports = class Help extends Command {
       }
 
       let commandUsage = `\`${t(`commands:${command.name}.commandUsage`)}\``
-      let commandDescription = t(`commands:${command.name}.commandDescription`)
       
       if(!commandUsage) {
         commandUsage = `\`${prefix}${this.name}\``
       }
 
-      if(!commandDescription) {
-        commandDescription = t("commands:help.noDescription")
-      }
-
       embed
         .setTitle(command.name)
         .setDescription(`
-          ${commandDescription}
+          ${t([`commands:${command.name}.commandDescription`, "commands:help.noDescriptionProvided"])}
 
           **${t("commons:usage")}:** ${commandUsage}
 

@@ -1,4 +1,4 @@
-const { EventHandler, CommandContext } = require('../');
+const { EventHandler, CommandContext } = require('../structures')
 const i18next = require('i18next')
 
 module.exports = class ClientOnMessage extends EventHandler {

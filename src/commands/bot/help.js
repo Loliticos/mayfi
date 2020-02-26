@@ -20,14 +20,8 @@ module.exports = class Help extends Command {
     console.log(cmd)
     const embed = new MayfiEmbed(author)
     const validCommands = this.client.commands.filter(c => !c.hidden)
-    console.log(validCommands)
-
-    if(cmd) {
-
-    }
-
     if (cmd) {
-      cmd = cmd.replace(prefixRegex(prefix), '')
+      cmd = cmd.toString().replace(prefixRegex(prefix), '')
       const command = cmd.split(' ').reduce((o, ca) => {
         const arr = (Array.isArray(o) && o) || (o && o.subcommands)
         if (!arr) return o

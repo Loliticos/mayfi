@@ -1,4 +1,4 @@
-const Permissions = require('../utils/Permissions.js')
+const { Permissions } = require('../../')
 const CommandError = require("./CommandError.js")
 const parseOptions = function (options = {}) {
   return {

@@ -16,7 +16,7 @@ const handle = function({ t, author, channel, client, command, guild, member, vo
   if (opt.onlyGuild && channel.type === "dm") throw new CommandError(t('permissions:guildOnly'))
   if (opt.onlyDevs && !process.env.owners.toString().includes(author.id)) throw new CommandError(t('permissions:onlyDevelopers'))
 
-  if (opt.botPermissions && !me.hasPermission(opt.botPermissions)) throw new CommandError(t('permissions:meWithoutPermission', {
+  if (opt.botPermissions && !client.hasPermission(opt.botPermissions)) throw new CommandError(t('permissions:meWithoutPermission', {
     perms: opt.botPermissions.map(a => new Permissions(a).toArray()[0]).join(', ')
   }))
   if (opt.permissions && !member.hasPermission(opt.permissions)) throw new CommandError(t('permissions:missingPermissions', {

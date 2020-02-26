@@ -60,8 +60,13 @@ module.exports = class Command {
   }
 
   usage(t, prefix, noUsage = true) {
-    const usage = noUsage ? t(`commands:${this.name}.commandUsage`) : t([`commands:${this.name}.commandUsage`, ''])
-    return `**${t("commons:usage")}:** \`${prefix}${this.name} ${usage ? ' ' + usage : ''}\` `
+    const usagePath = `${this.name}.commandUsage`
+    const usage = noUsage ? t(`commands:${usagePath}`) : t([`commands:${usagePath}`, ''])
+    if (usage !== usagePath) {
+      return `**${t('commons:usage')}:** \`${prefix}${this.fullName} ${usage ? usage : ''}\``
+    } else {
+      return `${prefix}${this.fullName}`
+    }
   }
     
     async run () {}

@@ -63,9 +63,9 @@ module.exports = class Command {
     const usagePath = `${this.name}.commandUsage`
     const usage = noUsage ? t(`commands:${usagePath}`) : t([`commands:${usagePath}`, ''])
     if (usage !== usagePath) {
-      return `**${t('commons:usage')}:** \`${prefix}${this.fullName} ${usage ? usage : ''}\``
+      return `**${t('commons:usage')}:** \`${prefix}${this.name} ${usage ? usage : ''}\``
     } else {
-      return `**${t('commons:usage')}:** ${prefix}${this.fullName}`
+      return `**${t('commons:usage')}:** ${prefix}${this.name}`
     }
   }
     

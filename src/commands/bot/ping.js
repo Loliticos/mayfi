@@ -18,7 +18,8 @@ module.exports = class Ping extends Command {
   async run({ channel, author, message, t}, msg) {
     channel.send(`🏓 \`${this.client.ping}ms\``)
 
-    console.log(msg.join(' '))
+    console.log(msg)
+    console.log(typeof msg)
 
   }
 };

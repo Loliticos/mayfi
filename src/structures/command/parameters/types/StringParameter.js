@@ -16,13 +16,15 @@ module.exports = class StringParameter extends Parameter {
     arg = arg ? (typeof arg === 'string' ? arg : String(arg)) : undefined
     if (!arg) return
 
-    /*if (this.clean) arg = DiscordUtils.cleanContent(arg, message)
-
-    console.log(`Testando (this.clean) -> ${console.log(arg)}`)*/
+    if (this.clean) arg = DiscordUtils.cleanContent(arg, message)
 
     if (this.maxLength > 0 && arg.length > this.maxLength) {
       if (!this.truncate) throw new CommandError(t('errors:needSmallerString', { number: this.maxLength }))
       arg = arg.substring(0, this.maxLength)
+    }
+
+    if(typeof arg == "array") {
+      arg = arg.join(' ')
     }
 
     return arg

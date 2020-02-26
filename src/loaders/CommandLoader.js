@@ -24,7 +24,7 @@ module.exports = class CommandLoader  {
         for (let category of commandsCategory) {
             let commandFile = readdirSync(`${dirPath}/${category}`)
             for (let name of commandFile) {
-                const command = new(require(`../commands/${category}/${name}`))(this.client)
+                const command = new(require(`../commands/${category}/${name.split('.js')[0]}`))(this.client)
                 this.client.commands.set(command.name, command)
                 command.alias.forEach(a => this.client.alias.set(a, command.name))
             }

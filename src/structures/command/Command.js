@@ -26,7 +26,7 @@ module.exports = class Command {
 
         }
 
-        this.run(ctx, args)
+        this.run(context, args)
     }
 
     handleRequirements(context, args) {

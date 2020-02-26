@@ -24,7 +24,7 @@ module.exports = class StringParameter extends Parameter {
       arg = arg.substring(0, this.maxLength)
     }
 
-    console.log(typeof arg)
+    console.log(arg.split())
 
     return arg
   }

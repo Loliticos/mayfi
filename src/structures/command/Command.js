@@ -18,16 +18,16 @@ module.exports = class Command {
         this.client = client
 
     }
-    async _run (ctx, args) {
+    async _run (context, args) {
         try {
-            this.handleRequirements(ctx, args)
+            this.handleRequirements(context, args)
         } catch(e) {
-            this.error(ctx, e)
+            this.error(context, e)
 
         }
     }
 
-    handleRequirements(ctx, args) {
+    handleRequirements(context, args) {
         return this.requirements ? CommandRequirements.handle(context, this.requirements, args) : true
     }
 

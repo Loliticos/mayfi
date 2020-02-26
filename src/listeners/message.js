@@ -12,7 +12,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         if (message.author.bot) return
 
         const mc = (...m) => m.some(st => message.content.startsWith(st))
-        const usedPrefix = mc(botMention, `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
+        const usedPrefix = mc(this.client.user.toString(), `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
         
         const language = "pt-BR"
 

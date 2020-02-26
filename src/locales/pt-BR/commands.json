@@ -1,3 +1,5 @@
 {
-  "ping": "Minha latência: `{{conexao}}`ms."
+  "ping": {
+  	"noArguments": "sem argumentos"
+  }
 }

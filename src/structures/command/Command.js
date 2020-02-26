@@ -59,8 +59,8 @@ module.exports = class Command {
     console.error(error)
   }
 
-  usage(t, prefix) {
-    const usage = t(`commands:${this.name}.commandUsage`) ? t(`commands:${this.name}.commandUsage`) : ""
+  usage(t, prefix, noUsage = true) {
+    const usage = noUsage ? t(`commands:${this.name}.commandUsage`) : ""
     return `**${t("commons:usage")}:** \`${prefix}${this.name} ${usage}\` `
   }
     

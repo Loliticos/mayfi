@@ -27,20 +27,16 @@ module.exports = class Help extends Command {
         throw new CommandError(t("commands:help.commandNotFound"))
       }
 
-      let commandUsage = `\`${t(`commands:${command.name}.commandUsage`)}\``
-      
-      if(!commandUsage) {
-        commandUsage = `\`${prefix}${this.name}\``
-      }
+      const description = [
+        t([`commands:${command.name}.commandDescription`, "commands:help.noDescriptionProvided"]),
+        '',
+        command.usage(t, prefix)
+      ]
+
+      if (command.aliases && command.aliases.length > 0) description.push(`\n**Aliases:** ${command.aliases.map(a => `\`${a}\``).join(', ')}`)
 
       embed
         .setTitle(command.name)
-        .setDescription(`
-          ${t([`commands:${command.name}.commandDescription`, "commands:help.noDescriptionProvided"])}
-
-          ${command.usage(t, prefix)}
-
-          `)
         channel.send(embed)
     }
   }

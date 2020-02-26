@@ -65,7 +65,7 @@ module.exports = class Command {
     if (usage !== usagePath) {
       return `**${t('commons:usage')}:** \`${prefix}${this.name} ${usage ? usage : ''}\``
     } else {
-      return `**${t('commons:usage')}:** ${prefix}${this.name}`
+      return `**${t('commons:usage')}:** \`${prefix}${this.name}\``
     }
   }
     

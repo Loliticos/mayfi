@@ -17,9 +17,14 @@ module.exports = class Help extends Command {
   }
 
   async run ({ t, author, channel, guild, prefix }, cmd) {
+    console.log(cmd)
     const embed = new MayfiEmbed(author)
     const validCommands = this.client.commands.filter(c => !c.hidden)
     console.log(validCommands)
+
+    if(cmd) {
+
+    }
 
     if (cmd) {
       cmd = cmd.replace(prefixRegex(prefix), '')

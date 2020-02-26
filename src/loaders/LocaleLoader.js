@@ -21,23 +21,22 @@ module.exports = class EventLoader  {
     
     async initializeLocales () {
       try {
-        i18next.use(translationBackend).init({
-          ns: [ 'categories', 'commands', 'errors', 'permissions' ],
-          preload: await readdirSync('./src/locales/'),
-          fallbackLng: 'pt-BR',
-          backend: {
-            loadPath: `src/locales/{{lng}}/{{ns}}.json`
-          },
-          interpolation: {
-            escapeValue: false
-          },
-          returnEmptyString: false
-        }, () => {
-          console.log('[Language] i18next initialized')
-        })
-      } catch (e) {
-        console.error(e)
-      }
+          i18next.use(translationBackend).init({
+              ns: ['commands', 'events', 'permissions'],
+              preload: await readdirSync('./src/locales/'),
+              fallbackLng: 'pt-BR',
+              backend: {
+                  loadPath: `src/locales/{{lng}}/{{ns}}.json`
+              },
+              interpolation: {
+                  escapeValue: false
+              },
+               returnEmptyString: false
+          })
+
+        } catch(err) {
+            console.error(err)
+        }
     }
 
 }

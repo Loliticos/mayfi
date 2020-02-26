@@ -1,7 +1,6 @@
 {
   "ping": {
-  	"commandDescription": "Veja o meu ping",
-  	"noArguments": "sem argumentos",
+  	"commandDescription": "Veja o meu ping"
   },
   "help": {
   	"commandDescription": "Veja informações sobre meus comandos ou veja todos eles",

@@ -1,4 +1,4 @@
-const { Command, MayfiEmbed } = require("../../");
+const Command  = require("../../structures/Command.js");
 
 module.exports = class PingCommand extends Command {
   constructor(client) {

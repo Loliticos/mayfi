@@ -1,5 +1,5 @@
 const MayfiEmbed = require("../MayfiEmbed.js")
-const Constants = require("../../utils/Data.js")
+const { Constants } = require("../../")
 
 const CommandRequirements = require('./CommandRequirements')
 const CommandError = require("./CommandError.js")

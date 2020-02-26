@@ -13,6 +13,9 @@ module.exports = {
   ListenerLoader: require("./loaders/ListenerLoader.js"),
   LocaleLoader: require("./loaders/LocaleLoader.js"),
 
+  // Utils
+  Constants: require("./utils/Constants.js")
+
   // Structures
   EventHandler: require("./structures/EventHandler.js"),
   MayfiEmbed: require('./structures/MayfiEmbed.js')

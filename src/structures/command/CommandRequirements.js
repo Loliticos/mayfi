@@ -21,7 +21,7 @@ const handle = function({ t, author, channel, client, command, guild, member, vo
   }))
 
   if (opt.botPermissions && opt.botPermissions.length > 0) {
-    if (!channel.permissionsFor(guild.me).has(opts.permissions)) {
+    if (!channel.permissionsFor(guild.me).has(opt.permissions)) {
       const permission = opt.botPermissions.map(p => t(`permissions:${p}`)).map(p => `**"${p}"**`).join(', ')
       const sentence = opt.botPermissions.length >= 1 ? 'errors:botMissingOnePermission' : 'errors:botMissingMultiplePermissions'
       throw new CommandError(t(sentence, { permission }))

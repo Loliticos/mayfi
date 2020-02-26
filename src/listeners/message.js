@@ -20,7 +20,8 @@ module.exports = class ClientOnMessage extends EventHandler {
             const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => !prefix || a)
             const args = fullCmd.slice(1)
             if (!fullCmd.length) return
-            const cmd = this.client.commands.get(commandname) || this.client.commands.get(this.client.alias.get(commandname))
+            const cmd = fullCmd[0].toLowerCase().trim()
+            const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.alias.get(cmd))
             if (command) {
                 let commandctx = new CommandContext(this.client, { 
                     aliase: cmd,

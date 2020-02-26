@@ -1,0 +1,5 @@
+module.exports = {
+  ERROR_COLOR: '#FF3333',
+  GUILD_LOST_COLOR: '#BD4351',
+  GUILD_ADDED_COLOR: '#41A57A'
+}

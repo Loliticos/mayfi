@@ -1,5 +1,8 @@
-const { handleRequirements } = require('./CommandRequirements')
 const MayfiEmbed = require("../MayfiEmbed.js")
+const Constants = require("../../utils/Data.js")
+
+const CommandRequirements = require('./CommandRequirements')
+const CommandError = require("./CommandError.js")
 
 module.exports = class Command {
     constructor(client, options) {
@@ -15,23 +18,25 @@ module.exports = class Command {
         this.client = client
 
     }
-    _execute (ctx, args) {
+    async _run (ctx, args) {
         try {
-            handleRequirements(ctx, this.requirements)
-        } catch(err) {
-            console.log(ctx)
-            const embed = new MayfiEmbed()
-            .setTitle(err.message)
-            .setColor(process.env.ERROR_COLOR)
+            this.handleRequirements(ctx, args)
+        } catch(e) {
+            this.error(ctx, e)
 
         }
-        this.execute(ctx, args)
     }
-    
-    async execute () {}
 
-    setT (t) {
-        return this.t = t;
+    error ({ t, author, channel, prefix }, error) {
+    if (error instanceof CommandError) {
+      const embed = new MayfiEmbed(author)
+        .setTitle(error.message)
+        .setDescription(error.showUsage ? "usage" : '')
+      return channel.send(embed.setColor(Constants.ERROR_COLOR)).then(() => channel.stopTyping())
     }
+    console.error(error)
+  }
+    
+    async run () {}
 
 }

@@ -9,8 +9,33 @@ module.exports = class ClientOnMessage extends EventHandler {
     run(message) {
         let prefix = message.channel.type === "dm" ? '' : 'mc!'
 
-        if (message.author.bot || !message.content.startsWith(prefix)) return
+        if (message.author.bot) return
+
+        const mc = (...m) => m.some(st => message.content.startsWith(st))
+        const usedPrefix = mc(botMention, `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
         
+        const language = "pt-BR"
+
+        if(usedPrefix) {
+            const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => !spacePrefix || a)
+            const args = fullCmd.slice(1)
+            if (!fullCmd.length) return
+            const cmd = this.client.commands.get(commandname) || this.client.commands.get(this.client.alias.get(commandname))
+            if (command) {
+                let commandctx = new CommandContext(this.client, { 
+                    aliase: cmd,
+                    client: this,
+                    prefix,
+                    message,
+                    command,
+                    language
+                })
+
+                console.log(`"${message.content}" (${command.constructor.name}) ran by "${message.author.tag}" (${message.author.id}) on guild "${message.guild.name}" (${message.guild.id}) channel "#${message.channel.name}" (${message.channel.id})`, { color: 'magenta', tags: ['Commands'] })
+                this.client.runCommand(command, context, args, language)
+            }
+        }
+
         let args = message.content.slice(prefix.length).trim().split(/ /g)
         let commandname = args.shift().toLowerCase()
         let cmd = this.client.commands.get(commandname) || this.client.commands.get(this.client.alias.get(commandname))
@@ -19,12 +44,17 @@ module.exports = class ClientOnMessage extends EventHandler {
         const setFixedT = function (translate) { t = translate }
         setFixedT(i18next.getFixedT('pt-BR'))
 
-        let commandctx = new CommandContext(this.client, { 
-            message,
-            prefix,
-            t
+        const context = new CommandContext({
+          prefix: usedPrefix,
+          aliase: cmd,
+          client: this,
+          prefix,
+          message,
+          command,
+          language
         })
 
-        cmd._execute(commandctx, args)
+        this.log(`"${message.content}" (${command.constructor.name}) ran by "${message.author.tag}" (${message.author.id}) on guild "${message.guild.name}" (${message.guild.id}) channel "#${message.channel.name}" (${message.channel.id})`, { color: 'magenta', tags: ['Commands'] })
+        this.runCommand(command, context, args, language)
     }
 };

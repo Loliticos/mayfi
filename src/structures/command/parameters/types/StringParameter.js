@@ -13,6 +13,7 @@ module.exports = class StringParameter extends Parameter {
   }
 
   static parse (arg, { t, message }) {
+    console.log(arg)
     arg = arg ? (typeof arg === 'string' ? arg : String(arg)) : undefined
     if (!arg) return
 

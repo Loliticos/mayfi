@@ -14,7 +14,7 @@ module.exports = {
   LocaleLoader: require("./loaders/LocaleLoader.js"),
 
   // Utils
-  Constants: require("./utils/Constants.js")
+  Constants: require("./utils/Constants.js"),
 
   // Structures
   EventHandler: require("./structures/EventHandler.js"),

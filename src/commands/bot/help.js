@@ -23,9 +23,9 @@ module.exports = class Help extends Command {
     if (cmd) {
       const command = this.client.commands.get(cmd.toString())
 
-      if (!command) {
+      /*if (!command) {
         throw new CommandError(t("commands:help.commandNotFound"))
-      }
+      }*/
 
       const description = [
         t([`commands:${command.name}.commandDescription`, "commands:help.noDescriptionProvided"]),

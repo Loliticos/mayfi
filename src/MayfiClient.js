@@ -15,7 +15,6 @@ module.exports = class MayfiClient extends Client {
   }
 
   async runCommand (command, context, args, language) {
-    context.setFixedT(i18next.getFixedT(language))
     return command._run(context, args).catch(console.error)
   }
 

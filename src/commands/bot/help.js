@@ -56,8 +56,7 @@ module.exports = class Help extends Command {
               .sort((a, b) => a.name.localeCompare(b.name))
               .map(c => `\`${c.name}\``).join('**, **')
 
-            console.log(validCommands.filter(c => c.category === category).size)
-            const length = validCommands.filter(c => c.category === category).length
+            const length = validCommands.filter(c => c.category === category).size
 
             embed.addField(`${t(`categories:${category}`)} [**${length}**]`, commands, false)
           })

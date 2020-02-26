@@ -16,7 +16,7 @@ module.exports = class Ping extends Command {
     });
   }
   async run({ channel, author, message, t}, msg) {
-    channel.send(`🏓 `\${this.client.ping}ms\` `)
+    channel.send(`🏓 \`${this.client.ping}ms\``)
 
     console.log(msg)
   }

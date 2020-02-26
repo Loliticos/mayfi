@@ -38,6 +38,7 @@ module.exports = class Help extends Command {
       embed
         .setTitle(command.name)
         .setDescription(description.join('\n'))
+        .setFooter(t("commands:help.footer"))
         channel.send(embed)
     }
   }

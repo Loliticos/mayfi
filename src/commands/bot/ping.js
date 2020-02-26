@@ -9,16 +9,14 @@ module.exports = class Ping extends Command {
         onlyGuild: false
       },
       parameters: [{
-        type: 'string', full: true, required: false
+        type: 'string', 
+        full: true, 
+        required: false
       }]
     });
   }
-  async run({ client, channel, author, message, t}, msg) {
-    channel.send("🏓 Pong").then(msg => {
-      setTimeout(function() {
-        msg.edit(t("commands:ping", {conexao: client.ping}))
-      }, 1000);
-    });
+  async run({ channel, author, message, t}, msg) {
+    channel.send(`🏓 `\${this.client.ping}ms\` `)
 
     console.log(msg)
   }

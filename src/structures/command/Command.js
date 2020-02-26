@@ -60,7 +60,7 @@ module.exports = class Command {
   }
 
   usage(t, prefix, noUsage = true) {
-    const usage = noUsage ? t(`commands:${this.name}.commandUsage`) : ""
+    const usage = noUsage ? t(`commands:${this.name}.commandUsage`) : t([`commands:${this.name}.commandUsage`, ''])
     return `**${t("commons:usage")}:** \`${prefix}${this.name} ${usage}\` `
   }
     

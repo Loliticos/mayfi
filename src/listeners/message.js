@@ -13,7 +13,7 @@ module.exports = class ClientOnMessage extends EventHandler {
 
         let args = message.content.slice(prefix.length).trim().split(/ /g)
         let commandname = args.shift().toLowerCase()
-        let command = this.client.commands.get(commandname) || this.client.commands.get(this.client.alias.get(commandname))
+        let command = this.client.commands.get(commandname) || this.client.commands.get(this.client.aliases.get(commandname))
 
         if(!command) return
 

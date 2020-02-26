@@ -4,7 +4,7 @@ module.exports = class Ping extends Command {
   constructor(client) {
     super(client, {
       name: "ping",
-      alias: ["pong", "latency", "latencia"],
+      aliases: ["pong", "latency", "latencia"],
       requirements: {
         onlyGuild: false
       },

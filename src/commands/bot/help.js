@@ -17,20 +17,17 @@ module.exports = class Help extends Command {
   }
 
   async run ({ t, author, channel, guild, prefix }, cmd) {
-    console.log(cmd.toString())
     const embed = new MayfiEmbed(author)
     const validCommands = this.client.commands.filter(c => !c.hidden)
 
     if (cmd) {
       const command = this.client.commands.get(cmd.toString())
 
-      console.log(command.name)
-
       if (!command) {
         throw new CommandError(t("commands:help.commandNotFound"))
       }
 
-      const commandUsage = t(`commands:${command.name}.commandUsage`) ? t(`commands:${command.name}.commandUsage`) : `\`${prefix}${this.name}\``
+      const commandUsage = t(`commands:${command.name}.commandUsage`) ? `\`${t(`commands:${command.name}.commandUsage`)}\`` : `\`${prefix}${this.name}\``
 
       embed
         .setTitle(command.name)

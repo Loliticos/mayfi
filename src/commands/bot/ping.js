@@ -1,6 +1,6 @@
 const { Command, MayfiEmbed } = require('../../')
 
-module.exports = class PingCommand extends Command {
+module.exports = class Ping extends Command {
   constructor(client) {
     super(client, {
       name: "ping",

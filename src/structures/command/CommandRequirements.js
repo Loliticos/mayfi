@@ -6,11 +6,11 @@ const parseOptions = function (options = {}) {
     botPermissions: options.botPermissions || [],
 
     onlyGuild: !!options.onlyGuild || true,
-    onlyDevs: !!options.onlyDevs || false ,
+    onlyDevs: !!options.onlyDevs || false 
   }
 }
 
-const handleRequirements = function ({ author, channel, client, guild, member, me, t }, options) {
+const handle = function({ t, author, channel, client, command, guild, member, voiceChannel }, options) {
   let opt = parseOptions(options)
 
   if (opt.onlyGuild && channel.type === "dm") throw new CommandError(t('permissions:guildOnly'))
@@ -24,5 +24,5 @@ const handleRequirements = function ({ author, channel, client, guild, member, m
   }))
 }
 module.exports = {
-  handleRequirements
+  handle
 }

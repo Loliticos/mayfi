@@ -27,6 +27,10 @@ module.exports = class Command {
         }
     }
 
+    handleRequirements(ctx, args) {
+        return this.requirements ? CommandRequirements.handle(context, this.requirements, args) : true
+    }
+
     error ({ t, author, channel, prefix }, error) {
     if (error instanceof CommandError) {
       const embed = new MayfiEmbed(author)

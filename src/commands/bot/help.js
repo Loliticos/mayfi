@@ -20,52 +20,27 @@ module.exports = class Help extends Command {
     console.log(cmd)
     const embed = new MayfiEmbed(author)
     const validCommands = this.client.commands.filter(c => !c.hidden)
+
     if (cmd) {
-      cmd = cmd.toString().replace(prefixRegex(prefix), '')
-      const command = cmd.split(' ').reduce((o, ca) => {
-        const arr = (Array.isArray(o) && o) || (o && o.subcommands)
-        if (!arr) return o
-        return arr.find(c => c.name === ca || (c.aliases && c.aliases.includes(ca)))
-      }, validCommands)
+      const command = this.client.commands.get(cmd)
 
-      if (command) {
-        const description = [
-          t([`commands:${command.tPath}.commandDescription`, 'commands:help.noDescriptionProvided']),
-          '',
-          command.usage(t, prefix, false)
-        ]
+      console.log(command.name)
 
-        if (command.aliases && command.aliases.length > 0) description.push(`\n**${t('commands:help.aliases')}:** ${command.aliases.map(a => `\`${a}\``).join(', ')}`)
-        if (command.subcommands.length > 0) description.push(`\n**${t('commands:help.subcommands')}:** ${command.subcommands.map(a => `\`${a.name}\``).join(', ')}`)
-        if (command.requirements && command.requirements.permissions && command.requirements.permissions.length > 0) description.push(`\n**${t('commands:help.permissions')}:** ${command.requirements.permissions.map(p => `\`${t(`permissions:${p}`)}\``).join(', ')}`)
-        if (command.requirements && command.requirements.botPermissions && command.requirements.botPermissions.length > 0) description.push(`\n**${t('commands:help.botPermissions')}:** ${command.requirements.botPermissions.map(p => `\`${t(`permissions:${p}`)}\``).join(', ')}`)
-
-        embed.setTitle(command.fullName)
-          .setDescription(description.join('\n'))
-      } else {
-        throw new CommandError(t('commands:help.commandNotFound'))
+      if (!command) {
+        throw new CommandError(t("commands:help.commandNotFound"))
       }
-    } else {
+
+      const commandUsage = t(`commands:${command.name}.commandUsage`) ? t(`commands:${command.name}.commandUsage`) : `\`${prefix}${this.name}\``
+
       embed
-        .setTitle(t('commands:help.listTitle'))
-        .setDescription(`${t('commands:help.prefix', { botPrefix: prefix })}, ${t('commands:help.youCanUse', { botMention: this.client.user })}`)
-        .setFooter(t('commands:help.specificInformation', { helpString: `${prefix}${this.name} ${t('commands:help.commandUsage')}` }))
+        .setTitle(command.name)
+        .setDescription(`
+          ${t(`commands:${command.name}.commandDescription`)}
 
-      const categories = validCommands.map(c => c.category).filter((v, i, a) => a.indexOf(v) === i)
-      categories
-        .sort((a, b) => t(`categories:${a}`).localeCompare(t(`categories:${b}`)))
-        .forEach(category => {
-          const commands = validCommands
-            .filter(c => c.category === category)
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map(c => `\`${c.name}\``).join('**, **')
+          **${t("commons:help.usage")}:** ${commandUsage}
 
-          const length = validCommands
-            .filter(c => c.category === category).length
-
-          embed.addField(`${t(`categories:${category}`)} [**${length}**]`, commands, false)
-        })
+          `)
+        channel.send(embed)
     }
-    channel.send(embed)
   }
 }

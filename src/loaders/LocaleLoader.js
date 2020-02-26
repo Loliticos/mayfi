@@ -22,7 +22,7 @@ module.exports = class EventLoader  {
     async initializeLocales () {
       try {
         i18next.use(translationBackend).init({
-          ns: [ 'categories', 'commands', 'commons', 'errors', 'permissions', 'moderation', 'languages', 'regions' ],
+          ns: [ 'categories', 'commands', 'errors', 'permissions' ],
           preload: await readdirSync('./src/locales/'),
           fallbackLng: 'en-US',
           backend: {
@@ -33,11 +33,10 @@ module.exports = class EventLoader  {
           },
           returnEmptyString: false
         }, () => {
-          resolve(this.loadLanguagesDisplayNames(Object.keys(i18next.store.data)))
-          this.log('i18next initialized', { color: 'green', tags: ['Localization'] })
+          console.log('[Language] i18next initialized')
         })
       } catch (e) {
-        this.logError(e)
+        console.error(e)
       }
     }
 

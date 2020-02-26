@@ -43,6 +43,10 @@ module.exports = class Help extends Command {
         .setDescription(description.join('\n'))
         .setFooter(t("commands:help.footer"))
         channel.send(embed)
+    } else {
+      embed
+        .setTitle(t("commands:help.title"))
+        .setDescription(t("commands:help.description"))
     }
   }
 }

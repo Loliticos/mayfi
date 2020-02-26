@@ -1,5 +1,5 @@
 module.exports = class CommandContext {
-    constructor(client, options = {}) {
+    constructor(options = {}) {
         this.client = client
 
         this.message = options.message
@@ -11,7 +11,6 @@ module.exports = class CommandContext {
         this.language = options.language
         this.command = options.command
         this.aliase = options.aliase
-        this.prefix = options.prefix
         this.t = () => { throw new Error("Invalid t") }
     }
 

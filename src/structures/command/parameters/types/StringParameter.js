@@ -15,7 +15,7 @@ module.exports = class StringParameter extends Parameter {
   static parse (arg, { t, message }) {
     arg = arg ? (typeof arg === 'string' ? arg : String(arg)) : undefined
     if (!arg) return
-    console.log(`Testando -> ${console.log(arg)}`)
+    console.log(`Testando -> ${arg}`)
 
     /*if (this.clean) arg = DiscordUtils.cleanContent(arg, message)
 
@@ -26,7 +26,7 @@ module.exports = class StringParameter extends Parameter {
       arg = arg.substring(0, this.maxLength)
     }
 
-    console.log(`Ultimo teste -> ${console.log(arg)}`)
+    console.log(`Ultimo teste -> ${arg}`)
 
     return arg
   }

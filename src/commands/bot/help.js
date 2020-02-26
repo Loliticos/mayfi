@@ -37,6 +37,7 @@ module.exports = class Help extends Command {
 
       embed
         .setTitle(command.name)
+        .setDescription(description.join('\n'))
         channel.send(embed)
     }
   }

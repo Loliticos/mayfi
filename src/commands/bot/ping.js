@@ -20,6 +20,6 @@ module.exports = class Ping extends Command {
       }, 1000);
     });
 
-    channel.send(msg)
+    console.log(msg)
   }
 };

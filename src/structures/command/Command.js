@@ -5,18 +5,18 @@ const CommandRequirements = require('./CommandRequirements')
 const CommandError = require("./CommandError.js")
 const CommandParameters = require("./parameters/CommandParameter.js")
 
+let Utils = require('../../utils')
+
 module.exports = class Command {
     constructor(client, options) {
-        let {
-            name,
-            requirements = {},
-            alias = [],
-        } = options
-        this.name = name
-        this.requirements = requirements
-        this.alias = alias
-        this.hidden = false
-        this.client = client
+        const options = Utils.createOptionHandler('Command', options)
+        this.name = options.required('name')
+        this.aliases = options.optional('aliases')
+        this.category = options.optional('category', 'general')
+        this.hidden = options.optional('hidden', false)
+        this.parentCommand = options.optional('parent')
+        this.requirements = options.optional('requirements')
+        this.parameters = options.optional('parameters')
 
     }
     async _run (context, args) {

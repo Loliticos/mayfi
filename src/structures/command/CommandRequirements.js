@@ -26,11 +26,11 @@ module.exports = class CommandRequirements {
     const opts = this.parseOptions(options)
 
     if(opts.onlyGuild && channel.type === "dm") {
-      throw new CommandError(t("permissions:guildOnly"))
+      throw new CommandError(t("errors:guildOnly"))
     }
 
     if(opts.onlyDevs && !Permissions.isDev(client, author)) {
-      throw new CommandError(t("permissions:onlyDevelopers"))
+      throw new CommandError(t("errors:onlyDevelopers"))
     }
 
     if (opts.permissions && opts.permissions.length > 0) {

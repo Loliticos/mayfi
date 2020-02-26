@@ -6,6 +6,8 @@
   	"commandDescription": "Veja informações sobre meus comandos ou veja todos eles",
   	"commandUsage": "[comando]",
   	"noDescriptionProvided": "Nenhuma descrição dada.",
-  	"footer": "<> = Obrigatorio, [] = opcional"
+  	"footer": "<> = Obrigatorio, [] = opcional",
+  	"permissions": "Permissões",
+  	"botPermissions": "Permissões do bot"
   }
 }

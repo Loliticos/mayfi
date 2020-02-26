@@ -10,7 +10,6 @@ module.exports = class Help extends Command {
       name: 'help',
       aliases: ['commands', 'ajuda', 'halp'],
       category: 'bot',
-      requirements: { botPermissions: ['MANAGE_ROLES'] },
       parameters: [{
         type: 'string', full: true, required: false
       }]

@@ -34,7 +34,11 @@ module.exports = class Command {
           return this.error(context, e)
         }
 
-        this.run(context, args)
+        try {
+          await this.run(context, args)
+        } catch (e) {
+          this.error(context, e)
+        }
     }
 
     setT (t) {

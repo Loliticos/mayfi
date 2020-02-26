@@ -11,32 +11,20 @@ module.exports = class ClientOnMessage extends EventHandler {
 
         if (message.author.bot) return
 
-        const mc = (...m) => m.some(st => message.content.startsWith(st))
-        const usedPrefix = mc(this.client.user.toString(), `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
-        
-        const language = "pt-BR"
-
-        if(!usedPrefix) return
-
-        const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => !prefix || a)
-        const args = fullCmd.slice(1)
-
-        if (!fullCmd.length) return
-
-        const commandName = args.shift().toLowerCase()
-        const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.alias.get(cmd))
+        let args = message.content.slice(prefix.length).trim().split(/ /g)
+        let commandname = args.shift().toLowerCase()
+        let cmd = this.client.commands.get(commandname) || this.client.commands.get(this.client.alias.get(commandname))
 
         if(!command) return
 
         const context = new CommandContext({ 
-            aliase: cmd,
             client: this.client,
             message,
             command,
             language
         })
 
-        console.log(`[Commands] "${message.content}" (${command.constructor.name}) ran by "${message.author.tag}" (${message.author.id}) on guild "${message.guild.name}" (${message.guild.id}) channel "#${message.channel.name}" (${message.channel.id})`)
-        this.client.runCommand(command, context, args, language)
+        console.log(`[Commands] "${message.content}" (${cmd.constructor.name}) ran by "${message.author.tag}" (${message.author.id}) on guild "${message.guild.name}" (${message.guild.id}) channel "#${message.channel.name}" (${message.channel.id})`)
+        this.client.runCommand(cmd, context, args, language)
     }
 }

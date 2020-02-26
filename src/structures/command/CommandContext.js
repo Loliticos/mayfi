@@ -10,7 +10,6 @@ module.exports = class CommandContext {
         this.guild = options.message.guild
         this.language = options.language
         this.command = options.command
-        this.aliase = options.aliase
         this.t = () => { throw new Error("Invalid t") }
     }
 

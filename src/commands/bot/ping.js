@@ -10,7 +10,7 @@ module.exports = class PingCommand extends Command {
       }
     });
   }
-  async execute({ client, channel, author, message, t}) {
+  async run({ client, channel, author, message, t}) {
     channel.send("🏓 Pong").then(msg => {
       setTimeout(function() {
         msg.edit(t("commands:ping", {conexao: client.ping}))

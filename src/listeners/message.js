@@ -24,7 +24,7 @@ module.exports = class ClientOnMessage extends EventHandler {
             if (command) {
                 let commandctx = new CommandContext(this.client, { 
                     aliase: cmd,
-                    client: this,
+                    client: this.client,
                     prefix,
                     message,
                     command,

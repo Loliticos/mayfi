@@ -9,8 +9,10 @@ module.exports = {
   CommandRequirements: CommandStructures.CommandRequirements,
 
   // Loaders
-  Loaders: require('./loaders/'),
+  CommandLoader: require('./loaders/CommandLoader.js'),
+  ListenerLoader: require("./loaders/ListenerLoader.js"),
+  LocaleLoader: require("./loaders/LocaleLoader.js")
 
   // Utils
-  MayfiEmbed: require('./structures/MayfiEmbed.js'),
+  MayfiEmbed: require('./structures/MayfiEmbed.js')
 }

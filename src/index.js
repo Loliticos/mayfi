@@ -6,6 +6,7 @@ module.exports = {
   Command: CommandStructures.Command,
   CommandContext: CommandStructures.CommandContext,
   CommandError: CommandStructures.CommandError,
+  CommandParameter: CommandStructures.CommandParameter,
   CommandRequirements: CommandStructures.CommandRequirements,
   Parameter: CommandStructures.Parameter,
 

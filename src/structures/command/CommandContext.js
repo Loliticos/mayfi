@@ -11,5 +11,6 @@ module.exports = class CommandContext {
         this.language = options.language
         this.command = options.command
         this.t = options.t
+        this.prefix = options.prefix
     }
 }

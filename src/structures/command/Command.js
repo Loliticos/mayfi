@@ -53,10 +53,15 @@ module.exports = class Command {
     if (error instanceof CommandError) {
       const embed = new MayfiEmbed(author)
         .setTitle(error.message)
-        .setDescription(error.showUsage ? "usage" : '')
+        .setDescription(error.showUsage ? this.usage(t, prefix): '')
       return channel.send(embed.setColor(Constants.ERROR_COLOR)).then(() => channel.stopTyping())
     }
     console.error(error)
+  }
+
+  usage(t, prefix) {
+    const usage = t(`commands:${this.name}.commandUsage`) ? t(`commands:${this.name}.commandUsage`) : ""
+    return `**${t("commons:usage")}:** \`${prefix}${this.name} ${usage}\` `
   }
     
     async run () {}

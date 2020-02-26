@@ -6,7 +6,7 @@ const prefixRegex = (prefix) => new RegExp(`^${quoteRegex(prefix)}`)
 
 module.exports = class Help extends Command {
   constructor (client) {
-    super({
+    super(client, {
       name: 'help',
       aliases: ['commands', 'ajuda', 'halp'],
       category: 'bot',

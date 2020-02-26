@@ -1,4 +1,4 @@
-const { Permissions } = require('discord.js')
+const Permissions = require('../utils/Permissions.js')
 const CommandError = require("./CommandError.js")
 const parseOptions = function (options = {}) {
   return {
@@ -29,14 +29,16 @@ module.exports = class CommandRequirements {
       throw new CommandError(t("permissions:guildOnly"))
     }
 
-    if(opts.onlyDevs && !process.env.OWNERS.toString().includes(author.id)) {
+    if(opts.onlyDevs && !Permissions.isDev(client, author)) {
       throw new CommandError(t("permissions:onlyDevelopers"))
     }
 
-    if(opts.permissions && !member.hasPermission(opts.permissions)) {
-      throw new CommandError(t("errors:missingPermissions", {
-        permissions: opts.permissions.map(a => new Permissions(a).toArray()[0]).join(', ')
-      }))
+    if (opts.permissions && opts.permissions.length > 0) {
+      if (!channel.permissionsFor(member).has(opts.permissions)) {
+        const permission = opts.permissions.map(p => t(`permissions:${p}`)).map(p => `**"${p}"**`).join(', ')
+        const sentence = opts.permissions.length >= 1 ? 'errors:missingOnePermission' : 'errors:missingMultiplePermissions'
+        throw new CommandError(t(sentence, { permission }))
+      }
     }
 
     if (opts.botPermissions && opts.botPermissions.length > 0) {

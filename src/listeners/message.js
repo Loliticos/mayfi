@@ -1,4 +1,5 @@
 const EventHandler = require('../structures/EventHandler');
+const i18next = require('i18next')
 
 module.exports = class ClientOnMessage extends EventHandler {
     constructor(client) {

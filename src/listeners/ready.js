@@ -12,7 +12,7 @@ module.exports = class ClientOnReady extends EventHandler {
       
         const presences = [
           {
-            name: `Mayfi Canary - Version ${process.env.MAYFI_VERSION}`,
+            name: `Mayfi Canary | Version ${process.env.MAYFI_VERSION}`,
             type: 'WATCHING'
           }
         ]

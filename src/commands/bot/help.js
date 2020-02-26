@@ -47,6 +47,22 @@ module.exports = class Help extends Command {
       embed
         .setTitle(t("commands:help.title"))
         .setDescription(t("commands:help.description"))
+        .setFooter(t('commands:help.specificInformation', { helpString: `${prefix}${this.name} ${t('commands:help.commandUsage')}` }))
+        const categories = validCommands.map(c => c.category).filter((v, i, a) => a.indexOf(v) === i)
+        categories
+          .sort((a, b) => t(`categories:${a}`).localeCompare(t(`categories:${b}`)))
+          .forEach(category => {
+            const commands = validCommands
+              .filter(c => c.category === category)
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map(c => `\`${c.name}\``).join('**, **')
+
+            const length = validCommands
+              .filter(c => c.category === category).length
+
+            embed.addField(`${t(`categories:${category}`)} [**${length}**]`, commands, false)
+          })
+        channel.send(embed)
     }
   }
 }

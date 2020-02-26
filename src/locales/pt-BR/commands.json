@@ -5,6 +5,7 @@
   "help": {
   	"commandDescription": "Veja informações sobre meus comandos ou veja todos eles",
   	"commandUsage": "[comando]",
+  	"commandNotFound": "Eu não consegui encontrar um comando com este nome.",
   	"noDescriptionProvided": "Nenhuma descrição dada.",
   	"footer": "<> = Obrigatorio, [] = opcional",
   	"permissions": "Permissões",

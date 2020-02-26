@@ -3,6 +3,7 @@ const { Constants } = require("../../")
 
 const CommandRequirements = require('./CommandRequirements')
 const CommandError = require("./CommandError.js")
+const CommandParameters = require("./parameters/CommandParameter.js")
 
 module.exports = class Command {
     constructor(client, options) {
@@ -23,7 +24,12 @@ module.exports = class Command {
             this.handleRequirements(context, args)
         } catch(e) {
             this.error(context, e)
+        }
 
+        try {
+          await this.handleParameters(context, args)
+        } catch (e) {
+          return this.error(context, e)
         }
 
         this.run(context, args)
@@ -35,6 +41,10 @@ module.exports = class Command {
 
     handleRequirements(context, args) {
         return this.requirements ? CommandRequirements.handle(context, this.requirements, args) : true
+    }
+
+    handleParameters(context, args) {
+        return this.parameters ? CommandParameters.handle(context, this.parameters, args) : args
     }
 
     error ({ t, author, channel, prefix }, error) {

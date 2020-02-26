@@ -7,6 +7,7 @@ module.exports = {
   CommandContext: CommandStructures.CommandContext,
   CommandError: CommandStructures.CommandError,
   CommandRequirements: CommandStructures.CommandRequirements,
+  Parameter: CommandStructures.Parameter,
 
   // Loaders
   CommandLoader: require('./loaders/CommandLoader.js'),

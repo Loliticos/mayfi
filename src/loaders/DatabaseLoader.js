@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const Database = require("../database/MongoDB.js")
 
 module.exports = class DatabaseLoader {
   constructor (client) {
@@ -11,7 +12,6 @@ module.exports = class DatabaseLoader {
     try {
       await this.initializeDatabase(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
       this.client.database = this.database
-      return !!this.database
     } catch (e) {
       console.log(e)
     }
@@ -20,10 +20,8 @@ module.exports = class DatabaseLoader {
 
   initializeDatabase (MONGODB_URI = process.env.MONGODB_URI, options = {}) {
     this.database = mongoose.connect(MONGODB_URI, options)
-      .then(() => console.log("Database connection established!"))
-      .catch(e => {
-        console.error(`[DB] ${e.message}`)
-        this.database = null
+      .then((m) => {
+        this.database = m
       })
   }
 }

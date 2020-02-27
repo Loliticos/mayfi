@@ -3,5 +3,6 @@ module.exports = {
   member: require('./MemberParameter.js'),
   string: require('./StringParameter.js'),
   user: require('./UserParameter.js'),
-  url: require('./URLParameter.js')
+  url: require('./URLParameter.js'),
+  channel: require('./ChannelParameter.js')
 }

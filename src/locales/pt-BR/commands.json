@@ -214,5 +214,11 @@
     "mustBe": "Você precisa digitar uma linguagem válida. `PT-B || EN-US`",
     "title": "Idioma",
     "languageChangedTo": "Idioma mudado para {{language}}"
+  },
+  "prefix": {
+    "commandDescription": "Mude o prefix do seu servidor.",
+    "commandUsage": "<prefix>",
+    "missingPrefix": "Você precisa informar um prefixo á ser mudado!",
+    "changedTo": "O prefixo foi mudado para `{{prefix}}`"
   }
 }

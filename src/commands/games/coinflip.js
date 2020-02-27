@@ -1,6 +1,6 @@
 const { Command, MayfiEmbed } = require('../../')
 const coins = {
-  heads: "https://cdn.discordapp.com/attachments/679117210215776276/682597936143925339/fMemdeFmPeYAAAAAASUVORK5CYII.png",
+  heads: "https://sorteador.com.br/_imgs/caracoroa/cara.jpg",
   tails: "https://cdn.discordapp.com/attachments/679117210215776276/682598126191771683/Y5vgPrzC7Iazmd78B6LVfyzD7HfwBKvIh3eeptpAAAAABJRU5ErkJggg.png"
 }
 

@@ -7,6 +7,7 @@ module.exports = class MayfiClient extends Client {
 		super(CLIENT_OPTIONS)
 
 		this.initializeLoaders()
+    this.database = require("../database.js")
 	}
 
 	login (token = process.env.DISCORD_TOKEN) {

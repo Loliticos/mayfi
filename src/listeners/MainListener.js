@@ -7,7 +7,10 @@ module.exports = class ClientOnMessage extends EventHandler {
     }
 
     async run(message) {
-        let prefix = message.channel.type === "dm" ? '' : 'mc!'
+        const user = await this.client.database.users.findOne({"_id": message.author.id})
+        const guild = await this.client.database.guilds.findOne({"_id": message.guild.id})
+
+        let prefix = message.channel.type === "dm" ? '' : guild ? guild.prefix : "mc!"
 
         if (message.author.bot) return
         
@@ -21,9 +24,6 @@ module.exports = class ClientOnMessage extends EventHandler {
         const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => a)
         const args = fullCmd.slice(1)
         if (!fullCmd.length) return
-
-        const user = await this.client.database.users.findOne({"_id": message.author.id})
-        const guild = await this.client.database.guilds.findOne({"_id": message.guild.id})
 
         if(!user) {
             const newUser = new this.client.database.users({
@@ -41,9 +41,8 @@ module.exports = class ClientOnMessage extends EventHandler {
             newGuild.save()
         }
 
-        console.log(guild.language)
-
-        if(user && user.blacklisted) return    
+        if(user && user.blacklisted) return   
+        const language = guild.language 
 
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))
@@ -51,7 +50,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const context = new CommandContext({ 
             client: this.client,
             message,
-            language: guild.language,
+            language: language
             command,
             prefix: guild.prefix
         })

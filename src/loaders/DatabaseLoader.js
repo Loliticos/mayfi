@@ -9,7 +9,7 @@ module.exports = class DatabaseLoader {
 
   async load () {
     try {
-      await this.initializeDatabase(MongoDB, { useNewUrlParser: true, useUnifiedTopology: true })
+      await this.initializeDatabase(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
       this.client.database = this.database
       return !!this.database
     } catch (e) {

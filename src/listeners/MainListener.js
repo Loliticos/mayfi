@@ -11,7 +11,6 @@ module.exports = class ClientOnMessage extends EventHandler {
 
         if (message.author.bot) return
         
-        const language = "pt-BR"
         const botMention = this.client.user.toString()
 
         const mc = (...m) => m.some(st => message.content.startsWith(st))
@@ -42,9 +41,9 @@ module.exports = class ClientOnMessage extends EventHandler {
             newGuild.save()
         }
 
-        if(guild) console.log(guild)
+        console.log(guild.language)
 
-        if(user && user.blacklisted) return     
+        if(user && user.blacklisted) return    
 
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))
@@ -52,7 +51,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const context = new CommandContext({ 
             client: this.client,
             message,
-            language,
+            language: guild.language
             command,
             prefix
         })

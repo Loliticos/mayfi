@@ -190,5 +190,11 @@
   "support": {
     "commandDescription": "Shows Mayfi support server link.",
     "clickHere": "**[Click here to join my support server](https://discord.gg/JZVmnqD)**"
+  },
+  "inversetext": {
+    "commandDescription": "Inverse a text",
+    "commandUsage": "<text>",
+    "noText": "You need to give me a text to be inverted!",
+    "heresYourText": "Here's your inverted text: `{{reversedText}}`"
   }
 }

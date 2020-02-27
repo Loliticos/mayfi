@@ -6,5 +6,6 @@ module.exports = {
   url: require('./URLParameter.js'),
   channel: require('./ChannelParameter.js'),
   emoji: require('./EmojiParameter.js'),
-  number: require('./NumberParameter.js')
+  number: require('./NumberParameter.js'),
+  role: require('./RoleParameter.js')
 }

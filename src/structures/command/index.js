@@ -13,5 +13,6 @@ module.exports = {
   GuildParameter: require('./parameters/types/GuildParameter.js'),
   ChannelParameter: require('./parameters/types/ChannelParameter.js'),
   EmojiParameter: require('./parameters/types/EmojiParameter.js'),
-  NumberParameter: require('./parameters/types/NumberParameter.js')
+  NumberParameter: require('./parameters/types/NumberParameter.js'),
+  RoleParameter: require('./parameters/types/RoleParameter.js')
 }

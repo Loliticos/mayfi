@@ -1,6 +1,6 @@
 const { EventHandler, MayfiEmbed, Constants } = require('../');
 
-module.exports = class ClientOnReady extends EventHandler {
+module.exports = class GuildLogging extends EventHandler {
     constructor(client) {
         super(client, 'guildCreate')
     }

@@ -7,7 +7,6 @@ module.exports = class ClientOnReady extends EventHandler {
 
     run(oldMessage, newMessage) {
       if(oldMessage.content === newMessage.content) return
-      this.client.lastMessage.delete()
       this.client.emit("message", newMessage)
     }
 };

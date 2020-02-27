@@ -1,5 +1,4 @@
 const { Command, MayfiEmbed, Constants } = require('../../')
-let { Constants } = require("../../")
 let moment = require("moment")
 
 module.exports = class Userinfo extends Command {

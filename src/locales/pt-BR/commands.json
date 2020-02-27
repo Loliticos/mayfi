@@ -191,6 +191,16 @@
     "commandDescription": "Mostra o link do servidor de suporte da Mayfi.",
     "clickHere": "**[Clique aqui para entrar no meu servidor de suporte](https://discord.gg/JZVmnqD)**"
   },
+  "roleinfo": {
+    "commandDescription": "Veja informações de um cargo.",
+    "commandUsage": "<cargo>",
+    "color": "Cor",
+    "name": "Nome",
+    "createdAt": "Criado",
+    "mentionable": "Mencionável",
+    "mentionableTrue": "Sim",
+    "mentionableFalse": "Não"
+  },
   "inversetext": {
     "commandDescription": "Inverte um texto",
     "commandUsage": "<texto>",

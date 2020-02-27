@@ -12,7 +12,7 @@ module.exports = class BotInfo extends Command {
   }
 
   run ({ channel, author, t, language}) {
-    const uptime = moment.duration(client.uptime).format("D [d], H [h], m [m], s [s]")
+    const uptime = moment.duration(this.client.uptime).format("D [d], H [h], m [m], s [s]")
     channel.send(
       new MayfiEmbed(author)
         .setAuthor(this.client.user.username, this.client.user.displayAvatarURL)

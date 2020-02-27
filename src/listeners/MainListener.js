@@ -50,7 +50,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const context = new CommandContext({ 
             client: this.client,
             message,
-            language: language
+            language: language,
             command,
             prefix: guild.prefix
         })

@@ -5,7 +5,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         super(client, 'message')
     }
 
-    run(message) {
+    async run(message) {
         let prefix = message.channel.type === "dm" ? '' : 'mc!'
 
         if (message.author.bot) return
@@ -21,6 +21,10 @@ module.exports = class ClientOnMessage extends EventHandler {
         const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => a)
         const args = fullCmd.slice(1)
         if (!fullCmd.length) return
+
+        const UserDatabase = await this.client.database.users.findOne({_id: message.author.id})
+
+        console.log(UserDatabase)
 
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))

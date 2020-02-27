@@ -157,6 +157,7 @@
   "unban": {
     "commandDescription": "Desbane um usuário",
     "commandUsage": "<usuario>",
+    "missingReason": "Você precisa informar o motivo para o membro ser punido",
     "missingUser": "Você precisa fornecer um usuário válido!",
     "successTitle": "Usuário foi desbanido!",
     "cantUnban": "Eu não posso desbanir esse usuário!"

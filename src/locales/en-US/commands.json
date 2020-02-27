@@ -157,6 +157,7 @@
   "unban": {
     "commandDescription": "Unbans an user",
     "commandUsage": "<user>",
+    "missingReason": "You need to give me a reason to unban this member!",
     "missingUser": "You must give me a valid user!",
     "successTitle": "Member was unbanned!",
     "cantUnban": "I can't unban this user!"

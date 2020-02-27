@@ -10,7 +10,7 @@ module.exports = class Unban extends Command {
       parameters: [{
         type: 'user', acceptBot: true, missingError: 'commands:unban.missingUser'
       }, {
-        type: 'string', full: true, missingError: 'commands:unban.missingReason'
+        type: 'string', full: true, missingError: 'commands:unban.missingReason', required: false
       }]
     }, client)
   }
@@ -20,7 +20,7 @@ module.exports = class Unban extends Command {
     await guild.unban(user).then(async unbannedMember => {
         embed
           .setTitle(t('commands:unban.successTitle'))
-          .setDescription(`${unbannedMember} - \`${reason}\``)
+          .setDescription(`${unbannedMember} ${reason ? `- \`${reason}\`` : " "}`)
     }).catch(err => {
       embed
         .setColor(Constants.ERROR_COLOR)

@@ -24,6 +24,7 @@ module.exports = class RoleInfo extends Command {
       .addField(t("commands:roleinfo.color"), role.hexColor)
       .addField(t("commands:roleinfo.createdAt"), `${moment(role.createdAt).format('LLL')}\n(${moment(role.createdAt).fromNow()})`, true)
       .addField(t("commands:roleinfo.mentionable"), role.mentionable ? t("commands:roleinfo.mentionableTrue") : t("commands:roleinfo.mentionableFalse"))     
+      .addField(t("commands:roleinfo.members"), role.members.size)
       .setThumbnail(`http://www.singlecolorimage.com/get/${role.hexColor.replace("#", "")}/100x100`)
 
       channel.send(embed)

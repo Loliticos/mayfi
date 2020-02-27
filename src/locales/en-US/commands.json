@@ -199,7 +199,8 @@
     "createdAt": "Created",
     "mentionable": "Mentionable",
     "mentionableTrue": "Yes",
-    "mentionableFalse": "No"
+    "mentionableFalse": "No",
+    "members": "Members that has this role"
   },
   "inversetext": {
     "commandDescription": "Inverse a text",

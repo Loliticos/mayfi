@@ -199,7 +199,8 @@
     "createdAt": "Criado",
     "mentionable": "Mencionável",
     "mentionableTrue": "Sim",
-    "mentionableFalse": "Não"
+    "mentionableFalse": "Não",
+    "members": "Membros que possuem este cargo"
   },
   "inversetext": {
     "commandDescription": "Inverte um texto",

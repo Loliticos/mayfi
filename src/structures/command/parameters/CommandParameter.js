@@ -7,8 +7,6 @@ const isNull = (n) => n === null || n === undefined
 const funcOrString = (f, sf, ...args) => typeof f === 'function' ? f(...args) : sf ? sf(f) : f
 const normalizeParam = (p) => {
   const type = ParameterTypes[p.type] || p.type
-  console.log(p)
-  console.log(p.type)
   if (!type || !(type.prototype instanceof Parameter)) throw new TypeError('Invalid parameter type')
   return { ...type.parseOptions(p), type }
 }

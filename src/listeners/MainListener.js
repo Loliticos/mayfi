@@ -14,20 +14,18 @@ module.exports = class ClientOnMessage extends EventHandler {
         let args = message.content.slice(prefix.length).trim().split(/ /g)
         let commandname = args.shift().toLowerCase()
         let command = this.client.commands.get(commandname) || this.client.commands.get(this.client.aliases.get(commandname))
-
+        const language = "pt-BR"
         if(!command) return
-
-        const t = i18next.getFixedT('pt-BR')
 
         const context = new CommandContext({ 
             client: this.client,
             message,
+            language,
             command,
-            t,
             prefix
         })
 
         console.log(`[Commands] "${message.content}" (${command.constructor.name}) ran by "${message.author.tag}" (${message.author.id}) on guild "${message.guild.name}" (${message.guild.id}) channel "#${message.channel.name}" (${message.channel.id})`)
-        this.client.runCommand(command, context, args)
+        this.client.runCommand(command, context, args, language)
     }
 }

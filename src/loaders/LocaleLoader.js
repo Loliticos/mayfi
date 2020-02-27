@@ -13,6 +13,7 @@ module.exports = class EventLoader  {
         try {
             console.log(chalk.green("Locales are initializing"))
             this.initializeLocales()
+            this.client.i18next = i18next
             return true
         } catch (err) {
             console.error(err)

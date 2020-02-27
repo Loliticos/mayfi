@@ -1,7 +1,6 @@
 const { Client } = require("discord.js")
 const { readdir } = require("fs")
 const Loaders = require('./loaders/')
-const i18next = require('i18next')
 
 module.exports = class MayfiClient extends Client {
 	constructor(CLIENT_OPTIONS = {}) {
@@ -15,6 +14,7 @@ module.exports = class MayfiClient extends Client {
   }
 
   async runCommand (command, context, args, language) {
+    context.setFixedT(this.i18next.getFixedT(language))
     return command._run(context, args).catch(console.error)
   }
 

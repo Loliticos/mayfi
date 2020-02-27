@@ -1,20 +1,13 @@
 const { Permissions } = require('../../')
 const CommandError = require("./CommandError.js")
-const parseOptions = function (options = {}) {
-  return {
-    permissions: options.permissions || [],
-    botPermissions: options.botPermissions || [],
-
-    onlyGuild: !!options.onlyGuild || true,
-    onlyDevs: !!options.onlyDevs || false 
-  }
-}
 
 module.exports = class CommandRequirements {
   static parseOptions(options = {}) {
     return {
       botPermissions: options.botPermissions || [],
       permissions: options.permissions || [],
+
+      databaseOnly: !!options.databaseOnly,
 
       onlyGuild: !!options.onlyGuild || true,
       onlyDevs: !!options.onlyDevs || false 
@@ -27,6 +20,10 @@ module.exports = class CommandRequirements {
 
     if(opts.onlyGuild && channel.type === "dm") {
       throw new CommandError(t("errors:guildOnly"))
+    }
+
+    if(opts.databaseOnly && !client.database) {
+      throw new CommandError(t("errors:databaseOnly"))
     }
 
     if(opts.onlyDevs && !Permissions.isDev(client, author)) {

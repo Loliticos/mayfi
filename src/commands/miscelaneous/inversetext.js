@@ -24,7 +24,7 @@ module.exports = class Inversetext extends Command {
       embed
         .setColor(Constants.ERROR_COLOR)
         .setTitle(t('errors:generic'))
-        .setDescription(`\`${err}\``)
+        .setDescription(`\`${e}\``)
     }
 
     channel.send(embed)

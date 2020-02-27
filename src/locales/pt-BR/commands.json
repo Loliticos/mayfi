@@ -168,5 +168,9 @@
     "commandDescription": "Faça uma enquete interativa no seu servidor!",
     "commandUsage": "<enquete> [| sim | não]",
     "noArguments": "Você precisa informar o título da enquete!"
+  },
+  "coinflip": {
+    "commandDescription": "Jogue um jogo de cara ou coroa!",
+    "landed": "A moeda caiu em {{side}}"
   }
 }

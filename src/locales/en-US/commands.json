@@ -168,5 +168,9 @@
     "commandDescription": "Starts an interactive poll in your discord server",
     "commandUsage": "<poll> [| yes | no]",
     "noArguments": "You need to give me the poll title!"
+  },
+  "coinflip": {
+    "commandDescription": "Play a head or tails game!",
+    "landed": "The coin landed on {{side}}"
   }
 }

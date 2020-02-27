@@ -31,5 +31,6 @@
   "invalidURL": "Você precisa me informar uma URL válida!",
   "invalidImageLink": "Você precisa informar o link de uma imagem válida!",
   "imageParsingError": "Um erro ocorreu enquanto carregava a imagem.",
-  "acceptSelf": "Você precisa informar um usuário que não seja você."
+  "acceptSelf": "Você precisa informar um usuário que não seja você.",
+  "onlyDevelopers": "Apenas desenvolvedores podem usar esse comando!"
 }

@@ -14,7 +14,6 @@ module.exports = class Command {
         this.aliases = options.optional('aliases')
         this.category = options.optional('category', 'general')
         this.hidden = options.optional('hidden', false)
-        this.parentCommand = options.optional('parent')
         this.requirements = options.optional('requirements')
         this.parameters = options.optional('parameters')
 

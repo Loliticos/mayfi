@@ -1,11 +1,11 @@
 const { Command, MayfiEmbed, Constants } = require('../../')
 let moment = require("moment")
 
-module.exports = class Serverinfo extends Command {
+module.exports = class Guildinfo extends Command {
   constructor (client) {
     super({
-      name: 'serverinfo',
-      aliases: ['si', 'guildinfo'],
+      name: 'guildinfo',
+      aliases: ['si', 'serverinfo'],
       category: 'utility',
       parameters: [{
         type: 'guild', full: true, required: false

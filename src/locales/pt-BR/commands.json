@@ -19,5 +19,34 @@
     "commandDescription": "Veja o avatar seu ou de um usuário.",
     "commandUsage": "[usuário]",
     "avatarMessage": "Avatar de `{{user.username}}` **| [Link]({{user.displayAvatarURL}})**"
+  },
+  "userinfo": {
+    "commandDescription": "Veja as informações de um usuário.",
+    "commandUsage": "[usuario]",
+    "dnd": "{{status}} Ocupado",
+    "idle": "{{status}} Ausente",
+    "online": "{{status}} Online",
+    "offline": "{{status}} Offline",
+    "createdAt": "Conta criada",
+    "joinedAt": "Entrou",
+    "playing": "Jogando",
+    "notPlaying": "Este jogador não está jogando nada"
+  }, 
+  "guildinfo": {
+    "commandDescription": "Veja as informações de um servidor.",
+    "commandUsage": "[servidor]",
+    "owner": "Criador do servidor",
+    "channels": "Quantidade de canais",
+    "roles": "Quantidade de cargos",
+    "region": "Região",
+    "joinedAt": "Entrei neste servidor",
+    "invalidOwner": "Dono inválido",
+    "createdAt": "Criado",
+    "members": "Membros ({{count}})",
+    "streaming": "Em live: **{{count}}**",
+    "idle": "Ausentes: **{{count}}**",
+    "dnd": "Ocupados: **{{count}}**",
+    "users": "Usuários: **{{count}}**",
+    "bots": "Bots: **{{count}}**"
   }
 }

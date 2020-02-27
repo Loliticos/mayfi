@@ -20,6 +20,7 @@ module.exports = class CommandParameters {
     const length = params.length
     const hasFlags = Array.isArray(params[length - 1])
     return {
+      flags: hasFlags ? params[length - 1].map(normalizeParam) : null,
       parameters: (hasFlags ? params.slice(0, length - 1) : params).map(normalizeParam)
     }
   }
@@ -30,7 +31,35 @@ module.exports = class CommandParameters {
    */
   static async handle (context, options, args) {
     const opts = this.parseOptions(options)
+    await this.handleFlags(context, opts, args)
     return this.handleArguments(context, opts, args)
+  }
+
+  /**
+   * @param {CommandContext} context The command context
+   * @param {Array<string>} args Array of the command args
+   */
+  static async handleFlags (context, opts, args) {
+    if (opts.flags) {
+      const flagIndex = args.findIndex(a => a.startsWith('--'))
+      if (flagIndex > -1) {
+        const [ , ...allFlags ] = args.splice(flagIndex).join(' ').split('--')
+        const flagsObject = {}
+
+        const flagsParsed = allFlags.map(s => s.trim().split(/[ \t]+/))
+        for (let i = 0; i < flagsParsed.length; i++) {
+          const [ name, ...flagArgs ] = flagsParsed[i]
+          const flag = opts.flags.find(f => f.name === name || (f.aliases && f.aliases.includes(name)))
+          if (!flag) return
+
+          const flagValue = flagArgs.join(' ')
+          const missingErr = funcOrString(flag.missingError, context.t, context)
+          const parsedFlag = await this.parseParameter(context, flag, flagValue, missingErr)
+          flagsObject[flag.name] = parsedFlag
+        }
+        context.setFlags(flagsObject)
+      }
+    }
   }
 
   /**
@@ -79,7 +108,6 @@ module.exports = class CommandParameters {
         }
       }
     }
-
 
     return parsedArg
   }

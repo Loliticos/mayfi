@@ -28,7 +28,7 @@ module.exports = class Command {
         }
 
         try {
-          await this.handleParameters(context, args)
+          args = await this.handleParameters(context, args)
         } catch (e) {
           return this.error(context, e)
         }

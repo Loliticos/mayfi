@@ -21,7 +21,7 @@ module.exports = class Channelinfo extends Command {
       try {
         let result = math.eval(expression)
 
-        embed.setTitle(t("commands:math.title", { result: result }))
+        embed.setTitle(t("commands:math.title", { result }))
       } catch(error) {
         throw new CommandError(t('commands:math.error'), true)
       }

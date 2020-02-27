@@ -48,5 +48,16 @@
     "joinedAt": "Joined",
     "playing": "Playing",
     "notPlaying": "This user isn't playing anything."
+  },
+  "math": {
+    "commandDescription": "Realizes a math expression.",
+    "commandUsage": "<expression>",
+    "invalidMathExpression": "You need to inform a valid math expression!",
+    "title": "Result `{{result}}`"
+  },
+  "guildIcon": {
+    "commandDescription": "Sees the guild icon!",
+    "commandUsage": "[server]",
+    "noImage": "This guild has no icon!"
   }
 }

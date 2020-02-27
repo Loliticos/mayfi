@@ -48,5 +48,16 @@
     "dnd": "Ocupados: **{{count}}**",
     "users": "Usuários: **{{count}}**",
     "bots": "Bots: **{{count}}**"
+  },
+  "math": {
+    "commandDescription": "Realiza uma expressão matemática.",
+    "commandUsage": "<expressão>",
+    "invalidMathExpression": "Você precisa informar uma expressão matemática válida!",
+    "title": "Resultado `{{result}}`"
+  },
+  "guildIcon": {
+    "commandDescription": "Veja o ícone de um servidor!",
+    "commandUsage": "[servidor]",
+    "noImage": "Este servidor não possui uma imagem!"
   }
 }

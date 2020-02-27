@@ -1,4 +1,5 @@
 const { Command, Constants, MayfiEmbed } = require('../../')
+const languageCodes = Object.keys(this.client.i18next.store.data)
 
 module.exports = class LanguageConfig extends Command {
   constructor (client) {
@@ -14,7 +15,7 @@ module.exports = class LanguageConfig extends Command {
       parameters: [{
         type: 'string', 
         full: true, 
-        whitelist: (arg) => ['pt-BR', 'en-US'].forEach(l => l.toLowerCase() === arg.toLowerCase()),
+        whitelist: (arg) => languageCodes.some(l => l.toLowerCase() === arg.toLowerCase()),
         missingError: ({ t, prefix, author }) => {
         let embed = new MayfiEmbed(author)
           .setColor(Constants.ERROR_COLOR)

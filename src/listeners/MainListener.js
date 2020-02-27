@@ -26,9 +26,9 @@ module.exports = class ClientOnMessage extends EventHandler {
         verifyUser(message.author.id)
 
         function verifyUser (id) {
-            this.database.users.findOne({"_id": id}, (err, user) => {
+            this.client.database.users.findOne({"_id": id}, (err, user) => {
                 if(!user) {
-                    const newUser = new this.database.users({
+                    const newUser = new this.client.database.users({
                     _id: id
                     })
 

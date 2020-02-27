@@ -1,9 +1,5 @@
 const { Command, CommandError, MayfiEmbed } = require('../../')
 
-const regexpSpecialChars = /([[\]^$|()\\+*?{}=!.])/gi
-const quoteRegex = (text) => text.replace(regexpSpecialChars, '\\$1')
-const prefixRegex = (prefix) => new RegExp(`^${quoteRegex(prefix)}`)
-
 module.exports = class Help extends Command {
   constructor (client) {
     super(client, {

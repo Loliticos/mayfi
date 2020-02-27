@@ -1,6 +1,6 @@
 const Parameter = require('./Parameter.js')
 const CommandError = require('../../CommandError.js')
-const PermissionUtils = require('../../../../utils/PermissionUtils.js')
+const PermissionUtils = require('../../../../utils/Permissions.js')
 
 const MENTION_REGEX = /^(?:<@!?)?([0-9]{16,18})(?:>)?$/
 const defVal = (o, k, d) => typeof o[k] === 'undefined' ? d : o[k]

@@ -1,4 +1,4 @@
-const { Permissions } = require('../../')
+const Permissions = require('../../utils/Permissions.js')
 const CommandError = require("./CommandError.js")
 
 module.exports = class CommandRequirements {

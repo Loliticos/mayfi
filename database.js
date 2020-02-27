@@ -8,16 +8,11 @@ connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: tr
   console.log('[DB] Connection estabilished with success!')
 })
 
-const BlacklistedSchema = new Schema({
-  reason: { type: String, required: true },
-  blacklister: { type: String, required: true }
-})
-
 const UserSchema = new Schema({
 	_id: String,
 	money: { type: Number, default: 0 },
 	personalText: { type: String, default: "Use m!personaltext to change this message" },
-	blacklisted: BlacklistedSchema,
+	blacklisted: { type: Boolean, default: false },
 	reps: { type: Number, default: 0 },
 	lastRep: { type: Number, default: 0 }
 })

@@ -17,7 +17,7 @@ module.exports = class BlacklistCommand extends Command {
 
   async run ({ channel, author, t }, user, reason) {
     const embed = new MayfiEmbed(author)
-    await this.client.database.users.updateOne({ _id: user.id }, { blacklisted: { reason, author } })
+    await this.client.database.users.updateOne({ _id: user.id }, { blacklisted: true })
     embed
       .setTitle(t('commands:blacklist.successTitle'))
       .setDescription(`${user} - \`${reason}\``)

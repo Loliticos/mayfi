@@ -21,6 +21,7 @@ module.exports = class DatabaseLoader {
     this.database = mongoose.connect(MONGODB_URI, options)
       .then((m) => {
         this.database = m
+        console.log("[DB] Database connection estabilished!")
       })
   }
 }

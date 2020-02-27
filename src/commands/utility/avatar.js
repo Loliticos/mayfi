@@ -16,6 +16,8 @@ module.exports = class Avatar extends Command {
 
   async run ({ channel, author, t}, user = author) {
 
+    console.log(this.client.database)
+
     let embed = new MayfiEmbed(author)
     .setTitle(user.tag)
     .setDescription(t("commands:avatar.avatarMessage", { user }))

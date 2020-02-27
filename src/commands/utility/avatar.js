@@ -7,19 +7,17 @@ module.exports = class Avatar extends Command {
       aliases: ['pic', 'photo'],
       category: 'utility',
       parameters: [{
-        type: 'url', full: true, required: false
+       type: 'user', full: true, required: false, acceptBot: true
       }]
     }, client)
   }
 
-  async run ({ channel, author, t}, url) {
-    channel.startTyping()
-    channel.send(url)
+  async run ({ channel, author, t}, user = author) {
 
     let embed = new MayfiEmbed(user)
-    .setTitle(author.tag)
-    .setDescription(t("commands:avatar.avatarMessage", { author }))
-    .setImage(author.displayAvatarURL)
+    .setTitle(user.tag)
+    .setDescription(t("commands:avatar.avatarMessage", { user }))
+    .setImage(user.displayAvatarURL)
 
     channel.send(embed).then(() => channel.stopTyping())
         

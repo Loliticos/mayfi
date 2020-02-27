@@ -176,7 +176,7 @@
   "botinfo": {
     "commandDescription": "Sends information about me.",
     "hello": "Hello {{user}}, my name is Mayfi and i'm a simples bot for Discord with some awesome feactures ^-^",
-    "statistics": "I'm awake for **{{uptime}}**, in this exact moment i'm throwing happiness to **{{guilds}} servers** and talking with **{{users}} users** with **{{commands}} commands!**",
+    "statistics": "I'm awake for **{{uptime}}**, i'm throwing happiness to **{{guilds}} servers** and talking with **{{users}} users** with **{{commands}} commands!**",
     "inviteMe": "Add me",
     "inviteLink": "**[Add](https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot)**",
     "supportServer": "Support server",

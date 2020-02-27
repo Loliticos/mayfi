@@ -280,6 +280,7 @@
     "commandDescription": "Sets the logs channel.",
     "commandUsage": "<channel>",
     "missingChannel": "You need to give me a channel!",
+    "title": "Logs",
     "changedTo": "The logs channel has been set to **#{{channel.name}}**",
     "editedMessage": "A message was edited",
     "deletedMessage": "A message was deleted",

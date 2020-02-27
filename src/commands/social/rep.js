@@ -26,7 +26,7 @@ module.exports = class Rep extends Command {
     if (Date.now() - lastRep < 86400000) {
       embed
         .setTitle(t("commands:rep.alreadyGave"))
-        .setDescription(t("commands:rep.youCanGiveAgain", { cooldown: moment.duration(86400000 - (now - lastRep)).format('h[h] m[m] s[s]') }))
+        .setDescription(t("commands:rep.youCanGiveAgain", { cooldown: moment.duration(86400000 - (Date.now() - lastRep)).format('h[h] m[m] s[s]') }))
       return channel.send(embed)
     }
 

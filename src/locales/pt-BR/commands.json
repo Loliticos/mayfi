@@ -244,5 +244,10 @@
     "alreadyGave": "Você não pode enviar outra reputação",
     "youCanGiveAgain": "Você precisa esperar `{{cooldown}}` antes de enviar outra reputação",
     "typeAgain": "Oops... Você precisa digitar este comando novamente :( Acontece que o usuário que você mencionou não possuia dados na minha database"
+  },
+  "reps": {
+    "commandDescription": "Veja a quantidade de reputação que um usuário possue.",
+    "commandUsage": "[usuário]",
+    "howMany": "`{{user.tag}}` possue {{reps}} pontos de reputação."
   }
 }

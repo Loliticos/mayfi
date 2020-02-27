@@ -51,9 +51,9 @@ module.exports = class ClientOnMessage extends EventHandler {
         const context = new CommandContext({ 
             client: this.client,
             message,
-            language: guild.language
+            language: guild.language,
             command,
-            prefix
+            prefix: guild.prefix
         })
 
         console.log(`[Commands] "${message.content}" (${command.constructor.name}) ran by "${message.author.tag}" (${message.author.id}) on guild "${message.guild.name}" (${message.guild.id}) channel "#${message.channel.name}" (${message.channel.id})`)

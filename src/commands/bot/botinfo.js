@@ -1,6 +1,6 @@
 const { Command, MayfiEmbed } = require('../../')
 const Discord = require('discord.js')
-const moment = require('moment')
+const moment = require("moment")
 
 module.exports = class BotInfo extends Command {
   constructor (client) {

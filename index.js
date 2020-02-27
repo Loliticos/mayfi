@@ -2,6 +2,9 @@ const dotenv = require('dotenv')
 const { readFileSync } = require('fs')
 dotenv.config();
 
+require('moment')
+require('moment-duration-format')
+
 const CLIENT_OPTIONS = {
 	fetchAllMembers: true,
 	disableEveryone: true

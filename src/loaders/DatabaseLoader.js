@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const Schemas = require("../schemas/")
 
 module.exports = class DatabaseLoader {
   constructor (client) {

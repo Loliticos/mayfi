@@ -34,7 +34,8 @@ module.exports = class Reps extends Command {
       }
 
       embed
-        .setTitle(t("commands:reps.howMany", { reps: UserReps, user, pointPoints: UserReps > 1 ? "points" : "point" }))
+        .setTitle(t("commands:reps.title"))
+        .setDescription(t("commands:reps.howMany", { reps: UserReps, user, pointPoints: UserReps > 1 ? "points" : "point" }))
  
       channel.send(embed)
     } catch(err) {

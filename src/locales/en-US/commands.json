@@ -235,5 +235,13 @@
     "success": "{{user}} has been removed from the blacklist!",
     "missingUser": "You have to give me a user to remove from the blacklist!",
     "notBlacklisted": "That user isn't blacklisted."
+  },
+  "rep": {
+    "commandDescription": "Gives a reputation to an user",
+    "commandUsage": "<user>",
+    "repYourself": "You cant give reputation to yourself!",
+    "repSuccess": "You gave **1** reputation to **{{user.tag}}**",
+    "alreadyGave": "You can't give another reputation",
+    "youCanGiveAgain": "You need to wait `{{cooldown}}` before sending another reputation"
   }
 }

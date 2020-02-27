@@ -235,5 +235,13 @@
     "success": "{{user}} foi removido da minha lista negra!",
     "missingUser": "Você precisa informar um usuário para ser removido da lista negra.",
     "notBlacklisted": "Este usuário não está na minha lista negra... Deixo ver denovo... Nop! Nada"
+  },
+  "rep": {
+    "commandDescription": "Dê uma reputação para um usuário",
+    "commandUsage": "<usuário>",
+    "repYourself": "Você não pode dar reputaçã para você mesmo!",
+    "repSuccess": "Você deu **1** reputação para **{{user.tag}}**",
+    "alreadyGave": "Você não pode enviar outra reputação",
+    "youCanGiveAgain": "Você precisa esperar `{{cooldown}}` antes de enviar outra reputação"
   }
 }

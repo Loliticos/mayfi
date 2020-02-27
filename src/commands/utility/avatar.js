@@ -14,6 +14,8 @@ module.exports = class Avatar extends Command {
 
   async run ({ channel, author, t}, user = author) {
 
+    console.log(user)
+
      channel.startTyping()
 
       let embed = new MayfiEmbed(user)

@@ -32,11 +32,11 @@ module.exports = class UserParameter extends Parameter {
     const findMember = guild.members.find(m => m.user.username.toLowerCase().includes(arg.toLowerCase()) || m.displayName.toLowerCase().includes(arg.toLowerCase()))
 
     const user = client.users.get(id) || (!!findMember && findMember.user)
-    if (!user) throw new CommandError(t(this.errors.invalidUser))
-    if (!this.acceptSelf && user.id === author.id) throw new CommandError(t(this.errors.acceptSelf))
-    if (!this.acceptBot && user.bot) throw new CommandError(t(this.errors.acceptBot))
-    if (!this.acceptUser && !user.bot) throw new CommandError(t(this.errors.acceptUser))
-    if (!this.acceptDeveloper && PermissionUtils.isDev(client, user)) throw new CommandError(t(this.errors.acceptDeveloper), false)
+    if (!user) throw new CommandError(t("errors.invalidUser"))
+    if (!this.acceptSelf && user.id === author.id) throw new CommandError(t("errors.acceptSelf"))
+    if (!this.acceptBot && user.bot) throw new CommandError(t("errors.acceptBot"))
+    if (!this.acceptUser && !user.bot) throw new CommandError(t("errors.acceptUser"))
+    if (!this.acceptDeveloper && PermissionUtils.isDev(client, user)) throw new CommandError(t("errors.acceptDeveloper"), false)
 
     return user
   }

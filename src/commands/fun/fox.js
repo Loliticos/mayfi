@@ -1,11 +1,11 @@
 const { Command, MayfiEmbed } = require('../../')
 const fetch = require("node-fetch")
 
-module.exports = class Dog extends Command {
+module.exports = class Fox extends Command {
   constructor (client) {
     super({
-      name: 'dog',
-      aliases: ['cachorro'],
+      name: 'fox',
+      aliases: ['raposa'],
       category: 'fun',
     }, client)
   }

@@ -9,7 +9,7 @@ module.exports = class Help extends Command {
       parameters: [{
         type: 'string', full: true, required: false
       }]
-    }, client)
+    })
   }
 
   async run ({ t, author, channel, guild, prefix }, cmd) {

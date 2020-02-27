@@ -11,7 +11,7 @@ module.exports = class Avatar extends Command {
        required: false, 
        acceptBot: true
       }]
-    }, client)
+    })
   }
 
   async run ({ channel, author, t}, user = author) {

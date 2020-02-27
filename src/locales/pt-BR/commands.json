@@ -228,5 +228,12 @@
     "missingUser": "Você precisa me informar um usuário para eu colocar ele na minha lista negra 😈",
     "missingReason": "Você precisa me dar um motivo para colocar esse usuário na lista negra!",
     "successTitle": "Usuário adicionado á minha lista negra 😈"
+  },
+  "unblacklist": {
+    "commandDescription": "Remova um usuário da blacklist.",
+    "commandUsage": "<usuario>",
+    "success": "{{user}} foi removido da minha lista negra!",
+    "missingUser": "Você precisa informar um usuário para ser removido da lista negra.",
+    "notBlacklisted": "Este usuário não está na minha lista negra... Deixo ver denovo... Nop! Nada"
   }
 }

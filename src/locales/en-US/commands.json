@@ -228,5 +228,12 @@
     "missingUser": "You have to give me a user to blacklist!",
     "missingReason": "You have to give me a reason for blacklisting!",
     "successTitle": "User added to the blacklist!"
+  },
+  "unblacklist": {
+    "commandDescription": "Removes a user from the blacklist.",
+    "commandUsage": "<user>",
+    "success": "{{user}} has been removed from the blacklist!",
+    "missingUser": "You have to give me a user to remove from the blacklist!",
+    "notBlacklisted": "That user isn't blacklisted."
   }
 }

@@ -22,10 +22,6 @@ module.exports = class ClientOnMessage extends EventHandler {
         const args = fullCmd.slice(1)
         if (!fullCmd.length) return
 
-        const UserDatabase = await this.client.database.users.findOne({"_id": message.author.id})
-
-        console.log(UserDatabase)
-
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))
 

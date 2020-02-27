@@ -7,7 +7,9 @@ module.exports = class Avatar extends Command {
       aliases: ['pic', 'photo'],
       category: 'utility',
       parameters: [{
-       type: 'user', full: true, required: false, acceptBot: true
+       type: 'user', 
+       required: false, 
+       acceptBot: true
       }]
     }, client)
   }

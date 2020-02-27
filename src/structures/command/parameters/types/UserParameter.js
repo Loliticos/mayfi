@@ -1,6 +1,6 @@
 const Parameter = require('./Parameter.js')
 const CommandError = require('../../CommandError.js')
-const PermissionUtils = require('../../../../utils/Permissions.js')
+const PermissionUtils = require('../../../../utils/PermissionUtils.js')
 
 const MENTION_REGEX = /^(?:<@!?)?([0-9]{16,18})(?:>)?$/
 const defVal = (o, k, d) => typeof o[k] === 'undefined' ? d : o[k]
@@ -36,9 +36,8 @@ module.exports = class UserParameter extends Parameter {
     if (!this.acceptSelf && user.id === author.id) throw new CommandError(t(this.errors.acceptSelf))
     if (!this.acceptBot && user.bot) throw new CommandError(t(this.errors.acceptBot))
     if (!this.acceptUser && !user.bot) throw new CommandError(t(this.errors.acceptUser))
-    if (!this.acceptDeveloper && PermissionUtils.isDev(client, user)) throw new CommandError(t(this.errors.acceptDeveloper), false)
+    if (!this.acceptDeveloper && PermissionUtils.isDeveloper(client, user)) throw new CommandError(t(this.errors.acceptDeveloper), false)
 
-    console.log(user)
     return user
   }
 }

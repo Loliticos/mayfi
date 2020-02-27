@@ -19,6 +19,18 @@ module.exports = class MayfiClient extends Client {
     return command._run(context, args).catch(console.error)
   }
 
+  verifyUser (id) {
+    this.database.users.findOne({"_id": id}, (err, user) => {
+      if(!user) {
+        const newUser = new this.database.users({
+          _id: id
+        })
+
+        newUser.save()
+      }
+    })
+  }
+
   async initializeLoaders () {
     for (let Loader in Loaders) {
       let loader = new Loaders[Loader](this)

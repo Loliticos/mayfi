@@ -40,10 +40,10 @@ module.exports = class ClientOnMessage extends EventHandler {
         this.client.runCommand(command, context, args, language)
 
         const verifyUser = (id) => {
-            this.client.database.users.findOne({"_id": message.author.id}, (err, user) => {
+            this.client.database.users.findOne({"_id": id}, (err, user) => {
                 if(!user) {
                     const newUser = new this.client.database.users({
-                        _id: message.author.id
+                        _id: id
                     })
 
                     newUser.save()

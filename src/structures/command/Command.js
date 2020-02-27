@@ -24,7 +24,7 @@ module.exports = class Command {
         try {
             this.handleRequirements(context, args)
         } catch(e) {
-            this.error(context, e)
+            return this.error(context, e)
         }
 
         try {
@@ -36,7 +36,7 @@ module.exports = class Command {
         try {
           await this.run(context, ...args)
         } catch (e) {
-          this.error(context, e)
+          return this.error(context, e)
         }
     }
 

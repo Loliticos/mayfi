@@ -242,6 +242,7 @@
     "repYourself": "Você não pode dar reputaçã para você mesmo!",
     "repSuccess": "Você deu **1** reputação para **{{user.tag}}**",
     "alreadyGave": "Você não pode enviar outra reputação",
-    "youCanGiveAgain": "Você precisa esperar `{{cooldown}}` antes de enviar outra reputação"
+    "youCanGiveAgain": "Você precisa esperar `{{cooldown}}` antes de enviar outra reputação",
+    "typeAgain": "Oops... Você precisa digitar este comando novamente :( Acontece que o usuário que você mencionou não possuia dados na minha database"
   }
 }

@@ -33,6 +33,19 @@ module.exports = class Rep extends Command {
     try {
       let { reps: UserReps } = await this.client.database.users.findOne({_id: user.id})
 
+      if(!UserReps) {
+          const newUser = new this.client.database.users({
+            _id: user.id
+          })
+
+          newUser.save()
+
+          embed
+            .setTitle(t("errors:generic"))
+            .setDescription(t("commands:rep.typeAgain"))
+          return channel.send(embed)
+      }
+
       await Promise.all([
         this.client.database.users.updateOne({_id: author.id}, { lastRep: Date.now() }),
         this.client.database.users.updateOne({_id: user.id}, { reps: UserReps += 1})

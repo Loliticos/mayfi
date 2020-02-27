@@ -283,6 +283,7 @@
     "changedTo": "The logs channel has been set to **#{{channel.name}}**",
     "editedMessage": "A message was edited",
     "deletedMessage": "A message was deleted",
+    "message": "Message",
     "newMessage": "New Message",
     "oldMessage": "Old Message",
     "author": "Message author",

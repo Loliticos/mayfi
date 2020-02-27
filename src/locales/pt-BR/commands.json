@@ -285,6 +285,7 @@
     "deletedMessage": "Uma mensagem foi deletada",
     "newMessage": "Mensagem atualizada",
     "oldMessage": "Mensagem antiga",
+    "message": "Mensagem",
     "author": "Autor da mensagem",
     "channel": "Canal",
     "goToMessage": "Ir até a mensagem"

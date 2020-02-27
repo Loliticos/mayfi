@@ -1,6 +1,6 @@
 const { EventHandler, MayfiEmbed } = require('../');
 
-module.exports = class ClientOnReady extends EventHandler {
+module.exports = class MessageUpdate extends EventHandler {
     constructor(client) {
         super(client, 'messageUpdate')
     }

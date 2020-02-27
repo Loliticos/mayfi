@@ -30,13 +30,17 @@ module.exports = class Rep extends Command {
       return channel.send(embed)
     }
 
-    const { reps: UserReps } = await this.client.database.users.findOne({_id: user.id})
+    try {
+      const { reps: UserReps } = await this.client.database.users.findOne({_id: user.id})
 
-    await Promise.all([
-      this.client.database.users.updateOne({_id: author.id}, { lastRep: Date.now() }),
-      this.client.database.users.updateOne({_id: user.id}, { reps: UserReps += 1})
-    ])
+      await Promise.all([
+        this.client.database.users.updateOne({_id: author.id}, { lastRep: Date.now() }),
+        this.client.database.users.updateOne({_id: user.id}, { reps: UserReps += 1})
+      ])
 
-    channel.send(embed.setDescription(t('commands:rep.repSuccess', { user })))
+      channel.send(embed.setDescription(t('commands:rep.repSuccess', { user })))
+    } catch(err) {
+      throw new CommandError(t("errors:generic"))
+    }
   }
 }

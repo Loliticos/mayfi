@@ -13,6 +13,7 @@ module.exports = class Cat extends Command {
   async run ({ channel, author, t}) {
     const body = await fetch('https://api.thecatapi.com/v1/images/search').then(res => res.json())
     let embed = new MayfiEmbed(author)
+      .setTitle("🐱")
       .setImage(body[0].url)
     channel.send(embed)
     

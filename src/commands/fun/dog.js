@@ -12,7 +12,8 @@ module.exports = class Dog extends Command {
 
   async run ({ channel, author, t}) {
     const body = await fetch('https://dog.ceo/api/breeds/image/random').then(res => res.json())
-    let embed = new MayfiEmbed(author)
+    let embed = new MayfiEmbed(author) 
+      .setTitle("🐶")
       .setImage(body.message)
     channel.send(embed)
     

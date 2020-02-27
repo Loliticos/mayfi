@@ -221,5 +221,12 @@
     "commandUsage": "<prefix>",
     "missingPrefix": "Você precisa informar um prefixo á ser mudado!",
     "changedTo": "O prefixo foi mudado para `{{prefix}}`"
+  },
+  "blacklist": {
+    "commandDescription": "Adiciona um usuário na blacklist",
+    "commandUsage": "<usario> <motivo>",
+    "missingUser": "Você precisa me informar um usuário para eu colocar ele na minha lista negra 😈",
+    "missingReason": "Você precisa me dar um motivo para colocar esse usuário na lista negra!",
+    "successTitle": "Usuário adicionado á minha lista negra 😈"
   }
 }

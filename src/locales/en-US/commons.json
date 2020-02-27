@@ -1,5 +1,7 @@
 {
 	"usage": "Usage",
 	"heads": "Heads",
-	"tails": "Tails"
+	"tails": "Tails",
+	"point": "point",
+	"points": "points"
 }

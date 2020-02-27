@@ -248,6 +248,6 @@
   "reps": {
     "commandDescription": "Veja a quantidade de reputação que um usuário possue.",
     "commandUsage": "[usuário]",
-    "howMany": "`{{user.tag}}` possue {{reps}} pontos de reputação."
+    "howMany": "`{{user.tag}}` possue {{reps}} $t(commons:{{pointPoints}}) de reputação."
   }
 }

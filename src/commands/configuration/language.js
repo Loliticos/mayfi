@@ -1,5 +1,7 @@
 const { Command, Constants, MayfiEmbed } = require('../../')
-const languageCodes = Object.keys(this.client.i18next.store.data)
+const i18next = require('i18next')
+
+const languageCodes = () => Object.keys(i18next.store.data)
 
 module.exports = class LanguageConfig extends Command {
   constructor (client) {
@@ -31,7 +33,7 @@ module.exports = class LanguageConfig extends Command {
     let embed = new MayfiEmbed(author)
 
     try {
-      const databaseGuild = await this.client.database.guilds.updateOne({ _id: guild.id }, { language: lang })
+      await this.client.database.guilds.updateOne({ _id: guild.id }, { language: lang })
       embed.setTitle(t("commands:language.languageChangedTo", { language: lang }))
     } catch (e) {
       embed.setColor(Constants.ERROR_COLOR)

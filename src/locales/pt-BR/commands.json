@@ -14,5 +14,10 @@
   	"prefix": "Meu prefixo é `{{botPrefix}}`",
   	"youCanUse": "mas você também pode usar {{- botMention}} como um prefixo.",
   	"specificInformation": "Digite {{helpString}} para mais informações."
+  },
+  "avatar": {
+    "commandDescription": "Veja o avatar seu ou de um usuário.",
+    "commandUsage": "[usuário]",
+    "avatarMessage": "Avatar de `{{user.username}}` **| [Link]({{user.displayAvatarURL}})**"
   }
 }

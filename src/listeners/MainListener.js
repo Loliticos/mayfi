@@ -23,21 +23,16 @@ module.exports = class ClientOnMessage extends EventHandler {
         const args = fullCmd.slice(1)
         if (!fullCmd.length) return
 
-        verifyUser(message.author.id)
+        this.client.database.users.findOne({"_id": message.author.id}, (err, user) => {
+            if(!user) {
+                const newUser = new client.database.users({
+                    _id: message.author.id
+                })
 
-        const client = this.client
-
-        function verifyUser (id) {
-            client.database.users.findOne({"_id": id}, (err, user) => {
-                if(!user) {
-                    const newUser = new client.database.users({
-                    _id: id
-                    })
-
-                    newUser.save()
-                }   
-            })
-        }
+                newUser.save()
+            }   
+        })
+        
 
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))

@@ -24,8 +24,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         if (!fullCmd.length) return
 
         const user = await this.client.database.users.findOne({"_id": message.author.id})
-
-        console.log(user)
+        const guild = await this.client.database.guilds.findOne({"_id": message.guild.id})
 
         if(!user) {
             const newUser = new this.client.database.users({
@@ -33,8 +32,19 @@ module.exports = class ClientOnMessage extends EventHandler {
             })
 
             newUser.save()
-        } else {
-        }        
+        }
+
+        if(!guild) {
+            const newGuild = new this.client.database.guilds({
+                _id: message.guild.id
+            })
+
+            newGuild.save()
+        }
+
+        if(guild) console.log(guild)
+
+        if(user && user.blacklisted) return     
 
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))

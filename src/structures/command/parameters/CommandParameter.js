@@ -18,9 +18,7 @@ const normalizeParam = (p) => {
 module.exports = class CommandParameters {
   static parseOptions (params = []) {
     const length = params.length
-    const hasFlags = Array.isArray(params[length - 1])
     return {
-      flags: hasFlags ? params[length - 1].map(normalizeParam) : null,
       parameters: (hasFlags ? params.slice(0, length - 1) : params).map(normalizeParam)
     }
   }

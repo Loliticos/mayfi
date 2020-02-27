@@ -1,0 +1,18 @@
+{
+  "ping": {
+  	"commandDescription": "See my ping"
+  },
+  "help": {
+  	"commandDescription": "See informations about my commands or list them.",
+  	"commandUsage": "[command]",
+  	"commandNotFound": "I couldn't find a command with that name!",
+  	"noDescriptionProvided": "No description provided.",
+  	"footer": "<> = Necessary, [] = optional",
+  	"permissions": "Permissions",
+  	"botPermissions": "Bot permissions",
+  	"title": "Commands",
+  	"prefix": "My prefix it's `{{botPrefix}}`",
+  	"youCanUse": "but you can also use {{- botMention}} as a prefix.",
+  	"specificInformation": "Type {{helpString}} for more informations."
+  }
+}

@@ -95,7 +95,7 @@
     "commandDescription": "Remove um emoji do servidor atual.",
     "commandUsage": "<emoji>",
     "invalidEmoji": "Você precisa informar um emoji válido.",
-    "deleted": "O emoji {{emoji.name}} foi deletado.",
+    "deleted": "O emoji `{{emoji.name}}` foi deletado.",
     "error": "Eu não pude deletar este emoji."
   },
   "cat": {
@@ -275,5 +275,18 @@
     "commandDescription": "Faça a vaca falar algo!",
     "commandUsage": "<texto>",
     "noText": "Você precisa informar um texto!"
+  },
+  "logs": {
+    "commandDescription": "Seta o canal de logs.",
+    "commandUsage": "<canal>",
+    "missingChannel": "Você precisa informar um canal!",
+    "changedTo": "O canal de logs foi setado para **#{{channel.name}}**",
+    "editedMessage": "Uma mensagem foi editada",
+    "deletedMessage": "Uma mensagem foi deletada",
+    "newMessage": "Mensagem atualizada",
+    "oldMessage": "Mensagem antiga",
+    "author": "Autor da mensagem",
+    "channel": "Canal",
+    "goToMessage": "Ir até a mensagem"
   }
 }

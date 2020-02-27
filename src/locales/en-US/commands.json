@@ -95,7 +95,7 @@
     "commandDescription": "Delete an emoji in the current guild.",
     "commandUsage": "<emoji>",
     "invalidEmoji": "You need to inform a valid emoji.",
-    "deleted": "The emoji {{emoji.name}} has been deleted.",
+    "deleted": "The emoji `{{emoji.name}}` has been deleted.",
     "error": "I couldn't delete the emoji."
   },
   "cat": {
@@ -275,5 +275,18 @@
     "commandDescription": "Makes the cow say something!",
     "commandUsage": "<text>",
     "noText": "You need to give me a text!"
+  },
+  "logs": {
+    "commandDescription": "Sets the logs channel.",
+    "commandUsage": "<channel>",
+    "missingChannel": "You need to give me a channel!",
+    "changedTo": "The logs channel has been set to **#{{channel.name}}**",
+    "editedMessage": "A message was edited",
+    "deletedMessage": "A message was deleted",
+    "newMessage": "New Message",
+    "oldMessage": "Old Message",
+    "author": "Message author",
+    "channel": "Channel",
+    "goToMessage": "Go to the message"
   }
 }

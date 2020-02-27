@@ -153,5 +153,12 @@
     "noPermission": "Eu não tenho a permissão **$t(permissions:BAN_MEMBERS)** para banir este membro.",
     "successTitle": "Membro foi punido!",
     "cantSoftban": "Eu não posso punir este membro!"
+  },
+  "unban": {
+    "commandDescription": "Desbane um usuário",
+    "commandUsage": "<usuario>",
+    "missingUser": "Você precisa fornecer um usuário válido!",
+    "successTitle": "Usuário foi desbanido!",
+    "cantUnban": "Eu não posso desbanir esse usuário!"
   }
 }

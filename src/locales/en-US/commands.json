@@ -153,5 +153,12 @@
     "noPermission": "I'm missing the **$t(permissions:BAN_MEMBERS)** permission to softban this member.",
     "successTitle": "Member was softbanned!",
     "cantSoftban": "I can't softban this member!"
+  },
+  "unban": {
+    "commandDescription": "Unbans an user",
+    "commandUsage": "<user>",
+    "missingUser": "You must give me a valid user!",
+    "successTitle": "Member was unbanned!",
+    "cantUnban": "I can't unban this user!"
   }
 }

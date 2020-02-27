@@ -181,5 +181,14 @@
     "inviteLink": "**[Add](https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot)**",
     "supportServer": "Support server",
     "supportLink": "**[Join](https://discord.gg/tvN7cGJ)**"
+  },
+  "invite": {
+    "commandDescription": "Shows Mayfi invite link.",
+    "clickHere": "**Click here to invite me to your server**",
+    "noteThat": "Take note that you need the permission **$t(permissions:MANAGE_GUILD)** in order to invite me to your server."
+  },
+  "support": {
+    "commandDescription": "Shows Mayfi support server link.",
+    "clickHere": "**[Click here to join my support server](https://discord.gg/JZVmnqD)**"
   }
 }

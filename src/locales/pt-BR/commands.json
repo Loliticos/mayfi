@@ -181,5 +181,14 @@
     "inviteLink": "**[Add](https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot)**",
     "supportServer": "Servidor de suporte",
     "supportLink": "**[Entrar](https://discord.gg/tvN7cGJ)**"
+  },
+  "invite": {
+    "commandDescription": "Veja o convite da Mayfi.",
+    "clickHere": "**Clique aqui para me convidar para o seu servidor**",
+    "noteThat": "Lembrando que você precisa da permissão **$t(permissions:MANAGE_GUILD)** para me convidar ao seu servidor."
+  },
+  "support": {
+    "commandDescription": "Mostra o link do servidor de suporte da Mayfi.",
+    "clickHere": "**[Clique aqui para entrar no meu servidor de suporte](https://discord.gg/JZVmnqD)**"
   }
 }

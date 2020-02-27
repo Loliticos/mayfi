@@ -8,7 +8,7 @@ module.exports = class Coinflip extends Command {
   constructor (client) {
     super({
       name: 'coinflip',
-      category: 'fun',
+      category: 'games',
     }, client)
   }
 

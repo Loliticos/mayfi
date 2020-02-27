@@ -6,7 +6,7 @@ module.exports = class BlacklistCommand extends Command {
       name: 'blacklist',
       category: 'developers',
       hidden: true,
-      requirements: { devOnly: true, databaseOnly: true },
+      requirements: { onlyDevs: true, databaseOnly: true },
       parameters: [{
         type: 'user', acceptDeveloper: false, missingError: 'commands:blacklist.missingUser'
       }, {

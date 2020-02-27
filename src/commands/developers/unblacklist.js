@@ -6,7 +6,7 @@ module.exports = class Unblacklist extends Command {
       name: 'unblacklist',
       category: 'developers',
       hidden: true,
-      requirements: { devOnly: true, databaseOnly: true },
+      requirements: { onlyDevs: true, databaseOnly: true },
       parameters: [{
         type: 'user', showUsage: false, missingError: 'commands:unblacklist.missingUser'
       }]

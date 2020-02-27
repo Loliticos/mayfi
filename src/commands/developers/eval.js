@@ -10,7 +10,7 @@ module.exports = class Eval extends Command {
       aliases: ['execute'],
       category: 'developers',
       hidden: true,
-      requirements: { devOnly: true },
+      requirements: { onlyDevs: true },
       parameters: [{
         type: 'string', full: true, missingError: 'errors:missingParameters', showUsage: false
       }]

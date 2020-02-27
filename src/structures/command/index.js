@@ -5,5 +5,10 @@ module.exports = {
   CommandParameter: require('./parameters/CommandParameter.js'),
   CommandRequirements: require('./CommandRequirements.js'),
 
+  // Parameters
+  Parameter: require('./parameters/types/Parameter.js'),
+  MemberParameter: require('./parameters/types/MemberParameter.js'),
   StringParameter: require('./parameters/types/StringParameter.js'),
+  UserParameter: require('./parameters/types/UserParameter.js'),
+  GuildParameter: require('./parameters/types/GuildParameter.js')
 }

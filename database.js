@@ -24,7 +24,7 @@ const GuildSchema = new Schema({
 	logsChannel: { type: String, default: "false" }
 })
 
-parse (entity) {
+parse = (entity) => {
    return entity ? transformProps(entity.toObject({ versionKey: false }), castToString, '_id') : null
 }
 

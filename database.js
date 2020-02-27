@@ -21,5 +21,5 @@ const GuildSchema = new Schema({
 	logsChannel: { type: String, default: "false" }
 })
 
-module.exports.Users = model('users', UserSchema)
-module.exports.Guilds = model('guilds', GuildSchema)
+module.exports.users = model('users', UserSchema)
+module.exports.guilds = model('guilds', GuildSchema)

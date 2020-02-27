@@ -18,7 +18,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         
         if(!usedPrefix) return
 
-        const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/)
+        const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => a)
         const args = fullCmd.slice(1)
         if (!fullCmd.length) return
 

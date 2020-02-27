@@ -249,5 +249,26 @@
     "commandDescription": "See how much reputation an user has",
     "commandUsage": "[user]",
     "howMany": "`{{user.tag}}` has {{reps}} reputation $t(commons:{{pointPoints}})."
+  }, 
+   "hug": {
+    "commandDescription": "Hug an user!",
+    "commandUsage": "<user>",
+    "noMention": "You need to inform the user to be hugged!",
+    "title": "Hug",
+    "description": "{{hugger}} hugged {{huggedUser}}"
+  },
+   "kiss": {
+    "commandDescription": "Kiss an user!",
+    "commandUsage": "<user>",
+    "noMention": "You need to inform the user to be kissed!",
+    "title": "Kiss",
+    "description": "{{hugger}} kissed {{huggedUser}}"
+  },
+   "slap": {
+    "commandDescription": "Slap an user!",
+    "commandUsage": "<user>",
+    "noMention": "You need to inform the user to be slapped!",
+    "title": "Slap",
+    "description": "{{hugger}} slapped {{huggedUser}}"
   }
 }

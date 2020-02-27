@@ -249,5 +249,26 @@
     "commandDescription": "Veja a quantidade de reputação que um usuário possue.",
     "commandUsage": "[usuário]",
     "howMany": "`{{user.tag}}` possue {{reps}} $t(commons:{{pointPoints}}) de reputação."
+  },
+  "hug": {
+    "commandDescription": "Abrace um usuário!",
+    "commandUsage": "<usuario>",
+    "noMention": "Você precisa informar um usuário para abraçar!",
+    "title": "Abraço",
+    "description": "{{hugger}} abraçou {{huggedUser}}"
+  },
+  "kiss": {
+    "commandDescription": "Beije um usuário!",
+    "commandUsage": "<usuario>",
+    "noMention": "Você precisa informar um usuário para beijar!",
+    "title": "Abraço",
+    "description": "{{hugger}} beijou {{huggedUser}}"
+  },
+  "slap": {
+    "commandDescription": "Dê um tap em um usuário!",
+    "commandUsage": "<usuario>",
+    "noMention": "Você precisa informar um usuário para dar aquele tapa!",
+    "title": "Tapa",
+    "description": "{{hugger}} deu um tapa em {{huggedUser}}"
   }
 }

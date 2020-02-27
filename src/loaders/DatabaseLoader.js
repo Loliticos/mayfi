@@ -1,5 +1,3 @@
-const { Loader } = require('../')
-const { MongoDB } = require('../database')
 const mongoose = require("mongoose")
 
 module.exports = class DatabaseLoader {
@@ -15,22 +13,16 @@ module.exports = class DatabaseLoader {
       this.client.database = this.database
       return !!this.database
     } catch (e) {
-      this.logError(e)
+      console.log(e)
     }
     return false
   }
 
-  initializeDatabase (DBWrapper = MongoDB, options = {}) {
-    if (DBWrapper.envVars && !DBWrapper.envVars.every(v => {
-      if (!process.env[v]) this.log(`Database failed to load - Required environment variable "${v}" is not set.`, { color: 'red', tags: ['DB'] })
-      return !!process.env[v]
-    })) return false
-
-    this.database = new DBWrapper(options)
-    this.database.connect()
-      .then(() => this.log('Database connection established!', { color: 'green', tags: ['DB'] }))
+  initializeDatabase (MONGODB_URI = process.env.MONGODB_URI, options = {}) {
+    this.database = mongoose.connect(MONGODB_URI, options)
+      .then(() => console.log("Database connection established!"))
       .catch(e => {
-        this.logError('DB', e.message)
+        console.error(`[DB] ${e.message}`)
         this.database = null
       })
   }

@@ -21,5 +21,9 @@ const GuildSchema = new Schema({
 	logsChannel: { type: String, default: "false" }
 })
 
+UserSchema.methods.findOne = (id, callback) => {
+  return this.model('Users').findOne({ _id: id }, cb);
+}
+
 module.exports.Users = model('Users', UserSchema)
 module.exports.Guilds = model('Guilds', GuildSchema)

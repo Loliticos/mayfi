@@ -20,8 +20,7 @@ module.exports = class Rep extends Command {
   async run ({ channel, guild, author, t }, user) {
     const embed = new MayfiEmbed(author)
 
-    const { lastRep } = await this.client.database.users.findOne({_id: author.id})
-
+    let { lastRep } = await this.client.database.users.findOne({_id: author.id})
 
     if (Date.now() - lastRep < 86400000) {
       embed
@@ -31,7 +30,7 @@ module.exports = class Rep extends Command {
     }
 
     try {
-      const { reps: UserReps } = await this.client.database.users.findOne({_id: user.id})
+      let { reps: UserReps } = await this.client.database.users.findOne({_id: user.id})
 
       await Promise.all([
         this.client.database.users.updateOne({_id: author.id}, { lastRep: Date.now() }),

@@ -206,5 +206,13 @@
     "commandUsage": "<texto>",
     "noText": "Você precisa informar um texto para ser invertido!",
     "heresYourText": "Aqui está seu texto invertido: `{{reversedText}}`"
+  },
+  "language": {
+    "commandDescription": "Mude a linguagem do seu servidor.",
+    "commandUsage": "<linguagem>",
+    "noArguments": "Você precisa digitar uma linguagem válida. `PT-B || EN-US`",
+    "mustBe": "Você precisa digitar uma linguagem válida. `PT-B || EN-US`",
+    "title": "Idioma",
+    "languageChangedTo": "Idioma mudado para {{language}}"
   }
 }

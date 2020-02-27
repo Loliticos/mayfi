@@ -17,7 +17,7 @@ module.exports = class LanguageConfig extends Command {
       parameters: [{
         type: 'string', 
         full: true, 
-        whitelist: (arg) => languageCodes.some(l => l.toLowerCase() === arg.toLowerCase()),
+        whitelist: (arg) => languageCodes().some(l => l.toLowerCase() === arg.toLowerCase()),
         missingError: ({ t, prefix, author }) => {
         let embed = new MayfiEmbed(author)
           .setColor(Constants.ERROR_COLOR)

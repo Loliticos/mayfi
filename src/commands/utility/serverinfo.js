@@ -1,4 +1,4 @@
-const { Command, MayfiEmbed, MiscUtils } = require('../../')
+const { Command, MayfiEmbed } = require('../../')
 let moment = require("moment")
 
 module.exports = class Serverinfo extends Command {
@@ -26,14 +26,14 @@ module.exports = class Serverinfo extends Command {
       .addField(t("commands:guildinfo.roles"), guild.roles.size)
       .addField(t("commands:guildinfo.joinedAt"), `${moment(guild.joinedTimestamp).format('LLL')}\n(${moment(guild.joinedTimestamp).fromNow()})`, true)
       .addField(t("commands:guildinfo.createdAt"), `${moment(guild.createdAt).format('LLL')}\n(${moment(guild.createdAt).fromNow()})`, true)   
-      .addField(t('commands:guildinfo.members', { count: MiscUtils.formatNumber(guild.members.size, language) }), [
-        `${Constants.streaming} ${t('commands:guildinfo.streaming', { count: MiscUtils.formatNumber(guild.members.filter(m => m.game === 'streaming').size, language) })}`,
-        `${Constants.online} Online: ${MiscUtils.formatNumber(guild.members.filter(m => m.presence.status === 'online').size, language) }`,
-        `${Constants.idle} ${t('commands:guildinfo.idle', { count: MiscUtils.formatNumber(guild.members.filter(m => m.presence.status === 'idle').size, language) })}`,
-        `${Constants.dnd} ${t('commands:guildinfo.dnd', { count: MiscUtils.formatNumber(guild.members.filter(m => m.presence.status === 'dnd').size, language) })}`,
-        `${Constants.offline} Offline: ${MiscUtils.formatNumber(guild.members.filter(m => m.presence.status === 'offline').size, language)}\n`,
-        t('commands:guildinfo.users', { count: MiscUtils.formatNumber(guild.members.filter(m => !m.user.bot).size, language) }),
-        t('commands:guildinfo.bots', { count: MiscUtils.formatNumber(guild.members.filter(m => m.user.bot).size, language) })
+      .addField(t('commands:guildinfo.members', { count: guild.members.size }), [
+        `${Constants.streaming} ${t('commands:guildinfo.streaming', { count: guild.members.filter(m => m.game === 'streaming'.size })}`,
+        `${Constants.online} Online: ${guild.members.filter(m => m.presence.status === 'online'.size}`,
+        `${Constants.idle} ${t('commands:guildinfo.idle', { count: guild.members.filter(m => m.presence.status === 'idle').size, language })}`,
+        `${Constants.dnd} ${t('commands:guildinfo.dnd', { count: guild.members.filter(m => m.presence.status === 'dnd').size })}`,
+        `${Constants.offline} Offline: ${guild.members.filter(m => m.presence.status === 'offline').size}\n`,
+        t('commands:guildinfo.users', { count: guild.members.filter(m => !m.user.bot).size }),
+        t('commands:guildinfo.bots', { count: guild.members.filter(m => m.user.bot).size })
       ].join('\n'))       
       .setThumbnail(guild.iconURL)
 

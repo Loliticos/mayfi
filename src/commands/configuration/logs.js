@@ -20,7 +20,7 @@ module.exports = class Logs extends Command {
     }, client)
   }
 
-  async run ({ channel, author, guild, t }, channel) {
+  async run ({ message, author, guild, t }, channel) {
 
     let embed = new MayfiEmbed(author)
 
@@ -32,7 +32,7 @@ module.exports = class Logs extends Command {
         .setTitle(t('errors:generic'))
     }
 
-    channel.send(embed)
+    message.channel.send(embed)
 
 
   }

@@ -14,5 +14,39 @@
   	"prefix": "My prefix it's `{{botPrefix}}`",
   	"youCanUse": "but you can also use {{- botMention}} as a prefix.",
   	"specificInformation": "Type {{helpString}} for more informations."
+  },
+  "avatar": {
+    "commandDescription": "Sees the avatar from an user.",
+    "commandUsage": "[user]",
+    "avatarMessage": "Avatar from `{{user.username}}` **| [Link]({{user.displayAvatarURL}})**"
+  },
+  "guildinfo": {
+    "commandDescription": "See some informations about a guild.",
+    "commandUsage": "[guild]",
+    "owner": "Server creator",
+    "channels": "Channels size",
+    "roles": "Roles size",
+    "region": "Region",
+    "joinedAt": "I joined this server",
+    "invalidOwner": "Invalid owner.",
+    "createdAt": "Created at",
+    "members": "Members ({{count}})",
+    "streaming": "Streaming: **{{count}}**",
+    "idle": "Idle: **{{count}}**",
+    "dnd": "Busy: **{{count}}**",
+    "users": "Users: **{{count}}**",
+    "bots": "Bots: **{{count}}**"
+  },
+  "userinfo": {
+    "commandDescription": "See some informations about an user.",
+    "commandUsage": "[user]",
+    "dnd": "{{status}} Busy",
+    "idle": "{{status}} Idle",
+    "online": "{{status}} Online",
+    "offline": "{{status}} Offline",
+    "createdAt": "Account created",
+    "joinedAt": "Joined",
+    "playing": "Playing",
+    "notPlaying": "This user isn't playing anything."
   }
 }

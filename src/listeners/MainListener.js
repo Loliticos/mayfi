@@ -1,4 +1,5 @@
 const { EventHandler, CommandContext }  = require('../')
+const mongoose = require("mongoose")
 
 module.exports = class ClientOnMessage extends EventHandler {
     constructor(client) {
@@ -22,6 +23,8 @@ module.exports = class ClientOnMessage extends EventHandler {
         const args = fullCmd.slice(1)
         if (!fullCmd.length) return
 
+        verifyUser(message.author.id)
+
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))
 
@@ -35,5 +38,18 @@ module.exports = class ClientOnMessage extends EventHandler {
 
         console.log(`[Commands] "${message.content}" (${command.constructor.name}) ran by "${message.author.tag}" (${message.author.id}) on guild "${message.guild.name}" (${message.guild.id}) channel "#${message.channel.name}" (${message.channel.id})`)
         this.client.runCommand(command, context, args, language)
+
+        const verifyUser = (id) => {
+            this.client.database.users.findOne({"_id": message.author.id}, (err, user) => {
+                if(!user) {
+                    const newUser = new this.client.database.users({
+                        _id: message.author.id
+                    })
+
+                    newUser.save()
+                }
+            })  
+        }
     }
 }
+

@@ -18,11 +18,7 @@ module.exports = class LanguageConfig extends Command {
         type: 'string', 
         full: true, 
         whitelist: (arg) => languageCodes().some(l => l.toLowerCase() === arg.toLowerCase()),
-        missingError: ({ t, prefix, author }) => {
-        let embed = new MayfiEmbed(author)
-          .setColor(Constants.ERROR_COLOR)
-          .setTitle(t("commands:language.mustBe"))
-        }
+        missingError: "commands:language.mustbe"
       }]
     }, client)
   }

@@ -144,5 +144,14 @@
     "purgedMemberSingular": "Purged **{{count}}** message sent by **{{user}}**.",
     "purgedMemberPlural": "Purged **{{count}}** messages sent by **{{user}}**.",
     "invalidNumber": "You have to give me a number between 1 and 100!"
+  },
+  "softban": {
+    "commandDescription": "Bans a member, removes all of their messages and then unbans them.",
+    "commandUsage": "<member> <reason>",
+    "missingUser": "You have to give me a member to softban!",
+    "missingReason": "You have to give me a reason for softbanning!",
+    "noPermission": "I'm missing the **$t(permissions:BAN_MEMBERS)** permission to softban this member.",
+    "successTitle": "Member was softbanned!",
+    "cantSoftban": "I can't softban this member!"
   }
 }

@@ -7,8 +7,8 @@ module.exports = class ClientOnMessage extends EventHandler {
     }
 
     async run(message) {
-        const user = await this.client.database.users.findOne({"_id": message.author.id})
-        const guild = await this.client.database.guilds.findOne({"_id": message.guild.id})
+        const user = await this.client.database.users.findOne({ _id: message.author.id })
+        const guild = await this.client.database.guilds.findOne({ _id: message.guild.id })
 
         let prefix = message.channel.type === "dm" ? '' : guild ? guild.prefix : "mc!"
 

@@ -8,7 +8,7 @@ const CommandParameters = require("./parameters/CommandParameter.js")
 let Utils = require('../../utils')
 
 module.exports = class Command {
-    constructor(client, opts) {
+    constructor(opts, client) {
         const options = Utils.createOptionHandler('Command', opts)
         this.name = options.required('name')
         this.aliases = options.optional('aliases')

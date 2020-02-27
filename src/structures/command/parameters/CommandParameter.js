@@ -80,7 +80,6 @@ module.exports = class CommandParameters {
       }
     }
 
-    console.log(`Loliticos top ${parsedArg}`)
 
     return parsedArg
   }

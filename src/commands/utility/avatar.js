@@ -2,7 +2,7 @@ const { Command, MayfiEmbed } = require('../../')
 
 module.exports = class Avatar extends Command {
   constructor (client) {
-    super(client, {
+    super({
       name: 'avatar',
       aliases: ['pic', 'photo'],
       category: 'utility',
@@ -11,7 +11,7 @@ module.exports = class Avatar extends Command {
        required: false, 
        acceptBot: true
       }]
-    })
+    }, client)
   }
 
   async run ({ channel, author, t}, userl = author) {

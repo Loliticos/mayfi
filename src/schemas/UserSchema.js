@@ -18,4 +18,4 @@ const UserSchema = new Schema({
   lastDBLBonusClaim: Number
 })
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = model('User', UserSchema)

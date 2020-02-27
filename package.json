@@ -12,6 +12,7 @@
     "mathjs": "^6.6.1",
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
+    "mongoose": "^5.9.2",
     "node-fetch": "^2.6.0",
     "transform-props": "^1.0.1"
   },

@@ -1,10 +1,11 @@
 const { Loader } = require('../')
 const { MongoDB } = require('../database')
+const mongoose = require("mongoose")
 
 module.exports = class DatabaseLoader {
   constructor (client) {
     this.client = client
-    
+
     this.database = null
   }
 

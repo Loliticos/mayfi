@@ -25,7 +25,7 @@ module.exports = class ClientOnReady extends EventHandler {
     	.addField(t("commands:logs.author"), newMessage.author)
     	.addField(t("commands:logs.channel"), newMessage.channel)
     	.addField(t("commands:logs.oldMessage"), oldMessage.content)
-    	.addField(t("commands:logs.newMessage") newMessage.content)
+    	.addField(t("commands:logs.newMessage"), newMessage.content)
   		.setFooter(oldMessage.author.tag)
   		this.client.channels.get(logsChannel).send(embed)
     }

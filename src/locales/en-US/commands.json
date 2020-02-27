@@ -160,5 +160,8 @@
     "missingUser": "You must give me a valid user!",
     "successTitle": "Member was unbanned!",
     "cantUnban": "I can't unban this user!"
+  },
+  "fox": {
+    "commandDescription": "What does the fox say ?"
   }
 }

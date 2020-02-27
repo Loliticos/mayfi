@@ -160,5 +160,8 @@
     "missingUser": "Você precisa fornecer um usuário válido!",
     "successTitle": "Usuário foi desbanido!",
     "cantUnban": "Eu não posso desbanir esse usuário!"
+  },
+  "fox": {
+    "commandDescription": "O que a raposa fala ?"
   }
 }

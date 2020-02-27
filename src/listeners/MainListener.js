@@ -25,7 +25,7 @@ module.exports = class ClientOnMessage extends EventHandler {
 
         this.client.database.users.findOne({"_id": message.author.id}, (err, user) => {
             if(!user) {
-                const newUser = new client.database.users({
+                const newUser = new this.client.database.users({
                     _id: message.author.id
                 })
 

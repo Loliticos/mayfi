@@ -16,6 +16,8 @@ module.exports = class Inversetext extends Command {
   async run ({ channel, t, author }, text) {
     const embed = new MayfiEmbed(author)
 
+    console.log(text)
+
     try {
       const reversedText = reverse(text)
 

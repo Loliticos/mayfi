@@ -1,4 +1,5 @@
 const { Command, MayfiEmbed, CommandError, Constants } = require('../../')
+const moment = require("moment")
 
 module.exports = class Rep extends Command {
   constructor (client) {

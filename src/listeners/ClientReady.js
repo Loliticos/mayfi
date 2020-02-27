@@ -12,6 +12,14 @@ module.exports = class ClientOnReady extends EventHandler {
           {
             name: `Mayfi Canary | Version ${process.env.MAYFI_VERSION}`,
             type: 'WATCHING'
+          },
+          {
+            name: `Mayfi Canary | ${this.client.guilds.size} Guilds`,
+            type: "LISTENING"
+          },
+          {
+            name: `Mayfi Canary | ${this.client.users.size} Users`,
+            type: "LISTENING"
           }
         ]
 

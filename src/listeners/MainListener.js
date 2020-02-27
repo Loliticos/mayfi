@@ -10,12 +10,21 @@ module.exports = class ClientOnMessage extends EventHandler {
         let prefix = message.channel.type === "dm" ? '' : 'mc!'
 
         if (message.author.bot) return
-
-        let args = message.content.slice(prefix.length).trim().split(/ /g)
-        let commandname = args.shift().toLowerCase()
-        let command = this.client.commands.get(commandname) || this.client.commands.get(this.client.aliases.get(commandname))
+        
         const language = "pt-BR"
-        if(!command) return
+        const botMention = this.client.user.toString()
+
+        const mc = (...m) => m.some(st => message.content.startsWith(st))
+        const usedPrefix = mc(botMention, `<@!${this.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
+        
+        if(!usedPrefix) return
+
+        const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/)
+        const args = fullCmd.slice(1)
+        if (!fullCmd.length) return
+
+        const cmd = fullCmd[0].toLowerCase().trim()
+        const command = this.client.commands.find(c => c.name.toLowerCase() === cmd || (c.aliases && c.aliases.includes(cmd)))
 
         const context = new CommandContext({ 
             client: this.client,

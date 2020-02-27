@@ -59,5 +59,28 @@
     "commandDescription": "Veja o ícone de um servidor!",
     "commandUsage": "[servidor]",
     "noImage": "Este servidor não possui uma imagem!"
+  },
+  "github": {
+    "commandDescription": "Veja o github de um usuário.",
+    "commandUsage": "<nome>",
+    "missingParameters": "Você precisa informar um nome válido",
+    "userNotFound": "Nenhum usuário com o nome '{{user}}' encontrado.",
+    "noBio": "Nenhuma descrição encontrada para esse usuário.",
+    "publicRepos": "Repositorios públicos:",
+    "createdAt": "Conta criada:",
+    "followers": "Quantidade de seguidores:",
+    "following": "Esse usuário está seguindo:",
+    "users": "Usuários",
+    "unknownLocation": "Localização desconhecida"
+  },
+  "channelinfo": {
+    "commandDescription": "Veja as informações de um canal.",
+    "commandUsage": "[canal]",
+    "createdAt": "Criado",
+    "position": "Position",
+    "nsfwYes": "Sim",
+    "nsfwNo": "Não",
+    "topic": "Tópico",
+    "noTopic": "Este canal não possue um tópico."
   }
 }

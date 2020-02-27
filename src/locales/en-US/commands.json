@@ -59,5 +59,28 @@
     "commandDescription": "Sees the guild icon!",
     "commandUsage": "[server]",
     "noImage": "This guild has no icon!"
+  },
+  "github": {
+    "commandDescription": "Sees the github of an user.",
+    "commandUsage": "<name>",
+    "missingParameters": "You need to inform the name of a Github user.",
+    "userNotFound": "No user with the name '{{user}}' found.",
+    "noBio": "No bio found for this user.",
+    "publicRepos": "Public repositorys:",
+    "createdAt": "Account created at:",
+    "followers": "Amount of followers:",
+    "following": "This user is following:",
+    "users": "Users",
+    "unknownLocation": "Unknown Location"
+  },
+  "channelinfo": {
+    "commandDescription": "See informations about a channel.",
+    "commandUsage": "[channel]",
+    "createdAt": "Created",
+    "position": "Position",
+    "nsfwYes": "Yes",
+    "nsfwNo": "No",
+    "topic": "Topic",
+    "noTopic": "This channel doesn't have a topic."
   }
 }

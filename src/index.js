@@ -1,3 +1,4 @@
+
 const CommandStructures = require('./structures/command/')
 
 module.exports = {
@@ -14,6 +15,7 @@ module.exports = {
   CommandLoader: require('./loaders/CommandLoader.js'),
   ListenerLoader: require("./loaders/ListenerLoader.js"),
   LocaleLoader: require("./loaders/LocaleLoader.js"),
+  DatabaseLoader: require("./DatabaseLoader.js"),
 
   // Utils
   Constants: require("./utils/Constants.js"),

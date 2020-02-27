@@ -163,5 +163,10 @@
   },
   "fox": {
     "commandDescription": "O que a raposa fala ?"
+  },
+  "poll": {
+    "commandDescription": "Faça uma enquete interativa no seu servidor!",
+    "commandUsage": "<enquete> [| sim | não]",
+    "noArguments": "Você precisa informar o título da enquete!"
   }
 }

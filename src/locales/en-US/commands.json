@@ -163,5 +163,10 @@
   },
   "fox": {
     "commandDescription": "What does the fox say ?"
+  },
+  "poll": {
+    "commandDescription": "Starts an interactive poll in your discord server",
+    "commandUsage": "<poll> [| yes | no]",
+    "noArguments": "You need to give me the poll title!"
   }
 }

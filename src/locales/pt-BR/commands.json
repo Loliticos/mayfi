@@ -171,6 +171,6 @@
   },
   "coinflip": {
     "commandDescription": "Jogue um jogo de cara ou coroa!",
-    "landed": "A moeda caiu em {{side}}"
+    "landed": "A moeda caiu em **$t(commons:{{side}})**!"
   }
 }

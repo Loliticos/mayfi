@@ -17,7 +17,7 @@ module.exports = class Coinflip extends Command {
     const result = sides[Math.floor(Math.random() * sides.length)]
     let embed = new MayfiEmbed(author)
       .setDescription(t("commands:coinflip.landed", { side: result }))
-      .setImage(coins[result])
+      .setThumbnail(coins[result])
     channel.send(embed)
     
   }

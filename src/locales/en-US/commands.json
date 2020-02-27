@@ -171,6 +171,6 @@
   },
   "coinflip": {
     "commandDescription": "Play a head or tails game!",
-    "landed": "The coin landed on {{side}}"
+    "landed": "The coin landed on **$t(commons:{{side}})**!"
   }
 }

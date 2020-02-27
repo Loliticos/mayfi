@@ -31,9 +31,9 @@ module.exports = class Rep extends Command {
     }
 
     try {
-      let { reps: UserReps } = await this.client.database.users.findOne({_id: user.id})
+      let userData = await this.client.database.users.findOne({_id: user.id})
 
-      if(!UserReps) {
+      if(!userData) {
           const newUser = new this.client.database.users({
             _id: user.id
           })
@@ -48,7 +48,7 @@ module.exports = class Rep extends Command {
 
       await Promise.all([
         this.client.database.users.updateOne({_id: author.id}, { lastRep: Date.now() }),
-        this.client.database.users.updateOne({_id: user.id}, { reps: UserReps += 1})
+        this.client.database.users.updateOne({_id: user.id}, { reps: userData.reps += 1})
       ])
 
       channel.send(embed.setDescription(t('commands:rep.repSuccess', { user })))

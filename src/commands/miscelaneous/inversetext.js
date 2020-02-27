@@ -8,7 +8,7 @@ module.exports = class Inversetext extends Command {
       aliases: ['reversetext'],
       category: 'miscelaneous',
       parameters: [{
-        type: 'string', required: true, missingError: 'commands:inversetext.noText', maxLength: 500
+        type: 'string', required: true, full: true, missingError: 'commands:inversetext.noText', maxLength: 500
       }]
     }, client)
   }

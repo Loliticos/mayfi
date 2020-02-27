@@ -82,5 +82,13 @@
     "nsfwNo": "Não",
     "topic": "Tópico",
     "noTopic": "Este canal não possue um tópico."
+  },
+  "createemoji": {
+    "commandDescription": "Cria um emoji para este servidor.",
+    "commandUsage": "<url do emoji> <nome do emoji>",
+    "noImage": "Você precisa informar uma imagem válida para o emoji.",
+    "noName": "Você precisa informar um nome para o emoji.",
+    "created": "Emoji {{emoji}} criado.",
+    "error": "Eu não pude criar o emoji."
   }
 }

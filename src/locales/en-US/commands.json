@@ -82,5 +82,13 @@
     "nsfwNo": "No",
     "topic": "Topic",
     "noTopic": "This channel doesn't have a topic."
+  },
+  "createemoji": {
+    "commandDescription": "Create an emoji in the current guild.",
+    "commandUsage": "<emoji url> <emoji name>",
+    "noImage": "You need to inform a valid image for the emoji.",
+    "noName": "You need to inform a name for the emoji.",
+    "created": "Emoji {{emoji}} created.",
+    "error": "I couldn't create the emoji."
   }
 }

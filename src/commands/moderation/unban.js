@@ -15,10 +15,10 @@ module.exports = class Unban extends Command {
 
   async run ({ channel, guild, author, t }, user) {
     const embed = new MayfiEmbed(author)
-    await guild.unban(user).then(async bannedMember => {
+    await guild.unban(user).then(async unbannedMember => {
         embed
           .setTitle(t('commands:unban.successTitle'))
-          .setDescription(`${softbannedMember} - \`${reason}\``)
+          .setDescription(`${unbannedMember} - \`${reason}\``)
     }).catch(err => {
       embed
         .setColor(Constants.ERROR_COLOR)

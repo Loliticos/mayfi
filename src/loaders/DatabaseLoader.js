@@ -1,5 +1,4 @@
 const mongoose = require("mongoose")
-const Database = require("../database/MongoDB.js")
 
 module.exports = class DatabaseLoader {
   constructor (client) {

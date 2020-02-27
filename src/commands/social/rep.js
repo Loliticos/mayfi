@@ -22,12 +22,12 @@ module.exports = class Rep extends Command {
 
     const { lastRep } = await this.client.database.users.findOne({_id: author.id})
 
-    embed.setDescription(t('commands:rep.repSuccess', { user }))
 
     if (Date.now() - lastRep < 86400000) {
       embed
         .setTitle(t("commands:rep.alreadyGave"))
         .setDescription(t("commands:rep.youCanGiveAgain", { cooldown: moment.duration(86400000 - (now - lastRep)).format('h[h] m[m] s[s]') }))
+      return channel.send(embed)
     }
 
     const dataUser = await this.client.database.users.findOne({_id: user.id})
@@ -36,6 +36,7 @@ module.exports = class Rep extends Command {
       this.client.database.users.updateOne({_id: author.id}, { lastRep: Date.now() }),
       this.client.database.users.updateOne({_id: user.id}, { reps: dataUser.reps += 1})
     ])
-    channel.send(embed)
+    
+    channel.send(embed.setDescription(t('commands:rep.repSuccess', { user })))
   }
 }

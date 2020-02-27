@@ -90,5 +90,59 @@
     "noName": "You need to inform a name for the emoji.",
     "created": "Emoji {{emoji}} created.",
     "error": "I couldn't create the emoji."
+  },
+  "deleteemoji": {
+    "commandDescription": "Delete an emoji in the current guild.",
+    "commandUsage": "<emoji>",
+    "invalidEmoji": "You need to inform a valid emoji.",
+    "deleted": "The emoji {{emoji.name}} has been deleted.",
+    "error": "I couldn't delete the emoji."
+  },
+  "cat": {
+    "commandDescription": "See cute cats images!"
+  },
+  "dog": {
+    "commandDescription": "See cute dogs images!"
+  },
+  "kick": {
+    "commandDescription": "Kicks a member from this server.",
+    "commandUsage": "<member> <reason>",
+    "missingUser": "You have to give me a member to kick!",
+    "missingReason": "You have to give me a reason for kicking!",
+    "noPermission": "I'm missing the **$t(permissions:KICK_MEMBERS)** permission to kick this member.",
+    "successTitle": "Member was kicked!",
+    "cantKick": "I can't kick this member!"
+  },
+  "lock": {
+    "commandDescription": "Locks a channel.",
+    "commandUsage": "<channel>",
+    "successTitle": "Locked",
+    "successDescription": "Locked the channel **#{{channel.name}}** successfuly.",
+    "cantLock": "I can't lock this channel!"
+  },
+  "unlock": {
+    "commandDescription": "Unlocks a channel.",
+    "commandUsage": "<channel>",
+    "successTitle": "Unlock",
+    "successDescription": "Unlocked the channel **#{{channel.name}}** successfuly.",
+    "cantLock": "I can't unlock this channel!"
+  },
+  "ban": {
+    "commandDescription": "Bans a member from this server.",
+    "commandUsage": "<member> <reason>",
+    "missingUser": "You have to give me a member to ban!",
+    "missingReason": "You have to give me a reason for banning!",
+    "noPermission": "I'm missing the **$t(permissions:BAN_MEMBERS)** permission to ban this member.",
+    "successTitle": "Member was banned!",
+    "cantBan": "I can't ban this member!"
+  },
+  "purge": {
+    "commandDescription": "Purges messages from a channel. (Default: 50)",
+    "commandUsage": "[number of messages] [user]",
+    "purgedSingular": "Purged **{{count}}** message.",
+    "purgedPlural": "Purged **{{count}}** messages.",
+    "purgedMemberSingular": "Purged **{{count}}** message sent by **{{user}}**.",
+    "purgedMemberPlural": "Purged **{{count}}** messages sent by **{{user}}**.",
+    "invalidNumber": "You have to give me a number between 1 and 100!"
   }
 }

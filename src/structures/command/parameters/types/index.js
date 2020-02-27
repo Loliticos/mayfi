@@ -4,5 +4,6 @@ module.exports = {
   string: require('./StringParameter.js'),
   user: require('./UserParameter.js'),
   url: require('./URLParameter.js'),
-  channel: require('./ChannelParameter.js')
+  channel: require('./ChannelParameter.js'),
+  emoji: require('./EmojiParameter.js')
 }

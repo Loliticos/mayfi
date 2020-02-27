@@ -90,5 +90,59 @@
     "noName": "Você precisa informar um nome para o emoji.",
     "created": "Emoji {{emoji}} criado.",
     "error": "Eu não pude criar o emoji."
+  },
+  "deleteemoji": {
+    "commandDescription": "Remove um emoji do servidor atual.",
+    "commandUsage": "<emoji>",
+    "invalidEmoji": "Você precisa informar um emoji válido.",
+    "deleted": "O emoji {{emoji.name}} foi deletado.",
+    "error": "Eu não pude deletar este emoji."
+  },
+  "cat": {
+    "commandDescription": "Veja fotos de gatinhos!"
+  },
+  "dog": {
+    "commandDescription": "Veja fotos de doguinhos!"
+  },
+  "purge": {
+    "commandDescription": "Limpa as mensagens de um usuário ou de um canal",
+    "commandUsage": "[quantidade de mensagens] [usuário]",
+    "purgedSingular": "Limpado **{{count}}** mensagem.",
+    "purgedPlural": "Limpado **{{count}}** mensagens.",
+    "purgedMemberSingular": "Limpado **{{count}}** mensagem enviada por **{{user}}**.",
+    "purgedMemberPlural": "Limpado **{{count}}** mensagens enviada por **{{user}}**.",
+    "invalidNumber": "Você precisa informar um número entre 1 e 100!"
+  },
+  "lock": {
+    "commandDescription": "Tranque um canal.",
+    "commandUsage": "<canal>",
+    "successTitle": "Trancado",
+    "successDescription": "Tranquei o canal **#{{channel.name}}** com sucesso.",
+    "cantLock": "Eu não posso trancar esse canal!"
+  },
+  "unlock": {
+    "commandDescription": "Destranque um canal.",
+    "commandUsage": "<canal>",
+    "successTitle": "Destrancado",
+    "successDescription": "Destranquei o canal **#{{channel.name}}** com sucesso.",
+    "cantLock": "Eu não posso destrancar esse canal!"
+  },
+  "kick": {
+    "commandDescription": "Expulse um membro desse servidor.",
+    "commandUsage": "<membro> <razão>",
+    "missingUser": "Você precisa informar um usuário para ser expulso!",
+    "missingReason": "Você precisa informar o motivo para o usuário ser expulso!",
+    "noPermission": "Eu não tenho a permissão **$t(permissions:KICK_MEMBERS)** para expulsar este membro.",
+    "successTitle": "Membro foi expulso!",
+    "cantKick": "Eu não posso expulsar esse membro!"
+  },
+  "ban": {
+    "commandDescription": "Bane um membro desse servidor.",
+    "commandUsage": "<membro> <razão>",
+    "missingUser": "Você precisa informar um membro para ser banido!",
+    "missingReason": "Você precisa informar o motivo para o membro ser banido!",
+    "noPermission": "Eu não tenho a permissão **$t(permissions:BAN_MEMBERS)** para banir este membro.",
+    "successTitle": "Membro foi banido!",
+    "cantBan": "Eu não posso banir este membro!"
   }
 }

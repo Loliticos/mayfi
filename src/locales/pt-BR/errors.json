@@ -30,5 +30,6 @@
   "needSmallerString": "Você precisa me informar uma frase com menos de {{number}} caracteres.",
   "invalidURL": "Você precisa me informar uma URL válida!",
   "invalidImageLink": "Você precisa informar o link de uma imagem válida!",
-  "imageParsingError": "Um erro ocorreu enquanto carregava a imagem."
+  "imageParsingError": "Um erro ocorreu enquanto carregava a imagem.",
+  "acceptSelf": "You need to inform a user that isn't you"
 }

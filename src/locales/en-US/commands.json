@@ -250,25 +250,30 @@
     "commandUsage": "[user]",
     "howMany": "`{{user.tag}}` has {{reps}} reputation $t(commons:{{pointPoints}})."
   }, 
-   "hug": {
+  "hug": {
     "commandDescription": "Hug an user!",
     "commandUsage": "<user>",
     "noMention": "You need to inform the user to be hugged!",
     "title": "Hug",
     "description": "{{hugger}} hugged {{huggedUser}}"
   },
-   "kiss": {
+  "kiss": {
     "commandDescription": "Kiss an user!",
     "commandUsage": "<user>",
     "noMention": "You need to inform the user to be kissed!",
     "title": "Kiss",
     "description": "{{hugger}} kissed {{huggedUser}}"
   },
-   "slap": {
+  "slap": {
     "commandDescription": "Slap an user!",
     "commandUsage": "<user>",
     "noMention": "You need to inform the user to be slapped!",
     "title": "Slap",
     "description": "{{hugger}} slapped {{huggedUser}}"
+  },
+  "cowsay": {
+    "commandDescription": "Makes the cow say something!",
+    "commandUsage": "<text>",
+    "noText": "You need to give me a text!"
   }
 }

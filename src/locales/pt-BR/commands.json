@@ -270,5 +270,10 @@
     "noMention": "Você precisa informar um usuário para dar aquele tapa!",
     "title": "Tapa",
     "description": "{{hugger}} deu um tapa em {{huggedUser}}"
+  },
+  "cowsay": {
+    "commandDescription": "Faça a vaca falar algo!",
+    "commandUsage": "<texto>",
+    "noText": "Você precisa informar um texto!"
   }
 }

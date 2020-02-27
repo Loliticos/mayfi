@@ -26,7 +26,6 @@ module.exports = class UserParameter extends Parameter {
 
   static parse (arg, { t, client, author, guild }) {
     if (!arg) return
-    console.log("Ryioka vadia")
     const regexResult = MENTION_REGEX.exec(arg)
     const id = regexResult && regexResult[1]
     const findMember = guild.members.find(m => m.user.username.toLowerCase().includes(arg.toLowerCase()) || m.displayName.toLowerCase().includes(arg.toLowerCase()))
@@ -37,7 +36,6 @@ module.exports = class UserParameter extends Parameter {
     if (!this.acceptBot && user.bot) throw new CommandError(t(this.errors.acceptBot))
     if (!this.acceptUser && !user.bot) throw new CommandError(t(this.errors.acceptUser))
     if (!this.acceptDeveloper && PermissionUtils.isDeveloper(client, user)) throw new CommandError(t(this.errors.acceptDeveloper), false)
-      console.log(`Ryioka vadia ${user}`)
     return user
   }
 }

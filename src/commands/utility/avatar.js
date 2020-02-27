@@ -14,14 +14,14 @@ module.exports = class Avatar extends Command {
     })
   }
 
-  async run ({ channel, author, t}, user = author) {
+  async run ({ channel, author, t}, userl = author) {
 
-    console.log(user)
+    console.log(userl)
 
-    let embed = new MayfiEmbed(user)
-    .setTitle(user.tag)
-    .setDescription(t("commands:avatar.avatarMessage", { user }))
-    .setImage(user.displayAvatarURL)
+    let embed = new MayfiEmbed(userl)
+    .setTitle(userl.tag)
+    .setDescription(t("commands:avatar.avatarMessage", { userl }))
+    .setImage(userl.displayAvatarURL)
 
     channel.send(embed).then(() => channel.stopTyping())
         

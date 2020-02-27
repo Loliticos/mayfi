@@ -35,7 +35,7 @@ module.exports = class UserParameter extends Parameter {
     if (!this.acceptSelf && user.id === author.id) throw new CommandError(t(this.errors.acceptSelf))
     if (!this.acceptBot && user.bot) throw new CommandError(t(this.errors.acceptBot))
     if (!this.acceptUser && !user.bot) throw new CommandError(t(this.errors.acceptUser))
-    if (!this.acceptDeveloper && PermissionUtils.isDeveloper(client, user)) throw new CommandError(t(this.errors.acceptDeveloper), false)
+    if (!this.acceptDeveloper && PermissionUtils.isDev(client, user)) throw new CommandError(t(this.errors.acceptDeveloper), false)
    
     return user
   }

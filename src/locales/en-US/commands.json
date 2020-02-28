@@ -307,6 +307,6 @@
     "commandDescription": "Work a little and get some gems!",
     "alreadyMined": "You can't work today",
     "youCanMineAgain": "You need to wait `{{cooldown}}` before mining again!",
-    "mined": "You gained a total of `{{mined}}` in the work today. I hope you can pay your light!"
+    "mined": "You found a total of `{{gems}}` today. Change it for money with the command `{{prefix}}commit <gems>`"
   }
 }

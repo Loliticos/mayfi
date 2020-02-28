@@ -11,10 +11,10 @@ module.exports = class Mine extends Command {
     }, client)
   }
 
-  async run ({ channel, guild, author, t }) {
+  async run ({ channel, guild, author, t, prefix }) {
     const embed = new MayfiEmbed(author)
 
-    let { lastMine, money } = await this.client.database.users.findOne({_id: author.id})
+    let { lastMine, gems } = await this.client.database.users.findOne({_id: author.id})
 
     if (Date.now() - lastMine < 86400000) {
       embed
@@ -24,12 +24,11 @@ module.exports = class Mine extends Command {
     }
 
     try {
-      const dayRDM = Math.floor(437 + Math.random() * (783 - 437))
+      const foundGems = Math.floor(0 + Math.random() * (437 - 0))
 
-      await this.client.database.users.updateOne({_id: author.id}, { lastMine: Date.now(), money: money += dayRDM })
+      await this.client.database.users.updateOne({_id: author.id}, { lastMine: Date.now(), gems: gems += foundGems })
 
-
-      channel.send(embed.setDescription(t('commands:mine.mined', { mined: dayRDM })))
+      channel.send(embed.setDescription(t('commands:mine.mined', { gems: foundGems, prefix })))
     } catch(err) {
       throw new CommandError(t("errors:generic"))
     }

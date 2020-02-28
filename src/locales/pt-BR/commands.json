@@ -307,6 +307,6 @@
     "commandDescription": "Trabalhe um pouco para ganhar gemas!",
     "alreadyMined": "Não foi possível trabalhar hoje",
     "youCanMineAgain": "Você precisa esperar `{{cooldown}}` antes de minerar novamente!",
-    "mined": "Você ganhou um total de `{{mined}}` no trabalho hoje. Espero que de para pagar as contas!"
+    "mined": "Você encontrou um total de `{{gems}}` gemas hoje. Troque elas por dinheiro usando o comando `{{prefix}}commit <gemas>`"
   }
 }

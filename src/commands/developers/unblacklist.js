@@ -15,7 +15,7 @@ module.exports = class Unblacklist extends Command {
 
   async run ({ channel, author, t }, user) {
     const embed = new MayfiEmbed(author)
-    const userDocument = this.client.database && await this.client.database.users.findOne({_id: user.id})
+    const userDocument = await this.client.database.users.findOne({_id: user.id})
     if(!userDocument.blacklisted) {
       embed.setDescription(t('commands:unblacklist.notBlacklisted'))
       .setColor(Constants.ERROR_COLOR)

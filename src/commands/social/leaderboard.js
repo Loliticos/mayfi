@@ -22,11 +22,11 @@ module.exports = class Rep extends Command {
     const top = topToCheck.splice(0, 5)
 
     embed
-      .setTitle("Leaderboard")
+      .setTitle(t("commands:leaderboard.title"))
       .setDescription(`
-        **1.** __${this.client.users.get(top[0]._id)} (${this.client.users.get(top[0]._id).tag})__\n**Reps**: ${top[0].reps}\n
-        **2.** __${this.client.users.get(top[1]._id)} (${this.client.users.get(top[1]._id).tag})__\n**Reps**: ${top[1].reps}\n
-        **3.** __${this.client.users.get(top[2]._id)} (${this.client.users.get(top[2]._id).tag})__\n**Reps**: ${top[2].reps}\n
+        **1.** __${this.client.users.get(top[0]._id)} (${this.client.users.get(top[0]._id).tag})__\n**${t("commands:leaderboard.reps")}**: ${top[0].reps}\n
+        **2.** __${this.client.users.get(top[1]._id)} (${this.client.users.get(top[1]._id).tag})__\n**${t("commands:leaderboard.reps")}**: ${top[1].reps}\n
+        **3.** __${this.client.users.get(top[2]._id)} (${this.client.users.get(top[2]._id).tag})__\n**${t("commands:leaderboard.reps")}**: ${top[2].reps}\n
         `)
     channel.send(embed)
 

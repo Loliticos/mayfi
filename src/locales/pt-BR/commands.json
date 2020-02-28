@@ -291,5 +291,10 @@
     "author": "Autor da mensagem",
     "channel": "Canal",
     "goToMessage": "Ir até a mensagem"
+  },
+  "leaderboard": {
+    "commandDescription": "Veja os top 5 jogadores com mais reputação!",
+    "title": "Placar",
+    "reps": "Reputação"
   }
 }

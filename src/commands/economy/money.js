@@ -3,9 +3,9 @@ const { Command, MayfiEmbed, CommandError } = require('../../')
 module.exports = class Reps extends Command {
   constructor (client) {
     super({
-      name: 'reps',
-      aliases: ['reputations'],
-      category: 'social',
+      name: 'money',
+      aliases: ['coin', 'coins'],
+      category: 'economy',
       requirements: { databaseOnly: true, },
       parameters: [{
         type: 'user', 
@@ -29,12 +29,12 @@ module.exports = class Reps extends Command {
 
           newUser.save()
 
-          UserData.reps = "0"
+          UserData.money = "0"
       }
 
       embed
-        .setTitle(t("commands:reps.title"))
-        .setDescription(t("commands:reps.howMany", { reps: UserData.reps, user, pointPoints: UserData.reps > 1 ? "points" : "point" }))
+        .setTitle(t("commands:money.title"))
+        .setDescription(t("commands:money.howMany", { money: UserData.money }))
  
       channel.send(embed)
     } catch(err) {

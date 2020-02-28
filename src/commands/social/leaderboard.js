@@ -16,7 +16,7 @@ module.exports = class Rep extends Command {
 
     const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(10 + 6)
     const top = dbRes.splice(0, 10)
-    const users = () => top.forEach(t => console.log(t))
+    const users = () => top.forEach(t => console.log(t._id))
 
     users()
 
@@ -24,7 +24,7 @@ module.exports = class Rep extends Command {
     embed
       .setTitle("Leaderboard")
       .setDescription(`
-        Kaigo vadia
+        ${top.forEach(t => `${this.client.users.get(t._id) } \`-\` **${t.reps} Reps**\n`)}
         `)
     channel.send(embed)
 

@@ -17,6 +17,8 @@ module.exports = class Userinfo extends Command {
 
       moment.locale(language)
 
+      const { personalText } = await this.client.database.users.findOne({_id: member.user.id})
+
       let embed = new MayfiEmbed(member.user)
       .setAuthor(member.displayName, member.user.displayAvatarURL)
       .addField("ID", member.user.id, true)
@@ -25,6 +27,7 @@ module.exports = class Userinfo extends Command {
       .addField(t("commands:userinfo.playing"), member.user.presence.game ? member.user.presence.game : t("commands:userinfo.notPlaying"), true)
       .addField(t("commands:userinfo.createdAt"), `${moment(member.user.createdTimestamp).format('LLL')}\n(${moment(member.user.createdTimestamp).fromNow()})`, true)
       .addField(t("commands:userinfo.joinedAt"), `${moment(member.joinedTimestamp).format('LLL')}\n(${moment(member.joinedTimestamp).fromNow()})`, true)     
+      .addField(t("commands:userinfo.aboutMe"), personalText)
       .setThumbnail(member.user.displayAvatarURL)
 
       channel.send(embed)

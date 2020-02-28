@@ -19,6 +19,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const usedPrefix = mc(botMention, `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
         
         if(!usedPrefix) {
+            const levelIsActive = guild ? guild.levelIsActive : false
             if(user.exp) {
                 const remainder = user.exp % 100
                 if(remainder == 0) {
@@ -56,7 +57,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         }
 
         if(user && user.blacklisted) return   
-        const language = guild.language 
+        const language = this.client.database ? guild.language : "en-US"
 
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))

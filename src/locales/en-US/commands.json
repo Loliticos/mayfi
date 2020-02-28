@@ -295,9 +295,9 @@
   "leaderboard": {
     "commandDescription": "Shows the top 5 users with most rep!",
     "titlereps": "Reps Leaderboard",
-    "titlelevels": "Levels Leaderboard",
+    "titlelevel": "Levels Leaderboard",
     "reps": "Reps",
-    "levels": "Level",
+    "level": "Level",
     "invalidType": "You need to give me a valid argument!",
     "description": "`{{prefix}}leaderboard reps` - Shows a list of users with most reputation point.\n`{{prefix}}leaderboard level` - Shows a list of the users with more levels."
   },

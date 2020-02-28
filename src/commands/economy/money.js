@@ -34,7 +34,7 @@ module.exports = class Reps extends Command {
 
       embed
         .setTitle(t("commands:money.title"))
-        .setDescription(t("commands:money.howMany", { money: UserData.money }))
+        .setDescription(t("commands:money.howMany", { coins: UserData.money, user }))
  
       channel.send(embed)
     } catch(err) {

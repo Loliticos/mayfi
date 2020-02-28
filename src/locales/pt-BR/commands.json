@@ -296,5 +296,11 @@
     "commandDescription": "Veja os top 5 jogadores com mais reputação!",
     "title": "Placar",
     "reps": "Reputação"
+  },
+  "title": {
+    "commandDescription": "Veja o money de algum usuário!",
+    "commandUsage": "[usuário]",
+    "title": "Dinheiro",
+    "howMany": "**{{user.tag}}** possue {{coins}} mayficoins"
   }
 }

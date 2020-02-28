@@ -296,5 +296,11 @@
     "commandDescription": "Shows the top 5 users with most rep!",
     "title": "Leaderboard",
     "reps": "Reps"
+  },
+  "title": {
+    "commandDescription": "Shows the money of an user.",
+    "commandUsage": "[user]",
+    "title": "Money",
+    "howMany": "**{{user.tag}}** has {{coins}} mayficoins"
   }
 }

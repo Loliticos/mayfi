@@ -22,7 +22,7 @@ const UserSchema = new Schema({
 const GuildSchema = new Schema({
 	_id: String,
 	prefix: { type: String, default: "m!" },
-	language: { type: String, default: "pt-BR" },
+	language: { type: String, default: "en-US" },
 	logsChannel: { type: String, default: "false" }
 })
 

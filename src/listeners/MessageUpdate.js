@@ -14,11 +14,11 @@ module.exports = class MessageUpdate extends EventHandler {
 
     	const author = newMessage.author
 
-    	const { logsChannel, language } = await this.client.database.guilds.findOne({_id: newMessage.guild.id})
+    	const dataGuild = await this.client.database.guilds.findOne({_id: newMessage.guild.id})
 
-    	if(!logsChannel || !language) return
+    	if(!dataGuild || !dataGuild.logsChannel || !dataGuild.language) return
 
-    	const t = this.client.i18next.getFixedT(language)
+    	const t = this.client.i18next.getFixedT(dataGuild.language)
 
     	const embed = new MayfiEmbed(author)
     	.setTitle(t("commands:logs.editedMessage"))
@@ -28,6 +28,6 @@ module.exports = class MessageUpdate extends EventHandler {
     	.addField(t("commands:logs.oldMessage"), oldMessage.content)
     	.addField(t("commands:logs.newMessage"), newMessage.content)
   		.setFooter(oldMessage.author.tag)
-  		newMessage.guild.channels.get(logsChannel).send(embed)
+  		newMessage.guild.channels.get(dataGuild.logsChannel).send(embed)
     }
 }

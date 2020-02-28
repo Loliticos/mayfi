@@ -7,12 +7,22 @@ module.exports = class Leaderboard extends Command {
       name: 'leaderboard',
       aliases: ['top'],
       category: 'social',
-      requirements: { databaseOnly: true }
+      requirements: { databaseOnly: true },
+      parameters: [{
+        type: 'string', 
+        full: false
+      }]
     }, client)
   }
 
-  async run ({ channel, guild, author, t }) {
+  async run ({ channel, guild, author, t, prefix }, text) {
     const embed = new MayfiEmbed(author)
+
+    if(!text) {
+      embed
+        .setDescription(t("commands:leaderboard.description", { prefix }))
+      channel.send(embed)
+    }
 
     const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(5 + 6)
     const topToCheck = dbRes.filter(u => {

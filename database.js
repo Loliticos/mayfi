@@ -24,7 +24,7 @@ const UserSchema = new Schema({
 
 const GuildSchema = new Schema({
 	_id: String,
-	prefix: { type: String, default: "mc!" },
+	prefix: { type: String, default: "m!" },
 	language: { type: String, default: "pt-BR" },
 	logsChannel: { type: String, default: "false" },
 	levelUpMessage: { type: String, default: "Gg {user}, you leved up to level {level}" }

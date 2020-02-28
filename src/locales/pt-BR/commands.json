@@ -296,7 +296,8 @@
   "leaderboard": {
     "commandDescription": "Veja os top 5 jogadores com mais reputação!",
     "title": "Placar",
-    "reps": "Reputação"
+    "reps": "Reputação",
+    "description": "`{{prefix}}leaderboard rep` - Mostra uma lista dos usuários com mais pontos de reputação.\n`{{prefix}}leaderboard levels` - Mostra uma lista dos usuários com mais level."
   },
   "money": {
     "commandDescription": "Veja o dinheiro de algum usuário!",

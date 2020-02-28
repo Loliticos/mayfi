@@ -20,6 +20,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         
         if(!usedPrefix) {
             const levelIsActive = guild ? guild.levelIsActive : false
+            if(!levelIsActive) return
             if(user.exp) {
                 const remainder = user.exp % 100
                 if(remainder == 0) {

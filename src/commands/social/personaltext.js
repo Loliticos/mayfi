@@ -26,6 +26,7 @@ module.exports = class Personaltext extends Command {
     
       channel.send(embed.setDescription(t('commands:personaltext.changedTo', { aboutme })))
     } catch(err) {
+      console.log(err)
       throw new CommandError(t("errors:generic"))
     }
   }

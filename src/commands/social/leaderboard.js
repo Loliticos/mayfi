@@ -25,7 +25,7 @@ module.exports = class Leaderboard extends Command {
       return channel.send(embed)
     }
 
-    if(text.toLowerCase() !== "reps" && text.toLowerCase() !== "levels") {
+    if(text.toLowerCase() !== "reps" && text.toLowerCase() !== "level") {
       embed
         .setTitle(t("commands:leaderboard.invalidType"))
         .setDescription(t("commands:leaderboard.description", { prefix }))

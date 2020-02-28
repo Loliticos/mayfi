@@ -10,9 +10,9 @@ module.exports = class MessageDelete extends EventHandler {
 
     	const author = message.author
 
-    	const { logsChannel, language } = await this.client.database.guilds.findOne({_id: message.guild.id})
+        const dataGuild = await this.client.database.guilds.findOne({_id: message.guild.id})
 
-    	if(!logsChannel || !language) return
+        if(!dataGuild || !dataGuild.logsChannel || !dataGuild.language) return
 
     	const t = this.client.i18next.getFixedT(language)
 
@@ -22,6 +22,6 @@ module.exports = class MessageDelete extends EventHandler {
     	.addField(t("commands:logs.channel"), message.channel)
     	.addField(t("commands:logs.message"), message.content)
   		.setFooter(message.author.tag)
-  		this.client.channels.get(logsChannel).send(embed)
+  		this.client.channels.get(dataGuild.logsChannel).send(embed)
     }
 }

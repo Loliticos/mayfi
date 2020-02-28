@@ -24,7 +24,7 @@ module.exports = class ClientOnMessage extends EventHandler {
 
                 return message.channel.send(guild.levelUpMessage.replace("{user}", message.author.username).replace("{level}", user.level))
             }
-            await this.client.database.users.updateOne({_id: message.author.id}, { exp: user.exp += 1 })
+            return await this.client.database.users.updateOne({_id: message.author.id}, { exp: user.exp += 1 })
 
         }
 

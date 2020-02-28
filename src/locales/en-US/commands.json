@@ -297,7 +297,7 @@
     "title": "Leaderboard",
     "reps": "Reps"
   },
-  "title": {
+  "money": {
     "commandDescription": "Shows the money of an user.",
     "commandUsage": "[user]",
     "title": "Money",

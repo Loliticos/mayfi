@@ -14,9 +14,9 @@ module.exports = class Rep extends Command {
   async run ({ channel, guild, author, t }) {
     const embed = new MayfiEmbed(author)
 
-    const dbRes = await this.client.database.users.find({}, "rep").sort({ ["rep"]: -1 }).limit(10 + 6)
+    const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(10 + 6)
 
-    console.log(dbRes)
+    console.log(dbRes.splice(0, 10))
 
   }
 }

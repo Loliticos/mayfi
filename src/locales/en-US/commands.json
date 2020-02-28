@@ -47,7 +47,8 @@
     "createdAt": "Account created",
     "joinedAt": "Joined",
     "playing": "Playing",
-    "notPlaying": "This user isn't playing anything."
+    "notPlaying": "This user isn't playing anything.",
+    "aboutMe": "About me"
   },
   "math": {
     "commandDescription": "Realizes a math expression.",

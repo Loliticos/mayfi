@@ -30,7 +30,8 @@
     "createdAt": "Conta criada",
     "joinedAt": "Entrou",
     "playing": "Jogando",
-    "notPlaying": "Este jogador não está jogando nada"
+    "notPlaying": "Este jogador não está jogando nada",
+    "aboutMe": "Sobre mim"
   }, 
   "guildinfo": {
     "commandDescription": "Veja as informações de um servidor.",

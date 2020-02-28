@@ -14,7 +14,8 @@ const UserSchema = new Schema({
 	personalText: { type: String, default: "Use m!personaltext to change this message" },
 	blacklisted: { type: Boolean, default: false },
 	reps: { type: Number, default: 0 },
-	lastRep: { type: Number, default: 0 }
+	lastRep: { type: Number, default: 0 },
+	lastMine: { type: Number, default: 0 }
 })
 
 const GuildSchema = new Schema({

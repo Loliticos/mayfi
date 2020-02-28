@@ -300,7 +300,13 @@
   "money": {
     "commandDescription": "Shows the money of an user.",
     "commandUsage": "[user]",
-    "title": "Money",
+    "title": "Gems",
     "howMany": "**{{user.tag}}** has {{coins}} gems"
+  },
+  "mine": {
+    "commandDescription": "Work a little and get some gems!",
+    "alreadyMined": "You can't work today",
+    "youCanMineAgain": "You need to wait `{{cooldown}}` before mining again!",
+    "mined": "You gained a total of `{{mined}}` in the work today. I hope you can pay your light!"
   }
 }

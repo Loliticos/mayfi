@@ -14,17 +14,19 @@ module.exports = class Rep extends Command {
   async run ({ channel, guild, author, t }) {
     const embed = new MayfiEmbed(author)
 
-    const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(10 + 6)
+    const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(5 + 6)
     const topToCheck = dbRes.filter(u => {
       u.user = this.client.users.get(u._id)
       return !!u.user
     })
-    const top = topToCheck.splice(0, 10)
+    const top = topToCheck.splice(0, 5)
+
+    console.log(top)
 
     embed
       .setTitle("Leaderboard")
       .setDescription(`
-        ${this.client.users.get(top[0]._id).tag}
+        ${this.client.users.get(top[0]._id).tag} \`-\` ${top[0].reps}
         `)
     channel.send(embed)
 

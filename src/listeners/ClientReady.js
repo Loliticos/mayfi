@@ -1,5 +1,5 @@
 const EventHandler = require('../structures/EventHandler')
-const DBL = require("dblapi.js")
+const fetch = require('node-fetch')
 
 module.exports = class ClientOnReady extends EventHandler {
     constructor(client) {
@@ -8,15 +8,14 @@ module.exports = class ClientOnReady extends EventHandler {
 
     run() {
       const PRESENCE_INTERVAL = 60 * 1000
-      const dbl = new DBL(process.env.DBL_TOKEN, this.client)
 
-      dbl.on('posted', () => {
-        console.log('Server count posted!');
+      fetch(`https://top.gg/api/bots/${this.client.user.id}/stats`, {
+        method: 'POST',
+        headers: { Authorization: process.env.DBL_TOKEN },
+        body: { server_count: this.client.guilds.size }
       })
-
-      dbl.on('error', e => {
-        console.log(`Oops! ${e}`);
-      })
+      .then(() => client.log('[DBL] Posted statistics successfully'))
+      .catch(() => client.log('[DBL] Failed to post statistics'))
       
       const presences = [
         {

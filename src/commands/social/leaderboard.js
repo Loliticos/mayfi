@@ -10,7 +10,8 @@ module.exports = class Leaderboard extends Command {
       requirements: { databaseOnly: true },
       parameters: [{
         type: 'string', 
-        full: false
+        full: false,
+        required: false
       }]
     }, client)
   }
@@ -21,7 +22,7 @@ module.exports = class Leaderboard extends Command {
     if(!text) {
       embed
         .setDescription(t("commands:leaderboard.description", { prefix }))
-      channel.send(embed)
+      return channel.send(embed)
     }
 
     const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(5 + 6)

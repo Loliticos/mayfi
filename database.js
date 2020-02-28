@@ -15,7 +15,7 @@ const UserSchema = new Schema({
 	blacklisted: { type: Boolean, default: false },
 	reps: { type: Number, default: 0 },
 	lastRep: { type: Number, default: 0 },
-	gems: { type: Number, default: 0 }
+	gems: { type: Number, default: 0 },
 	lastMine: { type: Number, default: 0 }
 })
 

@@ -81,7 +81,7 @@
     "nsfwYes": "Sim",
     "nsfwNo": "Não",
     "topic": "Tópico",
-    "noTopic": "Este canal não possue um tópico."
+    "noTopic": "Este canal não possui um tópico."
   },
   "createemoji": {
     "commandDescription": "Cria um emoji para este servidor.",

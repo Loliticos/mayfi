@@ -7,7 +7,7 @@ module.exports = class Rep extends Command {
       name: 'rep',
       aliases: ['reputation'],
       category: 'social',
-      requirements: { databaseOnly: true, },
+      requirements: { databaseOnly: true },
       parameters: [{
         type: 'user', 
         acceptBot: false, 

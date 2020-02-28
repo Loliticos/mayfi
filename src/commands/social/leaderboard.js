@@ -19,7 +19,7 @@ module.exports = class Rep extends Command {
       u.user = this.client.users.get(u._id)
       return !!u.user
     })
-    const top = top.splice(0, 10)
+    const top = topToCheck.splice(0, 10)
 
     embed
       .setTitle("Leaderboard")

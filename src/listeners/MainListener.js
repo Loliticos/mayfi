@@ -19,13 +19,17 @@ module.exports = class ClientOnMessage extends EventHandler {
         const usedPrefix = mc(botMention, `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
         
         if(!usedPrefix) {
-            const remainder = user.exp % 500
-            if(remainder == 0) {
-                await this.client.database.users.updateOne({_id: message.author.id}, { level: user.level += 1 })
+            if(user.exp) {
+                const remainder = user.exp % 500
+                if(remainder == 0) {
+                    await this.client.database.users.updateOne({_id: message.author.id}, { level: user.level += 1, exp: user.exp += 1 })
 
-                return message.channel.send(guild.levelUpMessage.replace("{user}", message.author.username).replace("{level}", user.level))
+                    return message.channel.send(guild.levelUpMessage.replace("{user}", message.author.username).replace("{level}", user.level))
+                }
+                return await this.client.database.users.updateOne({_id: message.author.id}, { exp: user.exp += 1 })                
+            } else {
+                return await this.client.database.users.updateOne({_id: message.author.id}, { exp: user.exp += 1 })                
             }
-            return await this.client.database.users.updateOne({_id: message.author.id}, { exp: user.exp += "1" })
 
         }
 

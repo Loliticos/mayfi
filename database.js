@@ -18,7 +18,7 @@ const UserSchema = new Schema({
 	gems: { type: Number, default: 0 },
 	lastMine: { type: Number, default: 0 },
 	level: { type: Number, default: 0 },
-	exp: { type: String, default: "0" }
+	exp: { type: String, default: 0 }
 })
 
 const GuildSchema = new Schema({

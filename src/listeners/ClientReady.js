@@ -20,7 +20,7 @@ module.exports = class ClientOnReady extends EventHandler {
       })
 
       setInterval(() => {
-        dbl.postStats(this.client.guilds.size, this.client.shards.Id, this.client.shards.total);
+        dbl.postStats(this.client.guilds.size)
       }, 1800000);
       
       const presences = [

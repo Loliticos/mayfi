@@ -15,11 +15,12 @@ module.exports = class Rep extends Command {
     const embed = new MayfiEmbed(author)
 
     const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(10 + 6)
-    const top = dbRes.filter(u => {
+    const topToCheck = dbRes.filter(u => {
       u.user = this.client.users.get(u._id)
       return !!u.user
     })
-    
+    const top = top.splice(0, 10)
+
     const users = () => top.forEach(t => console.log(t._id))
 
     users()
@@ -28,7 +29,7 @@ module.exports = class Rep extends Command {
     embed
       .setTitle("Leaderboard")
       .setDescription(`
-        ${top.forEach(t => `${this.client.users.get(t._id) } \`-\` **${t.reps} Reps**\n`)}
+        ${top[0].(t => `${this.client.users.get(t._id) } \`-\` **${t.reps} Reps**\n`)}
         `)
     channel.send(embed)
 

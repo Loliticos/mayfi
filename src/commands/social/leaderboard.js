@@ -35,7 +35,7 @@ module.exports = class Leaderboard extends Command {
     }
 
     const dbRes = await this.client.database.users.find({}, lowerCased).sort({ [lowerCased]: -1 }).limit(5 + 6)
-    const points;
+    let points;
     if(text.toLowerCase() == "level") {
       const dbResPoints = await this.client.database.users.find({}, "exp").sort({ ["exp"]: -1 }).limit(5 + 6)
       const topToCheckPoints = dbRes.filter(u => {

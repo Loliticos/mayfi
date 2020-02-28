@@ -300,8 +300,14 @@
   "money": {
     "commandDescription": "Shows the money of an user.",
     "commandUsage": "[user]",
+    "title": "Money",
+    "howMany": "**{{user.tag}}** has {{coins}} coins"
+  },
+  "gems": {
+    "commandDescription": "Shows the gems of an user.",
+    "commandUsage": "[user]",
     "title": "Gems",
-    "howMany": "**{{user.tag}}** has {{coins}} gems"
+    "howMany": "**{{user.tag}}** has {{gems}} gems"
   },
   "mine": {
     "commandDescription": "Work a little and get some gems!",

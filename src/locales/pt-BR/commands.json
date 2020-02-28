@@ -298,10 +298,16 @@
     "reps": "Reputação"
   },
   "money": {
-    "commandDescription": "Veja o money de algum usuário!",
+    "commandDescription": "Veja o dinheiro de algum usuário!",
+    "commandUsage": "[usuário]",
+    "title": "Dinheiro",
+    "howMany": "**{{user.tag}}** possue {{coins}} moedas"
+  },
+  "gems": {
+    "commandDescription": "Veja as gemas de algum usuário!",
     "commandUsage": "[usuário]",
     "title": "Gemas",
-    "howMany": "**{{user.tag}}** possue {{coins}} gemas"
+    "howMany": "**{{user.tag}}** possue {{gems}} gemas"
   },
   "mine": {
     "commandDescription": "Trabalhe um pouco para ganhar gemas!",

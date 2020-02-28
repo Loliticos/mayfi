@@ -329,6 +329,6 @@
     "noValue": "Insufficient gems",
     "youCantCommit": "You dont have `{{gems}}` gems!",
     "title": "Selled",
-    "transfered": "You've transfered `{{gems}}` and gained `{{transfered}}` coins."
+    "transfered": "You've transfered `{{gems}}` gems and gained `{{transfered}}` coins."
   }
 }

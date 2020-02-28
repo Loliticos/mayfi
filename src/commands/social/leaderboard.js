@@ -21,14 +21,9 @@ module.exports = class Rep extends Command {
     embed
       .setTitle("Leaderboard")
       .setDescription(`
-        ${top.forEach(t => getPosition(t._id, t.reps))}
+        ${top.forEach(t => `${this.client.users.get(t._id).tag} \`-\` **${t.reps} Reps**`)}
         `)
     channel.send(embed)
-
-    const getPosition = (user, reps) => {
-      return `${this.client.users.get(user).tag} \`-\` **${reps} Reps** `
-    }
-
 
   }
 }

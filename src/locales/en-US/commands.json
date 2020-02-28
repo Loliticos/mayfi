@@ -295,12 +295,9 @@
   "leaderboard": {
     "commandDescription": "Shows the top 5 users with most rep!",
     "titlereps": "Reps Leaderboard",
-    "titlelevel": "Levels Leaderboard",
     "reps": "Reps",
-    "level": "Level",
-    "points": "Experience",
     "invalidType": "You need to give me a valid argument!",
-    "description": "`{{prefix}}leaderboard reps` - Shows a list of users with most reputation point.\n`{{prefix}}leaderboard level` - Shows a list of the users with more levels."
+    "description": "`{{prefix}}leaderboard reps` - Shows a list of users with most reputation point."
   },
   "money": {
     "commandDescription": "Shows the money of an user.",

@@ -295,12 +295,9 @@
   "leaderboard": {
     "commandDescription": "Veja os top 5 jogadores com mais reputação!",
     "titlereps": "Placar de reputação",
-    "titlelevel": "Placar de levels",
     "reps": "Reputação",
-    "level": "Level",
-    "points": "Experiência",
     "invalidType": "Você precisa informar um argumento válido!",
-    "description": "`{{prefix}}leaderboard reps` - Mostra uma lista dos usuários com mais pontos de reputação.\n`{{prefix}}leaderboard level` - Mostra uma lista dos usuários com mais level."
+    "description": "`{{prefix}}leaderboard reps` - Mostra uma lista dos usuários com mais pontos de reputação."
   },
   "money": {
     "commandDescription": "Veja o dinheiro de algum usuário!",

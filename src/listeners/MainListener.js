@@ -17,23 +17,6 @@ module.exports = class ClientOnMessage extends EventHandler {
 
         const mc = (...m) => m.some(st => message.content.startsWith(st))
         const usedPrefix = mc(botMention, `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
-        
-        if(!usedPrefix) {
-            const levelIsActive = guild ? guild.levelIsActive : false
-            if(!levelIsActive) return
-            if(user.exp) {
-                const remainder = user.exp % 100
-                if(remainder == 0) {
-                    await this.client.database.users.updateOne({_id: message.author.id}, { level: user.level += 1, exp: user.exp += 1 })
-
-                    return message.channel.send(guild.levelUpMessage.replace("{user}", message.author.username).replace("{level}", user.level))
-                }
-                return await this.client.database.users.updateOne({_id: message.author.id}, { exp: user.exp += 1 })                
-            } else {
-                return await this.client.database.users.updateOne({_id: message.author.id}, { exp: user.exp += 1 })                
-            }
-
-        }
 
         const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => a)
         const args = fullCmd.slice(1)

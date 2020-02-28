@@ -16,18 +16,14 @@ const UserSchema = new Schema({
 	reps: { type: Number, default: 0 },
 	lastRep: { type: Number, default: 0 },
 	gems: { type: Number, default: 0 },
-	lastMine: { type: Number, default: 0 },
-	level: { type: Number, default: 0 },
-	exp: { type: Number, default: 0 },
-	levelIsActive: { type: Boolean, default: false }
+	lastMine: { type: Number, default: 0 }
 })
 
 const GuildSchema = new Schema({
 	_id: String,
 	prefix: { type: String, default: "m!" },
 	language: { type: String, default: "pt-BR" },
-	logsChannel: { type: String, default: "false" },
-	levelUpMessage: { type: String, default: "Gg {user}, you leved up to level {level}" }
+	logsChannel: { type: String, default: "false" }
 })
 
 parse = (entity) => {

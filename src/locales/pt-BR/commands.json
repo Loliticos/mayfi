@@ -212,8 +212,7 @@
   "language": {
     "commandDescription": "Mude a linguagem do seu servidor.",
     "commandUsage": "<linguagem>",
-    "noArguments": "Você precisa digitar uma linguagem válida. `PT-B || EN-US`",
-    "mustBe": "Você precisa digitar uma linguagem válida. `PT-B || EN-US`",
+    "mustbe": "Você precisa digitar uma linguagem válida. `PT-BR || EN-US || ES`",
     "title": "Idioma",
     "languageChangedTo": "Idioma mudado para {{language}}"
   },
@@ -297,6 +296,7 @@
     "commandDescription": "Veja os top 5 jogadores com mais reputação!",
     "title": "Placar",
     "reps": "Reputação",
+    "invalidType": "Você precisa informar um argumento válido!",
     "description": "`{{prefix}}leaderboard rep` - Mostra uma lista dos usuários com mais pontos de reputação.\n`{{prefix}}leaderboard levels` - Mostra uma lista dos usuários com mais level."
   },
   "money": {

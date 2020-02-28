@@ -16,12 +16,7 @@ module.exports = class Rep extends Command {
 
     const dbRes = await this.client.database.users.find({}, "rep").sort({ ["rep"]: -1 }).limit(10 + 6)
 
-    const top = dbRes.map(this._users.parse).filter(u => {
-      u.user = this.client.users.get(u._id)
-      return !!u.user
-    })
-
-    console.log(top)
+    console.log(dbRes)
 
   }
 }

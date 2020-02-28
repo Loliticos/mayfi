@@ -22,10 +22,8 @@ module.exports = class Personaltext extends Command {
     try {
       let userData = await this.client.database.users.findOne({_id: user.id})
 
-      await Promise.all([
-        this.client.database.users.updateOne({_id: author.id}, { personalText: aboutme })
-      ])
-
+      await this.client.database.users.updateOne({_id: author.id}, { personalText: aboutme })
+    
       channel.send(embed.setDescription(t('commands:personaltext.changedTo', { aboutme })))
     } catch(err) {
       throw new CommandError(t("errors:generic"))

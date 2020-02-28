@@ -15,8 +15,20 @@ module.exports = class Rep extends Command {
     const embed = new MayfiEmbed(author)
 
     const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(10 + 6)
+    const top = dbRes.splice(0, 10)
 
-    console.log(dbRes.splice(0, 10))
+
+    embed
+      .setTitle("Leaderboard")
+      .setDescription(`
+        ${top.forEach(t => getPosition(t._id, t.reps))}
+        `)
+    channel.send(embed)
+
+    const getPosition = (user, reps) => {
+      return `${this.client.users.get(user)} \`-\` **${reps} Reps** `
+    }
+
 
   }
 }

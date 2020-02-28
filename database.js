@@ -19,7 +19,7 @@ const UserSchema = new Schema({
 	lastMine: { type: Number, default: 0 },
 	level: { type: Number, default: 0 },
 	exp: { type: Number, default: 0 },
-	levelIsActive: { type: Boolean, default: 0 }
+	levelIsActive: { type: Boolean, default: false }
 })
 
 const GuildSchema = new Schema({

@@ -20,8 +20,6 @@ module.exports = class Personaltext extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      let userData = await this.client.database.users.findOne({_id: user.id})
-
       await this.client.database.users.updateOne({_id: author.id}, { personalText: aboutme })
     
       channel.send(embed.setDescription(t('commands:personaltext.changedTo', { aboutme })))

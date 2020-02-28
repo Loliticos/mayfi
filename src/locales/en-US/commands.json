@@ -294,7 +294,8 @@
   },
   "leaderboard": {
     "commandDescription": "Shows the top 5 users with most rep!",
-    "title": "Leaderboard",
+    "titlereps": "Reps Leaderboard",
+    "titlelevels": "Levels Leaderboard",
     "reps": "Reps",
     "levels": "Level",
     "invalidType": "You need to give me a valid argument!",

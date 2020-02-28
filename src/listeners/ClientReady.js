@@ -14,8 +14,8 @@ module.exports = class ClientOnReady extends EventHandler {
         headers: { Authorization: process.env.DBL_TOKEN },
         body: { server_count: this.client.guilds.size }
       })
-      .then(() => client.log('[DBL] Posted statistics successfully'))
-      .catch(() => client.log('[DBL] Failed to post statistics'))
+      .then(() => console.log('[DBL] Posted statistics successfully'))
+      .catch(() => console.log('[DBL] Failed to post statistics'))
       
       const presences = [
         {

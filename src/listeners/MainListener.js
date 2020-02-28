@@ -1,5 +1,4 @@
 const { EventHandler, CommandContext }  = require('../')
-const mongoose = require("mongoose")
 
 module.exports = class ClientOnMessage extends EventHandler {
     constructor(client) {

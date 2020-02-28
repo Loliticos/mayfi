@@ -6,6 +6,9 @@ const { FileUtils } = require("../")
 module.exports = class CommandLoader  {
     constructor(client) {
         this.client = client
+
+        this.commands = []
+        this.posLoadCommands = []
     }
 
     async load () {

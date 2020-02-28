@@ -26,7 +26,7 @@ module.exports = class Rep extends Command {
     channel.send(embed)
 
     const getPosition = (user, reps) => {
-      return `${this.client.users.get(user)} \`-\` **${reps} Reps** `
+      return `${this.client.users.get(user).tag} \`-\` **${reps} Reps** `
     }
 
 

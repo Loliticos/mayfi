@@ -315,5 +315,11 @@
     "alreadyMined": "Não foi possível trabalhar hoje",
     "youCanMineAgain": "Você precisa esperar `{{cooldown}}` antes de minerar novamente!",
     "mined": "Você encontrou um total de `{{gems}}` gemas hoje. Troque elas por dinheiro usando o comando `{{prefix}}commit <gemas>`"
+  },
+  "personalText": {
+    "commandDescription": "Mude o seu sobre mim",
+    "commandUsage": "<texto>",
+    "noArguments": "Você precisa informar o texto á ser mudado!",
+    "changedTo": "O seu sobre mim foi alterado para `{{aboutme}}`"
   }
 }

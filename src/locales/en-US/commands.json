@@ -321,5 +321,14 @@
     "commandUsage": "<text>",
     "noArguments": "You need to give me a text!",
     "changedTo": "Your about me has been changed to `{{aboutme}}`"
+  },
+  "commit": {
+    "commandDescription": "Change your gems to money.",
+    "commandUsage": "<gemas to be selled>",
+    "noArguments": "You need to give me the amount of gems to be selled!",
+    "noValue": "Insufficient gems",
+    "youCantCommit": "You dont have `{{gems}}` gems!",
+    "title": "Selled",
+    "transfered": "You've transfered `{{gems}}` and gained `{{transfered}}` coins."
   }
 }

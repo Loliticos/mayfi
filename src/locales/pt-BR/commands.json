@@ -321,5 +321,14 @@
     "commandUsage": "<texto>",
     "noArguments": "Você precisa informar o texto á ser mudado!",
     "changedTo": "O seu sobre mim foi alterado para `{{aboutme}}`"
+  },
+  "commit": {
+    "commandDescription": "Troque as suas gemas por dinheiro!",
+    "commandUsage": "<gemas para serem vendidas>",
+    "noArguments": "Você precisa informar a quantidade de gemas para serem vendidas",
+    "noValue": "Gemas insuficientes",
+    "youCantCommit": "Você não possuí `{{gems}}` gemas para trocar!",
+    "title": "Transferido",
+    "transfered": "Você transferiu `{{gems}}` e ganhou em troca `{{transfered}}` coins."
   }
 }

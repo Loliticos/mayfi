@@ -29,7 +29,7 @@ module.exports = class Rep extends Command {
     embed
       .setTitle("Leaderboard")
       .setDescription(`
-        ${top[0].(t => `${this.client.users.get(t._id) } \`-\` **${t.reps} Reps**\n`)}
+        ${(t => `${this.client.users.get(t._id) } \`-\` **${t.reps} Reps**\n`)}
         `)
     channel.send(embed)
 

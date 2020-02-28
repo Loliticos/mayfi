@@ -3,5 +3,6 @@
 	"heads": "Cara",
 	"tails": "Coroa",
 	"point": "ponto",
-	"points": "pontos"
+	"points": "pontos",
+	"typeAgain": "Digite esse comando novamente, por favor."
 }

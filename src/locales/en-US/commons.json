@@ -3,5 +3,6 @@
 	"heads": "Heads",
 	"tails": "Tails",
 	"point": "point",
-	"points": "points"
+	"points": "points",
+	"typeAgain": "Type this command again, please."
 }

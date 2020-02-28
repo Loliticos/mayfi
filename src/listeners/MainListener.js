@@ -31,6 +31,8 @@ module.exports = class ClientOnMessage extends EventHandler {
             })
 
             newUser.save()
+
+            return message.channel.send(t("commons:typeAgain"))
         }
 
         if(!guild) {

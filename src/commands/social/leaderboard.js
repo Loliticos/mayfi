@@ -24,9 +24,9 @@ module.exports = class Rep extends Command {
     embed
       .setTitle("Leaderboard")
       .setDescription(`
-        🥇. **${this.client.users.get(top[0]._id).tag}** \`-\` **${top[0].reps} Reps**
-        🥈. **${this.client.users.get(top[1]._id).tag}** \`-\` **${top[1].reps} Reps**
-        🥉. **${this.client.users.get(top[2]._id).tag}** \`-\` **${top[2].reps} Reps**
+        1. __${this.client.users.get(top[0]._id)} (${this.client.users.get(top[0]._id).tag})__\n**Reps**: ${top[0].reps}
+        2. __${this.client.users.get(top[1]._id)} (${this.client.users.get(top[1]._id).tag})__\n**Reps**: ${top[1].reps}
+        3. __${this.client.users.get(top[2]._id)} (${this.client.users.get(top[2]._id).tag})__\n**Reps**: ${top[2].reps}
 
         `)
     channel.send(embed)

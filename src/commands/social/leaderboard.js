@@ -1,7 +1,7 @@
 const { Command, MayfiEmbed, CommandError, Constants } = require('../../')
 const moment = require("moment")
 
-module.exports = class Rep extends Command {
+module.exports = class Leaderboard extends Command {
   constructor (client) {
     super({
       name: 'leaderboard',

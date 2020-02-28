@@ -10,7 +10,7 @@ module.exports = class Personaltext extends Command {
       parameters: [{
         type: 'string', 
         full: true,
-        required: true
+        required: true,
         missingError: 'commands:personalText.noArguments'
       }]
     }, client)

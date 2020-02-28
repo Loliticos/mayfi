@@ -4,7 +4,7 @@ module.exports = class Reps extends Command {
   constructor (client) {
     super({
       name: 'money',
-      aliases: ['coin', 'coins'],
+      aliases: ['coin', 'coins', 'gems', 'gemas'],
       category: 'economy',
       requirements: { databaseOnly: true, },
       parameters: [{

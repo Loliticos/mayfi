@@ -301,6 +301,6 @@
     "commandDescription": "Shows the money of an user.",
     "commandUsage": "[user]",
     "title": "Money",
-    "howMany": "**{{user.tag}}** has {{coins}} mayficoins"
+    "howMany": "**{{user.tag}}** has {{coins}} gems"
   }
 }

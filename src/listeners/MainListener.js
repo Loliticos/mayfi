@@ -1,5 +1,4 @@
 const { EventHandler, CommandContext }  = require('../')
-const mongoose = require("mongoose")
 
 module.exports = class ClientOnMessage extends EventHandler {
     constructor(client) {
@@ -19,7 +18,15 @@ module.exports = class ClientOnMessage extends EventHandler {
         const mc = (...m) => m.some(st => message.content.startsWith(st))
         const usedPrefix = mc(botMention, `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
         
-        if(!usedPrefix) return
+        if(!usedPrefix) {
+            if(user.exp.includes(500)) {
+                await this.client.database.users.updateOne({_id: message.author.id}, { level: user.level += 1 })
+
+                return message.channel.send(guild.levelUpMessage.replace("{user}", message.author.username).replace("{level}", user.level))
+            }
+            await this.client.database.users.updateOne({_id: message.author.id}, { exp: user.exp += 1 })
+
+        }
 
         const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => a)
         const args = fullCmd.slice(1)

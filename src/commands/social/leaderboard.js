@@ -21,15 +21,10 @@ module.exports = class Rep extends Command {
     })
     const top = top.splice(0, 10)
 
-    const users = () => top.forEach(t => console.log(t._id))
-
-    users()
-
-
     embed
       .setTitle("Leaderboard")
       .setDescription(`
-        ${(t => `${this.client.users.get(t._id) } \`-\` **${t.reps} Reps**\n`)}
+        ${this.client.users.get(top[0]._id).tag}
         `)
     channel.send(embed)
 

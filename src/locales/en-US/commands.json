@@ -298,6 +298,7 @@
     "titlelevel": "Levels Leaderboard",
     "reps": "Reps",
     "level": "Level",
+    "points": "Points",
     "invalidType": "You need to give me a valid argument!",
     "description": "`{{prefix}}leaderboard reps` - Shows a list of users with most reputation point.\n`{{prefix}}leaderboard level` - Shows a list of the users with more levels."
   },

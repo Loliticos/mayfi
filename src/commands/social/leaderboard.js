@@ -44,7 +44,7 @@ module.exports = class Leaderboard extends Command {
       })
       const pointsTop = topToCheckPoints.splice(0, 5)
     }
-    const topToCheck = dbRes.filter(u => {
+    const topToCheck = dbResPoints.filter(u => {
       u.user = this.client.users.get(u._id)
       return !!u.user
     })

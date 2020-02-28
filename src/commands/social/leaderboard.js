@@ -38,13 +38,13 @@ module.exports = class Leaderboard extends Command {
     let points;
     if(text.toLowerCase() == "level") {
       const dbResPoints = await this.client.database.users.find({}, "exp").sort({ ["exp"]: -1 }).limit(5 + 6)
-      const topToCheckPoints = dbRes.filter(u => {
+      const topToCheckPoints = dbResPoints.filter(u => {
         u.user = this.client.users.get(u._id)
         return !!u.user
       })
       const pointsTop = topToCheckPoints.splice(0, 5)
     }
-    const topToCheck = dbResPoints.filter(u => {
+    const topToCheck = dbRes.filter(u => {
       u.user = this.client.users.get(u._id)
       return !!u.user
     })

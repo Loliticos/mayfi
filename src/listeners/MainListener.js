@@ -20,7 +20,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         
         if(!usedPrefix) {
             if(user.exp) {
-                const remainder = user.exp % 500
+                const remainder = user.exp % 250
                 if(remainder == 0) {
                     await this.client.database.users.updateOne({_id: message.author.id}, { level: user.level += 1, exp: user.exp += 1 })
 

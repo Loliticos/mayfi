@@ -26,7 +26,7 @@ module.exports = class CommandLoader  {
     let failed = 0
     return FileUtils.requireDirectory(dirPath, (NewCommand) => {
       this.addCommand(new NewCommand(this.client)) ? success++ : failed++
-    }, this.logError.bind(this)).then(() => {
+    }).then(() => {
       const sorted = this.posLoadCommands.sort((a, b) => +(typeof b === 'string') || -(typeof a === 'string') || a.length - b.length)
       sorted.forEach(subCommand => this.addSubcommand(subCommand))
       if (failed) this.log(`${success} commands loaded, ${failed} failed.`, { color: 'yellow', tags: ['Commands'] })

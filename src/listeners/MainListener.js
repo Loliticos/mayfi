@@ -30,8 +30,6 @@ module.exports = class ClientOnMessage extends EventHandler {
             })
 
             newUser.save()
-
-            return message.channel.send("Please, type this command again")
         }
 
         if(!guild) {
@@ -43,7 +41,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         }
 
         if(user && user.blacklisted) return   
-        const language = guild.language 
+        const language = guild ? guild.language : "en-US"
 
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))

@@ -316,7 +316,7 @@
     "youCanMineAgain": "You need to wait `{{cooldown}}` before mining again!",
     "mined": "You found a total of `{{gems}}` today. Change it for money with the command `{{prefix}}commit <gems>`"
   },
-  "personalText": {
+  "personaltext": {
     "commandDescription": "Changes your about me",
     "commandUsage": "<text>",
     "noArguments": "You need to give me a text!",

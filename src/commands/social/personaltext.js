@@ -3,7 +3,7 @@ const { Command, MayfiEmbed, CommandError, Constants } = require('../../')
 module.exports = class Personaltext extends Command {
   constructor (client) {
     super({
-      name: 'personalText',
+      name: 'personaltext',
       aliases: ['sobremim', 'perfil', 'aboutme'],
       category: 'social',
       requirements: { databaseOnly: true },
@@ -11,7 +11,7 @@ module.exports = class Personaltext extends Command {
         type: 'string', 
         full: true,
         required: true,
-        missingError: 'commands:personalText.noArguments'
+        missingError: 'commands:personaltext.noArguments'
       }]
     }, client)
   }
@@ -26,7 +26,7 @@ module.exports = class Personaltext extends Command {
         this.client.database.users.updateOne({_id: author.id}, { personalText: aboutme })
       ])
 
-      channel.send(embed.setDescription(t('commands:personalText.changedTo', { aboutme })))
+      channel.send(embed.setDescription(t('commands:personaltext.changedTo', { aboutme })))
     } catch(err) {
       throw new CommandError(t("errors:generic"))
     }

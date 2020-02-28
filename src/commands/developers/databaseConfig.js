@@ -6,7 +6,7 @@ module.exports = class DatabaseConfig extends Command {
   constructor (client) {
     super({
       name: 'databaseconfig',
-      aliases: ['dc'],
+      aliases: ['dc', 'databaseRestauration'],
       category: 'developers',
       hidden: true,
       requirements: { onlyDevs: true }
@@ -16,7 +16,7 @@ module.exports = class DatabaseConfig extends Command {
   async run ({ channel, message, guild, author, t }) {
     try {
       channel.send("Estou tentando deletar as guilds!")
-      this.client.guilds.forEach(g => {
+      this.client.guilds.forEach(async (g) => {
           await this.client.database.guilds.deleteOne({_id: g.id}).then(() => {
             const newGuild = new this.client.database.guilds({
               _id: g.id

@@ -295,7 +295,7 @@
   "leaderboard": {
     "commandDescription": "Veja os top 5 jogadores com mais reputação!",
     "titlereps": "Placar de reputação",
-    "titlelevels": "Placar de leveis",
+    "titlelevels": "Placar de levels",
     "reps": "Reputação",
     "levels": "Level",
     "invalidType": "Você precisa informar um argumento válido!",

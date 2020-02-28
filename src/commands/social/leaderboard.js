@@ -42,9 +42,9 @@ module.exports = class Leaderboard extends Command {
     embed
       .setTitle(t(`commands:leaderboard.title${text}`))
       .setDescription(`
-        **1.** __${this.client.users.get(top[0]._id)} (${this.client.users.get(top[0]._id).tag})__\n**${t(`commands:leaderboard.${text == "reps" ? "reps" : "level"}`)}**: ${top[0]. + text == "reps" ? "reps" : "level"}\n
-        **2.** __${this.client.users.get(top[1]._id)} (${this.client.users.get(top[1]._id).tag})__\n**${t(`commands:leaderboard.${text == "reps" ? "reps" : "level"}`)}**: ${top[1]. + text == "reps" ? "reps" : "level"}\n
-        **3.** __${this.client.users.get(top[2]._id)} (${this.client.users.get(top[2]._id).tag})__\n**${t(`commands:leaderboard.${text == "reps" ? "reps" : "level"}`)}**: ${top[2]. + text == "reps" ? "reps" : "level"}\n
+        **1.** __${this.client.users.get(top[0]._id)} (${this.client.users.get(top[0]._id).tag})__\n**${t(`commands:leaderboard.${text == "reps" ? "reps" : "level"}`)}**: ${top[0][text == "reps" ? "reps" : "level"]}\n
+        **2.** __${this.client.users.get(top[1]._id)} (${this.client.users.get(top[1]._id).tag})__\n**${t(`commands:leaderboard.${text == "reps" ? "reps" : "level"}`)}**: ${top[1][text == "reps" ? "reps" : "level"]}\n
+        **3.** __${this.client.users.get(top[2]._id)} (${this.client.users.get(top[2]._id).tag})__\n**${t(`commands:leaderboard.${text == "reps" ? "reps" : "level"}`)}**: ${top[2][text == "reps" ? "reps" : "level"]}\n
         `)
     channel.send(embed)
 

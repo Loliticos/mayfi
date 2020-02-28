@@ -7,6 +7,7 @@ module.exports = class MessageUpdate extends EventHandler {
 
     async run(oldMessage, newMessage) {
     	if(newMessage.author.bot) return
+        if(!newMessage || !oldMessage) return
 
     	if(oldMessage.content === newMessage.content) return
         this.client.emit("message", newMessage)
@@ -27,6 +28,6 @@ module.exports = class MessageUpdate extends EventHandler {
     	.addField(t("commands:logs.oldMessage"), oldMessage.content)
     	.addField(t("commands:logs.newMessage"), newMessage.content)
   		.setFooter(oldMessage.author.tag)
-  		this.client.channels.get(logsChannel).send(embed)
+  		newMessage.guild.channels.get(logsChannel).send(embed)
     }
 }

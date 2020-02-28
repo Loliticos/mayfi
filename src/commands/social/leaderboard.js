@@ -15,7 +15,11 @@ module.exports = class Rep extends Command {
     const embed = new MayfiEmbed(author)
 
     const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(10 + 6)
-    const top = dbRes.splice(0, 10)
+    const top = dbRes.filter(u => {
+      u.user = this.client.users.get(u._id)
+      return !!u.user
+    })
+    
     const users = () => top.forEach(t => console.log(t._id))
 
     users()

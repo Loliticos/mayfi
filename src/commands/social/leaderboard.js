@@ -44,6 +44,7 @@ module.exports = class Leaderboard extends Command {
       })
       const pointsTop = topToCheckPoints.splice(0, 5)
     }
+
     const topToCheck = dbRes.filter(u => {
       u.user = this.client.users.get(u._id)
       return !!u.user
@@ -56,8 +57,8 @@ module.exports = class Leaderboard extends Command {
       .setTitle(t(`commands:leaderboard.title${text}`))
       .setDescription(`
         **1.** __${this.client.users.get(top[0]._id)} (${this.client.users.get(top[0]._id).tag})__\n**${t(`commands:leaderboard.${lowerCased == "reps" ? "reps" : "level"}`)}**: ${top[0][lowerCased == "reps" ? "reps" : "level"]} ${text == "level" ? `- **${t("commands:leaderboard.points")}**: ${pointsTop[0].exp}` : ""}\n
-        **2.** __${this.client.users.get(top[1]._id)} (${this.client.users.get(top[1]._id).tag})__\n**${t(`commands:leaderboard.${lowerCased == "reps" ? "reps" : "level"}`)}**: ${top[1][lowerCased == "reps" ? "reps" : "level"]} ${text == "level" ? `- **${t("commands:leaderboard.points")}**: ${pointsTop[0].exp}` : ""}\n
-        **3.** __${this.client.users.get(top[2]._id)} (${this.client.users.get(top[2]._id).tag})__\n**${t(`commands:leaderboard.${lowerCased == "reps" ? "reps" : "level"}`)}**: ${top[2][lowerCased == "reps" ? "reps" : "level"]} ${text == "level" ? `- **${t("commands:leaderboard.points")}**: ${pointsTop[0].exp}` : ""}\n
+        **2.** __${this.client.users.get(top[1]._id)} (${this.client.users.get(top[1]._id).tag})__\n**${t(`commands:leaderboard.${lowerCased == "reps" ? "reps" : "level"}`)}**: ${top[1][lowerCased == "reps" ? "reps" : "level"]} ${text == "level" ? `- **${t("commands:leaderboard.points")}**: ${pointsTop[1].exp}` : ""}\n
+        **3.** __${this.client.users.get(top[2]._id)} (${this.client.users.get(top[2]._id).tag})__\n**${t(`commands:leaderboard.${lowerCased == "reps" ? "reps" : "level"}`)}**: ${top[2][lowerCased == "reps" ? "reps" : "level"]} ${text == "level" ? `- **${t("commands:leaderboard.points")}**: ${pointsTop[2].exp}` : ""}\n
         `)
     channel.send(embed)
 

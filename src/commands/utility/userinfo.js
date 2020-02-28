@@ -25,8 +25,8 @@ module.exports = class Userinfo extends Command {
       .addField("Tag", member.user.tag, true)
       .addField("Status", t(`commands:userinfo.${member.presence.status}`, { status: Constants[member.presence.status] }), true)
       .addField(t("commands:userinfo.playing"), member.user.presence.game ? member.user.presence.game : t("commands:userinfo.notPlaying"), true)
-      .addField(t("commands:userinfo.createdAt"), `${moment(member.user.createdTimestamp).format('LLL')}\n(${moment(member.user.createdTimestamp).fromNow()})`, true)
-      .addField(t("commands:userinfo.joinedAt"), `${moment(member.joinedTimestamp).format('LLL')}\n(${moment(member.joinedTimestamp).fromNow()})`, true)     
+      .addField(t("commands:userinfo.createdAt"), `${moment(member.user.createdTimestamp).format('LLL')}\n(${moment(member.user.createdTimestamp).fromNow()})`)
+      .addField(t("commands:userinfo.joinedAt"), `${moment(member.joinedTimestamp).format('LLL')}\n(${moment(member.joinedTimestamp).fromNow()})`)     
       .addField(t("commands:userinfo.aboutMe"), personalText)
       .setThumbnail(member.user.displayAvatarURL)
 

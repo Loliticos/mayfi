@@ -7,7 +7,7 @@ module.exports = class GuildLogging extends EventHandler {
 
     run(guild) {
       const CHANNEL_ID = process.env.LOGGING_CHANNEL_ID
-      console.log(`Added to "${guild.name}" (${guild.id})`, { color: 'magenta', tags: ['Guilds'] })
+      console.log(`[Guilds] Added to "${guild.name}" (${guild.id})`)
       if (CHANNEL_ID) {
         this.client.channels.get(CHANNEL_ID).send(
           new MayfiEmbed()

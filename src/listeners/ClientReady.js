@@ -1,4 +1,5 @@
 const EventHandler = require('../structures/EventHandler')
+const fetch = require("node-fetch")
 
 module.exports = class ClientOnReady extends EventHandler {
     constructor(client) {
@@ -28,6 +29,14 @@ module.exports = class ClientOnReady extends EventHandler {
         this.client.user.setPresence({ game: presence })
         console.log(`🤖 Changed presence to "${presence.name}", type "${presence.type}"`)
       }, PRESENCE_INTERVAL)
+
+      fetch(`https://botsfordiscord.com/api/bots/673960641261994014`, {
+        method: 'POST',
+        headers: { Authorization: process.env.BOTSFORDISCORD_TOKEN },
+        body: { server_count: this.client.guilds.size }
+      })
+      .then(() => console.log('[BFD] Posted statistics successfully'))
+      .catch(() => console.log('[BFD] Failed to post statistics'))
 
     }
 };

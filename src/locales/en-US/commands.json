@@ -331,5 +331,9 @@
     "youCantCommit": "You dont have `{{gems}}` gems!",
     "title": "Selled",
     "transfered": "You've transfered `{{gems}}` gems and gained `{{transfered}}` coins."
+  },
+  "vote": {
+    "commandDescription": "Vote for me in DBL!",
+    "howToVote": "**[Vote on DBL]({{link}})**"
   }
 }

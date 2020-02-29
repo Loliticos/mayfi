@@ -9,7 +9,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const user = await this.client.database.users.findOne({ _id: message.author.id })
         const guild = await this.client.database.guilds.findOne({ _id: message.guild.id })
 
-        let prefix = "mc!"
+        let prefix = guild ? guild.prefix : "m!" 
 
         if (message.author.bot) return
         
@@ -39,7 +39,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         }
 
         if(user && user.blacklisted) return   
-        const language = this.client.database ? guild.language : "en-US"
+        const language = guild ? guild.language : "en-US"
 
         const cmd = fullCmd[0].toLowerCase().trim()
         const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))

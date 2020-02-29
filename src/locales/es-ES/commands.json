@@ -2,23 +2,6 @@
   "ping": {
     "commandDescription": "Mira mi ping"
   },
-  "guildinfo": {
-    "commandDescription": "Ver algunas informaciones sobre un servidor.",
-    "commandUsage": "[servidor]",
-    "owner": "Creador del servidor",
-    "channels": "Numero de canales",
-    "roles": "Numero de puestos",
-    "region": "Región",
-    "joinedAt": "Me uní a ese servidor",
-    "invalidOwner": "Creador inválido.",
-    "createdAt": "Día creado",
-    "members": "Miembros ({{count}})",
-    "streaming": "Transmisión: **{{count}}**",
-    "idle": "Idle: **{{count}}**",
-    "dnd": "Ocupado: **{{count}}**",
-    "users": "Usuarios: **{{count}}**",
-    "bots": "Bots: **{{count}}**"
-  },
   "help": {
     "commandDescription": "Ver información sobre mis comandos o verlos todos",
     "commandUsage": "[comando]",
@@ -37,6 +20,23 @@
     "commandUsage": "[usuario]",
     "avatarMessage": "Avatar de` {{user.username}}` ** | [Link] ({{user.displayAvatarURL}}) ** "
   },
+  "guildinfo": {
+    "commandDescription": "Ver algunas informaciones sobre un servidor.",
+    "commandUsage": "[servidor]",
+    "owner": "Creador del servidor",
+    "channels": "Numero de canales",
+    "roles": "Numero de puestos",
+    "region": "Región",
+    "joinedAt": "Me uní a ese servidor",
+    "invalidOwner": "Creador inválido.",
+    "createdAt": "Día creado",
+    "members": "Miembros ({{count}})",
+    "streaming": "Transmisión: **{{count}}**",
+    "idle": "Idle: **{{count}}**",
+    "dnd": "Ocupado: **{{count}}**",
+    "users": "Usuarios: **{{count}}**",
+    "bots": "Bots: **{{count}}**"
+  },
   "userinfo": {
     "commandDescription": "Ver la información de un usuario",
     "commandUsage": "[usuario]",

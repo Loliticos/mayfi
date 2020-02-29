@@ -32,7 +32,7 @@ module.exports = class EventLoader  {
               interpolation: {
                   escapeValue: false
               },
-               returnEmptyString: false
+              returnEmptyString: false
           })
 
         } catch(err) {

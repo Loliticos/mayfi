@@ -357,5 +357,9 @@
       "13": "My answer is yes!",
       "14": "Ooohh.. For sure!"
     }
+  },
+  "ascii": {
+    "commandDescription": "Asciify a message!",
+    "commandUsage": "<text>"
   }
 }

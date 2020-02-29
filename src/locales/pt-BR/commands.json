@@ -337,7 +337,7 @@
     "howToVote": "**[Vote no DBL]({{link}})**"
   },
   "8ball": {
-    "commandDescription": "Pergunte algo para a 8ball.",
+    "commandDescription": "Pergunte algo para a bola mágica.",
     "commandUsage": "<dúvida>",
     "noText": "Você precisa me perguntar algo!",
     "answers": {
@@ -357,5 +357,9 @@
       "13": "Minha resposta é sim!",
       "14": "Ooohh.. Com certeza!"
     }
+  },
+  "ascii": {
+    "commandDescription": "Faça uma mensagem ficar com um estilo diferente!",
+    "commandUsage": "<texto>"
   }
 }

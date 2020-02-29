@@ -10,6 +10,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const guild = await this.client.database.guilds.findOne({ _id: message.guild.id })
 
         let prefix = "mc!"
+        let prefix = message.channel.type === "dm" ? '' : this.client.database ? guild.prefix : "m!"
 
         if (message.author.bot) return
         
@@ -28,8 +29,6 @@ module.exports = class ClientOnMessage extends EventHandler {
             })
 
             newUser.save()
-
-            return message.channel.send(t("commons:typeAgain"))
         }
 
         if(!guild) {

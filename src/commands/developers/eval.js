@@ -20,7 +20,10 @@ module.exports = class Eval extends Command {
   async run ({ channel, message, guild, author, t }, expr) {
     try {
       const evaled = await eval(expr.replace(/(^`{3}(\w+)?|`{3}$)/g, ''))
-      let cleanEvaled = this.clean(util.inspect(evaled, { depth: 0 })).replace(this.client.token, "Quase em otário")
+      let cleanEvaled = this.clean(util.inspect(evaled, { depth: 0 }))
+      .replace(this.client.token, "Nop")
+      .replace(process.env.DBL_TOKEN, "Nop")
+      .replace(process.env.MONGODB_URI, "Nop")
       
       await channel.send(cleanEvaled, { code: 'xl' })
     } catch (err) {

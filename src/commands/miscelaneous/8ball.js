@@ -1,6 +1,6 @@
-const { Command, MayfiEmbed, Constants } = require('../../')
+const { Command, MayfiEmbed } = require('../../')
 
-module.exports = class Cowsay extends Command {
+module.exports = class EightBall extends Command {
   constructor (client) {
     super({
       name: '8ball',

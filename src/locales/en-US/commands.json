@@ -339,7 +339,7 @@
   "8ball": {
     "commandDescription": "Ask something to the 8ball.",
     "commandUsage": "<question>",
-    "noQuestion": "You have to ask me something!",
+    "noText": "You have to ask me something!",
     "answers": {
       "0": "For sure!",
       "1": "No.",

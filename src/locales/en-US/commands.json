@@ -335,5 +335,27 @@
   "vote": {
     "commandDescription": "Vote for me in DBL!",
     "howToVote": "**[Vote on DBL]({{link}})**"
+  },
+  "8ball": {
+    "commandDescription": "Ask something to the 8ball.",
+    "commandUsage": "<question>",
+    "noQuestion": "You have to ask me something!",
+    "answers": {
+      "0": "For sure!",
+      "1": "No.",
+      "2": "I'm in doubt.",
+      "3": "Yes.",
+      "4": "Maybe...",
+      "5": "I can't asnwer right now. Ask again!",
+      "6": "Hmm.. I'm with a slight headache right now, come back later!",
+      "7": "Sources say yes.",
+      "8": "Certainly no!",
+      "9": "It's likely",
+      "10": "No doubt!",
+      "11": "Peoples'd say yes.",
+      "12": "My answer is no!",
+      "13": "My answer is yes!",
+      "14": "Ooohh.. For sure!"
+    }
   }
 }

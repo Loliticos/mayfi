@@ -335,5 +335,27 @@
   "vote": {
     "commandDescription": "Vote em mim no site DBL!",
     "howToVote": "**[Vote no DBL]({{link}})**"
+  },
+  "8ball": {
+    "commandDescription": "Pergunte algo para a 8ball.",
+    "commandUsage": "<dúvida>",
+    "noQuestion": "Você precisa me perguntar algo!",
+    "answers": {
+      "0": "Com certeza!",
+      "1": "Não.",
+      "2": "Estou em dúvidas.",
+      "3": "Sim.",
+      "4": "Talvez.",
+      "5": "Eu não posso responder agora. Pergunte denovo!",
+      "6": "Hmm.. Estou com uma leve dor de cabeça, pergunte denovo daqui a pouco.",
+      "7": "Fontes dizem que sim.",
+      "8": "Certamente não!",
+      "9": "É provável",
+      "10": "Sem dúvidas!",
+      "11": "Pessoas diriam que sim.",
+      "12": "Minha resposta é não!",
+      "13": "Minha resposta é sim!",
+      "14": "Ooohh.. Com certeza!"
+    }
   }
 }

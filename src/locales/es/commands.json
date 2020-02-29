@@ -1,0 +1,334 @@
+{
+  "ping": {
+    "commandDescription": "Mira mi ping"
+  },
+  "help": {
+    "commandDescription": "Ver información sobre mis comandos o verlos todos",
+    "commandUsage": "[comando]",
+    "commandNotFound": "¡No pude encontrar un comando con este nombre!",
+    "noDescriptionProvided": "No se ha proporcionado ninguna descripción",
+    "footer": "<> = Obligatorio, [] = opcional",
+    "permisos": "Permisos",
+    "botPermissions": "Permisos de bot",
+    "title": "Comandos",
+    "prefix": "Mi prefijo es` {{botPrefix}}` ",
+    "youCanUse": "pero también puede usar {{- botMention}} como prefijo",
+    "specificInformation": "Escriba {{helpString}} para obtener más información"
+  },
+  "avatar": {
+    "commandDescription": "Ver tu avatar o el de un usuario",
+    "commandUsage": "[usuario]",
+    "avatarMessage": "Avatar de` {{user.username}}` ** | [Link] ({{user.displayAvatarURL}}) ** "
+  },
+  "userinfo": {
+    "commandDescription": "Ver la información de un usuario",
+    "commandUsage": "[usuario]",
+    "dnd": "{{status}} Ocupado",
+    "idle": "{{status}} Missing",
+    "online": "{{status}} en línea",
+    "offline": "{{status}} Offline",
+    "createdAt": "Cuenta creada",
+    "joinAt": "Unido",
+    "jugando": "Jugando",
+    "notPlaying": "Este jugador no está jugando nada",
+    "aboutMe": "Acerca de mí"
+  },
+  "guildinfo": {
+    "commandDescription": "Ver información sobre un servidor",
+    "commandUsage": "[servidor]",
+    "propietario": "Creador del servidor",
+    "canales": "Número de canales",
+    "roles": "Número de roles",
+    "region": "Región",
+    "joinAt": "Me uní a este servidor",
+    "invalidOwner": "Propietario no válido",
+    "createdAt": "Creado",
+    "miembros": "Miembros ({{count}})",
+    "streaming": "En vivo: ** {{count}} **",
+    "inactivo": "Falta: ** {{count}} **",
+    "dnd": "Ocupado: ** {{count}} **",
+    "usuarios": "Usuarios: ** {{count}} **",
+    "bots": "Bots: ** {{count}} **"
+  },
+  "math": {
+    "commandDescription": "Realiza una expresión matemática",
+    "commandUsage": "<expresión>",
+    "invalidMathExpression": "¡Necesita ingresar una expresión matemática válida!",
+    "title": "Resultado` {{result}}` "
+  },
+  "guildIcon": {
+    "commandDescription": "¡Vea un icono de servidor!",
+    "commandUsage": "[servidor]",
+    "noImage": "¡Este servidor no tiene una imagen!"
+  },
+  "github": {
+    "commandDescription": "Ver github de un usuario",
+    "commandUsage": "<nombre>",
+    "missingParameters": "Debe ingresar un nombre válido",
+    "userNotFound": "No se encontró ningún usuario con el nombre '{{user}}'",
+    "noBio": "No se encontró una descripción para ese usuario",
+    "publicRepos": "Repositorios públicos:",
+    "createdAt": "Cuenta creada:",
+    "seguidores": "Número de seguidores:",
+    "following": "Este usuario está siguiendo:",
+    "usuarios": "Usuarios",
+    "unknownLocation": "Ubicación desconocida"
+  },
+  "channelinfo": {
+    "commandDescription": "Ver la información de un canal",
+    "commandUsage": "[canal]",
+    "createdAt": "Creado",
+    "position": "Position",
+    "nsfw Sí": "Sí",
+    "nsfwNo": "No",
+    "topic": "Tema",
+    "noTopic": "Este canal no tiene un tema"
+  },
+  "createemoji": {
+    "commandDescription": "Crear un emoji para este servidor",
+    "commandUsage": "<emoji url> <emoji name>",
+    "noImage": "Debe ingresar una imagen válida para el emoji",
+    "noName": "Debe ingresar un nombre para el emoji",
+    "created": "Emoji {{emoji}} creado",
+    "error": "No pude crear el emoji"
+  },
+  "deleteemoji": {
+    "commandDescription": "Elimina un emoji del servidor actual",
+    "commandUsage": "<emoji>",
+    "invalidEmoji": "Debe ingresar un emoji válido",
+    "deleted": "El emoji` {{emoji.name}}` ha sido eliminado ",
+    "error": "No pude eliminar este emoji"
+  },
+  "cat": {
+    "commandDescription": "Ver fotos de gatitos!"
+  },
+  "dog": {
+    "commandDescription": "Ver fotos de doguinhos!"
+  },
+  "purge": {
+    "commandDescription": "Borrar mensajes de un usuario o canal",
+    "commandUsage": "[número de mensajes] [usuario]",
+    "purgedSingular": "Mensaje borrado ** {{count}} **",
+    "purgedPlural": "Borrado ** {{count}} ** mensajes",
+    "purgedMemberSingular": "Borrado ** {{count}} ** mensaje enviado por ** {{user}} **.",
+    "purgedMemberPlural": "Borrado ** {{count}} ** mensajes enviados por ** {{user}} **.",
+    "invalidNumber": "¡Debe ingresar un número entre 1 y 100!"
+  },
+  "lock": {
+    "commandDescription": "Bloquear un canal",
+    "commandUsage": "<canal>",
+    "successTitle": "Bloqueado",
+    "successDescription": "Bloqueé con éxito el canal ** # {{channel.name}} **.",
+    "cantLock": "¡No puedo bloquear este canal!"
+  },
+  "unlock": {
+    "commandDescription": "Desbloquear un canal",
+    "commandUsage": "<canal>",
+    "successTitle": "Desbloqueado",
+    "successDescription": "He desbloqueado con éxito el canal ** # {{channel.name}} **.",
+    "cantLock": "¡No puedo desbloquear este canal!"
+  },
+  "kick": {
+    "commandDescription": "Expulsar a un miembro de ese servidor",
+    "commandUsage": "<miembro> <razón>",
+    "missingUser": "¡Necesita informar a un usuario para que sea expulsado!",
+    "missingReason": "¡Debe proporcionar una razón para que el usuario sea expulsado!",
+    "noPermission": "No tengo el permiso ** $ t (permisos: KICK_MEMBERS) ** para expulsar a este miembro",
+    "successTitle": "¡El miembro ha sido expulsado!",
+    "cantKick": "¡No puedo echar a este miembro!"
+  },
+ "ban": {
+    "commandDescription": "Prohibir a un miembro de ese servidor",
+    "commandUsage": "<miembro> <razón>",
+    "missingUser": "¡Necesita informar a un miembro para que sea baneado!",
+    "missingReason": "¡Debe proporcionar una razón para que el miembro sea excluido!",
+    "noPermission": "No tengo el permiso ** $ t (permisos: BAN_MEMBERS) ** para prohibir este miembro",
+    "successTitle": "¡Miembro ha sido prohibido!",
+    "cantBan": "¡No puedo prohibir a este miembro!"
+  },
+  "softban": {
+    "commandDescription": "Prohibir a un miembro, borrar sus mensajes y luego desmarcar",
+    "commandUsage": "<member> <motive>",
+    "missingUser": "¡Necesitas informar a un miembro para que lo castigue!",
+    "missingReason": "¡Debe proporcionar una razón para que el miembro sea castigado!",
+    "noPermission": "No tengo el permiso ** $ t (permisos: BAN_MEMBERS) ** para prohibir este miembro",
+    "successTitle": "¡El miembro ha sido castigado!",
+    "cantSoftban": "¡No puedo castigar a este miembro!"
+  },
+  "unban": {
+    "commandDescription": "Desbancar un usuario",
+    "commandUsage": "<usuario> [razón]",
+    "missingUser": "¡Debe proporcionar un usuario válido!",
+    "successTitle": "¡El usuario ha sido excluido!",
+    "cantUnban": "¡No puedo desbancar a este usuario!"
+  },
+  "fox": {
+    "commandDescription": "¿Qué dice el zorro?"
+  },
+  "poll": {
+    "commandDescription": "¡Haga una encuesta interactiva en su servidor!",
+    "commandUsage": "<poll> [| yes | no]",
+    "noArguments": "¡Necesitas ingresar el título de la encuesta!"
+  },
+  "coinflip": {
+    "commandDescription": "¡Juega un juego de cara o cruz!",
+    "aterrizó": "¡La moneda se redujo en ** $ t (bienes comunes: {{side}}) **!"
+  },
+  "botinfo": {
+    "commandDescription": "Ver información sobre mí",
+    "hola": "Hola, {{usuario}}, mi nombre es Mayfi y soy un bot para Discord con algunas características increíbles. ^ - ^",
+    "estadísticas": "Estoy despierto para ** {{tiempo de actividad}} **, llevo alegría a los servidores ** {{gremios}} ** y hablo con ** {{usuarios}} usuarios ** con ** {{comandos}} comandos! ** ",
+    "inviteMe": "Agrégame",
+    "inviteLink": "** [Agregar] (https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot) **",
+    "supportServer": "Servidor de soporte",
+    "supportLink": "** [Iniciar sesión] (https://discord.gg/tvN7cGJ) **"
+  },
+  "invite": {
+    "commandDescription": "Ver la invitación de Mayfi",
+    "clickHere": "** Haz clic aquí para invitarme a tu servidor **",
+    "noteThat": "Recordando que necesita ** $ t (permisos: MANAGE_GUILD) ** permiso para invitarme a su servidor".
+  },
+  "support": {
+    "commandDescription": "Muestra el enlace al servidor de soporte de Mayfi",
+    "clickHere": "** [Haga clic aquí para ingresar a mi servidor de soporte] (https://discord.gg/tvN7cGJ) **"
+  },
+  "roleinfo": {
+    "commandDescription": "Ver información del trabajo",
+    "commandUsage": "<cargo>",
+    "color": "Color",
+    "nombre": "Nombre",
+    "createdAt": "Creado",
+    "mencionable": "Mencionable",
+    "mencionableTrue": "Sí",
+    "mencionableFalse": "No",
+    "miembros": "Miembros que tienen este puesto"
+  },
+  "inversetext": {
+    "commandDescription": "Invertir un texto",
+    "commandUsage": "<texto>",
+    "noText": "¡Necesita ingresar un texto para invertirlo!",
+    "heresYourText": "Aquí está su texto invertido:` {{reversedText}} `"
+  },
+  "language": {
+    "commandDescription": "Cambiar el idioma del servidor",
+    "commandUsage": "<lingue>",
+    "noArguments": "Debe ingresar un idioma válido. PT-B || EN-US",
+    "mustBe": "Debe ingresar un idioma válido. PT-B || EN-US",
+    "title": "Idioma",
+    "languageChangedTo": "El idioma cambió a {{language}}"
+  },
+  "prefix": {
+    "commandDescription": "Cambiar el prefijo de su servidor",
+    "commandUsage": "<prefijo>",
+    "missingPrefix": "Debe ingresar un prefijo para cambiarlo",
+    "changedTo": "El prefijo se ha cambiado a` {{prefix}}` "
+  },
+  "blacklist": {
+    "commandDescription": "Agregar un usuario a la lista negra",
+    "commandUsage": "<usario> <motive>",
+    "missingUser": "Debes decirme un usuario para que pueda incluirlo en mi lista negra 😈",
+    "missingReason": "¡Necesitas darme una razón para poner en la lista negra a este usuario!",
+    "successTitle": "Usuario agregado a mi lista negra 😈"
+  },
+  "unblacklist": {
+    "commandDescription": "Eliminar un usuario de la lista negra",
+    "commandUsage": "<usuario>",
+    "success": "{{user}} ha sido eliminado de mi lista negra!",
+    "missingUser": "Debe informar a un usuario para que esté en la lista negra",
+    "notBlacklisted": "Este usuario no está en mi lista negra ... Déjame ver de nuevo ... ¡Nop! Nada"
+  },
+  "rep": {
+    "commandDescription": "Dar una reputación a un usuario",
+    "commandUsage": "<usuario>",
+    "repYourself": "¡No puedes darte una reputación!",
+    "repSuccess": "Le diste ** 1 ** reputación a ** {{user.tag}} **",
+    "alreadyGave": "No puedes enviar otra reputación",
+    "youCanGiveAgain": "Debes esperar` {{cooldown}}` antes de enviar otra reputación ",
+    "typeAgain": "Vaya ... Necesita ingresar este comando nuevamente :( Resulta que el usuario que mencionó no tenía datos en mi base de datos"
+  },
+  "reps": {
+    "commandDescription": "Ver cuánta reputación tiene un usuario",
+    "commandUsage": "[usuario]",
+    "title": "Reputación",
+    "howMany": "` {{user.tag}} `tiene {{reps}} $ t (comunes: {{pointPoints}}) de reputación"
+  },
+  "hug": {
+    "commandDescription": "¡Abrace a un usuario!",
+    "commandUsage": "<usuario>",
+    "noMention": "¡Necesitas informar a un usuario que lo abrace!",
+    "title": "Abrazo",
+    "descripción": "{{hugger}} hugged {{huggedUser}}"
+  },
+  "kiss": {
+    "commandDescription": "¡Besa a un usuario!",
+    "commandUsage": "<usuario>",
+    "noMention": "¡Necesitas informar a un usuario que se bese!",
+    "title": "Abrazo",
+    "descripción": "{{hugger}} besó {{huggedUser}}"
+  },
+  "slap": {
+    "commandDescription": "¡Toca un usuario!",
+    "commandUsage": "<usuario>",
+    "noMention": "¡Necesitas informar a un usuario para que dé esa bofetada!",
+    "title": "Bofetada",
+    "descripción": "{{hugger}} abofeteó {{huggedUser}}"
+  },
+  "cowsay": {
+    "commandDescription": "¡Haz que la vaca diga algo!",
+    "commandUsage": "<texto>",
+    "noText": "¡Necesita ingresar un texto!"
+  },
+  "logs": {
+    "commandDescription": "Establece el canal de registro",
+    "commandUsage": "<canal>",
+    "missingChannel": "¡Necesita informar un canal!",
+    "title": "Registros",
+    "changedTo": "El canal de registro se ha establecido en ** # {{channel.name}} **",
+    "editedMessage": "Se ha editado un mensaje",
+    "deletedMessage": "Se ha eliminado un mensaje",
+    "newMessage": "Mensaje actualizado",
+    "oldMessage": "Mensaje antiguo",
+    "mensaje": "Mensaje",
+    "author": "Autor del mensaje",
+    "channel": "Canal",
+    "goToMessage": "Ir al mensaje"
+  },
+  "leaderboard": {
+    "commandDescription": "¡Mira los 5 mejores jugadores con más reputación!",
+    "title": "Score",
+    "reps": "Reputación"
+  },
+  "dinero": {
+    "commandDescription": "¡Vea el dinero de algunos usuarios!",
+    "commandUsage": "[usuario]",
+    "title": "Dinero",
+    "howMany": "** {{user.tag}} ** tiene {{monedas}} monedas"
+  },
+  "gems": {
+    "commandDescription": "¡Ver las gemas de cualquier usuario!",
+    "commandUsage": "[usuario]",
+    "title": "Gemas",
+    "howMany": "** {{user.tag}} ** posee {{gems}} gemas"
+  },
+  "mine": {
+    "commandDescription": "¡Haz algo de trabajo para ganar gemas!",
+    "alreadyMined": "No podría funcionar hoy",
+    "youCanMineAgain": "¡Necesitas esperar` {{cooldown}}` antes de volver a minar! ",
+    "minado": "Has encontrado un total de gemas` {{gemas}} `hoy. Cámbialos por dinero usando el comando` {{prefijo}} commit <gemas> `"
+  },
+  "personaltext": {
+    "commandDescription": "Cambia el tuyo sobre mí",
+    "commandUsage": "<texto>",
+    "noArguments": "¡Necesita informar el texto que se va a cambiar!",
+    "changedTo": "Tu información sobre mí ha cambiado a` {{aboutme}} `"
+  },
+  "commit": {
+    "commandDescription": "¡Cambia tus gemas por dinero en efectivo!",
+    "commandUsage": "<gemas para vender>",
+    "noArguments": "Debe informar la cantidad de gemas que se venderán",
+    "noValue": "gemas insuficientes",
+    "youCantCommit": "¡No tienes gemas` {{gems}}` para comerciar! ",
+    "title": "Descargado",
+    "transferido": "Has transferido` {{gemas}} `gemas y has ganado` {{transferido}} `monedas a cambio".
+  }
+}

@@ -2,13 +2,30 @@
   "ping": {
     "commandDescription": "Mira mi ping"
   },
+  "guildinfo": {
+    "commandDescription": "Ver algunas informaciones sobre un servidor.",
+    "commandUsage": "[servidor]",
+    "owner": "Creador del servidor",
+    "channels": "Numero de canales",
+    "roles": "Numero de puestos",
+    "region": "Región",
+    "joinedAt": "Me uní a ese servidor",
+    "invalidOwner": "Creador inválido.",
+    "createdAt": "Día creado",
+    "members": "Miembros ({{count}})",
+    "streaming": "Transmisión: **{{count}}**",
+    "idle": "Idle: **{{count}}**",
+    "dnd": "Ocupado: **{{count}}**",
+    "users": "Usuarios: **{{count}}**",
+    "bots": "Bots: **{{count}}**"
+  },
   "help": {
     "commandDescription": "Ver información sobre mis comandos o verlos todos",
     "commandUsage": "[comando]",
     "commandNotFound": "¡No pude encontrar un comando con este nombre!",
     "noDescriptionProvided": "No se ha proporcionado ninguna descripción",
     "footer": "<> = Obligatorio, [] = opcional",
-    "permisos": "Permisos",
+    "permissions": "Permisos",
     "botPermissions": "Permisos de bot",
     "title": "Comandos",
     "prefix": "Mi prefijo es` {{botPrefix}}` ",

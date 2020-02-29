@@ -45,7 +45,7 @@ module.exports = class ClientOnReady extends EventHandler {
           fetch(`https://botsfordiscord.com/api/bots/${client.user.id}`, {
             method: 'POST',
             headers: { Authorization: process.env.BOTSFORDISCORD_TOKEN },
-            body: { server_count: this.client.guilds.size }
+            body: { server_count: client.guilds.size }
           })
           .then(() => console.log('[BFD] Posted statistics successfully'))
           .catch(() => console.log('[BFD] Failed to post statistics'))

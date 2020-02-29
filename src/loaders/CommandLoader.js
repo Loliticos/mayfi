@@ -17,7 +17,7 @@ module.exports = class CommandLoader  {
             this.client.commands = this.commands
             return true
         } catch (err) {
-             this.logError(err)
+             this.client.logError(err)
         }
     }
 

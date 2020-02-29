@@ -17,9 +17,9 @@ module.exports = class Morse extends Command {
     const body = await fetch(`https://api.funtranslations.com/translate/morse.json?text=${encodeURIComponent(text)}`).then(res => res.json())
     
     console.log(body)
-    
+
     let embed = new MayfiEmbed(author)
-      .setDescription(`💻 ${text}\n ${body.translated}`)
+      .setDescription(`💻 ${body.contents.text}\n ➖ ${body.contents.translated}`)
     channel.send(embed)
     
   }

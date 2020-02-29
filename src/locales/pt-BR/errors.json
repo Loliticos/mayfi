@@ -23,6 +23,7 @@
   "invalidGuild": "Você precisa informar um servidor válido.",
   "invalidEmoji": "Você precisa informar um emoji válido.",
   "invalidRole": "Você precisa informar um cargo válido.",
+  "invalidChannelType": "Você precisa informar um canal válido!",
   "userCantBeDeveloper": "Usuário não pode ser um desenvolvedor.",
   "sameUser": "Você precisa informar um usuário que não seja você.",
   "needBiggerNumber": "Você precisa informar um número maior que {{number}}.",

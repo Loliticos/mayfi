@@ -84,7 +84,7 @@ module.exports = class CommandLoader  {
     }
 
     if (command.canLoad() !== true) {
-      console.loglog(`[Commands] ${command.fullName} failed to load - ${command.canLoad() || 'canLoad function did not return true.'}`)
+      console.log(`[Commands] ${command.fullName} failed to load - ${command.canLoad() || 'canLoad function did not return true.'}`)
       return false
     }
 

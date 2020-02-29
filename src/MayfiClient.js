@@ -18,11 +18,6 @@ module.exports = class MayfiClient extends Client {
     context.setFixedT(this.i18next.getFixedT(language))
     return command._run(context, args).catch(console.error)
   }
-  
-  logError (...args) {
-    const tags = args.length > 1 ? args.slice(0, -1).map(t => `[${t}]`) : []
-    console.error('[ErrorLog]', ...tags, args[args.length - 1])
-  }
 
   async initializeLoaders () {
     for (let Loader in Loaders) {

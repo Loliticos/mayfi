@@ -44,7 +44,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const language = this.client.database ? guild.language : "en-US"
 
         const cmd = fullCmd[0].toLowerCase().trim()
-        const command = this.client.commands.find(c => c.name.toLowerCase() === cmd || (c.aliases && c.aliases.includes(cmd)))
+        const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))
         
         if(!command) return
 

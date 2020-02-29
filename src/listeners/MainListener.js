@@ -9,8 +9,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const user = await this.client.database.users.findOne({ _id: message.author.id })
         const guild = await this.client.database.guilds.findOne({ _id: message.guild.id })
 
-        let prefix = "mc!"
-        let prefix = message.channel.type === "dm" ? '' : this.client.database ? guild.prefix : "m!"
+        let prefix = message.channel.type === "dm" ? '' : this.client.database ? guild.prefix : "mc!"
 
         if (message.author.bot) return
         
@@ -50,7 +49,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const context = new CommandContext({ 
             client: this.client,
             message,
-            language: language,
+            language,
             command,
             prefix: guild.prefix
         })

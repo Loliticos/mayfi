@@ -329,6 +329,6 @@
     "noValue": "gemas insuficientes",
     "youCantCommit": "¡No tienes gemas` {{gems}}` para comerciar! ",
     "title": "Descargado",
-    "transferido": "Has transferido` {{gemas}} `gemas y has ganado` {{transferido}} `monedas a cambio".
+    "transferido": "Has transferido` {{gemas}} `gemas y has ganado` {{transferido}} `monedas a cambio"
   }
 }

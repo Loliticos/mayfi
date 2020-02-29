@@ -15,7 +15,11 @@ module.exports = class Ascii extends Command {
 
   async run ({ channel, t, author }, text) {
     try {
-      const result = await figlet(text)
+      const result = figlet.textSync(text, {
+        font: 'Big',
+        horizontalLayout: 'universal smushing',
+        verticalLayout: 'universal smushing'
+      })
 
       channel.send(`\`\`\`${result}\`\`\``)
     } catch (err) {

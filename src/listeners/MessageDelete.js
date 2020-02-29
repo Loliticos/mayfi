@@ -21,6 +21,6 @@ module.exports = class MessageDelete extends EventHandler {
     	.addField(t("commands:logs.author"), `${author} - ${author.tag}`)
     	.addField(t("commands:logs.channel"), message.channel)
     	.addField(t("commands:logs.message"), message.content)
-  		this.client.channels.get(dataGuild.logsChannel).send(embed)
+  		message.guild.channels.get(dataGuild.logsChannel).send({embed: embed})
     }
 }

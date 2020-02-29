@@ -9,7 +9,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const user = await this.client.database.users.findOne({ _id: message.author.id })
         const guild = await this.client.database.guilds.findOne({ _id: message.guild.id })
 
-        let prefix = message.channel.type === "dm" ? '' : this.client.database ? guild.prefix : "m!"
+        let prefix = "mc!"
 
         if (message.author.bot) return
         
@@ -17,8 +17,6 @@ module.exports = class ClientOnMessage extends EventHandler {
 
         const mc = (...m) => m.some(st => message.content.startsWith(st))
         const usedPrefix = mc(botMention, `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
-        
-        if(!usedPrefix) return
 
         const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => a)
         const args = fullCmd.slice(1)
@@ -54,6 +52,7 @@ module.exports = class ClientOnMessage extends EventHandler {
             language,
             command,
             prefix
+            prefix: prefix
         })
 
         console.log(`[Commands] "${message.content}" (${command.constructor.name}) ran by "${message.author.tag}" (${message.author.id}) on guild "${message.guild.name}" (${message.guild.id}) channel "#${message.channel.name}" (${message.channel.id})`)

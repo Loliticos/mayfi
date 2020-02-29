@@ -1,5 +1,4 @@
 const EventHandler = require('../structures/EventHandler')
-const DBL = require("dblapi.js");
 
 module.exports = class ClientOnReady extends EventHandler {
     constructor(client) {
@@ -8,20 +7,6 @@ module.exports = class ClientOnReady extends EventHandler {
 
     run() {
       const PRESENCE_INTERVAL = 60 * 1000
-
-      const dbl = new DBL(process.env.DBL_TOKEN, this.client);
-
-      dbl.on('posted', () => {
-        console.log('[DBL] Posted statistics successfully');
-      })
-
-      dbl.on('error', e => {
-       console.log(`[DBL] Failed to post statistics ${e}`);
-      })
-
-      setInterval(() => {
-        dbl.postStats(this.client.guilds.size)
-      }, 1800000);
       
       const presences = [
         {

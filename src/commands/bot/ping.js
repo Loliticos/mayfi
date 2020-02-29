@@ -12,6 +12,6 @@ module.exports = class Ping extends Command {
     }, client)
   }
   async run({ channel, author, message, t}, msg) {
-    channel.send(`🏓 \`${this.client.ping}ms\``)
+    channel.send(`🏓 \`${Math.floor(this.client.ping)}ms\``)
   }
 }

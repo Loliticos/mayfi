@@ -1,6 +1,5 @@
 const { Collection } = require('discord.js');
 const { readdirSync } = require('fs');
-const chalk = require('chalk')
 
 module.exports = class CommandLoader  {
     constructor(client) {
@@ -9,9 +8,9 @@ module.exports = class CommandLoader  {
 
     load () {
         try {
-            console.log(chalk.green("Commands are initializing"))
-            this.client.commands = new Collection();
-            this.client.aliases = new Collection();
+            console.log("Commands are initializing")
+            this.client.commands = new Collection()
+            this.client.aliases = new Collection()
             this.initializeCommands()
             return true
         } catch (err) {

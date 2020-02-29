@@ -19,7 +19,7 @@ module.exports = class Morse extends Command {
     console.log(body)
 
     let embed = new MayfiEmbed(author)
-      .setDescription(`💻 ${body.contents.text}\n ➖ ${body.contents.translated}`)
+      .setDescription(`❓ ${body.contents.text}\n ❗ ${body.contents.translated}`)
     channel.send(embed)
     
   }

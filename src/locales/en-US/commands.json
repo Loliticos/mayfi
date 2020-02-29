@@ -366,5 +366,10 @@
     "commandDescription": "Clapify a message!",
     "commandUsage": "<text>",
     "noText": "You need to inform a message!"
+  },
+  "morse": {
+    "commandDescription": "Translate a morse message",
+    "commandUsage": "<text>",
+    "noText": "You need to give me a text to translate!"
   }
 }

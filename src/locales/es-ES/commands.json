@@ -315,7 +315,7 @@
     "title": "Score",
     "reps": "Reputación"
   },
-  "dinero": {
+  "money": {
     "commandDescription": "¡Vea el dinero de algunos usuarios!",
     "commandUsage": "[usuario]",
     "title": "Dinero",

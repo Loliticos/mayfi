@@ -29,8 +29,8 @@ module.exports = class CommandLoader  {
     }, this.logError.bind(this)).then(() => {
       const sorted = this.posLoadCommands.sort((a, b) => +(typeof b === 'string') || -(typeof a === 'string') || a.length - b.length)
       sorted.forEach(subCommand => this.addSubcommand(subCommand))
-      if (failed) this.log(`${success} commands loaded, ${failed} failed.`, { color: 'yellow', tags: ['Commands'] })
-      else this.log(`All ${success} commands loaded without errors.`, { color: 'green', tags: ['Commands'] })
+      if (failed) console.log(`${success} commands loaded, ${failed} failed.`, { color: 'yellow', tags: ['Commands'] })
+      else console.log(`All ${success} commands loaded without errors.`, { color: 'green', tags: ['Commands'] })
     })
   }
 
@@ -69,7 +69,7 @@ module.exports = class CommandLoader  {
     } else {
       parentCommand = subCommand.parentCommand
       const name = (Array.isArray(parentCommand) ? parentCommand : [ parentCommand ]).concat([ subCommand.name ]).join(' ')
-      this.log(`${name} failed to load - Couldn't find parent command.`, { color: 'red', tags: ['Commands'] })
+      console.log(`[Commands] ${name} failed to load - Couldn't find parent command.`)
       return false
     }
 
@@ -79,28 +79,28 @@ module.exports = class CommandLoader  {
 
   checkCommand (command) {
     if (!(command instanceof Command)) {
-      this.log(`${command} failed to load - Not a command`, { color: 'red', tags: ['Commands'] })
+      console.log(`[Commands] ${command} failed to load - Not a command`)
       return false
     }
 
     if (command.canLoad() !== true) {
-      this.log(`${command.fullName} failed to load - ${command.canLoad() || 'canLoad function did not return true.'}`, { color: 'red', tags: ['Commands'] })
+      console.loglog(`[Commands] ${command.fullName} failed to load - ${command.canLoad() || 'canLoad function did not return true.'}`)
       return false
     }
 
     if (command.requirements) {
       if (command.requirements.apis && !command.requirements.apis.every(api => {
-        if (!this.client.apis[api]) this.log(`${command.fullName} failed to load - Required API wrapper "${api}" not found.`, { color: 'red', tags: ['Commands'] })
+        if (!this.client.apis[api]) console.log(`[Commands] ${command.fullName} failed to load - Required API wrapper "${api}" not found.`)
         return !!this.client.apis[api]
       })) return false
 
       if (command.requirements.envVars && !command.requirements.envVars.every(variable => {
-        if (!process.env[variable]) this.log(`${command.fullName} failed to load - Required environment variable "${variable}" is not set.`, { color: 'red', tags: ['Commands'] })
+        if (!process.env[variable]) console.log(`[Commands] ${command.fullName} failed to load - Required environment variable "${variable}" is not set.`)
         return !!process.env[variable]
       })) return false
 
       if (command.requirements.canvasOnly && !this.client.canvasLoaded) {
-        this.log(`${command.fullName} failed to load - Canvas is not installed.`, { color: 'red', tags: ['Commands'] })
+        console.log(`[Commands] ${command.fullName} failed to load - Canvas is not installed.`)
         return false
       }
     }

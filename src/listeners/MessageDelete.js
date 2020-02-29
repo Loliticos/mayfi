@@ -18,10 +18,9 @@ module.exports = class MessageDelete extends EventHandler {
 
     	const embed = new MayfiEmbed(author)
     	.setTitle(t("commands:logs.deletedMessage"))
-    	.addField(t("commands:logs.author"), message.author)
+    	.addField(t("commands:logs.author"), `${author} - ${author.tag}`)
     	.addField(t("commands:logs.channel"), message.channel)
     	.addField(t("commands:logs.message"), message.content)
-  		.setFooter(message.author.tag)
   		this.client.channels.get(dataGuild.logsChannel).send(embed)
     }
 }

@@ -5,7 +5,7 @@ module.exports = class Morse extends Command {
   constructor (client) {
     super({
       name: 'morse',
-      aliases: ['morse-code'],
+      aliases: ['morse-code', 'translatemorse'],
       category: 'miscelaneous',
       parameters: [{
         type: 'string', full: true, missingError: 'commands:morse.noText', 
@@ -18,10 +18,12 @@ module.exports = class Morse extends Command {
 
     if(text.includes(".") || text.includes("-")) {
       const morseToEnglish = await fetch(`http://api.funtranslations.com/translate/morse2english.json?text=${encodeURIComponent(text)}`).then(res => res.json())
-      embed.setDescription(`❓ ${body.contents.translated}\n ❗ ${body.contents.text}`) 
+      
+      embed.setDescription(`❓ ${morseToEnglish.contents.translated}\n ❗ ${morseToEnglish.contents.text}`) 
+
     } else {
       const body = await fetch(`https://api.funtranslations.com/translate/morse.json?text=${encodeURIComponent(text)}`).then(res => res.json())
-        embed.setDescription(`❓ ${body.contents.text}\n ❗ ${body.contents.translated}`)  
+      embed.setDescription(`❓ ${body.contents.text}\n ❗ ${body.contents.translated}`)  
     }
     channel.send(embed)
     

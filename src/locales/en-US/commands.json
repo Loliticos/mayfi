@@ -361,5 +361,10 @@
   "ascii": {
     "commandDescription": "Asciify a message!",
     "commandUsage": "<text>"
+  },
+  "clapify": {
+    "commandDescription": "Clapify a message!",
+    "commandUsage": "<text>",
+    "noText": "You need to inform a message!"
   }
 }

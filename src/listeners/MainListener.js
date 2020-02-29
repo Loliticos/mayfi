@@ -18,7 +18,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         const mc = (...m) => m.some(st => message.content.startsWith(st))
         const usedPrefix = mc(botMention, `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
        
-        if(!usedPrefix.length) return
+        if(!usedPrefix) return
 
         const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => a)
         const args = fullCmd.slice(1)

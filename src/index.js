@@ -19,6 +19,7 @@ module.exports = {
   // Utils
   Constants: require("./utils/Constants.js"),
   Permissions: require("./utils/Permissions.js"),
+  DatabaseCheck: require("./utils/DatabaseCheck.js"),
 
   // Structures
   EventHandler: require("./structures/EventHandler.js"),

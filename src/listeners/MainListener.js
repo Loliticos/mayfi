@@ -1,4 +1,5 @@
 const { EventHandler, CommandContext }  = require('../')
+const DatabaseCheck = require("../utils/DatabaseCheck.js")
 
 module.exports = class ClientOnMessage extends EventHandler {
     constructor(client) {
@@ -6,12 +7,12 @@ module.exports = class ClientOnMessage extends EventHandler {
     }
 
     async run(message) {
+        if (message.author.bot) return
+
         const user = await this.client.database.users.findOne({ _id: message.author.id })
         const guild = await this.client.database.guilds.findOne({ _id: message.guild.id })
 
         let prefix = guild ? guild.prefix : "m!" 
-
-        if (message.author.bot) return
         
         const botMention = this.client.user.toString()
 
@@ -22,23 +23,11 @@ module.exports = class ClientOnMessage extends EventHandler {
 
         const fullCmd = message.content.substring(usedPrefix.length).split(/[ \t]+/).filter(a => a)
         const args = fullCmd.slice(1)
+        
         if (!fullCmd.length) return
 
-        if(!user) {
-            const newUser = new this.client.database.users({
-                _id: message.author.id
-            })
-
-            newUser.save()
-        }
-
-        if(!guild) {
-            const newGuild = new this.client.database.guilds({
-                _id: message.guild.id
-            })
-
-            newGuild.save()
-        }
+        DatabaseCheck.checkGuild(this.client, guild, message.guild.id)
+        DatabaseCheck.checkUser(this.client, user, message.author)
 
         if(user && user.blacklisted) return   
         const language = guild ? guild.language : "en-US"

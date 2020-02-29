@@ -10,7 +10,7 @@
   "missingMultiplePermissions": "Necesita {{permission}} permisos para hacer esto",
   "cooldown": "¡Cálmate amigo! Debes esperar un tiempo antes de volver a ejecutar este comando",
   "missingParameters": "¡Necesitas decirme los parámetros!",
-  "notTrueOrFalse": "Debe ingresar un valor que sea 'verdadero' o 'falso'",
+  "notTrueOrFalse": "Debe ingresar un valor que sea verdadero o falso",
   "nsfwOnly": "Este comando solo se puede ejecutar en canales NSFW",
   "noSentence": "Necesitas decirme una oración",
   "invalidNumber": "¡Necesita ingresar un número!",
@@ -29,8 +29,6 @@
   "needSmallerNumber": "Debe ingresar un número menor que {{number}}",
   "needSmallerString": "Debes decirme una oración de menos de {{número}} caracteres",
   "invalidURL": "¡Necesitas darme una URL válida!",
-  "invalidImageLink": "¡Debe proporcionar un enlace de imagen válido!",
-  "imageParsingError": "Se produjo un error al cargar la imagen",
   "acceptSelf": "Debe informar a un usuario que no sea usted",
   "onlyDevelopers": "¡Solo los desarrolladores pueden usar este comando!"
 }

@@ -25,7 +25,7 @@ module.exports = class EventLoader  {
           i18next.use(translationBackend).init({
               ns: ['commands', 'events', 'permissions', 'commons', 'categories', 'errors'],
               preload: await readdirSync('./src/locales/'),
-              fallbackLng: 'pt-BR',
+              fallbackLng: 'en-US',
               backend: {
                   loadPath: `src/locales/{{lng}}/{{ns}}.json`
               },

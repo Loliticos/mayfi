@@ -14,7 +14,7 @@ module.exports = class MessageDelete extends EventHandler {
 
         if(!dataGuild || !dataGuild.logsChannel || !dataGuild.language) return
 
-    	const t = this.client.i18next.getFixedT(language)
+    	const t = this.client.i18next.getFixedT(dataGuild.language)
 
     	const embed = new MayfiEmbed(author)
     	.setTitle(t("commands:logs.deletedMessage"))

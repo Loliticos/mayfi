@@ -372,6 +372,8 @@
   "morse": {
     "commandDescription": "Traduz uma mensagem em morse",
     "commandUsage": "<texto>",
-    "noText": "Você precisa me informar um texto para ser traduzido!"
+    "noText": "Você precisa me informar um texto para ser traduzido!",
+    "morseToText": "Morse para texto",
+    "textToMorse": "Texto para morse"
   }
 }

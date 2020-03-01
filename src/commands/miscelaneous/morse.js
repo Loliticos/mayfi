@@ -18,12 +18,15 @@ module.exports = class Morse extends Command {
 
     if(text.includes(".") || text.includes("-")) {
       const morseToEnglish = await fetch(`http://api.funtranslations.com/translate/morse2english.json?text=${encodeURIComponent(text)}`).then(res => res.json())
-      
-      embed.setDescription(`❓ ${morseToEnglish.contents.translated}\n ❗ ${morseToEnglish.contents.text}`) 
+      embed
+        .setTitle(t("commands:morse.morseToText"))
+        .setDescription(morseToEnglish.contents.text) 
 
     } else {
       const body = await fetch(`https://api.funtranslations.com/translate/morse.json?text=${encodeURIComponent(text)}`).then(res => res.json())
-      embed.setDescription(`❓ ${body.contents.text}\n ❗ ${body.contents.translated}`)  
+      embed
+        .setTitle(t("commands:morse.textToMorse"))
+        .setDescription(body.contents.translated)  
     }
 
     channel.send(embed)

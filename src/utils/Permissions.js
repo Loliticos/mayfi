@@ -1,4 +1,4 @@
-module.exports = class PermissionsUtils {
+module.exports = class Permissions {
 	static isDev(client, user) {
 		const botGuild = client.guilds.get(process.env.BOT_GUILD)
 	    const developerRole = botGuild && botGuild.roles.get(process.env.DEVELOPER_ROLE)

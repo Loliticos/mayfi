@@ -23,6 +23,7 @@ module.exports = class BotInfo extends Command {
         ].join('\n\n'))
         .addField(t('commands:botinfo.supportServer'), t('commands:botinfo.supportLink'))
         .addField(t('commands:botinfo.inviteMe'), t('commands:botinfo.inviteLink'))
+        .addField(t('commands:botinfo.docs'), t('commands:botinfo.docsLink'))
     )
   }
 }

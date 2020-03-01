@@ -181,7 +181,9 @@
     "inviteMe": "Add me",
     "inviteLink": "**[Add](https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot)**",
     "supportServer": "Support server",
-    "supportLink": "**[Join](https://discord.gg/tvN7cGJ)**"
+    "supportLink": "**[Join](https://discord.gg/tvN7cGJ)**",
+    "docs": "Documentation",
+    "docsLink": "[Mayfi Docs](https://mayfi.gitbook.io/docs/)"
   },
   "invite": {
     "commandDescription": "Shows Mayfi invite link.",

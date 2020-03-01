@@ -4,7 +4,7 @@ const transformProps = require('transform-props')
 const castToString = arg => String(arg)
 
 connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true }, (err) => {
-  if (err) return console.log('[DB] => Ocorreu um erro na conexão.')
+  if (err) return console.log('[DB] => There was an error while initializing database.', err)
   console.log('[DB] Connection estabilished with success!')
 })
 
@@ -22,7 +22,6 @@ const UserSchema = new Schema({
 const GuildSchema = new Schema({
 	_id: String,
 	prefix: { type: String, default: "m!" },
-	language: { type: String, default: "pt-BR" },
 	language: { type: String, default: "en-US" },
 	logsChannel: { type: String, default: "false" }
 })

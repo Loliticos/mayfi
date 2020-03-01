@@ -370,10 +370,14 @@
     "noText": "Você precisa informar uma mensagem!"
   },
   "morse": {
-    "commandDescription": "Traduz uma mensagem em morse",
+    "commandDescription": "Traduz uma mensagem em morse.",
     "commandUsage": "<texto>",
     "noText": "Você precisa me informar um texto para ser traduzido!",
     "morseToText": "Morse para texto",
     "textToMorse": "Texto para morse"
+  },
+  "docs": {
+    "commandDescription": "Veja a minha documentação.",
+    "clickHere": "Clique aqui para ver minha documentação."
   }
 }

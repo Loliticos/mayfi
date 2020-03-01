@@ -375,5 +375,9 @@
     "noText": "You need to give me a text to translate!",
     "morseToText": "Morse to text",
     "textToMorse": "Text to morse"
+  },
+  "docs": {
+    "commandDescription": "See my documentation.",
+    "clickHere": "Click here to see my documentation."
   }
 }

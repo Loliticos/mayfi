@@ -16,10 +16,10 @@ module.exports = class Mine extends Command {
 
     let { lastMine, gems } = await this.client.database.users.findOne({_id: author.id})
 
-    if (Date.now() - lastMine < 86400000) {
+    if (Date.now() - lastMine < 43200000) {
       embed
         .setTitle(t("commands:mine.alreadyMined"))
-        .setDescription(t("commands:mine.youCanMineAgain", { cooldown: moment.duration(86400000 - (Date.now() - lastMine)).format('h[h] m[m] s[s]') }))
+        .setDescription(t("commands:mine.youCanMineAgain", { cooldown: moment.duration(43200000 - (Date.now() - lastMine)).format('h[h] m[m] s[s]') }))
       return channel.send(embed)
     }
 

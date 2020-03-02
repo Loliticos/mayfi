@@ -13,7 +13,7 @@ module.exports = class Jokes extends Command {
   async run ({ author, channel }) {
     const embed = new MayfiEmbed(author)
 
-    const body = await fetch("https://api.jokes.one").then(res => res.json())
+    const body = await fetch("https://api.jokes.one/jod?category=animal").then(res => res.json())
     console.log(body)
 
   }

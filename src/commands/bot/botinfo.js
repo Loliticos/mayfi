@@ -23,7 +23,7 @@ module.exports = class BotInfo extends Command {
         .addField(t('commands:botinfo.supportServer'), t('commands:botinfo.supportLink'))
         .addField(t('commands:botinfo.inviteMe'), t('commands:botinfo.inviteLink'))
         .addField(t('commands:botinfo.docs'), t('commands:botinfo.docsLink'))
-        .addField(t('commands:botinfo.managers'), Permissions.getManagers(this.client))
+        .addField(t('commands:botinfo.managers'), Permissions.getManagers(this.client).join(", "))
     )
   }
 }

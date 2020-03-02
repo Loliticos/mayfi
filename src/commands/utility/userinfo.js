@@ -23,7 +23,7 @@ module.exports = class Userinfo extends Command {
       const UserData = await this.client.database.users.findOne({_id: member.user.id})
 
       let embed = new MayfiEmbed(member.user)
-      .setAuthor(member.user.displayName, member.user.displayAvatarURL)
+      .setTitle(member.displayName)
       .addField("ID", member.user.id, true)
       .addField("Tag", member.user.tag, true)
       .addField("Status", t(`commands:userinfo.${member.user.presence.status}`, { status: Constants[member.user.presence.status] }))

@@ -21,7 +21,7 @@ module.exports = class Mute extends Command {
     let mutedRole = guild.roles.find(r => r.name == t("commands:mute.roleName"))
 
     if(!mutedRole) {
-      muteRole = await message.guild.createRole({
+      mutedRole = await message.guild.createRole({
         name: t("commands:mute.roleName"),
         color: "#7a7a7a"
       })

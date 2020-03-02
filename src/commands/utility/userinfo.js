@@ -21,7 +21,6 @@ module.exports = class Userinfo extends Command {
       const charLimit = (s) => s.length > 1024 ? `${s.substr(0, 1020)}...` : s
 
       const UserData = await this.client.database.users.findOne({_id: member.user.id})
-      const member = guild.members.get(user.id)
 
       let embed = new MayfiEmbed(member.user)
       .setAuthor(member.user.displayName, member.user.displayAvatarURL)

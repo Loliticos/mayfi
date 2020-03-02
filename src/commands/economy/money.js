@@ -20,21 +20,11 @@ module.exports = class Money extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      let UserData = await this.client.database.users.findOne({_id: user.id})
-
-      if(!UserData) {
-          const newUser = new this.client.database.users({
-            _id: user.id
-          })
-
-          newUser.save()
-
-          UserData.money = "0"
-      }
+      let userData = await this.client.database.users.findOne({_id: user.id})
 
       embed
         .setTitle(t("commands:money.title"))
-        .setDescription(t("commands:money.howMany", { coins: UserData.money, user }))
+        .setDescription(t("commands:money.howMany", { coins: userData.money, user }))
  
       channel.send(embed)
     } catch(err) {

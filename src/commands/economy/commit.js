@@ -28,9 +28,10 @@ module.exports = class Commit extends Command {
         return channel.send(embed)
       }
 
-      await this.client.database.users.updateOne({_id: author.id}, { gems: UserData.gems -= gems, money: UserData.money += gems * 4 })
-
       const transfered = gems * 4
+
+      await this.client.database.users.updateOne({_id: author.id}, { $inc: { gems: -gems, money: transfered }})
+      
       embed
         .setTitle(t("commands:commit.title"))
         .setDescription(t("commands:commit.transfered", { gems, transfered }))

@@ -4,7 +4,7 @@ module.exports = class Research extends Command {
   constructor (client) {
     super({
       name: 'research',
-      aliases: ['pesquisa', 'pesquisar'],
+      aliases: ['pesquisa', 'pesquisar', 'researches'],
       category: 'economy',
       requirements: { databaseOnly: true, }
     }, client)
@@ -14,7 +14,7 @@ module.exports = class Research extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      let { gems, fragments, researchesPoints } = await this.client.database.users.findOne({_id: author.id})
+      let { gems, fragments } = await this.client.database.users.findOne({_id: author.id})
 
       if(gems < 10 || fragments < 15) {
         embed
@@ -27,7 +27,7 @@ module.exports = class Research extends Command {
 
       const researchRDM = Math.floor(1 + Math.random() * (23 - 1))
 
-      await this.client.database.users.updateOne({_id: author.id}, { gems: gems -= 10, fragments: fragments -= 15, researchesPoints: researchesPoints += researchRDM })
+      await this.client.database.users.updateOne({_id: author.id}, { $inc: { gems: -10, fragments: -15, researchesPoints: researchRDM } })
 
       embed
         .setTitle(t("commands:research.title"))

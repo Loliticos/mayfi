@@ -48,7 +48,7 @@ module.exports = class Rep extends Command {
 
       await Promise.all([
         this.client.database.users.updateOne({_id: author.id}, { lastRep: Date.now() }),
-        this.client.database.users.updateOne({_id: user.id}, { reps: userData.reps += 1})
+        this.client.database.users.updateOne({_id: user.id}, { $inc: { reps: 1 } })
       ])
 
       channel.send(embed.setDescription(t('commands:rep.repSuccess', { user })))

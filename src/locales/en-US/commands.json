@@ -48,7 +48,8 @@
     "joinedAt": "Joined",
     "playing": "Playing",
     "notPlaying": "This user isn't playing anything.",
-    "aboutMe": "About me"
+    "aboutMe": "About me",
+    "serversInCommon": "Servers in common."
   },
   "math": {
     "commandDescription": "Realizes a math expression.",

@@ -31,7 +31,8 @@
     "joinedAt": "Entrou",
     "playing": "Jogando",
     "notPlaying": "Este jogador não está jogando nada",
-    "aboutMe": "Sobre mim"
+    "aboutMe": "Sobre mim",
+    "serversInCommon": "Servidores em comum."
   }, 
   "guildinfo": {
     "commandDescription": "Veja as informações de um servidor.",

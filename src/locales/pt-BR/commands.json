@@ -183,7 +183,8 @@
     "supportServer": "Servidor de suporte",
     "supportLink": "**[Entrar](https://discord.gg/tvN7cGJ)**",
     "docs": "Documentação",
-    "docsLink": "**[Mayfi Docs](https://mayfi.gitbook.io/docs/)**"
+    "docsLink": "**[Mayfi Docs](https://mayfi.gitbook.io/docs/)**",
+    "specialThanks": "Agradecimentos para"
   },
   "invite": {
     "commandDescription": "Veja o convite da Mayfi.",

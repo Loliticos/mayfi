@@ -13,7 +13,7 @@ module.exports = class Addrole extends Command {
         acceptSelf: true,
         acceptBot: true
       }, {
-        type: 'role', required: true, full: true
+        type: 'role', required: true, full: false
       }]
     }, client)
   }

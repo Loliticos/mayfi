@@ -37,7 +37,7 @@ module.exports = class MayfiClient extends Client {
   }
 
   async checkMute (client) {
-    this.setInterval(() => {
+    this.setInterval(async () => {
       for (let i in client.mutes) {
         const guild = client.guilds.get(client.mutes[i].guild)
 

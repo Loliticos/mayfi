@@ -9,9 +9,9 @@ module.exports = class Mute extends Command {
       category: 'moderation',
       requirements: { guildOnly: true, botPermissions: ['KICK_MEMBERS'], permissions: ['KICK_MEMBERS'] },
       parameters: [{
-        type: 'member', missingError: 'commands:mute.missingUser'
+        type: 'member', missingError: 'commands:mute.missingUser', required: true
       }, {
-        type: 'time', full: true
+        type: 'time', full: true, required: true
       }]
     }, client)
   }

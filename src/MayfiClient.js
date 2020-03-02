@@ -56,7 +56,9 @@ module.exports = class MayfiClient extends Client {
 
           console.log(`User ${member.user.tag} has been unmuted`)
 
-          await fs.writeFile("../mute.json", JSON.stringify(client.mutes))
+          await fs.writeFile("../mute.json", JSON.stringify(client.mutes), err => {
+            if (err) console.error
+          })
 
         }
       }

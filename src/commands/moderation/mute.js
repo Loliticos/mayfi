@@ -9,9 +9,9 @@ module.exports = class Mute extends Command {
       category: 'moderation',
       requirements: { guildOnly: true, botPermissions: ['KICK_MEMBERS'], permissions: ['KICK_MEMBERS'] },
       parameters: [{
-        type: 'member', missingError: 'commands:mute.missingUser', required: true
+        type: 'member', missingError: 'commands:mute.missingUser'
       }, {
-        type: 'time', full: true, required: true
+        type: 'time', full: true
       }]
     }, client)
   }
@@ -21,7 +21,7 @@ module.exports = class Mute extends Command {
     let mutedRole = guild.roles.find(r => r.name == t("commands:mute.roleName"))
 
     if(!mutedRole) {
-      mutedRole = await message.guild.createRole({
+      mutedRole = await guild.createRole({
         name: t("commands:mute.roleName"),
         color: "#7a7a7a"
       })
@@ -41,8 +41,7 @@ module.exports = class Mute extends Command {
       return channel.send(
         embed
           .setColor(Constants.ERROR_COLOR)
-          .setTitle(t("commands:mute.cantMute"))
-          .setDescription(t("commands:mute.alreadyMuted"))
+          .setTitle(t("commands:mute.alreadyMuted"))
       )
     } 
 
@@ -53,22 +52,24 @@ module.exports = class Mute extends Command {
         guild: guild.id
       }
 
-      await fs.writeFile("../../../mute.json", JSON.stringify(this.client.mutes, null, 4))
+      fs.writeFile("../../../mute.json", JSON.stringify(this.client.mutes, null, 4), err => {
+        if (err) console.error
 
-      member.addRole(muteRole.id).then(async user => {
-        channel.send(        
+        member.addRole(mutedRole.id).then(async user => {
+          channel.send(        
+            embed
+              .setTitle(t("commands:mute.muted"))
+              .setDescription(t("commands:mute.description", { user, time: time / 60000, minute: time / 60000 > 1 ? t("commons:minute") : t("commons:minutes") }))
+          )
+        }).catch(err => {
           embed
-            .setTitle(t("commands:mute.muted"))
-            .setDescription(t("commands:mute.description", { user, time }))
-        )
-      }).catch(err => {
-        embed
-          .setColor(Constants.ERROR_COLOR)
-          .setTitle(t('commands:mute.cantMute'))
-          .setDescription(`\`${err}\``)
+            .setColor(Constants.ERROR_COLOR)
+            .setTitle(t('commands:mute.cantMute'))
+            .setDescription(`\`${err}\``)
+          return channel.send(embed)
+        })
       })
 
-      channel.send(embed)
     } catch(err) {
         embed
           .setColor(Constants.ERROR_COLOR)

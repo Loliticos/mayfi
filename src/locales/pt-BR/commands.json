@@ -404,6 +404,22 @@
     "cantMute": "Não foi possível silenciar o usuário",
     "alreadyMuted": "Esse usuário já está mutado.",
     "muted": "Usuário silenciado",
-    "description": "{{user}} `-` {{time}}"
+    "description": "{{user}} `-` {{time}} {{minute}}"
+  },
+  "catfact": {
+    "commandDescription": "Veja fatos aleatorios sobre gatos."
+  },
+  "history": {
+    "commandDescription": "Veja o que aconteceu em certo dia na história.",
+    "commandUsage": "<data>",
+    "invalidDate": "Você precisa informar uma data válida.",
+    "date": "Nesse dia ({{date}})...",
+    "seeMore": "Veja mais"
+  },
+  "dogfact": {
+    "commandDescription": "Veja fatos aleatórios sobre cachorros."
+  },
+  "meme": {
+    "commandDescription": "Mostra um meme aleatorio."
   }
 }

@@ -388,5 +388,38 @@
     "commandUsage": "<member> <role>",
     "title": "Role added",
     "description": "I added the role `{{role.name}}` to the member {{member}}"
+  },
+  "research": {
+    "commandDescription": "Do a research and get researches points!",
+    "invalidMaterial": "Invalid materials",
+    "youNeed": "You need 15 fragments and 10 gems to research!",
+    "title": "Research",
+    "howMany": "You researched and found `{{research}}` points of research."
+  },
+  "mute": {
+    "commandDescription": "Mute  an user for inderteminated time.",
+    "commandUsage": "<member> <time>",
+    "missingUser": "You need to give me an user to be muted!",
+    "roleName": "Muted",
+    "cantMute": "I couldn't mute the user",
+    "alreadyMuted": "This user is already muted.",
+    "muted": "Member muted",
+    "description": "{{user}} `-` {{time}} {{minute}}"
+  },
+  "catfact": {
+    "commandDescription": "See random facts about cats."
+  },
+  "history": {
+    "commandDescription": "See what happened certain day on history.",
+    "commandUsage": "<date>",
+    "invalidDate": "You need to give me a valid date.",
+    "date": "On this day ({{date}})...",
+    "seeMore": "See more"
+  },
+  "dogfact": {
+    "commandDescription": "See random facts about dogs."
+  },
+  "meme": {
+    "commandDescription": "Shows a random meme"
   }
 }

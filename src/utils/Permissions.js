@@ -10,4 +10,5 @@ module.exports = class Permissions {
 		const botGuild = client.guilds.get(process.env.BOT_GUILD)
 		const managerRole = botGuild.roles.get(process.env.DEVELOPER_ROLE)
 		return role.members.map(m => m.tag)
+	}
 }

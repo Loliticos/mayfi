@@ -9,6 +9,6 @@ module.exports = class Permissions {
 	static getManagers(client) {
 		const botGuild = client.guilds.get("676501101482082355")
         const managerRole = botGuild.roles.get("676526803157778447")
-        managerRole.members.map(m => m.user.tag).join(", ")
+        managerRole.members.map(m => m.user.tag)
 	}
 }

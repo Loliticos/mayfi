@@ -32,7 +32,7 @@
     "playing": "Jogando",
     "notPlaying": "Este jogador não está jogando nada",
     "aboutMe": "Sobre mim",
-    "serversInCommon": "Servidores em comum."
+    "serversInCommon": "Servidores em comum [{{count}}]"
   }, 
   "guildinfo": {
     "commandDescription": "Veja as informações de um servidor.",

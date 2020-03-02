@@ -49,7 +49,7 @@
     "playing": "Playing",
     "notPlaying": "This user isn't playing anything.",
     "aboutMe": "About me",
-    "serversInCommon": "Servers in common."
+    "serversInCommon": "Servers in common [{{count}}]"
   },
   "math": {
     "commandDescription": "Realizes a math expression.",

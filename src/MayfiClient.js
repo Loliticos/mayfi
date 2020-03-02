@@ -43,7 +43,7 @@ module.exports = class MayfiClient extends Client {
 
         if (!guild) return
 
-        const time  client.mutes[i].time
+        const time = client.mutes[i].time
         const member = guild.members.get(i)
 
         const mutedRole = guild.roles.find(r => r.name === "Silenciado" || r.name === "Muted")

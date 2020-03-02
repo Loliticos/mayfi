@@ -243,7 +243,7 @@
   "rep": {
     "commandDescription": "Dê uma reputação para um usuário",
     "commandUsage": "<usuário>",
-    "repYourself": "Você não pode dar reputaçã para você mesmo!",
+    "repYourself": "Você não pode dar reputação para você mesmo!",
     "repSuccess": "Você deu **1** reputação para **{{user.tag}}**",
     "alreadyGave": "Você não pode enviar outra reputação",
     "youCanGiveAgain": "Você precisa esperar `{{cooldown}}` antes de enviar outra reputação",

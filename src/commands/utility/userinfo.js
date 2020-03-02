@@ -17,7 +17,7 @@ module.exports = class Userinfo extends Command {
 
       moment.locale(language)
 
-      const UserData = await this.client.database.users.findOne({_id: member.user.id})
+      const UserData = await this.client.database.users.findOne({_id: member.id})
 
       let embed = new MayfiEmbed(member.user)
       .setAuthor(member.displayName, member.user.displayAvatarURL)

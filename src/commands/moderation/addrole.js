@@ -21,17 +21,15 @@ module.exports = class Addrole extends Command {
   async run ({ channel, guild, author, t }, member, role) {
     const embed = new MayfiEmbed(author)
 
-    try {
-      member.addRole(role.id)
-      .then(() => {
+      await member.addRole(role.id).then(async () => {
         embed
           .setTitle(t("commands:addrole.title"))
           .setDescription(t("commands:addrole.description", { role, member }))
         channel.send({ embed: embed })
+      }).catch(err => {
+          throw new CommandError(`${t("errors:generic")}\n\`${e.message}\``)
       })
-    } catch(e) {
-      throw new CommandError(`${t("errors:generic")}\n\`${e.message}\``)
-    }
+      
 
   }
 }

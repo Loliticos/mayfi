@@ -14,5 +14,6 @@ module.exports = {
   ChannelParameter: require('./parameters/types/ChannelParameter.js'),
   EmojiParameter: require('./parameters/types/EmojiParameter.js'),
   NumberParameter: require('./parameters/types/NumberParameter.js'),
-  RoleParameter: require('./parameters/types/RoleParameter.js')
+  RoleParameter: require('./parameters/types/RoleParameter.js'),
+  TimeParameter: require('./parameters/types/TimeParameter.js')
 }

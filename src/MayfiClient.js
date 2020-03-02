@@ -1,6 +1,7 @@
 const { Client } = require("discord.js")
 const { readdir } = require("fs")
 const Loaders = require('./loaders/')
+const fs = require('fs')
 
 module.exports = class MayfiClient extends Client {
 	constructor(CLIENT_OPTIONS = {}) {
@@ -10,8 +11,11 @@ module.exports = class MayfiClient extends Client {
 
     this.initializeLoaders()
     this.initializeDatabase()
+    this.checkMute(this)
 
     this.database = this.databaseLoaded
+    this.mutes = require("../mute.json")
+
 	}
 
 	login (token = process.env.DISCORD_TOKEN) {
@@ -30,6 +34,33 @@ module.exports = class MayfiClient extends Client {
       this.databaseLoaded = null
       console.error(e)
     }
+  }
+
+  async checkMute (client) {
+    this.setInterval(() => {
+      for (let i in client.mutes) {
+        const guild = client.guilds.get(client.mutes[i].guild)
+
+        if (!guild) return
+
+        const time  client.mutes[i].time
+        const member = guild.members.get(i)
+
+        const mutedRole = guild.roles.find(r => r.name === "Silenciado" || r.name === "Muted")
+
+        if (!member.roles.has(mutedRole.id)) member.addRole(mutedRole.id)
+
+        if (Date.now() > time) {
+          member.removeRole(mutedRole.id)
+          delete this.mutes[i]
+
+          console.log(`User ${member.user.tag} has been unmuted`)
+
+          await fs.writeFile("../mute.json", JSON.stringify(client.mutes))
+
+        }
+      }
+    }, 5000)
   }
 
   async initializeLoaders () {

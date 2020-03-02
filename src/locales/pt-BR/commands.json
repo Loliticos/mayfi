@@ -395,5 +395,15 @@
     "youNeed": "Você precisa de 15 fragmentos e 10 gemas para pesquisar!",
     "title": "Pesquisa",
     "howMany": "Você pesquisou e encontrou `{{research}}` pontos de pesquisa."
+  },
+  "mute": {
+    "commandDescription": "Mute um usuário por tempo inderteminado",
+    "commandUsage": "<membro> <tempo>",
+    "missingUser": "Você precisa informar um usuário para ser mutado!",
+    "roleName": "Silenciado",
+    "cantMute": "Não foi possível silenciar o usuário",
+    "alreadyMuted": "Esse usuário já está mutado.",
+    "muted": "Usuário silenciado",
+    "description": "{{user}} `-` {{time}}"
   }
 }

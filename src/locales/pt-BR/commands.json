@@ -421,5 +421,16 @@
   },
   "meme": {
     "commandDescription": "Mostra um meme aleatorio."
+  },
+  "jokes": {
+    "commandDescription": "Mostra uma piada aleatoria."
+  },
+  "advice": {
+    "commandDescription": "Mostra uma dica."
+  },
+  "dice": {
+    "commandDescription": "Rola um dado! Tem como argumento o número de lados do dado (Padrão 6)",
+    "commandUsage": "[número de lados do dado]",
+    "rolledOn": "O dado parou no número: `{{rolled}}`"
   }
 }

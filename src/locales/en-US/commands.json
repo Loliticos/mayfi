@@ -421,5 +421,16 @@
   },
   "meme": {
     "commandDescription": "Shows a random meme"
+  },
+  "jokes": {
+    "commandDescription": "Shows a random joke."
+  },
+  "advice": {
+    "commandDescription": "Shows an advice."
+  },
+  "dice": {
+    "commandDescription": "Roll a dice! It has as an argument the number of sides of the dice (Pattern 6)",
+    "commandUsage": "[number of sides of the dice]",
+    "rolledOn": "The dice stopped on: `{{rolled}}`"
   }
 }

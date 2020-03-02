@@ -20,6 +20,7 @@
   "invalidNumber": "You have to give me a valid number.",
   "invalidUser": "You have to give me a valid user.",
   "invalidUserBot": "You have to give me a user that isn't a bot.",
+  "invalidTime": "You have to give me a valid time!",
   "emojiNotFromSameGuild": "You have to give me an emoji that is from this guild.",
   "invalidUserNotBot": "You have to give me a user that is a bot.",
   "databaseOnly": "Sorry, I don't have a database connection right now!",

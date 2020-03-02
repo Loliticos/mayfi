@@ -31,7 +31,7 @@ module.exports = class Userinfo extends Command {
       .addField(t("commands:userinfo.createdAt"), `${moment(member.user.createdTimestamp).format('LLL')}\n(${moment(member.user.createdTimestamp).fromNow()})`)
       .addField(t("commands:userinfo.joinedAt"), `${moment(member.joinedTimestamp).format('LLL')}\n(${moment(member.joinedTimestamp).fromNow()})`)     
       UserData ? embed.addField(t("commands:userinfo.aboutMe"), UserData.personalText) : " "
-      .addField(t('commands:userinfo.serversInCommon', { count: filter.length }), charLimit(filter.join(', ')))
+      embed.addField(t('commands:userinfo.serversInCommon', { count: filter.length }), charLimit(filter.join(', ')))
       embed.setThumbnail(member.user.displayAvatarURL)
 
       channel.send(embed)

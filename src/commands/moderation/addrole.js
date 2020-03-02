@@ -26,7 +26,7 @@ module.exports = class Addrole extends Command {
       .then(() => {
         embed
           .setTitle(t("commands:addrole.title"))
-          .setDescription(t("commands:addrole.description"), { member, role })
+          .setDescription(t("commands:addrole.description"), { role, member })
         channel.send({ embed: embed })
       })
     } catch(e) {

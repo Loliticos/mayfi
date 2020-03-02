@@ -381,5 +381,11 @@
   "docs": {
     "commandDescription": "See my documentation.",
     "clickHere": "Click here to see my documentation."
+  },
+  "addrole": {
+    "commandDescription": "Add a role to a member.",
+    "commandUsage": "<member> <role>",
+    "title": "Role added",
+    "description": "I added the role `{{role.name}}` to the member {{member}}"
   }
 }

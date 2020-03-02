@@ -432,5 +432,11 @@
     "commandDescription": "Roll a dice! It has as an argument the number of sides of the dice (Pattern 6)",
     "commandUsage": "[number of sides of the dice]",
     "rolledOn": "The dice stopped on: `{{rolled}}`"
+  },
+  "slowmode": {
+    "commandDescription": "Sets the amount of time that an user needs to wait before talking again in a channel.",
+    "commandUsage": "<time> [channel]",
+    "noTime": "You need to give me a time for the slowmode.",
+    "changed": "Changed the slowmode of the channel **#{{channel.name}}** to **{{number}}**"
   }
 }

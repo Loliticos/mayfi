@@ -432,5 +432,11 @@
     "commandDescription": "Rola um dado! Tem como argumento o número de lados do dado (Padrão 6)",
     "commandUsage": "[número de lados do dado]",
     "rolledOn": "O dado parou no número: `{{rolled}}`"
+  },
+  "slowmode": {
+    "commandDescription": "Seta o tempo que o usuário deve esperar para falar novamente em um canal.",
+    "commandUsage": "<tempo> [canal]",
+    "noTime": "Você precisa informar o tempo para o slowmode.",
+    "changed": "Alterado o slowmode do canal **#{{channel.name}}** para **{{number}}**"
   }
 }

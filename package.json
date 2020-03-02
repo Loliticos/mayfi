@@ -1,8 +1,8 @@
 {
   "name": "mayfi",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Version 2 of Mayfi",
-  "main": "index.js",
+  "main": "shard.js",
   "dependencies": {
     "chalk": "^3.0.0",
     "cowsay": "^1.4.0",

@@ -27,7 +27,7 @@ module.exports = class Userinfo extends Command {
       .addField(t("commands:userinfo.playing"), member.user.presence.game ? member.user.presence.game : t("commands:userinfo.notPlaying"))
       .addField(t("commands:userinfo.createdAt"), `${moment(member.user.createdTimestamp).format('LLL')}\n(${moment(member.user.createdTimestamp).fromNow()})`)
       .addField(t("commands:userinfo.joinedAt"), `${moment(member.joinedTimestamp).format('LLL')}\n(${moment(member.joinedTimestamp).fromNow()})`)     
-      UserData ? embed.addField(t("commands:userinfo.aboutMe"), UserData.personalText) : ""
+      UserData ? embed.addField(t("commands:userinfo.aboutMe"), UserData.personalText) : " "
       embed.setThumbnail(member.user.displayAvatarURL)
 
       channel.send(embed)

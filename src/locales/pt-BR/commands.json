@@ -381,5 +381,11 @@
   "docs": {
     "commandDescription": "Veja a minha documentação.",
     "clickHere": "Clique aqui para ver minha documentação."
+  },
+  "addrole": {
+    "commandDescription": "Adicione um cargo para um membro.",
+    "commandUsage": "<membro> <cargo>",
+    "title": "Cargo adicionado",
+    "description": "Eu adicionei o cargo `{{role.name}}` ao usuário {{member}}"
   }
 }

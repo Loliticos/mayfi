@@ -184,7 +184,7 @@
     "supportLink": "**[Join](https://discord.gg/tvN7cGJ)**",
     "docs": "Documentation",
     "docsLink": "**[Mayfi Docs](https://mayfi.gitbook.io/docs/)**",
-    "specialThanks": "Special thanks to"
+    "managers": "Desenvolvedores"
   },
   "invite": {
     "commandDescription": "Shows Mayfi invite link.",

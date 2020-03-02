@@ -1,5 +1,6 @@
 const { Command, MayfiEmbed, Constants } = require('../../')
 const fs = require("fs")
+const ms = require("ms")
 
 module.exports = class Mute extends Command {
   constructor (client) {
@@ -59,7 +60,7 @@ module.exports = class Mute extends Command {
           channel.send(        
             embed
               .setTitle(t("commands:mute.muted"))
-              .setDescription(t("commands:mute.description", { user, time: time / 60000, minute: time / 60000 > 1 ? t("commons:minute") : t("commons:minutes") }))
+              .setDescription(t("commands:mute.description", { user, time: ms(time) }))
           )
         }).catch(err => {
           embed

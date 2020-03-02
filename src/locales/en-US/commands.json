@@ -404,7 +404,7 @@
     "cantMute": "I couldn't mute the user",
     "alreadyMuted": "This user is already muted.",
     "muted": "Member muted",
-    "description": "{{user}} `-` {{time}} {{minute}}"
+    "description": "{{user}} `-` {{time}}"
   },
   "catfact": {
     "commandDescription": "See random facts about cats."

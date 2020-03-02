@@ -404,7 +404,7 @@
     "cantMute": "Não foi possível silenciar o usuário",
     "alreadyMuted": "Esse usuário já está mutado.",
     "muted": "Usuário silenciado",
-    "description": "{{user}} `-` {{time}} {{minute}}"
+    "description": "{{user}} `-` {{time}}"
   },
   "catfact": {
     "commandDescription": "Veja fatos aleatorios sobre gatos."

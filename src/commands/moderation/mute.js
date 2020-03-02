@@ -69,6 +69,12 @@ module.exports = class Mute extends Command {
       })
 
       channel.send(embed)
-    }
+    } catch(err => {
+        embed
+          .setColor(Constants.ERROR_COLOR)
+          .setTitle(t('commands:mute.cantMute'))
+          .setDescription(`\`${err}\``)
+        return channel.send(embed)
+    })
   }
 }

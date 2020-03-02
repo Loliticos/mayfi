@@ -16,7 +16,9 @@ const UserSchema = new Schema({
 	reps: { type: Number, default: 0 },
 	lastRep: { type: Number, default: 0 },
 	gems: { type: Number, default: 0 },
-	lastMine: { type: Number, default: 0 }
+	lastMine: { type: Number, default: 0 },
+	researchesPoints: { type: Number, default: 0 },
+	fragments: { type: Number, default: 0 }
 })
 
 const GuildSchema = new Schema({

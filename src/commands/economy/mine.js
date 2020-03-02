@@ -24,7 +24,7 @@ module.exports = class Mine extends Command {
     }
 
     try {
-      const foundGems = Math.floor(0 + Math.random() * (437 - 0))
+      const foundGems = Math.floor(1 + Math.random() * (437 - 1))
 
       await this.client.database.users.updateOne({_id: author.id}, { lastMine: Date.now(), gems: gems += foundGems })
 

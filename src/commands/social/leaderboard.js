@@ -49,7 +49,7 @@ module.exports = class Leaderboard extends Command {
         **2.** __${this.client.users.get(top[1]._id)} (${this.client.users.get(top[1]._id).tag})__\n**${t(`commands:leaderboard.reps`)}**: ${top[1].reps}\n
         **3.** __${this.client.users.get(top[2]._id)} (${this.client.users.get(top[2]._id).tag})__\n**${t(`commands:leaderboard.reps`)}**: ${top[2].reps}\n
         **4.** __${this.client.users.get(top[3]._id)} (${this.client.users.get(top[3]._id).tag})__\n**${t(`commands:leaderboard.reps`)}**: ${top[3].reps}\n
-        **4.** __${this.client.users.get(top[4]._id)} (${this.client.users.get(top[3]._id).tag})__\n**${t(`commands:leaderboard.reps`)}**: ${top[4].reps}\n
+        **5.** __${this.client.users.get(top[4]._id)} (${this.client.users.get(top[3]._id).tag})__\n**${t(`commands:leaderboard.reps`)}**: ${top[4].reps}\n
         `)
     channel.send(embed)
 

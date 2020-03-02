@@ -25,10 +25,11 @@ module.exports = class Mine extends Command {
 
     try {
       const foundGems = Math.floor(1 + Math.random() * (437 - 1))
+      const foundFragments = Math.floor(1 + Math.random() * (72 - 1))
 
-      await this.client.database.users.updateOne({_id: author.id}, { $inc: { gems: foundGems }, lastMine: Date.now() })
+      await this.client.database.users.updateOne({_id: author.id}, { $inc: { gems: foundGems, fragments: foundFragments }, lastMine: Date.now() })
 
-      channel.send(embed.setDescription(t('commands:mine.mined', { gems: foundGems, prefix })))
+      channel.send(embed.setDescription(t('commands:mine.mined', { gems: foundGems, prefix, foundFragments })))
     } catch(err) {
       throw new CommandError(t("errors:generic"))
     }

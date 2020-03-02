@@ -319,7 +319,7 @@
     "commandDescription": "Trabalhe um pouco para ganhar gemas!",
     "alreadyMined": "Não foi possível trabalhar hoje",
     "youCanMineAgain": "Você precisa esperar `{{cooldown}}` antes de minerar novamente!",
-    "mined": "Você encontrou um total de `{{gems}}` gemas hoje. Troque elas por dinheiro usando o comando `{{prefix}}commit <gemas>`"
+    "mined": "Você encontrou um total de `{{gems}}` gemas e `{{foundFragments}}` fragmentos hoje. Troque suas gemas por dinheiro usando o comando `{{prefix}}commit <gemas>`"
   },
   "personaltext": {
     "commandDescription": "Mude o seu sobre mim",

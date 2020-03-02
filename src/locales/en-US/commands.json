@@ -319,7 +319,7 @@
     "commandDescription": "Work a little and get some gems!",
     "alreadyMined": "You can't work today",
     "youCanMineAgain": "You need to wait `{{cooldown}}` before mining again!",
-    "mined": "You found a total of `{{gems}}` today. Change it for money with the command `{{prefix}}commit <gems>`"
+    "mined": "You found a total of `{{gems}}` and `{{foundFragments}}` fragments today. Change your gems for money with the command `{{prefix}}commit <gems>`"
   },
   "personaltext": {
     "commandDescription": "Changes your about me",

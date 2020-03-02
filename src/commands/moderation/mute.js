@@ -41,7 +41,7 @@ module.exports = class Mute extends Command {
       return channel.send(
         embed
           .setColor(Constants.ERROR_COLOR)
-          .setTitle(t("commands:mute.cantMute")
+          .setTitle(t("commands:mute.cantMute"))
           .setDescription(t("commands:mute.alreadyMuted"))
       )
     } 

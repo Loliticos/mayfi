@@ -13,7 +13,7 @@ module.exports = class EightBall extends Command {
   }
 
   async run ({ channel, t, author }, text) {
-    const answerCount = 14
+    const answerCount = 15
     const result = Math.floor((Math.random() * answerCount))
 
     const embed = new MayfiEmbed(author)

@@ -203,7 +203,8 @@
     "mentionable": "Mencionável",
     "mentionableTrue": "Sim",
     "mentionableFalse": "Não",
-    "members": "Membros que possuem este cargo"
+    "members": "Membros que possuem este cargo",
+    "position": "Posição"
   },
   "inversetext": {
     "commandDescription": "Inverte um texto",
@@ -357,7 +358,8 @@
       "11": "Pessoas diriam que sim.",
       "12": "Minha resposta é não!",
       "13": "Minha resposta é sim!",
-      "14": "Ooohh.. Com certeza!"
+      "14": "Ooohh.. Com certeza!",
+      "15": "É provável que não."
     }
   },
   "ascii": {

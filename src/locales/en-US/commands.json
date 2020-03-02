@@ -203,7 +203,8 @@
     "mentionable": "Mentionable",
     "mentionableTrue": "Yes",
     "mentionableFalse": "No",
-    "members": "Members that has this role"
+    "members": "Members that has this role",
+    "position": "Position"
   },
   "inversetext": {
     "commandDescription": "Inverse a text",
@@ -357,7 +358,8 @@
       "11": "Peoples'd say yes.",
       "12": "My answer is no!",
       "13": "My answer is yes!",
-      "14": "Ooohh.. For sure!"
+      "14": "Ooohh.. For sure!",
+      "15": "Probally not."
     }
   },
   "ascii": {

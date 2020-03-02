@@ -7,8 +7,8 @@ module.exports = class Permissions {
 	}
 
 	static getManagers(client) {
-		const botGuild = client.guilds.get(process.env.BOT_GUILD)
-		const managerRole = botGuild.roles.get(process.env.DEVELOPER_ROLE)
-		return managerRole.members.map(m => m.tag)
+		const botGuild = client.guilds.get("676501101482082355")
+        const managerRole = botGuild.roles.get("676526803157778447")
+        managerRole.members.map(m => m.user.tag).join(", ")
 	}
 }

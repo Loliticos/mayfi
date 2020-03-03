@@ -17,6 +17,10 @@ module.exports = class Command {
         this.requirements = options.optional('requirements')
         this.parameters = options.optional('parameters')
 
+        this.parentCommand = options.optional('parent')
+
+        this.subcommands = []
+
         this.client = client
 
     }
@@ -27,11 +31,18 @@ module.exports = class Command {
             return this.error(context, e)
         }
 
+        const [ subcmd ] = args
+        const subcommand = this.subcommands.find(c => c.name.toLowerCase() === subcmd || (c.aliases && c.aliases.includes(subcmd)))
+
+        if (subcommand) {
+            return subcommand._run(context, args.splice(1))
+        }
+
         try {
           args = await this.handleParameters(context, args)
         } catch (e) {
           return this.error(context, e)
-        }
+        }       
 
         try {
           await this.run(context, ...args)

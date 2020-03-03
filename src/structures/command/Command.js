@@ -27,6 +27,8 @@ module.exports = class Command {
 
     }
     async _run (context, args) {
+        this.applyCooldown(context.author, this.cooldown)
+
         try {
             this.handleRequirements(context, args)
         } catch(e) {
@@ -45,8 +47,6 @@ module.exports = class Command {
         } catch (e) {
           return this.error(context, e)
         }       
-
-        this.applyCooldown(context.author, this.cooldown)
 
         try {
           await this.run(context, ...args)
@@ -81,7 +81,7 @@ module.exports = class Command {
         if (!user || !this.cooldown > 0) return false
         if (!this.cooldownMap.has(user.id)) {
             this.cooldownMap.set(user.id, Date.now())
-            user.client.setTimeout(() => this.cooldownMap.delete(user.id), time * 1000)
+            setTimeout(() => this.cooldownMap.delete(user.id), time * 1000)
         }
     }
 

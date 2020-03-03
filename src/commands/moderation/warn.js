@@ -6,6 +6,7 @@ module.exports = class Warn extends Command {
       name: 'warn',
       aliases: ['avisar'],
       category: 'moderation',
+      cooldown: 30,
       requirements: { guildOnly: true, botPermissions: ['KICK_MEMBERS'], permissions: ['KICK_MEMBERS'] },
       parameters: [{
         type: 'member', required: true, acceptSelf: false, missingError: "commands:warn.noMember"

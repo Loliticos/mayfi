@@ -47,8 +47,7 @@ module.exports = class CommandRequirements {
     }
 
    if (command.cooldownTime > 0 && command.cooldownMap.has(author.id)) {
-          throw new CommandError(t("errors:cooldown"))
-        
+        throw new CommandError(t("errors:cooldown"))
       }
   }
 }

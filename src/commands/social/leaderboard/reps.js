@@ -32,7 +32,7 @@ module.exports = class Reputation extends Command {
     }
 
     embed
-      .setTitle(t(`commands:leaderboard.subcommands.reputation.title`))
+      .setTitle(t(`commands:${this.path}.title`))
       .setDescription(description)
     channel.send(embed)
 

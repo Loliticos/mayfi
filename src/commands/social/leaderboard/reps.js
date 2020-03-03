@@ -23,12 +23,11 @@ module.exports = class Reputation extends Command {
 
     const top = users.splice(0, 5)
 
-    let description
-
-    console.log(top.length)
+    let description = ""
 
     for (let i = 0; i < top.length; i++) {
-      description += `**${i++}.** __${this.client.users.get(top[i]._id)} (${this.client.users.get(top[i]._id).tag})__\n**${t(`commands:leaderboard.reps`)}**: ${top[i].reps}\n`
+      console.log(i)
+      description += `**${i}.** __${this.client.users.get(top[i]._id)} (${this.client.users.get(top[i]._id).tag})__\n**${t(`commands:leaderboard.reps`)}**: ${top[i].reps}\n\n`
     }
 
     embed

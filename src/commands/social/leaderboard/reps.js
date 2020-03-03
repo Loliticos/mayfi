@@ -14,8 +14,7 @@ module.exports = class Reputation extends Command {
   async run ({ channel, author, t }) {
     const embed = new MayfiEmbed(author)
 
-
-    const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(5)
+    const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(5 + 6)
 
     const users = dbRes.filter(u => {
       u.user = this.client.users.get(u._id)

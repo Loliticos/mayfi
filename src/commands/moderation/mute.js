@@ -8,7 +8,7 @@ module.exports = class Mute extends Command {
       name: 'mute',
       aliases: ['mutar', 'tempmute', 'silenciar'],
       category: 'moderation',
-      requirements: { guildOnly: true, botPermissions: ['KICK_MEMBERS'], permissions: ['KICK_MEMBERS'] },
+      requirements: { guildOnly: true, botPermissions: ['KICK_MEMBERS'], permissions: ['MANAGE_ROLES'] },
       parameters: [{
         type: 'member', missingError: 'commands:mute.missingUser'
       }, {

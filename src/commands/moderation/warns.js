@@ -6,6 +6,7 @@ module.exports = class Warns extends Command {
       name: 'warns',
       aliases: ['avisos'],
       category: 'moderation',
+      cooldown: 30
       parameters: [{
         type: 'member', full: true, required: false, acceptBot: true
       }]
@@ -15,7 +16,7 @@ module.exports = class Warns extends Command {
   async run ({ channel, member: author, t }, member = author) {
     const { warns } = await this.client.database.users.findOne({_id: member.user.id})
 
-    const embed = new MayfiEmbed(author)
+    const embed = new MayfiEmbed(member.user)
     .setTitle(t("commands:warns.userWarns", { warns, member }))
     channel.send(embed)
 

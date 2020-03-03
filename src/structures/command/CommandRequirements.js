@@ -45,5 +45,10 @@ module.exports = class CommandRequirements {
         throw new CommandError(t(sentence, { permission }))
       }
     }
+
+   if (command.cooldownTime > 0 && command.cooldownMap.has(author.id)) {
+          throw new CommandError(t("errors:cooldown"))
+        
+      }
   }
 }

@@ -20,6 +20,8 @@ module.exports = class Command {
         this.parentCommand = options.optional('parent')
 
         this.subcommands = []
+        this.cooldown = 0
+        this.cooldownMap = this.cooldown > 0 ? new Map : null
 
         this.client = client
 
@@ -44,6 +46,8 @@ module.exports = class Command {
           return this.error(context, e)
         }       
 
+        this.applyCooldown(context.author)
+
         try {
           await this.run(context, ...args)
         } catch (e) {
@@ -64,24 +68,32 @@ module.exports = class Command {
     }
 
     error ({ t, author, channel, prefix }, error) {
-    if (error instanceof CommandError) {
-      const embed = new MayfiEmbed(author)
-        .setTitle(error.message)
-        .setDescription(error.showUsage ? this.usage(t, prefix) : '')
-      return channel.send(embed.setColor(Constants.ERROR_COLOR)).then(() => channel.stopTyping())
+        if (error instanceof CommandError) {
+          const embed = new MayfiEmbed(author)
+            .setTitle(error.message)
+            .setDescription(error.showUsage ? this.usage(t, prefix) : '')
+          return channel.send(embed.setColor(Constants.ERROR_COLOR)).then(() => channel.stopTyping())
+        }
+        console.error(error)
     }
-    console.error(error)
-  }
 
-  usage(t, prefix, noUsage = true) {
-    const usagePath = `${this.name}.commandUsage`
-    const usage = noUsage ? t(`commands:${usagePath}`) : t([`commands:${usagePath}`, ''])
-    if (usage !== usagePath) {
-      return `**${t('commons:usage')}:** \`${prefix}${this.name} ${usage ? usage : ''}\``
-    } else {
-      return `**${t('commons:usage')}:** \`${prefix}${this.name}\``
+    applyCooldown (user, time) {
+        if (!user || !this.cooldown > 0) return false
+        if (!this.cooldownMap.has(user.id)) {
+            this.cooldownMap.set(user.id, Date.now())
+            user.client.setTimeout(() => this.cooldownMap.delete(user.id), time * 1000)
+        }
     }
-  }
+
+    usage(t, prefix, noUsage = true) {
+        const usagePath = `${this.name}.commandUsage`
+        const usage = noUsage ? t(`commands:${usagePath}`) : t([`commands:${usagePath}`, ''])
+        if (usage !== usagePath) {
+        return `**${t('commons:usage')}:** \`${prefix}${this.name} ${usage ? usage : ''}\``
+        } else {
+        return `**${t('commons:usage')}:** \`${prefix}${this.name}\``
+        }
+    }
     
     async run () {}
 

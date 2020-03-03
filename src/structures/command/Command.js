@@ -35,7 +35,7 @@ module.exports = class Command {
         const subcommand = this.subcommands.find(c => c.name.toLowerCase() === subcmd || (c.aliases && c.aliases.includes(subcmd)))
 
         if (subcommand) {
-            this.hidden = true
+            subcommand.hidden = true
             return subcommand._run(context, args.splice(1))
         }
 

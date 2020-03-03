@@ -13,7 +13,8 @@
   	"title": "Comandos",
   	"prefix": "Meu prefixo é `{{botPrefix}}`",
   	"youCanUse": "mas você também pode usar {{- botMention}} como um prefixo.",
-  	"specificInformation": "Digite {{helpString}} para mais informações."
+  	"specificInformation": "Digite {{helpString}} para mais informações.",
+    "subcommands": "Subcomandos"
   },
   "avatar": {
     "commandDescription": "Veja o avatar seu ou de um usuário.",
@@ -55,7 +56,8 @@
     "commandDescription": "Realiza uma expressão matemática.",
     "commandUsage": "<expressão>",
     "invalidMathExpression": "Você precisa informar uma expressão matemática válida!",
-    "title": "Resultado `{{result}}`"
+    "title": "Resultado `{{result}}`",
+    "error": "Ocorreu um erro"
   },
   "guildIcon": {
     "commandDescription": "Veja o ícone de um servidor!",
@@ -180,7 +182,7 @@
     "hello": "Olá {{user}}, meu nome é Mayfi e eu sou uma bot para Discord com algumas funcionalidades incríveis! ^-^",
     "statistics": "Eu estou acordada faz **{{uptime}}**, eu estou trazendo alegria para **{{guilds}} servidores** e falando com **{{users}} usuários** com **{{commands}} comandos!**",
     "inviteMe": "Me adicione",
-    "inviteLink": "**[Add](https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot)**",
+    "inviteLink": "**[Adicionar](https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot)**",
     "supportServer": "Servidor de suporte",
     "supportLink": "**[Entrar](https://discord.gg/tvN7cGJ)**",
     "docs": "Documentação",
@@ -298,7 +300,8 @@
     "goToMessage": "Ir até a mensagem"
   },
   "leaderboard": {
-    "commandDescription": "Veja os top 5 jogadores com mais reputação!",
+    "commandDescription": "Veja os usuários com mais pontos.",
+    "commandUsage": "<subcomando>",
     "titlereps": "Placar de reputação",
     "repsTitle": "Reputação",
     "reps": "Reputação",

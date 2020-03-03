@@ -13,7 +13,8 @@
   	"title": "Commands",
   	"prefix": "My prefix it's `{{botPrefix}}`",
   	"youCanUse": "but you can also use {{- botMention}} as a prefix.",
-  	"specificInformation": "Type {{helpString}} for more informations."
+  	"specificInformation": "Type {{helpString}} for more informations.",
+    "subcommands": "Subcommands"
   },
   "avatar": {
     "commandDescription": "Sees the avatar from an user.",
@@ -55,7 +56,8 @@
     "commandDescription": "Realizes a math expression.",
     "commandUsage": "<expression>",
     "invalidMathExpression": "You need to inform a valid math expression!",
-    "title": "Result `{{result}}`"
+    "title": "Result `{{result}}`",
+    "error": "There was an error"
   },
   "guildIcon": {
     "commandDescription": "Sees the guild icon!",

@@ -31,10 +31,11 @@ module.exports = class Help extends Command {
 
       if (command.aliases && command.aliases.length > 0) description.push(`\n**Aliases:** ${command.aliases.map(a => `\`${a}\``).join(', ')}`)
       if (command.requirements && command.requirements.permissions && command.requirements.permissions.length > 0) description.push(`\n**${t('commands:help.permissions')}:** ${command.requirements.permissions.map(p => `\`${t(`permissions:${p}`)}\``).join(', ')}`)
+      if (command.subcommands.length > 0) description.push(`\n**${t('commands:help.subcommands')}:** ${command.subcommands.map(a => `\`${a.name}\``).join(', ')}`)
       if (command.requirements && command.requirements.botPermissions && command.requirements.botPermissions.length > 0) description.push(`\n**${t('commands:help.botPermissions')}:** ${command.requirements.botPermissions.map(p => `\`${t(`permissions:${p}`)}\``).join(', ')}`)
      
       embed
-        .setTitle(command.name)
+        .setTitle(cmd)
         .setDescription(description.join('\n'))
         .setFooter(t("commands:help.footer"))
         channel.send(embed)

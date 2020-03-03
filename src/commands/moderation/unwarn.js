@@ -25,7 +25,7 @@ module.exports = class Unwarn extends Command {
       embed
         .setColor(Constants.ERROR_COLOR)
         .setTitle(t("commands:unwarn.cantUnwarn"))
-        .setDescription(`\`${t("commands:unwarn.memberHasNoWarning")}\``)
+        .setDescription(t("commands:unwarn.memberHasNoWarning"))
       return channel.send(embed)
     }
 

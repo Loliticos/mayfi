@@ -23,7 +23,7 @@ module.exports = class Channelinfo extends Command {
 
         embed.setTitle(t("commands:math.title", { result }))
       } catch(error) {
-        throw new CommandError(t('commands:math.error'), true)
+        throw new CommandError(`${t('commands:math.error')}\n\`${error.message}\``)
       }
 
       channel.send(embed)

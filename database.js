@@ -18,7 +18,8 @@ const UserSchema = new Schema({
 	gems: { type: Number, default: 0 },
 	lastMine: { type: Number, default: 0 },
 	researchesPoints: { type: Number, default: 0 },
-	fragments: { type: Number, default: 0 }
+	fragments: { type: Number, default: 0 },
+	warns: { type: Number, default: 0 }
 })
 
 const GuildSchema = new Schema({

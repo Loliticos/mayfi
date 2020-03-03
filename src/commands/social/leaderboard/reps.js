@@ -7,6 +7,7 @@ module.exports = class Reputation extends Command {
       aliases: ['reps'],
       category: 'social',
       parent: "leaderboard",
+      hidden: true,
       requirements: { databaseOnly: true }
     }, client)
   }

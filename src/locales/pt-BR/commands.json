@@ -300,7 +300,7 @@
     "goToMessage": "Ir até a mensagem"
   },
   "leaderboard": {
-    "commandDescription": "Veja os usuários com mais pontos.",
+    "commandDescription": "Mostra um placar.",
     "commandUsage": "<subcomando>",
     "titlereps": "Placar de reputação",
     "repsTitle": "Reputação",

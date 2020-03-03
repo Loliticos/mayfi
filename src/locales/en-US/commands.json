@@ -300,12 +300,16 @@
     "goToMessage": "Go to the message"
   },
   "leaderboard": {
-    "commandDescription": "Shows the top 5 users with most rep!",
-    "titlereps": "Reps Leaderboard",
-    "repsTitle": "Reps",
-    "reps": "Reputation",
-    "invalidType": "You need to give me a valid argument!",
-    "description": "`{{prefix}}leaderboard reps` - Shows a list of users with most reputation point."
+    "commandDescription": "Shows a leaderboard!",
+    "commandUsage": "<subcommad>",
+    "allSubcommands": "`{{prefix}}leaderboard reps` - Shows a list of users with most reputation point.",
+    "subcommands" :{
+      "reputation": {
+        "commandDescription": "Shows a leaderboard of users with most reputation point.",
+        "title": "Reps Leaderboard",
+        "reps": "Reputation"
+      }
+    }
   },
   "money": {
     "commandDescription": "Shows the money of an user.",

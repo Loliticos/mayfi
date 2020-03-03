@@ -12,7 +12,7 @@ module.exports = class Leaderboard extends Command {
 
   async run ({ channel, guild, author, t, prefix }) {
     const embed = new MayfiEmbed(author)
-      .setDescription(t("commands:leaderboard.description", { prefix }))
+      .setDescription(t("commands:leaderboard.allSubcommands", { prefix }))
     channel.send(embed)
 
   }

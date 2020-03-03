@@ -63,6 +63,11 @@ module.exports = class Command {
         return this.requirements ? CommandRequirements.handle(context, this.requirements, args) : true
     }
 
+    get path() {
+        console.log(`Parent name ${this.parentCommand.name}\nThis.name ${this.name}`)
+        return this.parentCommand ? `${this.parentCommand.name}.subcommands.${this.name}` : `${this.name}`
+    }
+
     handleParameters(context, args) {
         return this.parameters ? CommandParameters.handle(context, this.parameters, args) : args
     }

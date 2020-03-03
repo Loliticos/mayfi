@@ -17,7 +17,11 @@ module.exports = class Help extends Command {
     const validCommands = this.client.commands.filter(c => !c.hidden)
 
     if (cmd) {
-      const command = this.client.commands.get(cmd)
+      const command = cmd.split(' ').reduce((o, ca) => {
+        const arr = (Array.isArray(o) && o) || (o && o.subcommands)
+        if (!arr) return o
+        return arr.find(c => c.name === ca || (c.aliases && c.aliases.includes(ca)))
+      }, validCommands)
 
       if (!command) {
         throw new CommandError(t("commands:help.commandNotFound"))

@@ -301,6 +301,7 @@
     "commandDescription": "Shows the top 5 users with most rep!",
     "titlereps": "Reps Leaderboard",
     "repsTitle": "Reps",
+    "reps": "Reputation",
     "invalidType": "You need to give me a valid argument!",
     "description": "`{{prefix}}leaderboard reps` - Shows a list of users with most reputation point."
   },

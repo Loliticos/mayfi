@@ -440,5 +440,17 @@
     "commandUsage": "<tempo> [canal]",
     "noTime": "Você precisa informar o tempo para o slowmode.",
     "changed": "Alterado o slowmode do canal **#{{channel.name}}** para **{{number}}**"
+  },
+  "warns": {
+    "commandDescription": "Veja a quantidade de avisos que um membro possui.",
+    "commandUsage": "[membro]",
+    "userWarns": "O usuário **{{member.user.tag}}** possui **{{warns}}** avisos."
+  },
+  "warn": {
+    "commandDescription": "Avise um membro por quaisquer motivos.",
+    "commandUsage": "<membro> [motivo]",
+    "noMember": "Você precisa informar um membro para ser avisado!",
+    "warned": "Membro avisado",
+    "cantWarn": "Não foi possível avisar o membro"
   }
 }

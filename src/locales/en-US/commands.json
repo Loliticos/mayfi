@@ -440,5 +440,17 @@
     "commandUsage": "<time> [channel]",
     "noTime": "You need to give me a time for the slowmode.",
     "changed": "Changed the slowmode of the channel **#{{channel.name}}** to **{{number}}**"
+  },
+  "warns": {
+    "commandDescription": "See how many warns a member has.",
+    "commandUsage": "[member]",
+    "userWarns": "The member **{{member.user.tag}}** has **{{warns}}** warns."
+  },
+  "warn": {
+    "commandDescription": "Warn a member.",
+    "commandUsage": "<member> [reason]",
+    "noMember": "You need to give me a member to be warned!",
+    "warned": "Member warned",
+    "cantWarn": "I couldn't warn this member"
   }
 }

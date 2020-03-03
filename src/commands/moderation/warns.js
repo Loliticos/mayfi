@@ -15,7 +15,7 @@ module.exports = class Warn extends Command {
     }, client)
   }
 
-  async run ({ channel, author, t }, member, string) {
+  async run ({ channel, author, t }, member, reason) {
     const embed = new MayfiEmbed(author)
 
     try {
@@ -23,7 +23,7 @@ module.exports = class Warn extends Command {
 
       embed
         .setTitle(t("commands:warn.warned"))
-        .setDescription(`${member} ${string ? "-" string : ""}`)
+        .setDescription(`${member} ${reason ? "-" + " " + reason : ""}`)
     } catch (e) {
       embed
         .setColor(Constants.ERROR_COLOR)

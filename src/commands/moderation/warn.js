@@ -1,22 +1,36 @@
-const { Command, MayfiEmbed } = require('../../')
+const { Command, MayfiEmbed, Constants } = require('../../')
 
-module.exports = class Warns extends Command {
+module.exports = class Warn extends Command {
   constructor (client) {
     super({
-      name: 'warns',
-      aliases: ['avisos'],
+      name: 'warn',
+      aliases: ['avisar'],
       category: 'moderation',
+      requirements: { guildOnly: true, botPermissions: ['KICK_MEMBERS'], permissions: ['KICK_MEMBERS'] },
       parameters: [{
-        type: 'member', full: true, required: false, acceptBot: true
+        type: 'member', required: true, acceptSelf: false, missingError: "commands:warn.noMember"
+      }, {
+        type: 'string', required: false, full: true
       }]
     }, client)
   }
 
-  async run ({ channel, member: author, t }, member = author) {
-    const { warns } = await this.database.users.findOne({_id: member.user.id})
-
+  async run ({ channel, author, t }, member, reason) {
     const embed = new MayfiEmbed(author)
-    .setTitle(t("commands:warns.userWarns", { warns, member }))
+
+    try {
+      await this.client.database.users.updateOne({_id: member.user.id}, { $inc: { warns: 1 } })
+
+      embed
+        .setTitle(t("commands:warn.warned"))
+        .setDescription(`${member} ${reason ? "-" + " " + reason : ""}`)
+    } catch (e) {
+      embed
+        .setColor(Constants.ERROR_COLOR)
+        .setTitle(t("commands:warn.cantWarn"))
+        .setDescription(`\`${e.message}\``)
+    }
+
     channel.send(embed)
 
   }

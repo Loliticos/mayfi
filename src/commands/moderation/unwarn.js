@@ -26,6 +26,7 @@ module.exports = class Unwarn extends Command {
         .setColor(Constants.ERROR_COLOR)
         .setTitle(t("commands:unwarn.cantUnwarn"))
         .setDescription(`\`${t("commands:unwarn.memberHasNoWarning")}\``)
+      return cannel.send(embed)
     }
 
     try {

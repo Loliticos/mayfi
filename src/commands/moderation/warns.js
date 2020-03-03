@@ -6,7 +6,6 @@ module.exports = class Warns extends Command {
       name: 'warns',
       aliases: ['avisos'],
       category: 'moderation',
-      cooldown: 30
       parameters: [{
         type: 'member', full: true, required: false, acceptBot: true
       }]

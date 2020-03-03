@@ -46,7 +46,7 @@ module.exports = class Command {
           return this.error(context, e)
         }       
 
-        this.applyCooldown(context.author)
+        this.applyCooldown(context.author, this.cooldown)
 
         try {
           await this.run(context, ...args)

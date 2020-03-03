@@ -38,7 +38,6 @@ module.exports = class CommandLoader  {
         }
 
         if(parentCommand) {
-            console.log(subCommand)
             parentCommand.subcommands.push(subCommand)
             subCommand.parentCommand = parentCommand
         }

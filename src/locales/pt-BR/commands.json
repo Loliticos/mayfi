@@ -300,7 +300,7 @@
   "leaderboard": {
     "commandDescription": "Veja os top 5 jogadores com mais reputação!",
     "titlereps": "Placar de reputação",
-    "reps": "Reputação",
+    "repsTitle": "Reputação",
     "invalidType": "Você precisa informar um argumento válido!",
     "description": "`{{prefix}}leaderboard reps` - Mostra uma lista dos usuários com mais pontos de reputação."
   },

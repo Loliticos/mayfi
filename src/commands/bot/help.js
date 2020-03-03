@@ -17,6 +17,7 @@ module.exports = class Help extends Command {
     const validCommands = this.client.commands.filter(c => !c.hidden)
 
     if (cmd) {
+      console.log(cmd)
       const command = this.client.commands.get(cmd)
 
       if (!command) {

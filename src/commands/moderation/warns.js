@@ -13,10 +13,10 @@ module.exports = class Warns extends Command {
   }
 
   async run ({ channel, member: author, t }, member = author) {
-    const { warns } = await this.database.users.findOne({_id: member.user.id})
+    const userData = await this.database.users.findOne({_id: member.user.id})
 
     const embed = new MayfiEmbed(author)
-    .setTitle(t("commands:warns.userWarns", { warns, member }))
+    .setTitle(t("commands:warns.userWarns", { warns: userData.warns, member }))
     channel.send(embed)
 
   }

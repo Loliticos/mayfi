@@ -46,7 +46,7 @@ module.exports = class Command {
           return this.error(context, e)
         }       
 
-        this.applyCooldown(context)
+        this.applyCooldown(context.author)
 
         try {
           await this.run(context, ...args)
@@ -77,11 +77,11 @@ module.exports = class Command {
         console.error(error)
     }
 
-    applyCooldown ({author}) {
-        if (!author || this.cooldown < 0) return false
-        if (!this.cooldownMap.has(author.id)) {
-            this.cooldownMap.set(author.id, Date.now())
-            setTimeout(() => this.cooldownMap.delete(author.id), this.cooldown * 1000)
+    applyCooldown (user) {
+        if (!user || this.cooldown < 0) return false
+        if (!this.cooldownMap.has(user.id)) {
+            this.cooldownMap.set(user.id, Date.now())
+            setTimeout(() => this.cooldownMap.delete(user.id), this.cooldown * 1000)
         }
     }
 

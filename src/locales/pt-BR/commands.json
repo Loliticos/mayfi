@@ -452,5 +452,12 @@
     "noMember": "Você precisa informar um membro para ser avisado!",
     "warned": "Membro avisado",
     "cantWarn": "Não foi possível avisar o membro"
+  },
+  "unwarn": {
+    "commandDescription": "Remova um aviso de um membro.",
+    "commandUsage": "<membro> [motivo]",
+    "noMember": "Você precisa informar um membro para ser retirado o aviso!",
+    "warned": "Membro desavisado",
+    "cantWarn": "Não foi possível retirar o aviso do membro"
   }
 }

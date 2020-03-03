@@ -452,5 +452,12 @@
     "noMember": "You need to give me a member to be warned!",
     "warned": "Member warned",
     "cantWarn": "I couldn't warn this member"
+  },
+  "unwarn": {
+    "commandDescription": "Removs a warning from a member.",
+    "commandUsage": "<member> [reason]",
+    "noMember": "You need to give me a member to remove a warning!",
+    "warned": "Member unwarned",
+    "cantWarn": "I couldn't unwarn the member"
   }
 }

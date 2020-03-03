@@ -19,6 +19,15 @@ module.exports = class Unwarn extends Command {
   async run ({ channel, author, t }, member, reason) {
     const embed = new MayfiEmbed(author)
 
+    const { warns } = await this.client.database.users.findOne({_id: member.user.id})
+
+    if (warns < 0) {
+      embed
+        .setColor(Constants.ERROR_COLOR)
+        .setTitle(t("commands:unwarn.cantUnwarn"))
+        .setDescription(`\`${t("commands:unwarn.memberHasNoWarning")}\``)
+    }
+
     try {
       await this.client.database.users.updateOne({_id: member.user.id}, { $inc: { warns: -1 } })
 

@@ -79,7 +79,7 @@ module.exports = class Command {
 
     applyCooldown (user) {
         if (!this.cooldownMap) return
-        if (!user || this.cooldown < 0) return false
+        if (!user || !this.cooldown > 0) return false
         if (this.cooldownMap.has(user.id)) return 
 
         this.cooldownMap.set(user.id, Date.now())

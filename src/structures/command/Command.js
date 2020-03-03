@@ -21,7 +21,7 @@ module.exports = class Command {
 
         this.subcommands = []
         this.cooldown = 0
-        this.cooldownMap = this.cooldown > 0 ? new Map : null
+        this.cooldownMap = this.cooldown > 0 ? new Map() : null
 
         this.client = client
 
@@ -79,10 +79,11 @@ module.exports = class Command {
 
     applyCooldown (user) {
         if (!user || this.cooldown < 0) return false
-        if (!this.cooldownMap.has(user.id)) {
-            this.cooldownMap.set(user.id, Date.now())
-            setTimeout(() => this.cooldownMap.delete(user.id), this.cooldown * 1000)
-        }
+        if (this.cooldownMap.has(user.id)) return 
+
+        this.cooldownMap.set(user.id, Date.now())
+        setTimeout(() => this.cooldownMap.delete(user.id), this.cooldown * 1000)
+        
     }
 
     usage(t, prefix, noUsage = true) {

@@ -21,7 +21,7 @@ module.exports = class Unwarn extends Command {
 
     const { warns } = await this.client.database.users.findOne({_id: member.user.id})
 
-    if (warns < 0) {
+    if (warns <= 0) {
       embed
         .setColor(Constants.ERROR_COLOR)
         .setTitle(t("commands:unwarn.cantUnwarn"))

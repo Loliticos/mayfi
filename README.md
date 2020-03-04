@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=2048"><br><br>
+  <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=100"><br><br>
   <br>
   <br>
   <strong><a href="https://invite.switchblade.xyz/">Add mayfi to your server</a></strong>

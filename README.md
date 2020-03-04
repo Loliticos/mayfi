@@ -1,14 +1,5 @@
 <div align="center">
   <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=2048"><br><br>
-
-  [![support][support-badge]][support-invite]
-  [![crowdin][crowdin-badge]][crowdin-url]
-  [![jetbrains][jetbrains-badge]][jetbrains-url]
-  [![codeclimate][codeclimate-badge]][codeclimate-url]
-  [![circleci][circleci-badge]][circleci-url]
-  ![invite-badege]
-  [![backers][backers-badge]][backers-url]
-  [![sponsors][sponsors-badge]][sponsors-url]
   <br>
   <br>
   <strong><a href="https://invite.switchblade.xyz/">Add mayfi to your server</a></strong>
@@ -18,7 +9,16 @@
 
 <h2 align="center">Mayfi</h2>
 
-Switchblade is a free and open source solution to your server managing problems, built from scratch with code organization and quality in mind. Our goal is to cover as many functionalities and niches as possible, while still maintaining high quality.
+Mayfi is a bot designed for those who want efficiency without needing to add thousand bots. 
+
+<h3>Index</h3>
+
+- [Docs](#docs)
+- [Improvement](#improvement)
+
+<h2 align="center">Docs</h2>
+
+Mayfi has a own documentation site, feel free to join and know everything about mayfi. [Join](https://mayfi.gitbook.io/docs/)
 
 <h3>Table of Contents</h3>
 

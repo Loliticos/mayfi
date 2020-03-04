@@ -40,6 +40,7 @@ module.exports = class CommandLoader  {
         if(parentCommand) {
             parentCommand.subcommands.push(subCommand)
             subCommand.parentCommand = parentCommand
+            subCommand.hidden = true
         }
     }
 

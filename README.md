@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=2048" class="mb-3 rounded-circle"><br><br>
+  <img src="https://cdn.discordapp.com/avatars/673960641261994014aed469a0d5ca3c7034e6e707be5e5527.png?size=2048" alt="Mayfi" width="150px;" class="mb-3 rounded-circle"><br><br>
   <br>
   <br>
   <strong><a href="https://discordapp.com/oauth2/authorize?client_id=673960641261994014&permissions=0&scope=bot">Add mayfi to your server</a></strong>

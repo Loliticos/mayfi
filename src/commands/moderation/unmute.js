@@ -1,7 +1,7 @@
 const { Command, MayfiEmbed, Constants } = require('../../')
 const fs = require("fs")
 
-module.exports = class Unute extends Command {
+module.exports = class Unmute extends Command {
   constructor (client) {
     super({
       name: 'unmute',
@@ -45,14 +45,16 @@ module.exports = class Unute extends Command {
 
     try {
 
-      fs.writeFile('../../../mute.json', JSON.stringify(this.client.mutes), err => {
+      delete this.client.mutes[member.id]
+
+      await fs.writeFile("../../../mute.json", JSON.stringify(client.mutes), err => {
         if (err) console.error
 
         member.removeRole(mutedRole.id).then(async user => {
           channel.send(        
             embed
               .setTitle(t("commands:unmute.unmuted"))
-              .setDescription(t("commands:unmute.description", { user}))
+              .setDescription(t("commands:unmute.description", { user }))
           )
         }).catch(err => {
           embed

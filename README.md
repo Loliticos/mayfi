@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=2048"><br><br>
+  <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=1048"><br><br>
 
   [![support][support-badge]][support-invite]
   [![crowdin][crowdin-badge]][crowdin-url]
@@ -13,12 +13,12 @@
   [![sponsors][sponsors-badge]][sponsors-url]
   <br>
   <br>
-  <strong><a href="https://invite.switchblade.xyz/">CLICK HERE TO ADD SWITCHBLADE TO YOUR SERVER</a></strong>
+  <strong><a href="https://invite.switchblade.xyz/">Add mayfi to your server</a></strong>
 </div>
 
 ---
 
-<h2 align="center">Switchblade</h2>
+<h2 align="center">Mayfi</h2>
 
 Switchblade is a free and open source solution to your server managing problems, built from scratch with code organization and quality in mind. Our goal is to cover as many functionalities and niches as possible, while still maintaining high quality.
 

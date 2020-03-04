@@ -13,7 +13,7 @@ module.exports = class MessageDelete extends EventHandler {
 
             const dataGuild = await this.client.database.guilds.findOne({_id: message.guild.id})
 
-            if(!dataGuild || !dataGuild.logsChannel || !dataGuild.language) return
+            if(!dataGuild || dataGuild.logsChannel == "false" || !dataGuild.language) return
 
             const t = this.client.i18next.getFixedT(dataGuild.language)
 

@@ -1,14 +1,12 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=1048"><br><br>
+  <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=2048"><br><br>
 
   [![support][support-badge]][support-invite]
   [![crowdin][crowdin-badge]][crowdin-url]
   [![jetbrains][jetbrains-badge]][jetbrains-url]
   [![codeclimate][codeclimate-badge]][codeclimate-url]
   [![circleci][circleci-badge]][circleci-url]
-  ![servers-badge]
-  ![commands-badge]
-  ![languages-badge]
+  ![invite-badege]
   [![backers][backers-badge]][backers-url]
   [![sponsors][sponsors-badge]][sponsors-url]
   <br>

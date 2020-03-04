@@ -19,7 +19,7 @@ module.exports = class Guessflag extends Command {
     embed
       .setTitle(t("commands:guessflag.guessTheFlag"))
       .setDescription(t("commands:guessflag.country"))
-      .setThumbnail(new Attachment(`https://www.countryflags.io/${country.code.toLowerCase()}/flat/64.png`))
+      .setThumbnail(`https://www.countryflags.io/${country.code.toLowerCase()}/flat/64.png`)
     channel.send(embed)
 
     const filter = c => c.author.equals(author) && c.content.toLowerCase() == country.name.toLowerCase() || c.content.toLowerCase() == country.code.toLowerCase()

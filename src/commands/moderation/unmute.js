@@ -47,7 +47,7 @@ module.exports = class Unmute extends Command {
 
       delete this.client.mutes[member.id]
 
-      await fs.writeFile("../../../mute.json", JSON.stringify(client.mutes), err => {
+      await fs.writeFile("../../../mute.json", JSON.stringify(this.client.mutes), err => {
         if (err) console.error
 
         member.removeRole(mutedRole.id).then(async user => {

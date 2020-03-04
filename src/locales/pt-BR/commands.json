@@ -480,5 +480,13 @@
     "notMuted": "Esse usuário não está mutado.",
     "unmuted": "Usuário desmutado",
     "description": "O usuário {{user}} foi desmutado"
+  },
+  "guessflag": {
+    "commandDescription": "A Mayfi irá te mandar uma bandeira de um continente e você terá que acertar essa bandeira!",
+    "guessTheFlag": "Advinhe a bandeira",
+    "country": "Você tem **10** segundos para advinhar o país que pertence á esta bandeira.",
+    "youGotIt": "Você acertou!",
+    "theWordWas": "O país era **{{country.name}} ({{country.code}})**",
+    "timeout": "O tempo acabou."
   }
 }

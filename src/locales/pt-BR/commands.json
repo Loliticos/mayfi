@@ -307,6 +307,11 @@
         "commandDescription": "Mostra um placar de usuários com mais pontos de reputação.",
         "title": "Placar de Reputação",
         "reps": "Reputação"
+      },
+      "money": {
+        "commandDescription": "Mostra um placar de usuários com mais dinheiro",
+        "title": "Placar de dinheiro",
+        "money": "Dinherio"
       }
     }
   },

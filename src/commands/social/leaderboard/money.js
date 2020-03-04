@@ -1,10 +1,10 @@
 const { Command, MayfiEmbed } = require('../../../')
 
-module.exports = class ReputationLeaderboard extends Command {
+module.exports = class MoneyLeaderboard extends Command {
   constructor (client) {
     super({
-      name: 'reputation',
-      aliases: ['reps'],
+      name: 'money',
+      aliases: ['coins', 'coin', 'dinheiro'],
       category: 'social',
       parent: "leaderboard",
       requirements: { databaseOnly: true }
@@ -14,7 +14,7 @@ module.exports = class ReputationLeaderboard extends Command {
   async run ({ channel, author, t }) {
     const embed = new MayfiEmbed(author)
 
-    const dbRes = await this.client.database.users.find({}, "reps").sort({ ["reps"]: -1 }).limit(5 + 6)
+    const dbRes = await this.client.database.users.find({}, "money").sort({ ["money"]: -1 }).limit(5 + 6)
 
     const users = dbRes.filter(u => {
       u.user = this.client.users.get(u._id)
@@ -26,7 +26,7 @@ module.exports = class ReputationLeaderboard extends Command {
     let description = ""
 
     for (let i = 0; i < top.length; i++) {
-      description += `**${i}.** __${this.client.users.get(top[i]._id)} (${this.client.users.get(top[i]._id).tag})__\n**${t(`commands:${this.path}.reps`)}**: ${top[i].reps}\n\n`
+      description += `**${i}.** __${this.client.users.get(top[i]._id)} (${this.client.users.get(top[i]._id).tag})__\n**${t(`commands:${this.path}.money`)}**: ${top[i].money}\n\n`
     }
 
     embed

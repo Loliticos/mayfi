@@ -6,6 +6,7 @@ module.exports = class Gems extends Command {
       name: 'gems',
       aliases: ['gemas', 'gem'],
       category: 'economy',
+      cooldown: 3,
       requirements: { databaseOnly: true, },
       parameters: [{
         type: 'user', 

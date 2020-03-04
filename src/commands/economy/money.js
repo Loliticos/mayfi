@@ -6,6 +6,7 @@ module.exports = class Money extends Command {
       name: 'money',
       aliases: ['coin', 'coins'],
       category: 'economy',
+      cooldown: 3,
       requirements: { databaseOnly: true, },
       parameters: [{
         type: 'user', 

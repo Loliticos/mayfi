@@ -7,6 +7,7 @@ module.exports = class Mine extends Command {
       name: 'mine',
       aliases: ['minerar', 'mina', 'daily'],
       category: 'economy',
+      cooldown: 3,
       requirements: { databaseOnly: true }
     }, client)
   }

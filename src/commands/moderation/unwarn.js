@@ -6,7 +6,7 @@ module.exports = class Unwarn extends Command {
       name: 'unwarn',
       aliases: ['desavisar'],
       category: 'moderation',
-      cooldown: 10,
+      cooldown: 3,
       requirements: { guildOnly: true, botPermissions: ['KICK_MEMBERS'], permissions: ['KICK_MEMBERS'] },
       parameters: [{
         type: 'member', required: true, acceptSelf: false, missingError: "commands:unwarn.noMember"

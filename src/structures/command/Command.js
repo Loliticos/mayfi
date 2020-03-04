@@ -74,8 +74,14 @@ module.exports = class Command {
     error ({ t, author, channel, prefix }, error) {
         if (error instanceof CommandError) {
           const embed = new MayfiEmbed(author)
-            .setTitle(error.message)
-            .setDescription(error.showUsage ? this.usage(t, prefix) : '')
+            if(!error.showUsage) {
+                embed.setDescription(error.message)
+            } else {
+                embed
+                  .setTitle(error.message)
+                  .setDescription(error.showUsage ? this.usage(t, prefix) : '')
+            }
+            
           return channel.send(embed.setColor(Constants.ERROR_COLOR)).then(() => channel.stopTyping())
         }
         console.error(error)

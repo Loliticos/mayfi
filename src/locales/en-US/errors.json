@@ -10,7 +10,7 @@
   "botMissingMultiplePermissions": "I need the {{permission}} permissions in order to do that.",
   "missingOnePermission": "You need the {{permission}} permission in order to do that.",
   "missingMultiplePermissions": "You need the {{permission}} permissions in order to do that.",
-  "cooldown": "You must **{{time}}** before executing another command again.",
+  "cooldown": "You must **{{time}}** before executing a command again.",
   "notPlaying": "I ain't playing anything!",
   "missingParameters": "You have to give me parameters!",
   "notTrueOrFalse": "You have to give me a value that is true or false.",

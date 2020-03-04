@@ -8,7 +8,7 @@
   "botMissingMultiplePermissions": "Eu preciso das permissões {{permission}} para fazer isto.",
   "missingOnePermission": "Você precisa da permissão {{permission}} para fazer isto.",
   "missingMultiplePermissions": "Você precisa das permissões {{permission}} para fazer isto.",
-  "cooldown": "Você precisa esperar **{{time}}** antes de executar outro comando novamente.",
+  "cooldown": "Você precisa esperar **{{time}}** antes de executar um comando novamente.",
   "missingParameters": "Você precisa me informar parametros!",
   "notTrueOrFalse": "Você precisa informar um valor que seja 'true' ou 'false'.",
   "nsfwOnly": "Esse comando pode ser apenas executados em canais NSFW.",

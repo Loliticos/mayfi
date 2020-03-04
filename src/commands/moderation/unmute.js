@@ -52,7 +52,7 @@ module.exports = class Unute extends Command {
           channel.send(        
             embed
               .setTitle(t("commands:unmute.unmuted"))
-              .setDescription(t("commands:unmute.description", { user, time: ms(time) }))
+              .setDescription(t("commands:unmute.description", { user}))
           )
         }).catch(err => {
           embed

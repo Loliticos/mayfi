@@ -307,6 +307,11 @@
         "commandDescription": "Shows a leaderboard of users with most reputation point.",
         "title": "Reps Leaderboard",
         "reps": "Reputation"
+      },
+      "money": {
+        "commandDescription": "Shows a leaderboard of users with most money.",
+        "title": "Money Leaderboard",
+        "money": "Money"
       }
     }
   },

@@ -29,7 +29,7 @@ module.exports = class Warn extends Command {
       embed
         .setColor(Constants.ERROR_COLOR)
         .setTitle(t("commands:warn.cantWarn"))
-        .setDescription(`\`${e.message}\``)
+        .setDescription(`\`${e}\``)
     }
 
     channel.send(embed)

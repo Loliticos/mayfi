@@ -82,6 +82,7 @@ module.exports = class Command {
     }
 
     applyCooldown (user) {
+        console.log(this.cooldown)
         if (!this.cooldownMap) return
         if (!user || !this.cooldown > 0) return false
         if (this.cooldownMap.has(user.id)) return 

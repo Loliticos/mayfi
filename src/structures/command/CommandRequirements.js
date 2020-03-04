@@ -48,7 +48,7 @@ module.exports = class CommandRequirements {
     }
 
    if (command.cooldown > 0 && command.cooldownMap.has(author.id)) {
-        throw new CommandError(t("errors:cooldown", { time: cooldownMap.get(author.id).format('s[s]') }))
+        throw new CommandError(t("errors:cooldown", { time: moment.duration(command.cooldown - (Date.now() - cooldownMap.get(author.id))).format('s[s]') }))
       }
   }
 }

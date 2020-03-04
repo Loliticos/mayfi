@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=2048"><br><br>
+  <img src="https://images-ext-1.discordapp.net/external/qGk0ne5YVrALwapOoXlK5uh-leVwdjD0g2tJ2Y325N0/%3Fsize%3D2048/https/cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png"><br><br>
   <br>
   <br>
-  <strong><a href="https://invite.switchblade.xyz/">Add mayfi to your server</a></strong>
+  <strong><a href="https://discordapp.com/oauth2/authorize?client_id=673960641261994014&permissions=0&scope=bot">Add mayfi to your server</a></strong>
 </div>
 
 ---

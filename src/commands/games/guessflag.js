@@ -1,5 +1,6 @@
 const { Command, MayfiEmbed, Constants } = require('../../')
 const fetch = require("node-fetch")
+const { Attachment } = require("discord.js")
 
 module.exports = class Guessflag extends Command {
   constructor (client) {
@@ -15,11 +16,10 @@ module.exports = class Guessflag extends Command {
     const choosenCountry = await fetch("https://api.printful.com/countries").then(res => res.json())
 
     const country = choosenCountry.result[Math.floor(Math.random() * choosenCountry.result.length)]
-    console.log(country)
     embed
       .setTitle(t("commands:guessflag.guessTheFlag"))
       .setDescription(t("commands:guessflag.country"))
-      .setThumbnail(`https://www.countryflags.io/${country.code.toLowerCase()}/flat/64.png`)
+      .setThumbnail(new Attachment(`https://www.countryflags.io/${country.code.toLowerCase()}/flat/64.png`))
     channel.send(embed)
 
     const filter = c => c.author.equals(author) && c.content.toLowerCase() == country.name.toLowerCase() || c.content.toLowerCase() == country.code.toLowerCase()

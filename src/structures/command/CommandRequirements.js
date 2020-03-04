@@ -1,5 +1,6 @@
 const Permissions = require('../../utils/Permissions.js')
 const CommandError = require("./CommandError.js")
+const moment = require("moment")
 
 module.exports = class CommandRequirements {
   static parseOptions(options = {}) {
@@ -47,7 +48,7 @@ module.exports = class CommandRequirements {
     }
 
    if (command.cooldown > 0 && command.cooldownMap.has(author.id)) {
-        throw new CommandError(t("errors:cooldown"))
+        throw new CommandError(t("errors:cooldown", { time: cooldownMap.get(author.id).format('s[s]') }))
       }
   }
 }

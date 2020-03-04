@@ -27,8 +27,7 @@ module.exports = class Reputation extends Command {
     let description = ""
 
     for (let i = 0; i < top.length; i++) {
-      console.log(i)
-      description += `**${i}.** __${this.client.users.get(top[i]._id)} (${this.client.users.get(top[i]._id).tag})__\n**${t(`commands:leaderboard.subcommands.reputation.reps`)}**: ${top[i].reps}\n\n`
+      description += `**${i}.** __${this.client.users.get(top[i]._id)} (${this.client.users.get(top[i]._id).tag})__\n**${t(`commands:${this.path}.reps`)}**: ${top[i].reps}\n\n`
     }
 
     embed

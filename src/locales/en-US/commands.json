@@ -302,7 +302,6 @@
   "leaderboard": {
     "commandDescription": "Shows a leaderboard!",
     "commandUsage": "<subcommad>",
-    "allSubcommands": "`{{prefix}}leaderboard reps` - Shows a list of users with most reputation point.",
     "subcommands" :{
       "reputation": {
         "commandDescription": "Shows a leaderboard of users with most reputation point.",

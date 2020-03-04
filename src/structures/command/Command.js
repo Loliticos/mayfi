@@ -64,7 +64,6 @@ module.exports = class Command {
     }
 
     get path() {
-        console.log(`Parent name ${this.parentCommand.name}\nThis.name ${this.name}`)
         return this.parentCommand ? `${this.parentCommand.name}.subcommands.${this.name}` : `${this.name}`
     }
 

@@ -302,11 +302,13 @@
   "leaderboard": {
     "commandDescription": "Mostra um placar.",
     "commandUsage": "<subcomando>",
-    "titlereps": "Placar de reputação",
-    "repsTitle": "Reputação",
-    "reps": "Reputação",
-    "invalidType": "Você precisa informar um argumento válido!",
-    "description": "`{{prefix}}leaderboard reps` - Mostra uma lista dos usuários com mais pontos de reputação."
+    "subcommands" :{
+      "reputation": {
+        "commandDescription": "Mostra um placar de usuários com mais pontos de reputação.",
+        "title": "Placar de Reputação",
+        "reps": "Reputação"
+      }
+    }
   },
   "money": {
     "commandDescription": "Veja o dinheiro de algum usuário!",

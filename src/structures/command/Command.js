@@ -20,7 +20,7 @@ module.exports = class Command {
         this.parentCommand = options.optional('parent')
 
         this.subcommands = []
-        this.cooldown = 0
+        this.cooldown = opts.cooldown || 0
         this.cooldownMap = this.cooldown > 0 ? new Map() : null
 
         this.client = client

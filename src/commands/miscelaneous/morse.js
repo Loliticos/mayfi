@@ -18,6 +18,8 @@ module.exports = class Morse extends Command {
 
     if(text.includes(".") || text.includes("-")) {
       const morseToEnglish = await fetch(`http://api.funtranslations.com/translate/morse2english.json?text=${encodeURIComponent(text)}`).then(res => res.json())
+      console.log(morseToEnglish)
+      
       embed
         .setTitle(t("commands:morse.morseToText"))
         .setDescription(morseToEnglish.contents.text) 

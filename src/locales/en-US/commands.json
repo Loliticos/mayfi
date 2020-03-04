@@ -465,5 +465,15 @@
     "unwarned": "Member unwarned",
     "cantUnwarn": "I couldn't unwarn the member",
     "memberHasNoWarning": "This member has no warnings."
+  },
+  "unmute": {
+    "commandDescription": "Unmute a member.",
+    "commandUsage": "<member>",
+    "missingUser": "You need to give me a member to be unmuted!",
+    "roleName": "Muted",
+    "cantUnmute": "I couldn't unmute this user.",
+    "notMuted": "This user isn't muted.",
+    "unmuted": "User unmuted",
+    "description": "The member {{user}} has been unmuted."
   }
 }

@@ -465,5 +465,15 @@
     "unwarned": "Membro desavisado",
     "cantUnwarn": "Não foi possível retirar o aviso do membro",
     "memberHasNoWarning": "Esse membro não possui avisos."
+  },
+  "unmute": {
+    "commandDescription": "Desmute um membro.",
+    "commandUsage": "<membro>",
+    "missingUser": "Você precisa informar um usuário para ser desmutado!",
+    "roleName": "Silenciado",
+    "cantUnmute": "Não foi possível desmutar o usuário",
+    "notMuted": "Esse usuário não está mutado.",
+    "unmuted": "Usuário desmutado",
+    "description": "O usuário {{user}} foi desmutado"
   }
 }

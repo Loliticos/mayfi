@@ -11,7 +11,7 @@
   	"permissions": "Permissions",
   	"botPermissions": "Bot permissions",
   	"title": "Commands",
-  	"prefix": "My prefix it's `{{botPrefix}}`",
+  	"prefix": "My prefix is `{{botPrefix}}`",
   	"youCanUse": "but you can also use {{- botMention}} as a prefix.",
   	"specificInformation": "Type {{helpString}} for more informations.",
     "subcommands": "Subcommands"

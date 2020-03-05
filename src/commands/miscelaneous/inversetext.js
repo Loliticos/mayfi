@@ -27,7 +27,7 @@ module.exports = class Inversetext extends Command {
         .setDescription(`\`${e}\``)
     }
 
-    channel.send(embed)
+    channel.send({embed})
         
   }
 }

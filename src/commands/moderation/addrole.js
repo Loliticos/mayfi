@@ -25,7 +25,7 @@ module.exports = class Addrole extends Command {
         embed
           .setTitle(t("commands:addrole.title"))
           .setDescription(t("commands:addrole.description", { role, member }))
-        channel.send({ embed: embed })
+        channel.send({ embed })
       }).catch(err => {
           throw new CommandError(`${t("errors:generic")}\n\`${e.message}\``)
       })

@@ -21,7 +21,7 @@ module.exports = class Avatar extends Command {
     .setDescription(t("commands:avatar.avatarMessage", { user }))
     .setImage(user.displayAvatarURL)
 
-    channel.send(embed).then(() => channel.stopTyping())
+    channel.send({embed})
         
   }
 }

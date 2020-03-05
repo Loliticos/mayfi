@@ -18,7 +18,7 @@ module.exports = class EightBall extends Command {
 
     const embed = new MayfiEmbed(author)
     .setDescription(`❓ ${text}\n🎱 ${t(`commands:8ball.answers.${result}`)}`)
-    channel.send(embed)
+    channel.send({embed})
         
   }
 }

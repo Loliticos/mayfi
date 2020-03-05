@@ -82,7 +82,7 @@ module.exports = class Command {
                   .setDescription(error.showUsage ? this.usage(t, prefix) : '')
             }
             
-          return channel.send(embed.setColor(Constants.ERROR_COLOR)).then(() => channel.stopTyping())
+          return channel.send(embed.setColor(Constants.ERROR_COLOR))
         }
         console.error(error)
     }

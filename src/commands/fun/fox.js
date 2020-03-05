@@ -15,7 +15,7 @@ module.exports = class Fox extends Command {
     let embed = new MayfiEmbed(author)
       .setTitle("🦊")
       .setImage(image)
-    channel.send(embed)
+    channel.send({embed})
     
   }
 }

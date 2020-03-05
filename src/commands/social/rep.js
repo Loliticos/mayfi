@@ -43,7 +43,7 @@ module.exports = class Rep extends Command {
           embed
             .setTitle(t("errors:generic"))
             .setDescription(t("commands:rep.typeAgain"))
-          return channel.send(embed)
+          return channel.send({embed})
       }
 
       await Promise.all([

@@ -23,7 +23,7 @@ module.exports = class Github extends Command {
       embed
         .setColor(Constants.ERROR_COLOR)
         .setTitle(t('commands:github.userNotFound', { user: github }))
-      return channel.send(embed)
+      return channel.send({embed})
     }
     
     channel.send(

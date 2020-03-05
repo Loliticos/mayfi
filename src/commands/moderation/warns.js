@@ -17,7 +17,7 @@ module.exports = class Warns extends Command {
 
     const embed = new MayfiEmbed(member.user)
     .setTitle(t("commands:warns.userWarns", { warns, member }))
-    channel.send(embed)
+    channel.send({embed})
 
   }
 }

@@ -25,7 +25,7 @@ module.exports = class Poll extends Command {
 
       embed.setTitle(`🗳️ ${toSplit[0]}`)
       embed.setDescription(`:regional_indicator_a: ${spliced[0]}\n :regional_indicator_b: ${spliced[1]}`)
-      channel.send(embed).then(msg => {
+      channel.send({embed}).then(msg => {
         msg.react("🇦").then(() => msg.react("🇧"))
       })
     } else if(toSplit.slice(1).length == 1) {
@@ -33,12 +33,12 @@ module.exports = class Poll extends Command {
 
         embed.setTitle(`🗳️ ${toSplit[0]}`)
         embed.setDescription(`:regional_indicator_a: ${spliced[0]}`)
-        channel.send(embed).then(msg => {
+        channel.send({embed}).then(msg => {
           msg.react("🇦")
         })
     } else {
       embed.setTitle(`🗳️ ${toSplit[0]}`)
-      channel.send(embed).then(msg => {
+      channel.send({embed}).then(msg => {
         msg.react("👍").then(() => msg.react("👎"))
       })
     }

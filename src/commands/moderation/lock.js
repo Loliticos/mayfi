@@ -28,6 +28,6 @@ module.exports = class Lock extends Command {
         .setTitle(t('commands:lock.cantLock'))
         .setDescription(`\`${err}\``)
     })
-    message.channel.send(embed)
+    message.channel.send({embed})
   }
 }

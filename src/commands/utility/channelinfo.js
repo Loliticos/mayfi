@@ -25,6 +25,6 @@ module.exports = class Channelinfo extends Command {
       .addField(t("commands:channelinfo.position"), channel.position)
       .addField("NSFW", channel.nsfw ? t("commands:channelinfo.nsfwYes") : t("commands:channelinfo.nsfwNo"))
       .addField(t("commands:channelinfo.topic"), channel.topic ? channel.topic : t("commands:channelinfo.noTopic"))
-      message.channel.send(embed)
+      message.channel.send({embed})
   }
 }

@@ -32,6 +32,6 @@ module.exports = class Slowmode extends Command {
         .setDescription(`\`${err}\``)
     })
 
-    message.channel.send(embed)
+    message.channel.send({embed})
   }
 }

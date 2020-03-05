@@ -19,7 +19,7 @@ module.exports = class Slap extends Command {
       .setTitle(t("commands:slap.title"))
       .setDescription(t("commands:slap.description", { hugger: author, huggedUser: user }))
       .setImage(body.url)
-    channel.send(embed)
+    channel.send({embed})
     
   }
 }

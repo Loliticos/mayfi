@@ -37,7 +37,7 @@ module.exports = class Guildinfo extends Command {
       ].join('\n'))       
       .setThumbnail(guild.iconURL)
 
-      channel.send(embed)
+      channel.send({embed})
         
   }
 }

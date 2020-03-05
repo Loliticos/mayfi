@@ -20,7 +20,7 @@ module.exports = class GuildIcon extends Command {
         embed
           .setColor(Constants.ERROR_COLOR)
           .setTitle(t("commands:guildIcon.noImage"))
-        return channel.send(embed)
+        return channel.send({embed})
       }
 
 
@@ -28,7 +28,7 @@ module.exports = class GuildIcon extends Command {
         .setTitle(guild.name)
         .setImage(guild.iconURL)
 
-      channel.send(embed)
+      channel.send({embed})
         
   }
 }

@@ -36,7 +36,7 @@ module.exports = class Reps extends Command {
         .setTitle(t("commands:reps.title"))
         .setDescription(t("commands:reps.howMany", { reps: UserData.reps, user, pointPoints: UserData.reps > 1 ? "points" : "point" }))
  
-      channel.send(embed)
+      channel.send({embed})
     } catch(err) {
       throw new CommandError(t("errors:generic"))
     }

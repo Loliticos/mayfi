@@ -28,7 +28,7 @@ module.exports = class RoleInfo extends Command {
       .addField(t("commands:roleinfo.position"), role.position)
       .setThumbnail(`http://www.singlecolorimage.com/get/${role.hexColor.replace("#", "")}/100x100`)
 
-      channel.send(embed)
+      channel.send({embed})
         
   }
 }

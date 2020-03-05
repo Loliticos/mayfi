@@ -61,7 +61,7 @@ module.exports = class Unmute extends Command {
             .setColor(Constants.ERROR_COLOR)
             .setTitle(t('commands:unmute.cantUnmute'))
             .setDescription(`\`${err}\``)
-          return channel.send(embed)
+          return channel.send({embed})
         })
       })
 
@@ -70,7 +70,7 @@ module.exports = class Unmute extends Command {
           .setColor(Constants.ERROR_COLOR)
           .setTitle(t('commands:unmute.cantUnmute'))
           .setDescription(`\`${err}\``)
-        return channel.send(embed)
+        return channel.send({embed})
     }
   }
 }

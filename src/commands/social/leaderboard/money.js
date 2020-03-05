@@ -32,7 +32,7 @@ module.exports = class MoneyLeaderboard extends Command {
     embed
       .setTitle(t(`commands:${this.path}.title`))
       .setDescription(description)
-    channel.send(embed)
+    channel.send({embed})
 
   }
 }

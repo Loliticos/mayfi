@@ -21,7 +21,7 @@ module.exports = class Research extends Command {
         embed
           .setTitle(t("commands:research.invalidMaterial"))
           .setDescription(t("commands:research.youNeed"))
-        return channel.send(embed)
+        return channel.send({embed})
       }
 
       // You'll get somewhere about 23 researches points
@@ -34,7 +34,7 @@ module.exports = class Research extends Command {
         .setTitle(t("commands:research.title"))
         .setDescription(t("commands:research.howMany", { research: researchRDM }))
  
-      channel.send(embed)
+      channel.send({embed})
     } catch(err) {
       throw new CommandError(`${t("errors:generic")}\n\`${err.message}\``)
     }

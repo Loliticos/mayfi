@@ -30,7 +30,7 @@ module.exports = class Morse extends Command {
         .setDescription(body.contents.translated)  
     }
 
-    channel.send(embed)
+    channel.send({embed})
     
   }
 }

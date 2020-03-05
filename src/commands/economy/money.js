@@ -27,7 +27,7 @@ module.exports = class Money extends Command {
         .setTitle(t("commands:money.title"))
         .setDescription(t("commands:money.howMany", { coins: userData.money, user }))
  
-      channel.send(embed)
+      channel.send({embed})
     } catch(err) {
       throw new CommandError(t("errors:generic"))
     }

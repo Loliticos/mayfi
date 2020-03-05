@@ -26,7 +26,7 @@ module.exports = class Commit extends Command {
         embed
           .setTitle(t("commands:commit.noValue"))
           .setDescription(t("commands:commit.youCantCommit", { gems }))
-        return channel.send(embed)
+        return channel.send({embed})
       }
 
       const transfered = gems * 4
@@ -37,7 +37,7 @@ module.exports = class Commit extends Command {
         .setTitle(t("commands:commit.title"))
         .setDescription(t("commands:commit.transfered", { gems, transfered }))
  
-      channel.send(embed)
+      channel.send({embed})
     } catch(err) {
       throw new CommandError(t("errors:generic"))
     }

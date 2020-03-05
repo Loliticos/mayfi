@@ -15,7 +15,7 @@ module.exports = class Dog extends Command {
     let embed = new MayfiEmbed(author) 
       .setTitle("🐶")
       .setImage(body.message)
-    channel.send(embed)
+    channel.send({embed})
     
   }
 }

@@ -15,7 +15,7 @@ module.exports = class Leaderboard extends Command {
       .setDescription(this.subcommands.map(subcmd => {
         return `\`${prefix}${this.name} ${subcmd.name}\` - ${t(`commands:${subcmd.path}.commandDescription`)}`
     }).join('\n'))
-    channel.send(embed)
+    channel.send({embed})
 
   }
 }

@@ -15,7 +15,7 @@ module.exports = class Cat extends Command {
     let embed = new MayfiEmbed(author)
       .setTitle("🐱")
       .setImage(body[0].url)
-    channel.send(embed)
+    channel.send({embed})
     
   }
 }

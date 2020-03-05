@@ -19,7 +19,7 @@ module.exports = class Hug extends Command {
       .setTitle(t("commands:hug.title"))
       .setDescription(t("commands:hug.description", { hugger: author, huggedUser: user }))
       .setImage(body.url)
-    channel.send(embed)
+    channel.send({embed})
     
   }
 }

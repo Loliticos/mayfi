@@ -27,6 +27,6 @@ module.exports = class Unban extends Command {
         .setTitle(t('commands:unban.cantUnban'))
         .setDescription(`\`${err}\``)
     })
-    channel.send(embed)
+    channel.send({embed})
   }
 }

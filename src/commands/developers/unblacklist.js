@@ -21,10 +21,10 @@ module.exports = class Unblacklist extends Command {
     if(!userDocument.blacklisted) {
       embed.setDescription(t('commands:unblacklist.notBlacklisted'))
       .setColor(Constants.ERROR_COLOR)
-      return channel.send(embed)  
+      return channel.send({embed})  
     }
     await this.client.database.users.updateOne({_id: user.id}, { blacklisted: false })
     embed.setDescription(`**${t('commands:unblacklist.success', { user })}**`)
-    channel.send(embed)
+    channel.send({embed})
   }
 }

@@ -12,6 +12,6 @@ module.exports = class Docs extends Command {
     const embed = new MayfiEmbed()
     embed.setThumbnail(this.client.user.displayAvatarURL)
       .setDescription(`**[${t('commands:docs.clickHere')}](https://mayfi.gitbook.io/docs/)**`)
-    channel.send(embed)
+    channel.send({ embed })
   }
 }

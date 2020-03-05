@@ -20,7 +20,6 @@ module.exports = class Purge extends Command {
   }
 
   async run ({ channel, guild, author, t }, number = 50, member) {
-    channel.startTyping()
     const embed = new MayfiEmbed(author)
     if (member) {
       channel.fetchMessages({ limit: number })
@@ -40,7 +39,7 @@ module.exports = class Purge extends Command {
     } else {
       channel.bulkDelete(number).then(() => {
         embed.setDescription(t(number > 1 ? 'commands:purge.purgedPlural' : 'commands:purge.purgedSingular', { count: number }))
-        channel.send(embed).then(() => channel.stopTyping())
+        channel.send({embed})
       }).catch(() => {
         return channel.send(new MayfiEmbed()
           .setTitle(t('errors:generic')))

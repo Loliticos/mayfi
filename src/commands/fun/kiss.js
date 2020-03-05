@@ -19,7 +19,7 @@ module.exports = class Kiss extends Command {
       .setTitle(t("commands:kiss.title"))
       .setDescription(t("commands:kiss.description", { hugger: author, huggedUser: user }))
       .setImage(body.url)
-    channel.send(embed)
+    channel.send({embed})
     
   }
 }

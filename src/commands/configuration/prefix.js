@@ -33,7 +33,7 @@ module.exports = class Prefix extends Command {
         .setTitle(t('errors:generic'))
     }
 
-    channel.send(embed)
+    channel.send({embed})
 
 
   }

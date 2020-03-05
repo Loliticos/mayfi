@@ -32,7 +32,7 @@ module.exports = class Warn extends Command {
         .setDescription(`\`${e}\``)
     }
 
-    channel.send(embed)
+    channel.send({embed})
 
   }
 }

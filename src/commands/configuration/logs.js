@@ -34,7 +34,7 @@ module.exports = class Logs extends Command {
         .setTitle(t('errors:generic'))
     }
 
-    message.channel.send(embed)
+    message.channel.send({embed})
 
 
   }

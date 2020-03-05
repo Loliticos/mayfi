@@ -34,7 +34,7 @@ module.exports = class Userinfo extends Command {
       embed.addField(t('commands:userinfo.serversInCommon', { count: filter.length }), charLimit(filter.join(', ')))
       embed.setThumbnail(member.user.displayAvatarURL)
 
-      channel.send(embed)
+      channel.send({embed})
         
   }
 }

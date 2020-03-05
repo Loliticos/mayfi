@@ -29,7 +29,7 @@ module.exports = class History extends Command {
         .setDescription(`${event.year}: ${event.text}`)
         .addField(t("commands:history.seeMore"),
           event.links.map(link => `[${link.title}](${link.link.replace(/\)/g, '%29')})`).join(', '))
-      channel.send(embed)
+      channel.send({embed})
 
     } catch(err) {
       return channel.send(

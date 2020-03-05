@@ -75,7 +75,7 @@ module.exports = class Command {
         if (error instanceof CommandError) {
           const embed = new MayfiEmbed(author)
             if(!error.showUsage) {
-                embed.setTitle(t("commansd:errors.generic"))
+                embed.setTitle(t("errors:generic"))
                 embed.setDescription(error.message)
             } else {
                 embed

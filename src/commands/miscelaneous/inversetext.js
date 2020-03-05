@@ -19,7 +19,9 @@ module.exports = class Inversetext extends Command {
     try {
       const reversedText = reverse(text)
 
-      embed.setTitle(t("commands:inversetext.heresYourText", { reversedText }))
+      embed
+        .setTitle(t("inversedText"))
+        .setDescription(t("commands:inversetext.heresYourText", { reversedText }))
     } catch(e) {
       embed
         .setColor(Constants.ERROR_COLOR)

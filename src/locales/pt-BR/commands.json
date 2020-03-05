@@ -214,7 +214,8 @@
     "commandDescription": "Inverte um texto",
     "commandUsage": "<texto>",
     "noText": "Você precisa informar um texto para ser invertido!",
-    "heresYourText": "Aqui está seu texto invertido: `{{reversedText}}`"
+    "inversedText": "Texto invertido",
+    "heresYourText": "**{{reversedText}}**"
   },
   "language": {
     "commandDescription": "Mude a linguagem do seu servidor.",

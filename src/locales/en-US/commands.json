@@ -214,7 +214,8 @@
     "commandDescription": "Inverse a text",
     "commandUsage": "<text>",
     "noText": "You need to give me a text to be inverted!",
-    "heresYourText": "Here's your inverted text: `{{reversedText}}`"
+    "inversedText": "Inversed text",
+    "heresYourText": "**{{reversedText}}**"
   },
   "language": {
     "commandDescription": "Changes your server language.",
@@ -362,7 +363,7 @@
       "2": "I'm in doubt.",
       "3": "Yes.",
       "4": "Maybe...",
-      "5": "I can't asnwer right now. Ask again!",
+      "5": "I can't answer right now. Ask again!",
       "6": "Hmm.. I'm with a slight headache right now, come back later!",
       "7": "Sources say yes.",
       "8": "Certainly no!",

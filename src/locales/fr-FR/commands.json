@@ -196,22 +196,23 @@
     "clickHere": "**[Cliquez ici pour rejoindre mon serveur d'assistance](https://discord.gg/tvN7cGJ)**"
   },
   "roleinfo": {
-    "commandDescription": "Shows informations about a role.",
-    "commandUsage": "<role>",
-    "name": "Name",
-    "color": "Color",
-    "createdAt": "Created",
-    "mentionable": "Mentionable",
-    "mentionableTrue": "Yes",
-    "mentionableFalse": "No",
-    "members": "Members that has this role",
+    "commandDescription": "Affiche des informations sur un rôle.",
+    "commandUsage": "<rôle>",
+    "name": "Nom",
+    "color": "Couleur",
+    "createdAt": "Créé",
+    "mentionable": "Mentionnable",
+    "mentionableTrue": "Oui",
+    "mentionableFalse": "Non",
+    "members": "Membres qui ont ce rôle",
     "position": "Position"
   },
   "inversetext": {
-    "commandDescription": "Inverse a text",
-    "commandUsage": "<text>",
-    "noText": "You need to give me a text to be inverted!",
-    "heresYourText": "Here's your inverted text: {{reversedText}}"
+    "commandDescription": "Inverse un texte.",
+    "commandUsage": "<texte>",
+    "noText": "Vous devez me donner un texte à inverser!",
+    "inversedText": "Voici votre texte inversé",
+    "heresYourText": "**{{reversedText}}**"
   },
   "language": {
     "commandDescription": "Modifie la langue de votre serveur.",
@@ -227,18 +228,18 @@
     "changedTo": "Le préfixe est devenu **{{prefix}}**"
   },
   "blacklist": {
-    "commandDescription": "Adds a user to the blacklist.",
-    "commandUsage": "<user> <reason>",
-    "missingUser": "You have to give me a user to blacklist!",
-    "missingReason": "You have to give me a reason for blacklisting!",
-    "successTitle": "User added to the blacklist!"
+    "commandDescription": "Ajoute un utilisateur à la liste noire.",
+    "commandUsage": "<utilisateur> <raison>",
+    "missingUser": "Vous devez me donner un utilisateur sur liste noire!",
+    "missingReason": "Vous devez me donner une raison pour la liste noire!",
+    "successTitle": "L'utilisateur a été ajouté à la liste noire!"
   },
   "unblacklist": {
-    "commandDescription": "Removes a user from the blacklist.",
-    "commandUsage": "<user>",
-    "success": "{{user}} has been removed from the blacklist!",
-    "missingUser": "You have to give me a user to remove from the blacklist!",
-    "notBlacklisted": "That user isn't blacklisted."
+    "commandDescription": "Supprime un utilisateur de la liste noire.",
+    "commandUsage": "<utilisateur>",
+    "success": "{{user}} a été retiré de la liste noire!",
+    "missingUser": "Vous devez me donner un utilisateur à retirer de la liste noire!",
+    "notBlacklisted": "Cet utilisateur n'est pas sur liste noire."
   },
   "rep": {
     "commandDescription": "Donne une réputation à un utilisateur.",
@@ -263,7 +264,7 @@
     "description": "{{hugger}} étreint {{huggedUser}}"
   },
   "kiss": {
-    "commandDescription": "Kiss an user!",
+    "commandDescription": "Embrasser un utilisateur!",
     "commandUsage": "<utilisateur>",
     "noMention": "Vous devez informer l'utilisateur d'être embrassé!",
     "title": "Baiser",
@@ -277,9 +278,9 @@
     "description": "{{hugger}} giflé {{huggedUser}}"
   },
   "cowsay": {
-    "commandDescription": "Makes the cow say something!",
-    "commandUsage": "<text>",
-    "noText": "You need to give me a text!"
+    "commandDescription": "Fait dire à la vache quelque chose!",
+    "commandUsage": "<texte>",
+    "noText": "Tu dois me donner un texto!"
   },
   "logs": {
     "commandDescription": "Définit le canal des journaux.",
@@ -313,22 +314,22 @@
     }
   },
   "money": {
-    "commandDescription": "Shows the money of an user.",
+    "commandDescription": "Montre l'argent d'un utilisateur.",
     "commandUsage": "[user]",
-    "title": "Money",
-    "howMany": "**{{user.tag}}** has {{coins}} coins"
+    "title": "Argent",
+    "howMany": "**{{user.tag}}** a **{{coins}}** pièces"
   },
   "gems": {
-    "commandDescription": "Shows the gems of an user.",
-    "commandUsage": "[user]",
+    "commandDescription": "Montre les joyaux d'un utilisateur.",
+    "commandUsage": "[utilisateur]",
     "title": "Gems",
     "howMany": "**{{user.tag}}** has {{gems}} gems"
   },
   "mine": {
-    "commandDescription": "Work a little and get some gems!",
-    "alreadyMined": "You can't work today",
-    "youCanMineAgain": "You need to wait `{{cooldown}}` before mining again!",
-    "mined": "You found a total of `{{gems}}` and `{{foundFragments}}` fragments today. Change your gems for money with the command `{{prefix}}commit <gems>`"
+    "commandDescription": "Travaillez un peu et obtenez des gemmes!",
+    "alreadyMined": "Tu ne peux pas travailler aujourd'hui",
+    "youCanMineAgain": "Vous devez attendre **{{cooldown}}** avant d'explorer à nouveau!",
+    "mined": "Vous avez trouvé un total de fragments de **{{gems}}** et de **{{foundFragments}}** aujourd'hui. Changez vos gemmes pour de l'argent avec la commande `{{prefix}} commit <gems>`"
   },
   "personaltext": {
     "commandDescription": "Vous change de moi.",
@@ -350,26 +351,26 @@
     "howToVote": "**[Votez sur DBL]({{link}})**"
   },
   "8ball": {
-    "commandDescription": "Ask something to the 8ball.",
+    "commandDescription": "Demandez quelque chose au 8ball.",
     "commandUsage": "<question>",
-    "noText": "You have to ask me something!",
+    "noText": "Tu dois me demander quelque chose!",
     "answers": {
-      "0": "For sure!",
-      "1": "No.",
-      "2": "I'm in doubt.",
-      "3": "Yes.",
-      "4": "Maybe...",
-      "5": "I can't asnwer right now. Ask again!",
-      "6": "Hmm.. I'm with a slight headache right now, come back later!",
-      "7": "Sources say yes.",
-      "8": "Certainly no!",
-      "9": "It's likely",
-      "10": "No doubt!",
-      "11": "Peoples'd say yes.",
-      "12": "My answer is no!",
-      "13": "My answer is yes!",
-      "14": "Ooohh.. For sure!",
-      "15": "Probally not."
+      "0": "Pour sûr!",
+      "1": "Non.",
+      "2": "Je doute.",
+      "3": "Oui.",
+      "4": "Peut être...",
+      "5": "Je ne peux pas répondre pour l'instant. Demande encore!",
+      "6": "Hmm .. je suis avec un léger mal de tête en ce moment, revenez plus tard!",
+      "7": "Des sources disent oui.",
+      "8": "Certainement pas!",
+      "9": "Il est probable",
+      "10": "Sans aucun doute!",
+      "11": "Les gens diraient oui.",
+      "12": "Ma réponse est non!",
+      "13": "Ma réponse est oui!",
+      "14": "Ooohh .. Bien sûr!",
+      "15": "Probablement pas."
     }
   },
   "ascii": {
@@ -377,16 +378,16 @@
     "commandUsage": "<texte>"
   },
   "clapify": {
-    "commandDescription": "Clapify a message!",
-    "commandUsage": "<text>",
-    "noText": "You need to inform a message!"
+    "commandDescription": "Clapify un message!",
+    "commandUsage": "<texte>",
+    "noText": "Vous devez informer un message!"
   },
   "morse": {
-    "commandDescription": "Translate a morse message",
-    "commandUsage": "<text>",
-    "noText": "You need to give me a text to translate!",
-    "morseToText": "Morse to text",
-    "textToMorse": "Text to morse"
+    "commandDescription": "Traduire un message morse.",
+    "commandUsage": "<texte>",
+    "noText": "Vous devez me donner un texte à traduire!",
+    "morseToText": "Morse au texte",
+    "textToMorse": "Texte en morse"
   },
   "docs": {
     "commandDescription": "Voir ma documentation.",
@@ -396,14 +397,14 @@
     "commandDescription": "Ajouter un rôle à un membre.",
     "commandUsage": "<membre> <rôle>",
     "title": "Rôle ajouté",
-    "description": "J'ai ajouté le rôle `{{role.name}}` au membre {{member}}"
+    "description": "J'ai ajouté le rôle **{{role.name}}** au membre {{member}}"
   },
   "research": {
-    "commandDescription": "Do a research and get researches points!",
-    "invalidMaterial": "Invalid materials",
-    "youNeed": "You need 15 fragments and 10 gems to research!",
-    "title": "Research",
-    "howMany": "You researched and found `{{research}}` points of research."
+    "commandDescription": "Faites une recherche et obtenez des points de recherche!",
+    "invalidMaterial": "Matériaux invalides",
+    "youNeed": "Vous avez besoin de 15 fragments et 10 gemmes pour rechercher!",
+    "title": "Recherche",
+    "howMany": "Vous avez recherché et trouvé **{{research}}** points de recherche."
   },
   "mute": {
     "commandDescription": "Désactiver un utilisateur pendant une durée indéterminée.",
@@ -416,7 +417,7 @@
     "description": "{{user}} `-` {{time}}"
   },
   "catfact": {
-    "commandDescription": "See random facts about cats."
+    "commandDescription": "Voir des faits aléatoires sur les chats."
   },
   "history": {
     "commandDescription": "Voir ce qui s'est passé un jour sur l'histoire.",
@@ -444,9 +445,9 @@
   },
   "slowmode": {
     "commandDescription": "Sets the amount of time that an user needs to wait before talking again in a channel.",
-    "commandUsage": "<time> [channel]",
-    "noTime": "You need to give me a time for the slowmode.",
-    "changed": "Changed the slowmode of the channel **#{{channel.name}}** to **{{number}}**"
+    "commandUsage": "<heure> [chaîne]",
+    "noTime": "Vous devez me donner un temps pour le slowmode.",
+    "changed": "Modification du mode lent du canal **#{{channel.name}}** en **{{number}}**"
   },
   "warns": {
     "commandDescription": "Voir combien d'avertissements un membre a.",

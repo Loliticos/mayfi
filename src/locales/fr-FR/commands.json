@@ -1,6 +1,6 @@
 {
   "ping": {
-  	"commandDescription": "See my ping"
+  	"commandDescription": "Voir mon ping"
   },
   "help": {
   	"commandDescription": "See informations about my commands or list them.",
@@ -219,7 +219,7 @@
   "language": {
     "commandDescription": "Changes your server language.",
     "commandUsage": "<language>",
-    "mustbe": "You must type a valid language. `pt-BR, en-US, fr-FR`",
+    "mustbe": "You must type a valid language. `PT-BR || EN-US || ES`",
     "title": "Language",
     "languageChangedTo": "Language changed to {{language}}"
   },

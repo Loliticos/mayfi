@@ -219,7 +219,7 @@
   "language": {
     "commandDescription": "Mude a linguagem do seu servidor.",
     "commandUsage": "<linguagem>",
-    "mustbe": "Você precisa digitar uma linguagem válida. `PT-BR || EN-US || ES`",
+    "mustbe": "Você precisa digitar uma linguagem válida. `pt-BR, en-US, fr-FR`",
     "title": "Idioma",
     "languageChangedTo": "Idioma mudado para {{language}}"
   },

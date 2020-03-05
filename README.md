@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <img alt="forthebadge" src="https://forthebadge.com/images/badges/made-with-javascript.svg">
     <head>
         <style type="text/css">
@@ -46,7 +45,6 @@
           </div>
         </div>
     </body>
-=======
 <div align="center">
   <img src="https://cdn.discordapp.com/avatars/673960641261994014/aed469a0d5ca3c7034e6e707be5e5527.png?size=2048" alt="Mayfi" width="150px;" class="mb-3 rounded-circle"><br><br>
   <br>
@@ -79,5 +77,4 @@ Mayfi has a lot of contents to be improved, feel free to create a pull request w
 
 You can help Mayfi by donating any amount (you can even help Mayfi by giving only love to her). Feel free to help us at any time. I'll be gladd :). [Patron](link)
 
->>>>>>> b2fb6e49cbf99c182061465189570e9c71226a9f
 

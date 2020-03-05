@@ -7,23 +7,25 @@ module.exports = class Translate extends Command {
       name: 'translate',
       aliases: ['gtranslate', 'traduzir'],
       category: 'utility',
-      parameters: [{
-       type: 'string', 
-       required: true, 
-       full: false
-      }, {
-        type: 'string',
-        required: true,
-        full: false
-      }, {
-        type: 'string',
-        required: true,
-        full: true
-      }]
+      parameters: [
+        {
+          type: 'string',
+          required: false
+        },
+        {
+          type: 'string',
+          required: false
+        },
+        {
+          type: 'string',
+          full: true,
+          clean: true
+        }
+      ]
     }, client)
   }
 
-  async run ({ channel, author, t}, from, to, text) {
+  async run ({ channel, author, t}, from = "pt", to = "en", text) {
 
     const params = {
       sl: from,
@@ -35,10 +37,11 @@ module.exports = class Translate extends Command {
 
     const res = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&dt=t' + `&${URLqueryParams.toString()}`).then(res => res.json())
 
+    const translated = res[0][0][0]
     console.log(res)
     
     let embed = new MayfiEmbed(author)
-    .setDescription(res[0][0][0])
+    .setDescription(translated.length > 2000 ? translated.slice(0, 2000) + '...' : translated)
 
     channel.send({embed})
         

@@ -60,143 +60,140 @@
     "error": "Il y avait une erreur"
   },
   "guildIcon": {
-    "commandDescription": "Sees the guild icon!",
-    "commandUsage": "[server]",
-    "noImage": "This guild has no icon!"
+    "commandDescription": "Voit l'icône de guilde!",
+    "commandUsage": "[serveur]",
+    "noImage": "Cette guilde n'a pas d'icône!"
   },
   "github": {
-    "commandDescription": "Sees the github of an user.",
-    "commandUsage": "<name>",
-    "missingParameters": "You need to inform the name of a Github user.",
-    "userNotFound": "No user with the name '{{user}}' found.",
-    "noBio": "No bio found for this user.",
-    "publicRepos": "Public repositorys:",
-    "createdAt": "Account created at:",
-    "followers": "Amount of followers:",
-    "following": "This user is following:",
-    "users": "Users",
-    "unknownLocation": "Unknown Location"
+    "commandDescription": "Voir le github d'un utilisateur.",
+    "commandUsage": "<nom>",
+    "missingParameters": "Vous devez renseigner le nom d'un utilisateur Github.",
+    "userNotFound": "Aucun utilisateur avec le nom '{{user}}' a trouvé.",
+    "noBio": "Aucune biographie trouvée pour cet utilisateur.",
+    "publicRepos": "Référentiels publics:",
+    "createdAt": "Compte créé à:",
+    "followers": "Nombre d'abonnés:",
+    "following": "Cet utilisateur suit:",
+    "users": "Utilisateurs",
+    "unknownLocation": "Lieu inconnu"
   },
   "channelinfo": {
-    "commandDescription": "See informations about a channel.",
-    "commandUsage": "[channel]",
-    "createdAt": "Created",
+    "commandDescription": "Voir les informations sur une chaîne.",
+    "commandUsage": "[canal]",
+    "createdAt": "Créé",
     "position": "Position",
-    "nsfwYes": "Yes",
-    "nsfwNo": "No",
-    "topic": "Topic",
-    "noTopic": "This channel doesn't have a topic."
+    "nsfwYes": "Oui",
+    "nsfwNo": "Non",
+    "topic": "Sujet",
+    "noTopic": "Cette chaîne n'a pas de sujet."
   },
   "createemoji": {
-    "commandDescription": "Create an emoji in the current guild.",
-    "commandUsage": "<emoji url> <emoji name>",
-    "noImage": "You need to inform a valid image for the emoji.",
-    "noName": "You need to inform a name for the emoji.",
-    "created": "Emoji {{emoji}} created.",
-    "error": "I couldn't create the emoji."
+    "commandDescription": "Créer un emoji dans la guilde actuelle.",
+    "commandUsage": "<emoji url> <nom emoji>",
+    "noImage": "Vous devez renseigner une image valide pour les emoji.",
+    "noName": "Vous devez donner un nom à l'emoji.",
+    "created": "Emoji {{emoji}} créé.",
+    "error": "Je n'ai pas pu créer d'emoji."
   },
   "deleteemoji": {
-    "commandDescription": "Delete an emoji in the current guild.",
+    "commandDescription": "Supprimer un emoji dans la guilde actuelle.",
     "commandUsage": "<emoji>",
-    "invalidEmoji": "You need to inform a valid emoji.",
-    "deleted": "The emoji `{{emoji.name}}` has been deleted.",
-    "error": "I couldn't delete the emoji."
+    "invalidEmoji": "Vous devez informer un emoji valide.",
+    "deleted": "L'emoji `{{emoji.name}}` a été supprimé.",
+    "error": "Je n'ai pas pu supprimer les emoji."
   },
   "cat": {
-    "commandDescription": "See cute cats images!"
+    "commandDescription": "Voir des images de chats mignons!"
   },
   "dog": {
-    "commandDescription": "See cute dogs images!"
+    "commandDescription": "Voir des images de chiens mignons!"
   },
   "kick": {
-    "commandDescription": "Kicks a member from this server.",
-    "commandUsage": "<member> <reason>",
-    "missingUser": "You have to give me a member to kick!",
-    "missingReason": "You have to give me a reason for kicking!",
-    "noPermission": "I'm missing the **$t(permissions:KICK_MEMBERS)** permission to kick this member.",
-    "successTitle": "Member was kicked!",
-    "cantKick": "I can't kick this member!"
+    "commandDescription": "Expulse un membre de ce serveur.",
+    "commandUsage": "<membre> <raison>",
+    "missingUser": "Vous devez me donner un membre pour donner un coup de pied!",
+    "missingReason": "Tu dois me donner une raison pour donner un coup de pied!",
+    "successTitle": "Un membre a été expulsé!",
+    "cantKick": "Je ne peux pas botter ce membre!"
   },
   "lock": {
-    "commandDescription": "Locks a channel.",
-    "commandUsage": "<channel>",
-    "successTitle": "Locked",
-    "successDescription": "Locked the channel **#{{channel.name}}** successfuly.",
-    "cantLock": "I can't lock this channel!"
+    "commandDescription": "Verrouille un canal.",
+    "commandUsage": "<canal>",
+    "successTitle": "Fermé à clé",
+    "successDescription": "Verrouillé la chaîne **#{{channel.name}}** avec succès.",
+    "cantLock": "Je ne peux pas verrouiller cette chaîne!"
   },
   "unlock": {
-    "commandDescription": "Unlocks a channel.",
-    "commandUsage": "<channel>",
-    "successTitle": "Unlock",
-    "successDescription": "Unlocked the channel **#{{channel.name}}** successfuly.",
-    "cantLock": "I can't unlock this channel!"
+    "commandDescription": "Déverrouille une chaîne.",
+    "commandUsage": "<canal>",
+    "successTitle": "Ouvrir",
+    "successDescription": "Déverrouillé la chaîne **#{{channel.name}}** avec succès.",
+    "cantLock": "Je ne peux pas déverrouiller cette chaîne!"
   },
   "ban": {
-    "commandDescription": "Bans a member from this server.",
-    "commandUsage": "<member> <reason>",
-    "missingUser": "You have to give me a member to ban!",
-    "missingReason": "You have to give me a reason for banning!",
-    "noPermission": "I'm missing the **$t(permissions:BAN_MEMBERS)** permission to ban this member.",
-    "successTitle": "Member was banned!",
-    "cantBan": "I can't ban this member!"
+    "commandDescription": "Interdit un membre de ce serveur.",
+    "commandUsage": "<membre> <raison>",
+    "missingUser": "Vous devez me donner un membre à bannir!",
+    "missingReason": "Vous devez me donner une raison pour interdire!",
+    "successTitle": "Le membre a été banni!",
+    "cantBan": "Je ne peux pas interdire ce membre!"
   },
   "purge": {
-    "commandDescription": "Purges messages from a channel. (Default: 50)",
-    "commandUsage": "[number of messages] [user]",
-    "purgedSingular": "Purged **{{count}}** message.",
-    "purgedPlural": "Purged **{{count}}** messages.",
-    "purgedMemberSingular": "Purged **{{count}}** message sent by **{{user}}**.",
-    "purgedMemberPlural": "Purged **{{count}}** messages sent by **{{user}}**.",
-    "invalidNumber": "You have to give me a number between 1 and 100!"
+    "commandDescription": "Purge les messages d'un canal. (Par défaut: 50)",
+    "commandUsage": "[nombre de messages] [utilisateur]",
+    "purgedSingular": "Message **{{count}}** purgé.",
+    "purgedPlural": "Messages **{{count}}** purgés.",
+    "purgedMemberSingular": "Purgé **{{count}}** message envoyé par **{{user}}**.",
+    "purgedMemberPlural": "Purgé **{{count}}** messages purgés envoyés par **{{user}}**.",
+    "invalidNumber": "Vous devez me donner un nombre entre 1 et 100!"
   },
   "softban": {
-    "commandDescription": "Bans a member, removes all of their messages and then unbans them.",
-    "commandUsage": "<member> <reason>",
-    "missingUser": "You have to give me a member to softban!",
-    "missingReason": "You have to give me a reason for softbanning!",
-    "noPermission": "I'm missing the **$t(permissions:BAN_MEMBERS)** permission to softban this member.",
-    "successTitle": "Member was softbanned!",
-    "cantSoftban": "I can't softban this member!"
+    "commandDescription": "Interdit un membre, supprime tous ses messages, puis les interdit.",
+    "commandUsage": "<membre> <raison>",
+    "missingUser": "Vous devez me donner un membre de softban!",
+    "missingReason": "Vous devez me donner une raison pour l'interdiction douce!",
+    "successTitle": "Le membre a été interdit!",
+    "cantSoftban": "Je ne peux pas softban ce membre!"
   },
   "unban": {
-    "commandDescription": "Unbans an user",
-    "commandUsage": "<user> [reason]",
-    "missingUser": "You must give me a valid user!",
-    "successTitle": "Member was unbanned!",
-    "cantUnban": "I can't unban this user!"
+    "commandDescription": "Interdit un utilisateur.",
+    "commandUsage": "<utilisateur> [raison]",
+    "missingUser": "Vous devez me donner un utilisateur valide!",
+    "successTitle": "Le membre n'était pas banni!",
+    "cantUnban": "Je ne peux pas démanteler cet utilisateur!"
   },
   "fox": {
-    "commandDescription": "What does the fox say ?"
+    "commandDescription": "Que dit le renard ?"
   },
   "poll": {
-    "commandDescription": "Starts an interactive poll in your discord server",
-    "commandUsage": "<poll> [| yes | no]",
-    "noArguments": "You need to give me the poll title!"
+    "commandDescription": "Lance un sondage interactif sur votre serveur Discord.",
+    "commandUsage": "<sondage [| oui | non]",
+    "noArguments": "Vous devez me donner le titre du sondage!"
   },
   "coinflip": {
-    "commandDescription": "Play a head or tails game!",
-    "landed": "The coin landed on **$t(commons:{{side}})**!"
+    "commandDescription": "Jouer à un jeu de tête ou de queue!",
+    "landed": "La pièce a atterri **$t(commons:{{side}})**!"
   },
   "botinfo": {
-    "commandDescription": "Sends information about me.",
-    "hello": "Hello {{user}}, my name is Mayfi and i'm a simples bot for Discord with some awesome feactures ^-^",
-    "statistics": "I'm awake for **{{uptime}}**, i'm throwing happiness to **{{guilds}} servers** and talking with **{{users}} users** with **{{commands}} commands!**",
-    "inviteMe": "Add me",
-    "inviteLink": "**[Add](https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot)**",
-    "supportServer": "Support server",
-    "supportLink": "**[Join](https://discord.gg/tvN7cGJ)**",
+    "commandDescription": "Envoie des informations sur moi.",
+    "hello": "Bonjour {{user}}, je m'appelle Mayfi et je suis un robot simple pour Discord avec de superbes fonctionnalités ^ - ^",
+    "statistics": "Je suis éveillé pour **{{uptime}}**, jetant du bonheur aux serveurs **{{guilds}}** et discutant avec **{{users}} utilisateurs** avec **{{commandes}} commandes!**",
+    "inviteMe": "Ajoute moi",
+    "inviteLink": "**[Ajouter](https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot)**",
+    "supportServer": "Serveur de support",
+    "supportLink": "**[Joindre](https://discord.gg/tvN7cGJ)**",
     "docs": "Documentation",
     "docsLink": "**[Mayfi Docs](https://mayfi.gitbook.io/docs/)**",
-    "managers": "Developers"
+    "managers": "Développeurs"
   },
   "invite": {
-    "commandDescription": "Shows Mayfi invite link.",
-    "clickHere": "**Click here to invite me to your server**",
-    "noteThat": "Take note that you need the permission **$t(permissions:MANAGE_GUILD)** in order to invite me to your server."
+    "commandDescription": "Affiche le lien d'invitation Mayfi.",
+    "clickHere": "**Cliquez ici pour m'inviter sur votre serveur**",
+    "noteThat": "Prenez note que vous avez besoin de l'autorisation **$t(permissions:MANAGE_GUILD)** afin de m'inviter sur votre serveur."
   },
   "support": {
-    "commandDescription": "Shows Mayfi support server link.",
-    "clickHere": "**[Click here to join my support server](https://discord.gg/tvN7cGJ)**"
+    "commandDescription": "Affiche le lien du serveur de support Mayfi.",
+    "clickHere": "**[Cliquez ici pour rejoindre mon serveur d'assistance](https://discord.gg/tvN7cGJ)**"
   },
   "roleinfo": {
     "commandDescription": "Shows informations about a role.",
@@ -214,20 +211,20 @@
     "commandDescription": "Inverse a text",
     "commandUsage": "<text>",
     "noText": "You need to give me a text to be inverted!",
-    "heresYourText": "Here's your inverted text: `{{reversedText}}`"
+    "heresYourText": "Here's your inverted text: {{reversedText}}"
   },
   "language": {
-    "commandDescription": "Changes your server language.",
-    "commandUsage": "<language>",
-    "mustbe": "You must type a valid language. `PT-BR || EN-US || ES`",
-    "title": "Language",
-    "languageChangedTo": "Language changed to {{language}}"
+    "commandDescription": "Modifie la langue de votre serveur.",
+    "commandUsage": "<langue>",
+    "mustbe": "Vous devez saisir une langue valide",
+    "title": "Langue",
+    "languageChangedTo": "Langue changée en {{language}}"
   },
   "prefix": {
-    "commandDescription": "Changes your server prefix.",
+    "commandDescription": "Modifie le préfixe de votre serveur.",
     "commandUsage": "<prefix>",
-    "missingPrefix": "You need to give me a prefix to be changed!",
-    "changedTo": "The prefix has changed to `{{prefix}}`"
+    "missingPrefix": "Vous devez me donner un préfixe à changer!",
+    "changedTo": "Le préfixe est devenu **{{prefix}}**"
   },
   "blacklist": {
     "commandDescription": "Adds a user to the blacklist.",
@@ -244,40 +241,40 @@
     "notBlacklisted": "That user isn't blacklisted."
   },
   "rep": {
-    "commandDescription": "Gives a reputation to an user",
-    "commandUsage": "<user>",
-    "repYourself": "You cant give reputation to yourself!",
-    "repSuccess": "You gave **1** reputation to **{{user.tag}}**",
-    "alreadyGave": "You can't give another reputation",
-    "youCanGiveAgain": "You need to wait `{{cooldown}}` before sending another reputation",
-    "typeAgain": "Oops... You need to type this command again :( The user that you just mentioned didn't had a database perfil :c"
+    "commandDescription": "Donne une réputation à un utilisateur.",
+    "commandUsage": "<utilisateur>",
+    "repYourself": "Vous ne pouvez pas vous faire une réputation!",
+    "repSuccess": "Vous avez donné **1** réputation à**{{user.tag}}**",
+    "alreadyGave": "Vous ne pouvez pas donner une autre réputation",
+    "youCanGiveAgain": "Tu dois attendre `{{cooldown}}` avant d'envoyer une autre réputation.",
+    "typeAgain": "Oups ... Vous devez taper à nouveau cette commande :( L'utilisateur que vous venez de mentionner n'avait pas de base de données: c"
   },
   "reps": {
-    "commandDescription": "See how much reputation an user has",
-    "commandUsage": "[user]",
-    "title": "Reputation",
-    "howMany": "`{{user.tag}}` has {{reps}} reputation $t(commons:{{pointPoints}})."
+    "commandDescription": "Découvrez la réputation d'un utilisateur",
+    "commandUsage": "[utilisateur]",
+    "title": "Réputation",
+    "howMany": "`{{user.tag}}` a {{reps}} réputation $t(commons:{{pointPoints}})."
   }, 
   "hug": {
-    "commandDescription": "Hug an user!",
-    "commandUsage": "<user>",
-    "noMention": "You need to inform the user to be hugged!",
-    "title": "Hug",
-    "description": "{{hugger}} hugged {{huggedUser}}"
+    "commandDescription": "Embrassez un utilisateur!",
+    "commandUsage": "<utilisateur>",
+    "noMention": "Vous devez informer l'utilisateur d'être étreint!",
+    "title": "Étreinte",
+    "description": "{{hugger}} étreint {{huggedUser}}"
   },
   "kiss": {
     "commandDescription": "Kiss an user!",
-    "commandUsage": "<user>",
-    "noMention": "You need to inform the user to be kissed!",
-    "title": "Kiss",
-    "description": "{{hugger}} kissed {{huggedUser}}"
+    "commandUsage": "<utilisateur>",
+    "noMention": "Vous devez informer l'utilisateur d'être embrassé!",
+    "title": "Baiser",
+    "description": "{{hugger}} embrassé {{huggedUser}}"
   },
   "slap": {
-    "commandDescription": "Slap an user!",
-    "commandUsage": "<user>",
-    "noMention": "You need to inform the user to be slapped!",
-    "title": "Slap",
-    "description": "{{hugger}} slapped {{huggedUser}}"
+    "commandDescription": "Gifler un utilisateur!",
+    "commandUsage": "<utilisateur>",
+    "noMention": "Vous devez informer l'utilisateur à gifler!",
+    "title": "Gifler",
+    "description": "{{hugger}} giflé {{huggedUser}}"
   },
   "cowsay": {
     "commandDescription": "Makes the cow say something!",
@@ -285,33 +282,33 @@
     "noText": "You need to give me a text!"
   },
   "logs": {
-    "commandDescription": "Sets the logs channel.",
-    "commandUsage": "<channel>",
-    "missingChannel": "You need to give me a channel!",
-    "title": "Logs",
-    "changedTo": "The logs channel has been set to **#{{channel.name}}**",
-    "editedMessage": "A message was edited",
-    "deletedMessage": "A message was deleted",
+    "commandDescription": "Définit le canal des journaux.",
+    "commandUsage": "<canal>",
+    "missingChannel": "Vous devez me donner une chaîne!",
+    "title": "Journaux",
+    "changedTo": "Le canal des journaux a été défini sur **#{{channel.name}}**",
+    "editedMessage": "Un message a été édité",
+    "deletedMessage": "Un message a été supprimé",
     "message": "Message",
-    "newMessage": "New Message",
-    "oldMessage": "Old Message",
-    "author": "Message author",
-    "channel": "Channel",
-    "goToMessage": "Go to the message"
+    "newMessage": "Nouveau message",
+    "oldMessage": "Ancien message",
+    "author": "Auteur du message",
+    "channel": "Canal",
+    "goToMessage": "Allez au message"
   },
   "leaderboard": {
-    "commandDescription": "Shows a leaderboard!",
-    "commandUsage": "<subcommad>",
+    "commandDescription": "Affiche un classement!",
+    "commandUsage": "<sous-commande>",
     "subcommands" :{
       "reputation": {
-        "commandDescription": "Shows a leaderboard of users with most reputation point.",
-        "title": "Reps Leaderboard",
-        "reps": "Reputation"
+        "commandDescription": "Affiche un classement des utilisateurs avec le plus de points de réputation.",
+        "title": "Classement des représentants",
+        "reps": "Réputation"
       },
       "money": {
-        "commandDescription": "Shows a leaderboard of users with most money.",
-        "title": "Money Leaderboard",
-        "money": "Money"
+        "commandDescription": "Affiche un classement des utilisateurs avec le plus d'argent.",
+        "title": "Classement de l'argent",
+        "money": "Argent"
       }
     }
   },
@@ -334,23 +331,23 @@
     "mined": "You found a total of `{{gems}}` and `{{foundFragments}}` fragments today. Change your gems for money with the command `{{prefix}}commit <gems>`"
   },
   "personaltext": {
-    "commandDescription": "Changes your about me",
-    "commandUsage": "<text>",
-    "noArguments": "You need to give me a text!",
-    "changedTo": "Your about me has been changed to `{{aboutme}}`"
+    "commandDescription": "Vous change de moi.",
+    "commandUsage": "<texte>",
+    "noArguments": "Tu dois me donner un texto!",
+    "changedTo": "Votre nom a été changé pour `{{aboutme}}`"
   },
   "commit": {
-    "commandDescription": "Change your gems to money.",
-    "commandUsage": "<gemas to be selled>",
-    "noArguments": "You need to give me the amount of gems to be selled!",
-    "noValue": "Insufficient gems",
-    "youCantCommit": "You dont have `{{gems}}` gems!",
-    "title": "Selled",
-    "transfered": "You've transfered `{{gems}}` gems and gained `{{transfered}}` coins."
+    "commandDescription": "Transformez vos gemmes en argent.",
+    "commandUsage": "<gemmes à vendre>",
+    "noArguments": "Vous devez me donner la quantité de gemmes à vendre!",
+    "noValue": "Gemmes insuffisantes",
+    "youCantCommit": "Vous n'avez pas `{{gems}}` gemmes!",
+    "title": "Vendu",
+    "transfered": "Vous avez transféré `{{gems}}` gemmes et gagnés `{{transfered}}` pièces de monnaie."
   },
   "vote": {
-    "commandDescription": "Vote for me in DBL!",
-    "howToVote": "**[Vote on DBL]({{link}})**"
+    "commandDescription": "Votez pour moi dans DBL!",
+    "howToVote": "**[Votez sur DBL]({{link}})**"
   },
   "8ball": {
     "commandDescription": "Ask something to the 8ball.",
@@ -376,8 +373,8 @@
     }
   },
   "ascii": {
-    "commandDescription": "Asciify a message!",
-    "commandUsage": "<text>"
+    "commandDescription": "Asciify un message!",
+    "commandUsage": "<texte>"
   },
   "clapify": {
     "commandDescription": "Clapify a message!",
@@ -392,14 +389,14 @@
     "textToMorse": "Text to morse"
   },
   "docs": {
-    "commandDescription": "See my documentation.",
-    "clickHere": "Click here to see my documentation."
+    "commandDescription": "Voir ma documentation.",
+    "clickHere": "Cliquez ici pour voir ma documentation."
   },
   "addrole": {
-    "commandDescription": "Add a role to a member.",
-    "commandUsage": "<member> <role>",
-    "title": "Role added",
-    "description": "I added the role `{{role.name}}` to the member {{member}}"
+    "commandDescription": "Ajouter un rôle à un membre.",
+    "commandUsage": "<membre> <rôle>",
+    "title": "Rôle ajouté",
+    "description": "J'ai ajouté le rôle `{{role.name}}` au membre {{member}}"
   },
   "research": {
     "commandDescription": "Do a research and get researches points!",
@@ -409,41 +406,41 @@
     "howMany": "You researched and found `{{research}}` points of research."
   },
   "mute": {
-    "commandDescription": "Mute  an user for inderteminated time.",
-    "commandUsage": "<member> <time>",
-    "missingUser": "You need to give me an user to be muted!",
+    "commandDescription": "Désactiver un utilisateur pendant une durée indéterminée.",
+    "commandUsage": "<membre> <heure>",
+    "missingUser": "Vous devez me donner un utilisateur à couper!",
     "roleName": "Muted",
-    "cantMute": "I couldn't mute the user",
-    "alreadyMuted": "This user is already muted.",
-    "muted": "Member muted",
+    "cantMute": "Je n'ai pas pu couper le son de l'utilisateur",
+    "alreadyMuted": "Cet utilisateur est déjà désactivé.",
+    "muted": "Membre désactivé",
     "description": "{{user}} `-` {{time}}"
   },
   "catfact": {
     "commandDescription": "See random facts about cats."
   },
   "history": {
-    "commandDescription": "See what happened certain day on history.",
+    "commandDescription": "Voir ce qui s'est passé un jour sur l'histoire.",
     "commandUsage": "<date>",
-    "invalidDate": "You need to give me a valid date.",
-    "date": "On this day ({{date}})...",
-    "seeMore": "See more"
+    "invalidDate": "Vous devez me donner une date valide.",
+    "date": "Ce jour-là ({{date}})...",
+    "seeMore": "Voir plus"
   },
   "dogfact": {
-    "commandDescription": "See random facts about dogs."
+    "commandDescription": "Voir des faits aléatoires sur les chiens."
   },
   "meme": {
-    "commandDescription": "Shows a random meme"
+    "commandDescription": "Affiche un mème aléatoire."
   },
   "jokes": {
-    "commandDescription": "Shows a random joke."
+    "commandDescription": "Montre une blague aléatoire."
   },
   "advice": {
-    "commandDescription": "Shows an advice."
+    "commandDescription": "Affiche un conseil."
   },
   "dice": {
-    "commandDescription": "Roll a dice! It has as an argument the number of sides of the dice (Pattern 6)",
-    "commandUsage": "[number of sides of the dice]",
-    "rolledOn": "The dice stopped on: `{{rolled}}`"
+    "commandDescription": "Lancez un dé! Il a comme argument le nombre de faces des dés (Défaut: 6)",
+    "commandUsage": "[nombre de côtés des dés]",
+    "rolledOn": "Les dés s'arrêtèrent: **{{rolled}}**"
   },
   "slowmode": {
     "commandDescription": "Sets the amount of time that an user needs to wait before talking again in a channel.",
@@ -452,41 +449,41 @@
     "changed": "Changed the slowmode of the channel **#{{channel.name}}** to **{{number}}**"
   },
   "warns": {
-    "commandDescription": "See how many warns a member has.",
-    "commandUsage": "[member]",
-    "userWarns": "The member **{{member.user.tag}}** has **{{warns}}** warns."
+    "commandDescription": "Voir combien d'avertissements un membre a.",
+    "commandUsage": "[membre]",
+    "userWarns": "Le membre **{{member.user.tag}}** a **{{warns}}** met en garde."
   },
   "warn": {
-    "commandDescription": "Warn a member.",
-    "commandUsage": "<member> [reason]",
-    "noMember": "You need to give me a member to be warned!",
-    "warned": "Member warned",
-    "cantWarn": "I couldn't warn this member"
+    "commandDescription": "Avertit un membre.",
+    "commandUsage": "<membre> [raison]",
+    "noMember": "Vous devez me donner un membre pour être averti!",
+    "warned": "Membre averti",
+    "cantWarn": "Je n'ai pas pu avertir ce membre"
   },
   "unwarn": {
-    "commandDescription": "Removs a warning from a member.",
-    "commandUsage": "<member> [reason]",
-    "noMember": "You need to give me a member to remove a warning!",
-    "unwarned": "Member unwarned",
-    "cantUnwarn": "I couldn't unwarn the member",
-    "memberHasNoWarning": "This member has no warnings."
+    "commandDescription": "Supprime un avertissement d'un membre.",
+    "commandUsage": "<membre> [raison]",
+    "noMember": "Vous devez me donner un membre pour supprimer un avertissement!",
+    "unwarned": "Membre non averti",
+    "cantUnwarn": "Je ne pouvais pas avertir le membre",
+    "memberHasNoWarning": "Ce membre n'a aucun avertissements."
   },
   "unmute": {
-    "commandDescription": "Unmute a member.",
-    "commandUsage": "<member>",
-    "missingUser": "You need to give me a member to be unmuted!",
+    "commandDescription": "Réactive le son d'un membre.",
+    "commandUsage": "<membre>",
+    "missingUser": "Vous devez me donner un membre pour ne pas être muet!",
     "roleName": "Muted",
-    "cantUnmute": "I couldn't unmute this user.",
-    "notMuted": "This user isn't muted.",
-    "unmuted": "User unmuted",
-    "description": "The member {{user}} has been unmuted."
+    "cantUnmute": "Je ne pouvais pas réactiver cet utilisateur.",
+    "notMuted": "Cet utilisateur n'est pas désactivé.",
+    "unmuted": "Utilisateur non muet",
+    "description": "Le membre {{user}} n'a pas été désactivé."
   },
   "guessflag": {
-    "commandDescription": "Mayfi will send you a country flag, and you'll need to guess it right.",
-    "guessTheFlag": "Guess the flag",
-    "country": "You got **10** seconds to guess the country that has this flag.",
-    "youGotIt": "You got it!",
-    "theWordWas": "The country was **{{country.name}} ({{country.code}})**",
-    "timeout": "Time's over."
+    "commandDescription": "Mayfi vous enverra un drapeau de pays, et vous devrez le deviner correctement.",
+    "guessTheFlag": "Devinez le drapeau",
+    "country": "Vous avez **10** secondes pour deviner le pays qui a ce drapeau.",
+    "youGotIt": "Tu l'as eu!",
+    "theWordWas": "Le pays était **{{country.name}} ({{country.code}})**",
+    "timeout": "Le temps est dépassé."
   }
 }

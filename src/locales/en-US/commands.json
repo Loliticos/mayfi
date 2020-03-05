@@ -219,7 +219,7 @@
   "language": {
     "commandDescription": "Changes your server language.",
     "commandUsage": "<language>",
-    "mustbe": "You must type a valid language. `pt-BR, en-US, fr-FR`",
+    "mustbe": "You must type a valid language.",
     "title": "Language",
     "languageChangedTo": "Language changed to {{language}}"
   },
@@ -464,7 +464,7 @@
     "cantWarn": "I couldn't warn this member"
   },
   "unwarn": {
-    "commandDescription": "Removs a warning from a member.",
+    "commandDescription": "Removes a warning from a member.",
     "commandUsage": "<member> [reason]",
     "noMember": "You need to give me a member to remove a warning!",
     "unwarned": "Member unwarned",

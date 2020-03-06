@@ -25,13 +25,12 @@ module.exports = class Translate extends Command {
   async run ({ channel, author, t}, to, text) {
     const embed = new MayfiEmbed(author)
 
-    try {
-      const detectLanguage = new DetectLanguage({
-        key: process.env.TRANSLATE_API
-      })
+    const detectLanguage = new DetectLanguage({
+      key: process.env.TRANSLATE_API
+    })
 
-      detectLanguage.detect(text, async (error, result) => {
-        if (error) {
+    detectLanguage.detect(text, async (error, result) => {
+      if (error) {
           console.error(error)
           embed
             .setColor(Constants.ERROR_COLOR)

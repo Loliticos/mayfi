@@ -22,7 +22,7 @@ module.exports = class Marry extends Command {
     }, client)
   }
 
-  async run ({ channel, guild, author, t, prefix }, user, text) {
+  async run ({ channel, guild, author, t, prefix, message }, user, text) {
     const embed = new MayfiEmbed(author)
 
     const userData = await this.client.database.users.findOne({_id: user.id})
@@ -45,7 +45,9 @@ module.exports = class Marry extends Command {
       )
     }
 
-    channel.send(user)
+    message.delete()
+
+    channel.send(user.user)
     channel.send(
       embed
         .setTitle(t("commands:marry.title", { author }))
@@ -54,7 +56,7 @@ module.exports = class Marry extends Command {
         .setFooter(t("commands:marry.footer"))
     )
 
-    const filter = c => c.author.equals(user.id) && c.content.toLowercase() == t("commons:yes").toLowerCase() || c.content.toLowercase() == t("commons:no").toLowerCase()
+    const filter = c => c.author.id == user.id && c.content.toLowerCase() == t("commons:yes").toLowerCase() || c.content.toLowercase() == t("commons:no").toLowerCase()
 
     channel.awaitMessages(filter, { time: 180000, max: 1 })
     .then(async (collected) => {

@@ -19,7 +19,9 @@ const UserSchema = new Schema({
 	lastMine: { type: Number, default: 0 },
 	researchesPoints: { type: Number, default: 0 },
 	fragments: { type: Number, default: 0 },
-	warns: { type: Number, default: 0 }
+	warns: { type: Number, default: 0 },
+	married: { type: String, default: "false" },
+	ring: { type: Boolean, default: false }
 })
 
 const GuildSchema = new Schema({

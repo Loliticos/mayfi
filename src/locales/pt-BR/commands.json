@@ -510,5 +510,19 @@
     "commandDescription": "Veja uma tirinha direta do site xkcd.",
     "commandUsage": "[latest]",
     "notFound": "Ocorreu um erro ao tentar encontrar uma tirinha, tente novamente em breve."
-  }
+  },
+  "marry": {
+    "commandDescription": "Peça alguém em noivado!",
+    "commandUsage": "<usuário>",
+    "invalidUser": "Você precisa informar um usuário válido!",
+    "invalidText": "Você precisa preparar um discurdo para pedir essa pessoa em casamento!",
+    "userAlreadyMarried": "O usuário **{{user.username}}** já está casado :(",
+    "noRing": "Compre um anel!",
+    "noRingDescription": "Você não possui um anel! Para pedir alguém em casamento você precisa de um, digite `{{prefix}}ring comprar`",
+    "title": "O usuário **{{author.username}}** está te pedindo em casamento!",
+    "recused": "Recusado",
+    "recusedDescription": "Pelo visto essa pessoa não quer casar com você. Que tristeza, bora comer um pote de sorvete juntos.",
+    "accepted": "Aceitado",
+    "acceptedDescription": "O amor está no ar! O usuário **{{user.username}}** aceitou o pedido de noivado de **{{author.username}}**"
+  } 
 }

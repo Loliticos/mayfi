@@ -6,5 +6,7 @@
 	"points": "points",
 	"typeAgain": "Type this command again, please.",
 	"minute": "minute",
-	"minutes": "minutes"
+	"minutes": "minutes",
+	"yes": "Yes",
+	"no": "No"
 }

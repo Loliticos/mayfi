@@ -25,7 +25,9 @@ module.exports = class Translate extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      const from = await fetch(`http://api.languagelayer.com/detect?acces_key=${process.env.TRANSLATE_API}&query=${new URLSearchParams(text).toString()}`).then(res => res.json())
+      const QueryParams = new URLSearchParams(text)
+
+      const from = await fetch(`http://api.languagelayer.com/detect?acces_key=${process.env.TRANSLATE_API}&query=${QueryParams.toString()}`).then(res => res.json())
       
       console.log(from)
 

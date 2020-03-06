@@ -524,6 +524,6 @@
     "recused": "Recusado",
     "recusedDescription": "Pelo visto essa pessoa não quer casar com você. Que tristeza, bora comer um pote de sorvete juntos.",
     "accepted": "Aceitado",
-    "acceptedDescription": "O amor está no ar! O usuário **{{member.username}}** aceitou o pedido de noivado de **{{author.username}}**"
+    "acceptedDescription": "O amor está no ar! O usuário **{{member.user.username}}** aceitou o pedido de noivado de **{{author.username}}**"
   } 
 }

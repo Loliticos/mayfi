@@ -9,7 +9,7 @@ module.exports = class LogsChannel extends Command {
       parent: 'logs',
       parameters: [{
         type: 'channel', 
-        acceptText: true
+        acceptText: true,
         required: true
       }]
     }, client)

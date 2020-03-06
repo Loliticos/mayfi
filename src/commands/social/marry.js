@@ -61,6 +61,7 @@ module.exports = class Marry extends Command {
     const collector = channel.createMessageCollector(filter, { time: 180000, max: 1 })
 
     collector.on("collect", async (m) => {
+      collector.stop()
       if (m.content.toLowerCase() === t("commons:no").toLowerCase()) {
         channel.send(`<@${author.id}>`)
         return channel.send(

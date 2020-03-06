@@ -67,6 +67,10 @@ module.exports = class Command {
         return this.parentCommand ? `${this.parentCommand.name}.subcommands.${this.name}` : `${this.name}`
     }
 
+    get fullName () {
+        return this.parentCommand ? `${this.parentCommand.fullName} ${this.name}` : this.name
+    }
+
     handleParameters(context, args) {
         return this.parameters ? CommandParameters.handle(context, this.parameters, args) : args
     }
@@ -102,9 +106,9 @@ module.exports = class Command {
         const usagePath = `${this.path}.commandUsage`
         const usage = noUsage ? t(`commands:${usagePath}`) : t([`commands:${usagePath}`, ''])
         if (usage !== usagePath) {
-        return `**${t('commons:usage')}:** \`${prefix}${this.name} ${usage ? usage : ''}\``
+        return `**${t('commons:usage')}:** \`${prefix}${this.fullName} ${usage ? usage : ''}\``
         } else {
-        return `**${t('commons:usage')}:** \`${prefix}${this.name}\``
+        return `**${t('commons:usage')}:** \`${prefix}${this.fullName}\``
         }
     }
     

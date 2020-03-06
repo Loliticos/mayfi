@@ -22,7 +22,7 @@ module.exports = class Guessflag extends Command {
 
       embed
         .setTitle(t("commands:guessflag.guessTheFlag"))
-        .setDescription(t("commands:guessflag.country"))
+        .setDescription(`${t("commands:guessflag.country")}\n${t("commands:guessflag.hint")}: ${country.name.substr(0, 2)}`)
         .setThumbnail(`https://www.countryflags.io/${country.code.toLowerCase()}/flat/64.png`)
       channel.send({embed})
 

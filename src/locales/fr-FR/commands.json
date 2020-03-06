@@ -485,7 +485,8 @@
     "country": "Vous avez **10** secondes pour deviner le pays qui a ce drapeau.",
     "youGotIt": "Tu l'as eu!",
     "theWordWas": "Le pays était **{{country.name}} ({{country.code}})**",
-    "timeout": "Le temps est dépassé."
+    "timeout": "Le temps est dépassé.",
+    "hint": "Allusion"
   },
   "translate": {
     "commandDescription": "Traduire un message.",

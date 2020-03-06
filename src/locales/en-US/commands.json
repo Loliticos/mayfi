@@ -488,7 +488,8 @@
     "country": "You got **10** seconds to guess the country that has this flag.",
     "youGotIt": "You got it!",
     "theWordWas": "The country was **{{country.name}} ({{country.code}})**",
-    "timeout": "Time's over."
+    "timeout": "Time's over.",
+    "hint": "**Hint**"
   },
   "translate": {
     "commandDescription": "Translate a message.",

@@ -488,7 +488,8 @@
     "country": "Você tem **10** segundos para advinhar o país que pertence á esta bandeira.",
     "youGotIt": "Você acertou!",
     "theWordWas": "O país era **{{country.name}} ({{country.code}})**",
-    "timeout": "O tempo acabou."
+    "timeout": "O tempo acabou.",
+    "hint": "**Dica**"
   },
   "translate": {
     "commandDescription": "Traduza uma mensagem."

@@ -496,7 +496,7 @@
   },
   "instagram": {
     "commandDescription": "Stalqueie aquela pessoa que você curte ❣️",
-    "commandUsage": "<usuário>",
+    "commandUsage": "<usuário> <discurso>",
     "invalidUser": "Você precisa informar um usuário do instagram válido.",
     "noBiography": "Sem biografia",
     "followers": "Quantidade de seguidores",

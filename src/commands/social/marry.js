@@ -10,10 +10,13 @@ module.exports = class Marry extends Command {
       parameters: [{
         type: 'member', 
         required: true,
+        acceptSelf: false,
+        acceptBot: false,
         missingError: 'commands:marry.invalidUser'
       }, {
         type: 'string',
         required: true,
+        full: true,
         missingError: 'commands:marry.invalidText'
       }]
     }, client)

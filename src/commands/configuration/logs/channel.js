@@ -21,9 +21,6 @@ module.exports = class LogsChannel extends Command {
     try {
       await this.client.database.guilds.updateOne({ _id: guild.id }, { logsChannel: channel.id })
 
-      console.log("Yuup")
-      console.log(t(`commands:${this.path}.channel`))
-
       embed
         .setTitle(t(`commands:${this.path}.enabledLogsSystem`))
         .setDescription(t(`commands:${this.path}.channel`, { channel }))

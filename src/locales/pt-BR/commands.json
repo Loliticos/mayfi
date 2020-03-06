@@ -534,7 +534,7 @@
     "invalidText": "Você precisa preparar um discurso para pedir essa pessoa em casamento!",
     "alert": "Eu gostaria de avisar que o seu parceiro tentou te trair! Isso mesmo, ele acaba de tentar casar com outra pessoa, espero que tenha uma conversa com ele.",
     "authorAlreadyMarried": "😵 WOW! Eu peguei você no ato! Como você pode trair seu parceiro desse modo ? Isso é tão triste, pode ficar sabendo que eu irei avisar o seu parceiro sobre sua atitude!",
-    "userAlreadyMarried": "O usuário **{{member.username}}** já está casado :(",
+    "userAlreadyMarried": "O usuário {{member..userusername}} já está casado :(",
     "noRing": "Compre um anel!",
     "noRingDescription": "Você não possui um anel! Para pedir alguém em casamento você precisa de um, digite `{{prefix}}ring comprar`",
     "title": "O usuário **{{author.username}}** está te pedindo em casamento!",

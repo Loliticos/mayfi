@@ -1,13 +1,12 @@
-const { Command, MayfiEmbed, CommandError, Constants } = require('../../')
-const moment = require("moment")
+const { Command, MayfiEmbed } = require('../../')
 const ytdl = require("ytdl-core")
 
-module.exports = class Rep extends Command {
+module.exports = class Play extends Command {
   constructor (client) {
     super({
-      name: 'rep',
-      aliases: ['reputation'],
-      category: 'social',
+      name: 'play',
+      aliases: ['tocar', 'p'],
+      category: 'music',
       requirements: { voiceChannelonly: true, sameVoiceChannelOnly: true },
       parameters: [{
         type: 'string', 

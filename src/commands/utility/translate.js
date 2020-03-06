@@ -23,7 +23,7 @@ module.exports = class Translate extends Command {
 
   async run ({ channel, author, t},  to = "en", text) {
 
-    const from = await fetch(`http://api.languagelayer.com/detect?acces_key=${process.env.TRANSLATE_API}&query=${new URLSearchParams(params).toString()}`)
+    const from = await fetch(`http://api.languagelayer.com/detect?acces_key=${process.env.TRANSLATE_API}&query=${new URLSearchParams(params).toString()}`).then(res => res.json())
     
     console.log(from)
 

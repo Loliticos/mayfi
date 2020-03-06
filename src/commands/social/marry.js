@@ -56,7 +56,7 @@ module.exports = class Marry extends Command {
         .setFooter(t("commands:marry.footer"))
     )
 
-    const filter = c => c.author.id == user.id && c.content.toLowerCase() == t("commons:yes").toLowerCase() || c.content.toLowercase() == t("commons:no").toLowerCase()
+    const filter = c => c.author.id == user.id && c.content.toLowerCase() == t("commons:yes").toLowerCase() || c.content.toLowerCase() == t("commons:no").toLowerCase()
 
     channel.awaitMessages(filter, { time: 180000, max: 1 })
     .then(async (collected) => {

@@ -180,7 +180,7 @@
   "botinfo": {
     "commandDescription": "Veja informações sobre mim.",
     "hello": "Olá {{user}}, meu nome é Mayfi e eu sou uma bot para Discord com algumas funcionalidades incríveis! ^-^",
-    "statistics": "Eu estou acordada faz **{{uptime}}**, eu estou trazendo alegria para **{{guilds}} servidores** e falando com **{{users}} usuários** com **{{commands}} comandos!**",
+    "statistics": "Eu estou acordada faz **{{uptime}}**, e nesse tempo eu estive trazendo alegria para **{{guilds}} servidores** e falando com **{{users}} usuários** com **{{commands}} comandos!**",
     "inviteMe": "Me adicione",
     "inviteLink": "**[Adicionar](https://discordapp.com/api/oauth2/authorize?client_id=673960641261994014&permissions=1345358070&scope=bot)**",
     "supportServer": "Servidor de suporte",

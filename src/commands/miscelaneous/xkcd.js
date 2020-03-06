@@ -41,6 +41,7 @@ module.exports = class Xkcd extends Command {
     function generateEmbed(response) {
       embed
         .setTitle(`${response.num} - ${response.title}`)
+        .setURL(`http://xkcd.com/${response.num}`)
         .setDescription(response.alt)
         .setImage(response.img)
       return channel.send({embed})

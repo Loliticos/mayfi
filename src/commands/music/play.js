@@ -25,7 +25,7 @@ module.exports = class Play extends Command {
 
     const connection = await voiceChannel.join()
 
-    const dispatcher = await connection.playStream(ytdl(song, { filter: "audioonly" }))
+    const dispatcher = await connection.playOpusStream(ytdl(song, { filter: "audioonly" }))
 
     channel.send(
       embed

@@ -43,7 +43,7 @@ module.exports = class Translate extends Command {
       console.log(res)
 
       const params = {
-        sl: res.detections.language,
+        sl: res.language,
         tl: to,
         q: text
       }

@@ -37,7 +37,7 @@ module.exports = class Betflip extends Command {
     await this.client.database.users.update({_id: author.id}, { $inc: { money: bet } })
 
     embed
-      .setDescription(t(`commands:betFlip.${side === choosenSide ? "won" : "loss"}`, { choosenSide, amount }))
+      .setDescription(t(`commands:betflip.${side === choosenSide ? "won" : "loss"}`, { choosenSide, amount }))
       .setThumbnail(coins[choosenSide])
     channel.send({embed})
     

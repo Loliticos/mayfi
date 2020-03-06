@@ -47,7 +47,7 @@ module.exports = class Marry extends Command {
 
     message.delete()
 
-    channel.send(member)
+    channel.send(`<@${member.id}>`)
     channel.send(
       embed
         .setTitle(t("commands:marry.title", { author }))
@@ -60,9 +60,9 @@ module.exports = class Marry extends Command {
 
     channel.awaitMessages(filter, { time: 180000, max: 1 })
     .then(async (collected) => {
-      console.log(collected)
+      console.log(collected[0])
       if (collected.message.content.toLowerCase() === t("commons:no").toLowerCase()) {
-        channel.send(author)
+        channel.send(`<@${author.id}>`)
         return channel.send(
           embed
             .setColor(Constants.ERROR_COOLR)

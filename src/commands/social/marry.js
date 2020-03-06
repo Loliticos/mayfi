@@ -79,6 +79,7 @@ module.exports = class Marry extends Command {
         embed
           .setTitle(t("commands:marry.accepted"))
           .setDescription(t("commands:marry.acceptedDescription", { user, author }))
+          .setImage("https://3.bp.blogspot.com/-aIudQs8QDi0/VSv1CrZhXlI/AAAAAAAAA14/dwthdzNydyM/s1600/Saito_x_louise3.gif")
         return channel.send(embed)
        } catch (e) {
         console.error(e)

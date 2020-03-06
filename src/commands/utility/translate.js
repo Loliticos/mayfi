@@ -60,7 +60,7 @@ module.exports = class Translate extends Command {
       console.log(countryNameFROM)
 
       embed
-        .setAuthor(t("commands:translate.googleTranslate"), "https://lh3.googleusercontent.com/ZrNeuKthBirZN7rrXPN1JmUbaG8ICy3kZSHt-WgSnREsJzo2txzCzjIoChlevMIQEA")
+        .setAuthor(t("commands:translate.translated"), "https://lh3.googleusercontent.com/ZrNeuKthBirZN7rrXPN1JmUbaG8ICy3kZSHt-WgSnREsJzo2txzCzjIoChlevMIQEA")
         .addField(`:flag_${to.replace("pt", "br").replace("en", "us")}: ${countryNameTO.name}`, `\`\`\`${translated.length > 2000 ? translated.slice(0, 2000) + '...' : translated}\`\`\``)
         .addField(`:flag_${result[0].language.replace("en", "us").replace("pt", "br")}: ${countryNameFROM.name}`, `\`\`\`${text.length > 200 ? text.slice(0, 2000) + '...' : text}\`\`\``)
       return channel.send(embed)

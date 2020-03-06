@@ -21,6 +21,8 @@ module.exports = class Play extends Command {
 
     const songInfo = await ytdl.getInfo(song)
 
+    console.log(songInfo.title)
+
     const connection = await voiceChannel.join()
 
     const dispatcher = await connection.playStream(ytdl(song, { filter: "audioonly" }))

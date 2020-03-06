@@ -5,21 +5,17 @@ module.exports = class Logs extends Command {
     super({
       name: 'logs',
       aliases: ['setlogs'],
-      category: 'config',
-      requirements: {
-       guildOnly: true, 
-       databaseOnly: true,
-       permissions: ['MANAGE_GUILD']
-      }
+      category: 'social',
+      requirements: { databaseOnly: true }
     }, client)
   }
 
-  async run ({ author, t, channel, prefix }) {
-    console.log("a")
+  async run ({ channel, guild, author, t, prefix }) {
     const embed = new MayfiEmbed(author)
       .setDescription(this.subcommands.map(subcmd => {
         return `\`${prefix}${this.name} ${subcmd.name}\` - ${t(`commands:${subcmd.path}.commandDescription`)}`
     }).join('\n'))
     channel.send({embed})
+
   }
 }

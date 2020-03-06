@@ -31,13 +31,10 @@ module.exports = class CommandLoader  {
     }
 
     addSubcommand (subCommand) {
-        console.log(subCommand)
         let parentCommand
         if(subCommand.parentCommand) {
             parentCommand = this.client.commands.get(subCommand.parentCommand)
         }
-
-        console.log(parentCommand)
 
         if(parentCommand) {
             parentCommand.subcommands.push(subCommand)

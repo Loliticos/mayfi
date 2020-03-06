@@ -520,6 +520,7 @@
     "noRing": "Compre um anel!",
     "noRingDescription": "Você não possui um anel! Para pedir alguém em casamento você precisa de um, digite `{{prefix}}ring comprar`",
     "title": "O usuário **{{author.username}}** está te pedindo em casamento!",
+    "footer": "Você tem 3 minutos para digitar \"sim\" ou \"não\" no chat.",
     "recused": "Recusado",
     "recusedDescription": "Pelo visto essa pessoa não quer casar com você. Que tristeza, bora comer um pote de sorvete juntos.",
     "accepted": "Aceitado",

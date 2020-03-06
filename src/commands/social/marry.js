@@ -39,6 +39,7 @@ module.exports = class Marry extends Command {
           .setColor(Constants.ERROR_COOLR)
           .setTitle(t("commands:marry.noRing"))
           .setDescription(t("commands:marry.noRingDescription", { prefix }))
+          .setFooter(t("commands:marry.footer"))
       )
     }
 
@@ -50,7 +51,7 @@ module.exports = class Marry extends Command {
         .setImage("https://media.giphy.com/media/oPy4OOpCRgkXm/giphy.gif")
     )
 
-    const filter = c => c.author.equals(user.id) && c.content.toLowercase() == t("commons:yes").toLowerCase() || && c.content.toLowercase() == t("commons:no").toLowerCase()
+    const filter = c => c.author.equals(user.id) && c.content.toLowercase() == t("commons:yes").toLowerCase() || c.content.toLowercase() == t("commons:no").toLowerCase()
 
     channel.awaitMessages(filter, { time: 180000, max: 1 })
     .then(async (collected) => {

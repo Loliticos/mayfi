@@ -17,10 +17,7 @@ module.exports = class Guessflag extends Command {
 
     function play() {
       const country = choosenCountry.result[Math.floor(Math.random() * choosenCountry.result.length)]
-
-      const start = country.name.substr(0, 2)
-      const end = country.name.substr(5, country.name.length)
-
+      console.log(country)
       embed
         .setTitle(t("commands:guessflag.guessTheFlag"))
         .setDescription(`${t("commands:guessflag.country")}\n\n${t("commands:guessflag.hint")}: ${country.name.substr(0, 2) }${"-".repeat(country.name.length - 2)}`)

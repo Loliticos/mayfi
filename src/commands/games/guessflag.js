@@ -18,8 +18,8 @@ module.exports = class Guessflag extends Command {
     function play() {
       const country = choosenCountry.result[Math.floor(Math.random() * choosenCountry.result.length)]
 
-      const start = country.substr(0, 2)
-      const end = country.substr(5, country.name.length)
+      const start = country.name.substr(0, 2)
+      const end = country.name.substr(5, country.name.length)
 
       embed
         .setTitle(t("commands:guessflag.guessTheFlag"))

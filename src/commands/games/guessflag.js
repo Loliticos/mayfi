@@ -26,7 +26,7 @@ module.exports = class Guessflag extends Command {
         .setThumbnail(`https://www.countryflags.io/${country.code.toLowerCase()}/flat/64.png`)
       channel.send({embed})
 
-      const filter = c => c.author.equals(author) && c.content.toLowerCase() == country.name.toLowerCase() || c.content.toLowerCase() == country.code.toLowerCase()
+      const filter = c => c.content.toLowerCase() == country.name.toLowerCase()
 
       channel.awaitMessages(filter, { time: 10000, max: 1 })
         .then(collected => {

@@ -1,7 +1,7 @@
 const { Command, MayfiEmbed } = require('../../')
 const coins = {
-  heads: "https://sorteador.com.br/_imgs/caracoroa/cara.jpg",
-  tails: "https://cdn.discordapp.com/attachments/679117210215776276/682598126191771683/Y5vgPrzC7Iazmd78B6LVfyzD7HfwBKvIh3eeptpAAAAABJRU5ErkJggg.png"
+  heads: "https://cdn.discordapp.com/attachments/677214949159862272/685512381987684392/fMemdeFmPeYAAAAAASUVORK5CYII.png",
+  tails: "https://cdn.discordapp.com/attachments/677214949159862272/685512212387069982/Y5vgPrzC7Iazmd78B6LVfyzD7HfwBKvIh3eeptpAAAAABJRU5ErkJggg.png"
 }
 
 module.exports = class Coinflip extends Command {

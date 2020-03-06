@@ -14,7 +14,7 @@ module.exports = class Logs extends Command {
     }, client)
   }
 
-  async run ({ author, t }) {
+  async run ({ author, t, channel }) {
     const embed = new MayfiEmbed(author)
       .setDescription(this.subcommands.map(subcmd => {
         return `\`${prefix}${this.name} ${subcmd.name}\` - ${t(`commands:${subcmd.path}.commandDescription`)}`

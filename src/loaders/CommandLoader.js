@@ -24,7 +24,7 @@ module.exports = class CommandLoader  {
     initializeCommands (dirPath = "src/commands") {
         return FileUtils.requireDirectory(dirPath, (NewCommand) => {
             const command = new NewCommand(this.client)
-            if(command.parentCommand) return this.addSubcommand(command)
+            if (typeof command.parentCommand === 'string') return this.addSubcommand(command)
             this.client.commands.set(command.name, command)
             if (command.aliases) command.aliases.forEach(a => this.client.aliases.set(a, command.name))
         })

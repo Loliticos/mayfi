@@ -493,5 +493,22 @@
   "translate": {
     "commandDescription": "Translate a message.",
     "commandUsage": "[from] [to] <text>"
+  },
+  "instagram": {
+    "commandDescription": "See an instagram profile ❣️",
+    "commandUsage": "<user>",
+    "invalidUser": "You need to give me a valid instagram user.",
+    "noBiography": "No biography",
+    "followers": "Followers",
+    "following": "Is following",
+    "users": "Users",
+    "media": "Amount of photos",
+    "photos": "Photos",
+    "privatedAcoount": "Private account"
+  },
+  "xkcd": {
+    "commandDescription": "See a funny comic from the site xkcd.",
+    "commandUsage": "[latest]",
+    "notFound": "There was an error while trying to find a comic, try again soon."
   }
 }

@@ -486,5 +486,26 @@
     "youGotIt": "Tu l'as eu!",
     "theWordWas": "Le pays était **{{country.name}} ({{country.code}})**",
     "timeout": "Le temps est dépassé."
+  },
+  "translate": {
+    "commandDescription": "Traduire un message.",
+    "commandUsage": "[de] [à] <text>"
+  },
+  "instagram": {
+    "commandDescription": "Voir un profil instagram ❣️",
+    "commandUsage": "<utilisateur>",
+    "invalidUser": "Vous devez me donner un utilisateur instagram valide.",
+    "noBiography": "Pas de biograpie",
+    "followers": "Suiveurs",
+    "following": "Suit",
+    "users": "Utilisateurs",
+    "media": "Nombre de photos",
+    "photos": "Photos",
+    "privatedAcoount": "Compte privé"
+  },
+  "xkcd": {
+    "commandDescription": "Voir une bande dessinée amusante sur le site xkcd.",
+    "commandUsage": "[latest]",
+    "notFound": "Une erreur s'est produite lors de la recherche d'une bande dessinée, réessayez bientôt."
   }
 }

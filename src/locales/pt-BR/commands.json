@@ -492,5 +492,22 @@
   },
   "translate": {
     "commandDescription": "Traduza uma mensagem."
+  },
+  "instagram": {
+    "commandDescription": "Stalqueie aquela pessoa que você curte ❣️",
+    "commandUsage": "<usuário>",
+    "invalidUser": "Você precisa informar um usuário do instagram válido.",
+    "noBiography": "Sem biografia",
+    "followers": "Quantidade de seguidores",
+    "following": "Está seguindo",
+    "users": "Usuários",
+    "media": "Quantidade de fotos",
+    "photos": "Fotos",
+    "privatedAcoount": "Conta privada"
+  },
+  "xkcd": {
+    "commandDescription": "Veja uma tirinha direta do site xkcd.",
+    "commandUsage": "[latest]",
+    "notFound": "Ocorreu um erro ao tentar encontrar uma tirinha, tente novamente em breve."
   }
 }

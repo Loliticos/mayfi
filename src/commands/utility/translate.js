@@ -49,9 +49,9 @@ module.exports = class Translate extends Command {
 
         const URLqueryParams = new URLSearchParams(params)
 
-        const res = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&dt=t' + `&${URLqueryParams.toString()}`).then(res => res.json())
+        const result = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&dt=t' + `&${URLqueryParams.toString()}`).then(res => res.json())
 
-        const translated = res[0][0][0]
+        const translated = result[0][0][0]
         
         embed
           .setDescription(translated.length > 2000 ? translated.slice(0, 2000) + '...' : translated)

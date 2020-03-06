@@ -18,7 +18,7 @@ module.exports = class Instagram extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      const body = await fetch(`https://instagram.com/${user}/?__a=1`).then(res => res.json())
+      const body = await fetch(`https://instagram.com/${new URLSearchParams(user).toString()}/?__a=1`).then(res => res.json())
 
       console.log(body)
     } catch(e) {

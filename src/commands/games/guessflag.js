@@ -28,6 +28,7 @@ module.exports = class Guessflag extends Command {
 
       channel.awaitMessages(filter, { time: 10000, max: 1 })
         .then(collected => {
+          console.log(collected.author)
           embed = new MayfiEmbed(author)
           if (collected.size > 0) {
             embed

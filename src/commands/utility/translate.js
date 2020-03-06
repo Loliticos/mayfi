@@ -30,7 +30,7 @@ module.exports = class Translate extends Command {
         key: process.env.TRANSLATE_API
       })
 
-      detectLanguage.detect(text, (error, result) => {
+      detectLanguage.detect(text, async (error, result) => {
         if (error) {
           console.error(error)
           embed

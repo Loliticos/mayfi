@@ -31,7 +31,7 @@ module.exports = class Marry extends Command {
     if(userData.married !== "false") {
       return channel.send(
         embed
-          .setColor(Constants.ERROR_COOLR)
+          .setColor(Constants.ERROR_COLOR)
           .setTitle(t("commands:marry.userAlreadyMarried", { user }))
       )
     }
@@ -39,10 +39,9 @@ module.exports = class Marry extends Command {
     if(!authorData.ring) {
       return channel.send(
         embed
-          .setColor(Constants.ERROR_COOLR)
+          .setColor(Constants.ERROR_COLOR)
           .setTitle(t("commands:marry.noRing"))
           .setDescription(t("commands:marry.noRingDescription", { prefix }))
-          .setFooter(t("commands:marry.footer"))
       )
     }
 
@@ -52,6 +51,7 @@ module.exports = class Marry extends Command {
         .setTitle(t("commands:marry.title", { author }))
         .setDescription(text)
         .setImage("https://media.giphy.com/media/oPy4OOpCRgkXm/giphy.gif")
+        .setFooter(t("commands:marry.footer"))
     )
 
     const filter = c => c.author.equals(user.id) && c.content.toLowercase() == t("commons:yes").toLowerCase() || c.content.toLowercase() == t("commons:no").toLowerCase()

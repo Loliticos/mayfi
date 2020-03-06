@@ -8,8 +8,8 @@ module.exports = class Instagram extends Command {
       category: 'utility',
       parameters: [{
         type: 'string',
-        full: false,
-        missingError: 'commands:deleteemoji.invalidEmoji'
+        full: true,
+        missingError: 'commands:instagram.invalidUser'
       }]
     }, client)
   }

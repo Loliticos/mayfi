@@ -19,7 +19,7 @@ module.exports = class DisableLogs extends Command {
       return channel.send(
         embed
           .setColor(Constants.ERROR_COLOR)
-          .setTitle(t("logsAlreadyDisabled"))
+          .setTitle(t(`commands:${this.path}.logsAlreadyDisabled`))
       )
     }
 

@@ -4,7 +4,7 @@ module.exports = class Logs extends Command {
   constructor (client) {
     super({
       name: 'logs',
-      aliases: ['logschannel', 'setlogs'],
+      aliases: ['setlogs'],
       category: 'config',
       requirements: {
        guildOnly: true, 

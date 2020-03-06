@@ -8,7 +8,7 @@ module.exports = class Betflip extends Command {
   constructor (client) {
     super({
       name: 'betflip',
-      aliases: ['apostar']
+      aliases: ['apostar'],
       category: 'games',
       parameters: [{
         type: 'number', min: 1, missingError: 'commands:betflip.noAmount'

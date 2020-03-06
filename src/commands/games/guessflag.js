@@ -28,11 +28,10 @@ module.exports = class Guessflag extends Command {
 
       channel.awaitMessages(filter, { time: 10000, max: 1 })
         .then(collected => {
-          console.log(collected)
           embed = new MayfiEmbed(author)
           if (collected.size > 0) {
             embed
-              .setTitle(t("commands:guessflag.youGotIt"))
+              .setTitle(t("commands:guessflag.youGotIt", { user: collected.message.author }))
               .setDescription(t("commands:guessflag.theWordWas", { country }))
 
             return channel.send({ embed }).then(async (msg) => {

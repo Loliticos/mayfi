@@ -486,7 +486,7 @@
     "commandDescription": "A Mayfi irá te mandar uma bandeira de um continente e você terá que acertar essa bandeira!",
     "guessTheFlag": "Advinhe a bandeira",
     "country": "Você tem **10** segundos para advinhar o país que pertence á esta bandeira.",
-    "youGotIt": "Você acertou!",
+    "youGotIt": "{{user.username}} acertou!",
     "theWordWas": "O país era **{{country.name}} ({{country.code}})**",
     "timeout": "O tempo acabou.",
     "hint": "**Dica**"

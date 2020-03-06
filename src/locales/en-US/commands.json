@@ -486,7 +486,7 @@
     "commandDescription": "Mayfi will send you a country flag, and you'll need to guess it right.",
     "guessTheFlag": "Guess the flag",
     "country": "You got **10** seconds to guess the country that has this flag.",
-    "youGotIt": "You got it!",
+    "youGotIt": "{{user.username}} guessed it!",
     "theWordWas": "The country was **{{country.name}} ({{country.code}})**",
     "timeout": "Time's over.",
     "hint": "**Hint**"

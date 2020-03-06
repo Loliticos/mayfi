@@ -16,7 +16,8 @@ module.exports = class Translate extends Command {
         {
           type: 'string',
           full: true,
-          clean: true
+          clean: true,
+          required: true
         }
       ]
     }, client)
@@ -38,13 +39,13 @@ module.exports = class Translate extends Command {
         return channel.send(error)
       }
 
-      const res = JSON.stringify(result)
-
       const params = {
-        sl: res.language,
+        sl: result[0].language,
         tl: to,
         q: text
       }
+
+      console.log(result)
 
       const URLqueryParams = new URLSearchParams(params)
 
@@ -52,21 +53,16 @@ module.exports = class Translate extends Command {
 
       const translated = language[0][0][0]
 
-      const choosenCountry = await fetch("https://api.printful.com/countries").then(r => r.json())
-
-      console.log(res)
-      console.log(res.language)
-      
-      const countryNameTO = choosenCountry.result.find(o => o.code.toString().toLowerCase() === to.toLowerCase())
-      const countryNameFROM = choosenCountry.result.find(o => o.code.toString().toLowerCase() === res.language)
+      const countryNameTO = await fetch(`https://restcountries.eu/rest/v2/alpha/${to.replace("en", "us")}`).then(r => r.json())
+      const countryNameFROM = await fetch(`https://restcountries.eu/rest/v2/alpha/${result[0].language.replace("en", "us")}`).then(r => r.json())
 
       console.log(countryNameTO)
       console.log(countryNameFROM)
 
       embed
-        .setTitle(t("commands:translate.translated"))
-        .addField(`flag_${to} ${countryNameTO.name}`, text.length > 200 ? text.slice(0, 2000) + '...' : text)
-        .addField(`flag_${res.language} ${countryNameFROM.name}`, translated.length > 2000 ? translated.slice(0, 2000) + '...' : translated)
+        .setAuthor(t("commands:translate.googleTranslate"), "")
+        .addField(`:flag_${to.replace("pt", "br").replace("en", "us")}: ${countryNameTO.name}`, `\`\`\`${translated.length > 2000 ? translated.slice(0, 2000) + '...' : translated}\`\`\``)
+        .addField(`:flag_${result[0].language.replace("en", "us").replace("pt", "br")}: ${countryNameFROM.name}`, `\`\`\`${text.length > 200 ? text.slice(0, 2000) + '...' : text}\`\`\``)
       return channel.send(embed)
     })
   }

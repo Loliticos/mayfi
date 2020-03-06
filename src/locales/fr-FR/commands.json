@@ -491,7 +491,8 @@
   "translate": {
     "commandDescription": "Traduire un message.",
     "commandUsage": "<à> <text>",
-    "invalidLanguage": "Vous devez me donner une langue valide!"
+    "invalidLanguage": "Vous devez me donner une langue valide!",
+    "translated": "Traduire"
   },
   "instagram": {
     "commandDescription": "Voir un profil instagram ❣️",

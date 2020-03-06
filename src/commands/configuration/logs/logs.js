@@ -1,4 +1,4 @@
-const { Command, Constants, MayfiEmbed } = require('../../')
+const { Command, Constants, MayfiEmbed } = require('../../../')
 
 module.exports = class Logs extends Command {
   constructor (client) {

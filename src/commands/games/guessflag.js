@@ -18,11 +18,12 @@ module.exports = class Guessflag extends Command {
     function play() {
       const country = choosenCountry.result[Math.floor(Math.random() * choosenCountry.result.length)]
 
-      console.log(country)
+      const start = country.substr(0, 2)
+      const end = country.substr(5, country.name.length)
 
       embed
         .setTitle(t("commands:guessflag.guessTheFlag"))
-        .setDescription(`${t("commands:guessflag.country")}\n\n${t("commands:guessflag.hint")}: ${country.name.substr(0, 2)}${"-".repeat(country.name.length - 2)}`)
+        .setDescription(`${t("commands:guessflag.country")}\n\n${t("commands:guessflag.hint")}: ${start + end}${"-".repeat(country.name.length - 2)}`)
         .setThumbnail(`https://www.countryflags.io/${country.code.toLowerCase()}/flat/64.png`)
       channel.send({embed})
 

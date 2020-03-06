@@ -489,5 +489,9 @@
     "youGotIt": "You got it!",
     "theWordWas": "The country was **{{country.name}} ({{country.code}})**",
     "timeout": "Time's over."
+  },
+  "translate": {
+    "commandDescription": "Translate a message.",
+    "commandUsage": "[from] [to] <text>"
   }
 }

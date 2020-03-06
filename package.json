@@ -21,7 +21,8 @@
     "node-fetch": "^2.6.0",
     "openweather-apis": "^4.2.0",
     "reverse-string": "0.0.6",
-    "transform-props": "^1.0.1"
+    "transform-props": "^1.0.1",
+    "ytdl-core": "^2.0.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -10,6 +10,9 @@ module.exports = class CommandRequirements {
 
       databaseOnly: !!options.databaseOnly,
 
+      voiceChannelonly: !!options.voiceChannelonly,
+      sameVoiceChannelOnly: !!options.sameVoiceChannelOnly,
+
       onlyGuild: !!options.onlyGuild || true,
       onlyDevs: !!options.onlyDevs || false 
     }
@@ -29,6 +32,14 @@ module.exports = class CommandRequirements {
 
     if(opts.onlyDevs && !Permissions.isDev(client, author)) {
       throw new CommandError(t("errors:onlyDevelopers"))
+    }
+
+    if (opts.sameVoiceChannelOnly && guild.me.voiceChannelID && (!voiceChannel || guild.me.voiceChannelID !== voiceChannel.id)) {
+      throw new CommandError(t("errors:sameVoiceChannelOnly"))
+    }
+
+    if (opts.voiceChannelOnly && !voiceChannel) {
+      throw new CommandError(t("errors:voiceChannelOnly"))
     }
 
     if (opts.permissions && opts.permissions.length > 0) {

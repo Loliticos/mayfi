@@ -16,6 +16,7 @@ module.exports = class LogsChannel extends Command {
   }
 
   async run ({ author, t, message, guild }, channel) {
+    const embed = new MayfiEmbed(author)
 
     try {
       await this.client.database.guilds.updateOne({ _id: guild.id }, { logsChannel: channel.id })

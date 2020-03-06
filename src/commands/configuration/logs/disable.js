@@ -11,6 +11,7 @@ module.exports = class DisableLogs extends Command {
   }
 
   async run ({ author, t, channel, guild }) {
+    const embed = new MayfiEmbed(author)
 
     const guildData = await this.client.database.guilds.findOne({_id: guild.id})
 

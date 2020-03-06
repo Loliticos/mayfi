@@ -58,10 +58,10 @@ module.exports = class Marry extends Command {
 
     const filter = c => c.author.id == member.id && c.content.toLowerCase() == t("commons:yes").toLowerCase() || c.content.toLowerCase() == t("commons:no").toLowerCase()
 
-    channel.awaitMessages(filter, { time: 180000, max: 1 })
-    .then(async (collected) => {
-      console.log(collected[0])
-      if (collected.message.content.toLowerCase() === t("commons:no").toLowerCase()) {
+    const collector = channel.createMessageCollector(filter, { time: 180000, max: 1 })
+
+    collector.on("collect", async (m) => {
+      if (m.content.toLowerCase() === t("commons:no").toLowerCase()) {
         channel.send(`<@${author.id}>`)
         return channel.send(
           embed

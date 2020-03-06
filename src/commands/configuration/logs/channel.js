@@ -6,7 +6,7 @@ module.exports = class LogsChannel extends Command {
       name: 'channel',
       aliases: ['canal', 'setcanal'],
       category: 'config',
-      parent: 'logs',
+      parent: "logs",
       parameters: [{
         type: 'channel', 
         acceptText: true,

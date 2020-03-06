@@ -60,7 +60,8 @@ module.exports = class Marry extends Command {
 
     channel.awaitMessages(filter, { time: 180000, max: 1 })
     .then(async (collected) => {
-      if (collected.content.toLowerCase() === t("commons:no").toLowerCase()) {
+      console.log(collected)
+      if (collected.message.content.toLowerCase() === t("commons:no").toLowerCase()) {
         channel.send(author)
         return channel.send(
           embed

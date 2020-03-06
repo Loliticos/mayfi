@@ -5,7 +5,7 @@ module.exports = class Logs extends Command {
     super({
       name: 'logs',
       aliases: ['setlogs'],
-      category: 'social',
+      category: 'config',
       requirements: { databaseOnly: true }
     }, client)
   }

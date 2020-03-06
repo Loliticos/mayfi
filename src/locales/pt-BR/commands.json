@@ -532,7 +532,7 @@
     "commandUsage": "<usuário> <discurso>",
     "invalidUser": "Você precisa informar um usuário válido!",
     "invalidText": "Você precisa preparar um discurso para pedir essa pessoa em casamento!",
-    "alert": "Eu gostaria de avisar que o seu parceiro tentou te trair! Isso mesmo, ele acaba de tentar casar com outra pessoa, espero que tenha uma conversa com ele.",
+    "alert": "Eu gostaria de avisar que o seu parceiro tentou te trair! Isso mesmo, ele acaba de tentar casar com outra pessoa, espero que tenha uma conversa com ele.\n\n**Informações:** Isso ocorreu no servidor **{{guild.name}}** mo canal **#{{channel.name}}** e ele tentou casar com o usuário **{{member.user.username}}**",
     "authorAlreadyMarried": "😵 WOW! Eu peguei você no ato! Como você pode trair seu parceiro desse modo ? Isso é tão triste, pode ficar sabendo que eu irei avisar o seu parceiro sobre sua atitude!",
     "userAlreadyMarried": "O usuário {{member..userusername}} já está casado :(",
     "noRing": "Compre um anel!",

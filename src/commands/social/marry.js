@@ -34,7 +34,7 @@ module.exports = class Marry extends Command {
 
       if(!user) return
 
-      user.send(t("commands:marry.alert"))
+      user.send(t("commands:marry.alert", { guild, channel, member }))
       return channel.send(
         embed
           .setColor(Constants.ERROR_COLOR)

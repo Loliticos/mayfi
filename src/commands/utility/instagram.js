@@ -17,13 +17,17 @@ module.exports = class Instagram extends Command {
   async run ({ t, channel, author, guild }, user) {
     const embed = new MayfiEmbed(author)
 
-    try {
-      const body = await fetch(`https://instagram.com/${new URLSearchParams(user).toString()}/?__a=1`).then(res => res.json())
+    const body = await fetch(`https://instagram.com/${user}/?__a=1`).then(res => res.json()).graphql.user
 
-      console.log(body)
-    } catch(e) {
-      console.error(e)
+    if(!body.username) {
+      embed
+        .setTitle("Invalid user")
+      return channel.send(embed)
     }
+
+    embed
+      .setDescription(body.biography)
+    channel.send(embed)
 
   }
 }

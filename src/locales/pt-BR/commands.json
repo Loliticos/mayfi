@@ -527,5 +527,13 @@
     "recusedDescription": "Pelo visto essa pessoa não quer casar com você. Que tristeza, bora comer um pote de sorvete juntos.",
     "accepted": "Convite aceito!",
     "acceptedDescription": "O amor está no ar! O usuário **{{member.user.username}}** aceitou o pedido de noivado de **{{author.username}}**"
-  } 
+  },
+  "betflip": {
+    "commandDescription": "Aposte dinheiro em cara e coroa!",
+    "commandUsage": "<quantidade para apostar> <cara ou coroa>",
+    "noAmount": "Você precisa informar uma quantidade para apostar.",
+    "noSide": "Você precisa informar um lado para apostar.",
+    "won": "A moeda parou em **{{choosenSide}}** e você ganhou! Você ganhou um total de **{{amount}}**.",
+    "loss": "A moeda parou em **{{choosenSide}}** e você perdeu! Você perdeu um total de **{{amount}}**."
+  }
 }

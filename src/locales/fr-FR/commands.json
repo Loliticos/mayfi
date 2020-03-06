@@ -508,5 +508,13 @@
     "commandDescription": "Voir une bande dessinée amusante sur le site xkcd.",
     "commandUsage": "[latest]",
     "notFound": "Une erreur s'est produite lors de la recherche d'une bande dessinée, réessayez bientôt."
+  },
+  "betflip": {
+    "commandDescription": "Pariez une valeur dans un jeu coinflip!",
+    "commandUsage": "<montant à parier> <heads ou tails>",
+    "noAmount": "Vous devez me donner un montant à parier.",
+    "noSide": "Vous devez me donner un côté pour parier.",
+    "won": "La pièce a atterri sur **{{choosenSide}}** et vous avez gagné! Vous avez gagné un total de **{{amount}}**.",
+    "loss": "La pièce a atterri sur **{{choosenSide}}** et vous avez perdu! Vous avez perdu un total de **{{amount}}**."
   }
 }

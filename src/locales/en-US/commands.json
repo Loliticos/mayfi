@@ -511,5 +511,13 @@
     "commandDescription": "See a funny comic from the site xkcd.",
     "commandUsage": "[latest]",
     "notFound": "There was an error while trying to find a comic, try again soon."
+  },
+  "betflip": {
+    "commandDescription": "Bet a value in a coinflip game!",
+    "commandUsage": "<amount to bet> <heads or tails>",
+    "noAmount": "You need to give me an amount to bet.",
+    "noSide": "You need to give me a side to bet.",
+    "won": "The coin landed on **{{choosenSide}}** and you won! You gained a total of **{{amount}}**.",
+    "loss": "The coin landed on **{{choosenSide}}** and you lost! You lost a total of **{{amount}}**."
   }
 }

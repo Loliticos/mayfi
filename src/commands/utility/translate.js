@@ -14,10 +14,6 @@ module.exports = class Translate extends Command {
         },
         {
           type: 'string',
-          required: false
-        },
-        {
-          type: 'string',
           full: true,
           clean: true
         }
@@ -25,10 +21,14 @@ module.exports = class Translate extends Command {
     }, client)
   }
 
-  async run ({ channel, author, t}, from = "pt", to = "en", text) {
+  async run ({ channel, author, t},  to = "en", text) {
+
+    const from = await fetch(`http://api.languagelayer.com/detect?acces_key=${process.env.TRANSLATE_API}&query=${new URLSearchParams(params).toString()}`)
+    
+    console.log(from)
 
     const params = {
-      sl: from,
+      sl: from.results.language_code,
       tl: to,
       q: text
     }

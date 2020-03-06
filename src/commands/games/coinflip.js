@@ -12,7 +12,7 @@ module.exports = class Coinflip extends Command {
     }, client)
   }
 
-  async run ({ channel, author, t}) {
+  run ({ channel, author, t}) {
     const sides = ['heads', 'tails']
     const result = sides[Math.floor(Math.random() * sides.length)]
     let embed = new MayfiEmbed(author)

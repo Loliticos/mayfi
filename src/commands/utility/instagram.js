@@ -21,6 +21,8 @@ module.exports = class Instagram extends Command {
       const body = await fetch(`https://instagram.com/${user}/?__a=1`).then(res => res.json())
 
       console.log(body)
+    } catch(e) {
+      console.error(e)
     }
 
   }

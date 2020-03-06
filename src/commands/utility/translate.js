@@ -31,30 +31,32 @@ module.exports = class Translate extends Command {
 
     detectLanguage.detect(text, async (error, result) => {
       if (error) {
-          console.error(error)
-          embed
-            .setColor(Constants.ERROR_COLOR)
-            .setTitle(t("commands:translate.invalidLanguage"))
-          return channel.send(error)
-        }
-
-        const res = JSON.stringify(result)
-
-        const params = {
-          sl: res.data.detections.language,
-          tl: to,
-          q: text
-        }
-
-        const URLqueryParams = new URLSearchParams(params)
-
-        const language = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&dt=t' + `&${URLqueryParams.toString()}`).then(res => res.json())
-
-        const translated = language[0][0][0]
-        
+        console.error(error)
         embed
-          .setDescription(translated.length > 2000 ? translated.slice(0, 2000) + '...' : translated)
-        return channel.send(embed)
-      })
+          .setColor(Constants.ERROR_COLOR)
+          .setTitle(t("commands:translate.invalidLanguage"))
+        return channel.send(error)
+      }
+
+      const res = JSON.stringify(result)
+
+      console.log(res)
+
+      const params = {
+        sl: res.detections.language,
+        tl: to,
+        q: text
+      }
+
+      const URLqueryParams = new URLSearchParams(params)
+
+      const language = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&dt=t' + `&${URLqueryParams.toString()}`).then(res => res.json())
+
+      const translated = language[0][0][0]
+        
+      embed
+        .setDescription(translated.length > 2000 ? translated.slice(0, 2000) + '...' : translated)
+      return channel.send(embed)
+    })
   }
 }

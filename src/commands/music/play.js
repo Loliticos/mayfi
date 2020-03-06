@@ -28,7 +28,7 @@ module.exports = class Play extends Command {
     channel.send(
       embed
         .setTitle("Song")
-        .setDescription(`Now playing: **${info.title}**!`)
+        .setDescription(`Now playing: **${songInfo.title}**!`)
     )
   }
 }

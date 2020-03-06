@@ -25,7 +25,8 @@ module.exports = class LogsChannel extends Command {
         .setTitle(t(`commands:${this.path}.enabledLogsSystem`))
         .setDescription(t(`commands:${this.path}.channel`, { channel }))
     } catch (e) {
-      embed.setColor(Constants.ERROR_COLOR)
+      embed
+        .setColor(Constants.ERROR_COLOR)
         .setTitle(t('errors:generic'))
     }
 

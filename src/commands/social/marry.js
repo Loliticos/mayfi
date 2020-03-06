@@ -22,17 +22,17 @@ module.exports = class Marry extends Command {
     }, client)
   }
 
-  async run ({ channel, guild, author, t, prefix, message }, user, text) {
+  async run ({ channel, guild, author, t, prefix, message }, member, text) {
     const embed = new MayfiEmbed(author)
 
-    const userData = await this.client.database.users.findOne({_id: user.id})
+    const userData = await this.client.database.users.findOne({_id: member.id})
     const authorData = await this.client.database.users.findOne({_id: author.id})
 
     if(userData.married !== "false") {
       return channel.send(
         embed
           .setColor(Constants.ERROR_COLOR)
-          .setTitle(t("commands:marry.userAlreadyMarried", { user }))
+          .setTitle(t("commands:marry.userAlreadyMarried", { member }))
       )
     }
 
@@ -47,7 +47,7 @@ module.exports = class Marry extends Command {
 
     message.delete()
 
-    channel.send(user.user)
+    channel.send(member)
     channel.send(
       embed
         .setTitle(t("commands:marry.title", { author }))
@@ -56,7 +56,7 @@ module.exports = class Marry extends Command {
         .setFooter(t("commands:marry.footer"))
     )
 
-    const filter = c => c.author.id == user.id && c.content.toLowerCase() == t("commons:yes").toLowerCase() || c.content.toLowerCase() == t("commons:no").toLowerCase()
+    const filter = c => c.author.id == member.id && c.content.toLowerCase() == t("commons:yes").toLowerCase() || c.content.toLowerCase() == t("commons:no").toLowerCase()
 
     channel.awaitMessages(filter, { time: 180000, max: 1 })
     .then(async (collected) => {
@@ -73,13 +73,13 @@ module.exports = class Marry extends Command {
 
        try {
         await Promise.all([
-          this.client.database.users.updateOne({_id: user.id}, { married: author.id }),
-          this.client.database.users.updateOne({_id: author.id}, { married: user.id })
+          this.client.database.users.updateOne({_id: member.id}, { married: author.id }),
+          this.client.database.users.updateOne({_id: author.id}, { married: member.id })
         ])
 
         embed
           .setTitle(t("commands:marry.accepted"))
-          .setDescription(t("commands:marry.acceptedDescription", { user, author }))
+          .setDescription(t("commands:marry.acceptedDescription", { member, author }))
           .setImage("https://3.bp.blogspot.com/-aIudQs8QDi0/VSv1CrZhXlI/AAAAAAAAA14/dwthdzNydyM/s1600/Saito_x_louise3.gif")
         return channel.send(embed)
        } catch (e) {

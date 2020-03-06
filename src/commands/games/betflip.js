@@ -11,7 +11,7 @@ module.exports = class Betflip extends Command {
       aliases: ['apostar'],
       category: 'games',
       parameters: [{
-        type: 'number', min: 1, missingError: 'commands:betflip.noAmount'
+        type: 'number', min: 100, missingError: 'commands:betflip.noAmount'
       }, {
         type: 'string', full: true, whitelist: ['heads', 'tails', 'cara', 'coroa'], missingError: 'commands:betflip.noSide'
       }]
@@ -34,7 +34,7 @@ module.exports = class Betflip extends Command {
 
     const bet = side.toLowerCase() === choosenSide ? amount : -amount
 
-    await this.client.database._users.update({_id: author.id}, { $inc: { money: bet } })
+    await this.client.database.users.update({_id: author.id}, { $inc: { money: bet } })
 
     embed
       .setDescription(t(`commands:betFlip.${side === choosenSide ? "won" : "loss"}`, { choosenSide, amount }))

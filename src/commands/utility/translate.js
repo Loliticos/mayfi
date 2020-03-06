@@ -1,5 +1,6 @@
 const { Command, MayfiEmbed, Constants } = require('../../')
 const fetch = require("node-fetch")
+const DetectLanguage = require('detectlanguage')
 
 module.exports = class Translate extends Command {
   constructor (client) {
@@ -25,34 +26,39 @@ module.exports = class Translate extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      const QueryParams = new URLSearchParams(text)
+      const detectLanguage = new DetectLanguage({
+        key: process.env.TRANSLATE_API
+      })
 
-      const from = await fetch(`http://api.languagelayer.com/detect?acces_key=${process.env.TRANSLATE_API}&query=${QueryParams.toString()}`).then(res => res.json())
-      
-      console.log(from)
+      detectLanguage.detect(text, (error, result) => {
+        if (error) {
+          console.error(error)
+          embed
+            .setColor(Constants.ERROR_COLOR)
+            .setTitle(t("commands:translate.invalidLanguage"))
+          return channel.send(error)
+        }
 
-      const params = {
-        sl: from.results.language_code,
-        tl: to,
-        q: text
-      }
+        const res = JSON.stringify(result)
 
-      const URLqueryParams = new URLSearchParams(params)
+        const params = {
+          sl: res.data.detections.language,
+          tl: to,
+          q: text
+        }
 
-      const res = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&dt=t' + `&${URLqueryParams.toString()}`).then(res => res.json())
+        const URLqueryParams = new URLSearchParams(params)
 
-      const translated = res[0][0][0]
-      
-      embed
-        .setDescription(translated.length > 2000 ? translated.slice(0, 2000) + '...' : translated)
+        const res = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&dt=t' + `&${URLqueryParams.toString()}`).then(res => res.json())
 
-    } catch(e) {
+        const translated = res[0][0][0]
+        
         embed
-          .setColor(Constants.ERROR_COLOR)
-          .setTitle(t("commands:translate.invalidLanguage"))
-    }
+          .setDescription(translated.length > 2000 ? translated.slice(0, 2000) + '...' : translated)
+        return channel.send(embed)
 
-    channel.send(embed)
+
+      })
 
   }
 }

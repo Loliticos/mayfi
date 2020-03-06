@@ -22,12 +22,12 @@ module.exports = class MessageUpdate extends EventHandler {
             const t = this.client.i18next.getFixedT(dataGuild.language)
 
             const embed = new MayfiEmbed(author)
-            .setTitle(t("commands:logs.editedMessage"))
-            .setDescription(`**[${t("commands:logs.goToMessage")}](${newMessage.url})**`)
-            .addField(t("commands:logs.author"), `${author} - ${author.tag}`)
-            .addField(t("commands:logs.channel"), newMessage.channel)
-            .addField(t("commands:logs.oldMessage"), oldMessage.content)
-            .addField(t("commands:logs.newMessage"), newMessage.content)
+            .setTitle(t("commands:logs.messages.editedMessage"))
+            .setDescription(`**[${t("commands:logs.messages.goToMessage")}](${newMessage.url})**`)
+            .addField(t("commands:logs.messages.author"), `${author} - ${author.tag}`)
+            .addField(t("commands:logs.messages.channel"), newMessage.channel)
+            .addField(t("commands:logs.messages.oldMessage"), oldMessage.content)
+            .addField(t("commands:logs.messages.newMessage"), newMessage.content)
             newMessage.guild.channels.get(dataGuild.logsChannel).send(embed)
         } catch (e) {
             console.error(e)

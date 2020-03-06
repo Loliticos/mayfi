@@ -287,18 +287,31 @@
   },
   "logs": {
     "commandDescription": "Seta o canal de logs.",
-    "commandUsage": "<canal>",
-    "missingChannel": "Você precisa informar um canal!",
-    "title": "Logs",
-    "changedTo": "O canal de logs foi setado para **#{{channel.name}}**",
-    "editedMessage": "Uma mensagem foi editada",
-    "deletedMessage": "Uma mensagem foi deletada",
-    "newMessage": "Mensagem atualizada",
-    "oldMessage": "Mensagem antiga",
-    "message": "Mensagem",
-    "author": "Autor da mensagem",
-    "channel": "Canal",
-    "goToMessage": "Ir até a mensagem"
+    "commandUsage": "<sub-comandos>",
+    "subcommands": {
+      "channel": {
+        "commandDescription": "Sete o canal que irá ocorrer as logs.",
+        "commandUsage": "<canal>",
+        "enabledLogsSystem": "Sistema de logs habilitado.",
+        "channel": "O canal de logs foi setado para **#{{channel.name}}**."
+      },
+      "disable": {
+        "commandDescription": "Desabilite o sistema de logs.",
+        "disabledLogsSystem": "Sistema de logs desabilitado com sucesso.",
+        "logsAlreadyDisabled": "O sistema de logs já está desabilitado."
+      }
+    },
+    "messages": {
+      "title": "Logs",
+      "editedMessage": "Uma mensagem foi editada",
+      "deletedMessage": "Uma mensagem foi deletada",
+      "newMessage": "Mensagem atualizada",
+      "oldMessage": "Mensagem antiga",
+      "message": "Mensagem",
+      "author": "Autor da mensagem",
+      "channel": "Canal",
+      "goToMessage": "Ir até a mensagem"
+    }
   },
   "leaderboard": {
     "commandDescription": "Mostra um placar.",
@@ -536,7 +549,7 @@
     "commandUsage": "<quantidade para apostar> <cara ou coroa>",
     "noAmount": "Você precisa informar uma quantidade para apostar.",
     "noSide": "Você precisa informar um lado para apostar.",
-    "won": "A moeda parou em **{{choosenSide}}** e você ganhou! Você ganhou um total de **{{amount}}**.",
-    "loss": "A moeda parou em **{{choosenSide}}** e você perdeu! Você perdeu um total de **{{amount}}**."
+    "won": "A moeda parou em **{{choosenSide}}** e você ganhou! Você ganhou um total de **{{amount}}** moedas.",
+    "loss": "A moeda parou em **{{choosenSide}}** e você perdeu! Você perdeu um total de **{{amount}}** moedas."
   }
 }

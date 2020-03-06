@@ -287,22 +287,35 @@
   },
   "logs": {
     "commandDescription": "Sets the logs channel.",
-    "commandUsage": "<channel>",
-    "missingChannel": "You need to give me a channel!",
-    "title": "Logs",
-    "changedTo": "The logs channel has been set to **#{{channel.name}}**",
-    "editedMessage": "A message was edited",
-    "deletedMessage": "A message was deleted",
-    "message": "Message",
-    "newMessage": "New Message",
-    "oldMessage": "Old Message",
-    "author": "Message author",
-    "channel": "Channel",
-    "goToMessage": "Go to the message"
+    "commandUsage": "<sub-command>",
+    "subcommands": {
+      "channel": {
+        "commandDescription": "Sets the channel that will occur the logs.",
+        "commandUsage": "<channel>",
+        "enabledLogsSystem": "Logs system enabled.",
+        "channel": "The logs channel has been seted to **#{{channel.name}}**."
+      },
+      "disable": {
+        "commandDescription": "Disables the logs system.",
+        "disabledLogsSystem": "Logs system disabled with success.",
+        "logsAlreadyDisabled": "The logs system is already disabled."
+      }
+    },
+    "messages": {
+      "title": "Logs",
+      "editedMessage": "A message has been edited",
+      "deletedMessage": "A message has been deleted",
+      "newMessage": "New message",
+      "oldMessage": "Old message",
+      "message": "Message",
+      "author": "Message author",
+      "channel": "Channel",
+      "goToMessage": "Go to the message"
+    }
   },
   "leaderboard": {
     "commandDescription": "Shows a leaderboard!",
-    "commandUsage": "<subcommad>",
+    "commandUsage": "<sub-commad>",
     "subcommands" :{
       "reputation": {
         "commandDescription": "Shows a leaderboard of users with most reputation point.",
@@ -519,7 +532,7 @@
     "commandUsage": "<amount to bet> <heads or tails>",
     "noAmount": "You need to give me an amount to bet.",
     "noSide": "You need to give me a side to bet.",
-    "won": "The coin landed on **{{choosenSide}}** and you won! You gained a total of **{{amount}}**.",
-    "loss": "The coin landed on **{{choosenSide}}** and you lost! You lost a total of **{{amount}}**."
+    "won": "The coin landed on **{{choosenSide}}** and you won! You gained a total of **{{amount}}** coins.",
+    "loss": "The coin landed on **{{choosenSide}}** and you lost! You lost a total of **{{amount}}** coins."
   }
 }

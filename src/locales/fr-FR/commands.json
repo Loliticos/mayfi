@@ -283,19 +283,32 @@
     "noText": "Tu dois me donner un texto!"
   },
   "logs": {
-    "commandDescription": "Définit le canal des journaux.",
-    "commandUsage": "<canal>",
-    "missingChannel": "Vous devez me donner une chaîne!",
-    "title": "Journaux",
-    "changedTo": "Le canal des journaux a été défini sur **#{{channel.name}}**",
-    "editedMessage": "Un message a été édité",
-    "deletedMessage": "Un message a été supprimé",
-    "message": "Message",
-    "newMessage": "Nouveau message",
-    "oldMessage": "Ancien message",
-    "author": "Auteur du message",
-    "channel": "Canal",
-    "goToMessage": "Allez au message"
+    "commandDescription": "Définir le canal des journaux.",
+    "commandUsage": "<sous-commande>",
+    "subcommands": {
+      "channel": {
+        "commandDescription": "Définit le canal qui se produira les journaux.",
+        "commandUsage": "<canal>",
+        "enabledLogsSystem": "Système de journaux activé.",
+        "channel": "The logs channel has been seted to **#{{channel.name}}**."
+      },
+      "disable": {
+        "commandDescription": "Désactive le système de journaux.",
+        "disabledLogsSystem": "Système de journaux désactivé avec succès.",
+        "logsAlreadyDisabled": "Le système de journaux est déjà désactivé."
+      }
+    },
+    "messages": {
+      "title": "Logs",
+      "editedMessage": "Un message a été édité",
+      "deletedMessage": "Un message a été supprimé",
+      "newMessage": "New message",
+      "oldMessage": "Ancien message",
+      "message": "Message",
+      "author": "Auteur du message",
+      "channel": "Channel",
+      "goToMessage": "Allez au message"
+    }
   },
   "leaderboard": {
     "commandDescription": "Affiche un classement!",
@@ -516,7 +529,7 @@
     "commandUsage": "<montant à parier> <heads ou tails>",
     "noAmount": "Vous devez me donner un montant à parier.",
     "noSide": "Vous devez me donner un côté pour parier.",
-    "won": "La pièce a atterri sur **{{choosenSide}}** et vous avez gagné! Vous avez gagné un total de **{{amount}}**.",
-    "loss": "La pièce a atterri sur **{{choosenSide}}** et vous avez perdu! Vous avez perdu un total de **{{amount}}**."
+    "won": "La pièce a atterri sur **{{choosenSide}}** et vous avez gagné! Vous avez gagné un total de **{{amount}}** pièces de monnaie.",
+    "loss": "La pièce a atterri sur **{{choosenSide}}** et vous avez perdu! Vous avez perdu un total de **{{amount}}** pièces de monnaie."
   }
 }

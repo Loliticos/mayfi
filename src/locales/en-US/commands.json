@@ -493,7 +493,8 @@
   },
   "translate": {
     "commandDescription": "Translate a message.",
-    "commandUsage": "[from] [to] <text>"
+    "commandUsage": "<to> <text>",
+    "invalidLanguage": "You need to give me a valid language!"
   },
   "instagram": {
     "commandDescription": "See an instagram profile ❣️",

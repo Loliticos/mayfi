@@ -492,7 +492,9 @@
     "hint": "**Dica**"
   },
   "translate": {
-    "commandDescription": "Traduza uma mensagem."
+    "commandDescription": "Traduza uma mensagem.",
+    "commandUsage": "<para> <texto>",
+    "invalidLanguage": "Você precisa informar uma linguagem válida!"
   },
   "instagram": {
     "commandDescription": "Stalqueie aquela pessoa que você curte ❣️",

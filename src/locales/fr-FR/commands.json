@@ -490,7 +490,8 @@
   },
   "translate": {
     "commandDescription": "Traduire un message.",
-    "commandUsage": "[de] [à] <text>"
+    "commandUsage": "<à> <text>",
+    "invalidLanguage": "Vous devez me donner une langue valide!"
   },
   "instagram": {
     "commandDescription": "Voir un profil instagram ❣️",

@@ -7,6 +7,7 @@ module.exports = class CommandLoader  {
     constructor(client) {
         this.client = client
 
+        this.posLoadCommands = []
     }
 
     load () {
@@ -23,11 +24,20 @@ module.exports = class CommandLoader  {
 
     initializeCommands (dirPath = "src/commands") {
         return FileUtils.requireDirectory(dirPath, (NewCommand) => {
-            const command = new NewCommand(this.client)
-            if (typeof command.parentCommand === 'string') return this.addSubcommand(command)
+            this.addCommand(new NewCommand(this.client))
+        }).then(() => {
+            const sorted = this.posLoadCommands.sort((a, b) => +(typeof b === 'string') || -(typeof a === 'string') || a.length - b.length)
+            sorted.forEach(subCommand => this.addSubcommand(subCommand))
+        })
+    }
+
+    addCommand (command) {
+        if (typeof command.parentCommand === 'string' || Array.isArray(command.parentCommand)) {
+          this.posLoadCommands.push(command)
+        } else {
             this.client.commands.set(command.name, command)
             if (command.aliases) command.aliases.forEach(a => this.client.aliases.set(a, command.name))
-        })
+        }
     }
 
     addSubcommand (subCommand) {

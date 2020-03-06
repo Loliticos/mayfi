@@ -28,6 +28,20 @@ module.exports = class Marry extends Command {
     const userData = await this.client.database.users.findOne({_id: member.id})
     const authorData = await this.client.database.users.findOne({_id: author.id})
 
+    if(authorData.married !== "false") {
+
+      const user = this.client.users.get(authorData.married)
+
+      if(!user) return
+
+      user.send(t("commands:marry.alert"))
+      return channel.send(
+        embed
+          .setColor(Constants.ERROR_COLOR)
+          .setTitle(t("commands:marry.authorAlreadyMarried"))
+      )
+    }
+
     if(userData.married !== "false") {
       return channel.send(
         embed

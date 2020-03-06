@@ -515,7 +515,9 @@
     "commandDescription": "Peça alguém em noivado!",
     "commandUsage": "<usuário>",
     "invalidUser": "Você precisa informar um usuário válido!",
-    "invalidText": "Você precisa preparar um discurdo para pedir essa pessoa em casamento!",
+    "invalidText": "Você precisa preparar um discurso para pedir essa pessoa em casamento!",
+    "alert": "Eu gostaria de avisar que o seu parceiro tentou te trair! Isso mesmo, ele acaba de tentar casar com outra pessoa, espero que tenha uma conversa com ele.",
+    "authorAlreadyMarried": "😵 WOW! Eu peguei você no ato! Como você pode trair seu parceiro desse modo ? Isso é tão triste, pode ficar sabendo que eu irei avisar o seu parceiro sobre sua atitude!",
     "userAlreadyMarried": "O usuário **{{member.username}}** já está casado :(",
     "noRing": "Compre um anel!",
     "noRingDescription": "Você não possui um anel! Para pedir alguém em casamento você precisa de um, digite `{{prefix}}ring comprar`",
@@ -523,7 +525,7 @@
     "footer": "Você tem 3 minutos para digitar \"sim\" ou \"não\" no chat.",
     "recused": "Recusado",
     "recusedDescription": "Pelo visto essa pessoa não quer casar com você. Que tristeza, bora comer um pote de sorvete juntos.",
-    "accepted": "Aceitado",
+    "accepted": "Convite aceito!",
     "acceptedDescription": "O amor está no ar! O usuário **{{member.user.username}}** aceitou o pedido de noivado de **{{author.username}}**"
   } 
 }

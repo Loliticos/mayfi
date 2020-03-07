@@ -35,7 +35,7 @@ module.exports = class Instagram extends Command {
     } catch(e) {
         embed
           .setColor(Constants.ERROR_COLOR)
-          .setTitle(t("commons:instagram.invalidUser"))
+          .setTitle(t("commands:instagram.invalidUser"))
         return channel.send(embed)
     }
 

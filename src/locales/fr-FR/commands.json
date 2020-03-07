@@ -326,11 +326,11 @@
       }
     }
   },
-  "money": {
-    "commandDescription": "Montre l'argent d'un utilisateur.",
-    "commandUsage": "[user]",
-    "title": "Argent",
-    "howMany": "**{{user.tag}}** a **{{coins}}** pièces"
+  "balance": {
+    "commandDescription": "Affiche l'équilibre d'un utilisateur.",
+    "commandUsage": "[utilisateur]",
+    "title": "Équilibre",
+    "howMany": "**{{user.tag}}**\n\n**{{userData.money}} pièces de monnaie** | **{{userData.gems}} gemmes**"
   },
   "gems": {
     "commandDescription": "Montre les joyaux d'un utilisateur.",

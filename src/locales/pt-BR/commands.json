@@ -329,11 +329,11 @@
       }
     }
   },
-  "money": {
-    "commandDescription": "Veja o dinheiro de algum usuário!",
+  "balance": {
+    "commandDescription": "Veja a balança de algum usuário!",
     "commandUsage": "[usuário]",
-    "title": "Dinheiro",
-    "howMany": "**{{user.tag}}** possue {{coins}} moedas"
+    "title": "Saldo",
+    "balanceDescription": "**{{user.tag}}**\n\n**{{userData.money}} coins** | **{{userData.gems}} gemas**"
   },
   "gems": {
     "commandDescription": "Veja as gemas de algum usuário!",

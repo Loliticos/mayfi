@@ -329,11 +329,11 @@
       }
     }
   },
-  "money": {
-    "commandDescription": "Shows the money of an user.",
+  "balance": {
+    "commandDescription": "Shows the balance of an user.",
     "commandUsage": "[user]",
-    "title": "Money",
-    "howMany": "**{{user.tag}}** has {{coins}} coins"
+    "title": "Balance",
+    "howMany": "**{{user.tag}}**\n\n**{{userData.money}} coins** | **{{userData.gems}} gems**"
   },
   "gems": {
     "commandDescription": "Shows the gems of an user.",

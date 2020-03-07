@@ -1,10 +1,10 @@
 const { Command, MayfiEmbed, CommandError } = require('../../')
 
-module.exports = class Gems extends Command {
+module.exports = class Balance extends Command {
   constructor (client) {
     super({
-      name: 'gems',
-      aliases: ['gemas', 'gem'],
+      name: 'balance',
+      aliases: ['money', 'coin', 'coins', 'gems', 'gem'],
       category: 'economy',
       cooldown: 3,
       requirements: { databaseOnly: true, },
@@ -21,11 +21,11 @@ module.exports = class Gems extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      let UserData = await this.client.database.users.findOne({_id: user.id})
+      let userData = await this.client.database.users.findOne({_id: user.id})
 
       embed
-        .setTitle(t("commands:gems.title"))
-        .setDescription(t("commands:gems.howMany", { gems: UserData.gems, user }))
+        .setTitle(t("commands:balance.title"))
+        .setDescription(t("commands:balance.balanceDescription", { userData, user }))
  
       channel.send({embed})
     } catch(err) {

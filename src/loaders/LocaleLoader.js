@@ -23,7 +23,7 @@ module.exports = class EventLoader  {
     async initializeLocales () {
       try {
           i18next.use(translationBackend).init({
-              ns: ['commands', 'events', 'permissions', 'commons', 'categories', 'errors'],
+              ns: ['commands', 'events', 'permissions', 'commons', 'categories', 'errors', 'regions'],
               preload: await readdirSync('./src/locales/'),
               fallbackLng: 'en-US',
               backend: {

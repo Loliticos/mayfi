@@ -20,7 +20,7 @@ module.exports = class Guildinfo extends Command {
       let embed = new MayfiEmbed(author)
       .setAuthor(guild.name, guild.iconURL)
       .addField("ID", guild.id, true)
-      .addField(t("commands:guildinfo.owner"), `${guild.owner.member ? guild.owner.member + "**-**" + guild.owner.username : t("commands:guildinfo.invalidOwner")}`, true)
+      .addField(t("commands:guildinfo.owner"), `${guild.owner.user.tag ? guild.owner.user.tag : t("commands:guildinfo.invalidOwner")}`, true)
       .addField(t("commands:guildinfo.region"), t(`regions:${guild.region}`))
       .addField(t("commands:guildinfo.channels"), guild.channels.size)
       .addField(t("commands:guildinfo.roles"), guild.roles.size)

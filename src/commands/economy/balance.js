@@ -4,7 +4,7 @@ module.exports = class Balance extends Command {
   constructor (client) {
     super({
       name: 'balance',
-      aliases: ['money', 'coin', 'coins', 'gems', 'gem'],
+      aliases: ['money', 'coin', 'coins', 'gems', 'gem', 'researchpoints', 'fragments'],
       category: 'economy',
       cooldown: 3,
       requirements: { databaseOnly: true },

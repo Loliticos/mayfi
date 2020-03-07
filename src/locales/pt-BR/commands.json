@@ -333,7 +333,7 @@
     "commandDescription": "Veja a balança de algum usuário!",
     "commandUsage": "[usuário]",
     "title": "Saldo",
-    "balanceDescription": "**{{user.tag}}**\n\n{{userData.money}} coins **|** {{userData.gems}} gemas"
+    "balanceDescription": "**{{user.tag}}**\n\n{{userData.money}} moedas **|** {{userData.gems}} gemas **|** {{userData.fragments}} fragmentos **|** {{userData.researchesPoints}} pontos de pesquisa"
   },
   "gems": {
     "commandDescription": "Veja as gemas de algum usuário!",
@@ -344,8 +344,8 @@
   "mine": {
     "commandDescription": "Trabalhe um pouco para ganhar gemas!",
     "alreadyMined": "Não foi possível trabalhar hoje",
-    "youCanMineAgain": "Você precisa esperar `{{cooldown}}` antes de minerar novamente!",
-    "mined": "Você encontrou um total de `{{gems}}` gemas e `{{foundFragments}}` fragmentos hoje. Troque suas gemas por dinheiro usando o comando `{{prefix}}commit <gemas>`"
+    "youCanMineAgain": "Você precisa esperar **{{cooldown}}** antes de minerar novamente!",
+    "mined": "Você encontrou um total de **{{gems}}** gemas e **{{foundFragments}}** fragmentos hoje. Troque suas gemas por dinheiro usando o comando **{{prefix}}commit <gemas>**"
   },
   "personaltext": {
     "commandDescription": "Mude o seu sobre mim",

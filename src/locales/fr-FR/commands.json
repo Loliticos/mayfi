@@ -330,7 +330,7 @@
     "commandDescription": "Affiche l'équilibre d'un utilisateur.",
     "commandUsage": "[utilisateur]",
     "title": "Équilibre",
-    "howMany": "**{{user.tag}}**\n\n{{userData.money}} pièces de monnaie **|** {{userData.gems}} gemmes"
+    "howMany": "**{{user.tag}}**\n\n{{userData.money}} pièces de monnaie **|** {{userData.gems}} gemmes **|** {{userData.fragments}} des fragments **|** {{userData.researchesPoints}} recherche des points"
   },
   "gems": {
     "commandDescription": "Montre les joyaux d'un utilisateur.",

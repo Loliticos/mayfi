@@ -333,7 +333,7 @@
     "commandDescription": "Shows the balance of an user.",
     "commandUsage": "[user]",
     "title": "Balance",
-    "howMany": "**{{user.tag}}**\n\n{{userData.money}} coins **|** {{userData.gems}} gems"
+    "howMany": "**{{user.tag}}**\n\n{{userData.money}} coins **|** {{userData.gems}} gems **|** {{userData.fragments}} fragments **|** {{userData.researchesPoints}} researches points"
   },
   "gems": {
     "commandDescription": "Shows the gems of an user.",
@@ -344,11 +344,11 @@
   "mine": {
     "commandDescription": "Work a little and get some gems!",
     "alreadyMined": "You can't work today",
-    "youCanMineAgain": "You need to wait `{{cooldown}}` before mining again!",
-    "mined": "You found a total of `{{gems}}` and `{{foundFragments}}` fragments today. Change your gems for money with the command `{{prefix}}commit <gems>`"
+    "youCanMineAgain": "You need to wait **{{cooldown}}** before mining again!",
+    "mined": "You found a total of **{{gems}}** and **{{foundFragments}}** fragments today. Change your gems for money with the command **{{prefix}}commit <gems>**"
   },
   "personaltext": {
-    "commandDescription": "Changes your about me",
+    "commandDescription": "Changes your personal text.",
     "commandUsage": "<text>",
     "noArguments": "You need to give me a text!",
     "changedTo": "Your about me has been changed to `{{aboutme}}`"

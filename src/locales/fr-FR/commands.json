@@ -531,5 +531,21 @@
     "noSide": "Vous devez me donner un côté pour parier.",
     "won": "La pièce a atterri sur **{{choosenSide}}** et vous avez gagné! Vous avez gagné un total de **{{amount}}** pièces de monnaie.",
     "loss": "La pièce a atterri sur **{{choosenSide}}** et vous avez perdu! Vous avez perdu un total de **{{amount}}** pièces de monnaie."
+  },
+  "blackjack": {
+    "commandDescription": "Misez une valeur dans un jeu de blackjack!",
+    "commandUsage": "<pari>",
+    "howToPlay": "Comment jouer",
+    "explaining": "Le Blackjack est un jeu est un jeu dans lequel le premier joueur à former la valeur 21 gagne, si vous passez ce montant que vous perdez.\n\n**Significations**\n `hit` - Prenez une carte du jeu\n`stand` - Sautez votre tour et ne prenez aucune carte\n`double` - Doublez votre mise et prenez une carte du jeu.",
+    "gameName": "Blackjack",
+    "types": "Tapez `hit` pour prendre une carte du jeu, `stand` pour sauter votre tour, ou `double` pour doubler votre mise et obtenir une carte du jeu.",
+    "winner": "Nous avons un gagnant!",
+    "youWon": "Toutes nos félicitations! **{{amount}}** pièces de monnaie.",
+    "botWinner": "Comme on dit: \"Le meilleur gagne toujours\". C'est devenu vrai!  **{{amount}}** pièces de monnaie de vous.",
+    "tieTitle": "Attacher",
+    "tie": "Quelle honte ... Cravate."
+  },
+  "ifunny": {
+    "commandDescription": "Voir un mème aléatoire sur le site Web ifunny."
   }
 }

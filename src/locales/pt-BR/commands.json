@@ -564,5 +564,8 @@
     "botWinner": "Como diz o ditado: \"O melhor sempre ganha\". Isso se tornou verdade! Acabei de te roubar **{{amount}}** moedas.",
     "tieTitle": "Empate",
     "tie": "Que pena... Deu empate."
+  },
+  "ifunny": {
+    "commandDescription": "Veja um meme aleatorio do webiste ifunny."
   }
 }

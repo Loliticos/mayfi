@@ -547,5 +547,8 @@
     "botWinner": "As the saying goes: \"The best always wins\". That became true! I just stole **{{amount}}** coins from you.",
     "tieTitle": "Tie",
     "tie": "What a shame... Tie."
+  },
+  "ifunny": {
+    "commandDescription": "See a random meme in the website ifunny."
   }
 }

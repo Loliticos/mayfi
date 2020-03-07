@@ -37,7 +37,7 @@ module.exports = class Blackjack extends Command {
     }
 
     let playerValueCards = Math.floor(4 + Math.random() * (18 - 4))
-    let botValueCards = Math.floor(4 + Math.random() * (18 - 4))
+    let botValueCards = Math.floor(4 + Math.random() * (14 - 4))
 
     channel.send(
      embed
@@ -74,8 +74,8 @@ module.exports = class Blackjack extends Command {
     }
 
   function playAsBot(botCards) {
-    const botValues = ["stand", "hit", "stand", "hit"]
-    const botValue = botValues[Math.floor(1 + Math.random() * (3 - 1))]
+    const botValues = ["hit"]
+    const botValue = botValues[Math.floor(1 + Math.random() * (1 - 1))]
 
     switch (botValue) {
       case "hit":

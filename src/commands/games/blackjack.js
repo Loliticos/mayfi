@@ -36,8 +36,8 @@ module.exports = class Blackjack extends Command {
       return channel.send(embed)
     }
 
-    let playerValueCards = Math.floor(3 + Math.random() * (9 - 3))
-    let botValueCards = Math.floor(3 + Math.random() * (9 - 3))
+    let playerValueCards = Math.floor(4 + Math.random() * (18 - 4))
+    let botValueCards = Math.floor(4 + Math.random() * (18 - 4))
 
     channel.send(
      embed

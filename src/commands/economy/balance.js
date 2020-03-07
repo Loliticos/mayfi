@@ -7,7 +7,7 @@ module.exports = class Balance extends Command {
       aliases: ['money', 'coin', 'coins', 'gems', 'gem'],
       category: 'economy',
       cooldown: 3,
-      requirements: { databaseOnly: true, },
+      requirements: { databaseOnly: true },
       parameters: [{
         type: 'user', 
         acceptBot: false, 
@@ -26,7 +26,6 @@ module.exports = class Balance extends Command {
       embed
         .setTitle(t("commands:balance.title"))
         .setDescription(t("commands:balance.balanceDescription", { userData, user }))
- 
       channel.send({embed})
     } catch(err) {
       throw new CommandError(t("errors:generic"))

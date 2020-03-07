@@ -45,8 +45,6 @@ module.exports = class Translate extends Command {
         q: text
       }
 
-      console.log(result)
-
       const URLqueryParams = new URLSearchParams(params)
 
       const language = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&dt=t' + `&${URLqueryParams.toString()}`).then(res => res.json())
@@ -55,9 +53,6 @@ module.exports = class Translate extends Command {
 
       const countryNameTO = await fetch(`https://restcountries.eu/rest/v2/alpha/${to.replace("en", "us")}`).then(r => r.json())
       const countryNameFROM = await fetch(`https://restcountries.eu/rest/v2/alpha/${result[0].language.replace("en", "us")}`).then(r => r.json())
-
-      console.log(countryNameTO)
-      console.log(countryNameFROM)
 
       embed
         .setAuthor(t("commands:translate.translated"), "https://lh3.googleusercontent.com/ZrNeuKthBirZN7rrXPN1JmUbaG8ICy3kZSHt-WgSnREsJzo2txzCzjIoChlevMIQEA")

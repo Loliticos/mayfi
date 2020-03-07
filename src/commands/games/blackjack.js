@@ -148,6 +148,8 @@ module.exports = class Blackjack extends Command {
     }
 
     function checkBot(botCards, playerCards) {
+      if (botCards == playerCards) return "tie"
+
       if (botCards > 21 && playerCards > botCards) return true
 
       if (playerCards > 21 && botCards < playerCards) return true
@@ -160,11 +162,12 @@ module.exports = class Blackjack extends Command {
 
       if (botCards == 21) return true
 
-      if (botCards == playerCards) return "tie"
 
     }
 
     function checkPlayer(playerCards, botCards) {
+      if (playerCards == botCards) return "tie"
+        
       if (botCards > 21 && playerCards > botCards) return true
 
       if (playerCards > 21 && botCards > playerCards) return false
@@ -174,8 +177,6 @@ module.exports = class Blackjack extends Command {
       if (playerCards < 21 && botCards > playerCards) return false
         
       if (playerCards == 21) return true
-
-      if (playerCards == botCards) return "tie"
 
     } 
   }

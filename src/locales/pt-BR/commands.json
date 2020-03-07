@@ -551,5 +551,18 @@
     "noSide": "Você precisa informar um lado para apostar.",
     "won": "A moeda parou em **{{choosenSide}}** e você ganhou! Você ganhou um total de **{{amount}}** moedas.",
     "loss": "A moeda parou em **{{choosenSide}}** e você perdeu! Você perdeu um total de **{{amount}}** moedas."
+  },
+  "blackjack": {
+    "commandDescription": "Faça uma aposta em um jogo de 21!",
+    "commandUsage": "<aposta>",
+    "howToPlay": "Como jogar",
+    "explaining": "21 é um jogo no qual o primeiro jogador á formar o valor 21 ganha, caso você passe desse valor você perde.\n\n**Significados**\n `hit` - Pegue uma carta do baralho\n`stand` - Pule sua vez e não pegue nenhuma carta\n`double` - Dobre sua aposta e pegue uma carta do baralho.",
+    "gameName": "Vinte e um",
+    "types": "Digite `hit` para puxar mais uma carta, `stand` para pular sua vez ou `double` para dobrar sua aposta e pegar mais uma carta.",
+    "winner": "Nós temos um ganhador!",
+    "youWon": "Parabéns! Você ganhou um total de **{{amount}}** moedas.",
+    "botWinner": "Como diz o ditado: \"O melhor sempre ganha\". Isso se tornou verdade! Acabei de te roubar **{{amount}}** moedas.",
+    "tieTitle": "Empate",
+    "tie": "Que pena... Deu empate."
   }
 }

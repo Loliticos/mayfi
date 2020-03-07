@@ -534,5 +534,18 @@
     "noSide": "You need to give me a side to bet.",
     "won": "The coin landed on **{{choosenSide}}** and you won! You gained a total of **{{amount}}** coins.",
     "loss": "The coin landed on **{{choosenSide}}** and you lost! You lost a total of **{{amount}}** coins."
+  },
+  "blackjack": {
+    "commandDescription": "Bet a value in a blackjack game!",
+    "commandUsage": "<bet>",
+    "howToPlay": "How to play",
+    "explaining": "Blackjack is a game is a game in which the first player to form the value 21 wins, if you pass that amount you lose.\n\n**Meanings**\n `hit` - Take a card from the deck\n`stand` - Skip your turn and don't take any cards\n`double` - Double your bet and take a card from the deck.",
+    "gameName": "Blackjack",
+    "types": "Type `hit` to take a card from the deck, `stand` to skip your turn, or `double` to double your bet and get one card from the deck.",
+    "winner": "We have a winner!",
+    "youWon": "Congratulations! You got a total of **{{amount}}** coins.",
+    "botWinner": "As the saying goes: \"The best always wins\". That became true! I just stole **{{amount}}** coins from you.",
+    "tieTitle": "Tie",
+    "tie": "What a shame... Tie."
   }
 }

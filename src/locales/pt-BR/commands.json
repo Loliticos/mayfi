@@ -546,7 +546,7 @@
   },
   "betflip": {
     "commandDescription": "Aposte dinheiro em cara e coroa!",
-    "commandUsage": "<quantidade para apostar> <cara ou coroa>",
+    "commandUsage": "<quantidade para apostar> <heads ou tails>",
     "noAmount": "Você precisa informar uma quantidade para apostar.",
     "noSide": "Você precisa informar um lado para apostar.",
     "won": "A moeda parou em **{{choosenSide}}** e você ganhou! Você ganhou um total de **{{amount}}** moedas.",

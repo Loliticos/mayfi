@@ -23,7 +23,7 @@ module.exports = class Marry extends Command {
   }
 
   async run ({ channel, guild, author, t, prefix, message }, member, text) {
-    const embed = new MayfiEmbed(author)
+    let embed = new MayfiEmbed(author)
 
     const userData = await this.client.database.users.findOne({_id: member.id})
     const authorData = await this.client.database.users.findOne({_id: author.id})
@@ -75,6 +75,7 @@ module.exports = class Marry extends Command {
     const collector = channel.createMessageCollector(filter, { time: 180000, max: 1 })
 
     collector.on("collect", async (m) => {
+      embed = new MayfiEmbed()
       collector.stop()
       if (m.content.toLowerCase() === t("commons:no").toLowerCase()) {
         channel.send(`<@${author.id}>`)

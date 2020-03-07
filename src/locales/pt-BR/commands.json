@@ -413,14 +413,14 @@
     "commandDescription": "Adicione um cargo para um membro.",
     "commandUsage": "<membro> <cargo>",
     "title": "Cargo adicionado",
-    "description": "Eu adicionei o cargo `{{role.name}}` ao usuário {{member}}"
+    "description": "Eu adicionei o cargo **{{role.name}}** ao usuário {{member}}"
   },
   "research": {
     "commandDescription": "Faça uma pesquisa e ganhe pontos!",
     "invalidMaterial": "Materias inválidos",
-    "youNeed": "Você precisa de 15 fragmentos e 10 gemas para pesquisar!",
+    "youNeed": "Você precisa de **15** fragmentos e 10** gemas para pesquisar!",
     "title": "Pesquisa",
-    "howMany": "Você pesquisou e encontrou `{{research}}` pontos de pesquisa."
+    "howMany": "Você pesquisou e encontrou **{{research}}** pontos de pesquisa."
   },
   "mute": {
     "commandDescription": "Mute um usuário por tempo inderteminado",

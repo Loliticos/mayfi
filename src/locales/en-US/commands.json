@@ -413,14 +413,14 @@
     "commandDescription": "Add a role to a member.",
     "commandUsage": "<member> <role>",
     "title": "Role added",
-    "description": "I added the role `{{role.name}}` to the member {{member}}"
+    "description": "I added the role **{{role.name}}** to the member {{member}}"
   },
   "research": {
     "commandDescription": "Do a research and get researches points!",
     "invalidMaterial": "Invalid materials",
-    "youNeed": "You need 15 fragments and 10 gems to research!",
+    "youNeed": "You need **15** fragments and **10** gems to research!",
     "title": "Research",
-    "howMany": "You researched and found `{{research}}` points of research."
+    "howMany": "You researched and found **{{research}}** points of research."
   },
   "mute": {
     "commandDescription": "Mute  an user for inderteminated time.",

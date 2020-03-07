@@ -415,7 +415,7 @@
   "research": {
     "commandDescription": "Faites une recherche et obtenez des points de recherche!",
     "invalidMaterial": "Matériaux invalides",
-    "youNeed": "Vous avez besoin de 15 fragments et 10 gemmes pour rechercher!",
+    "youNeed": "Vous avez besoin de **15** fragments et **10** gemmes pour rechercher!",
     "title": "Recherche",
     "howMany": "Vous avez recherché et trouvé **{{research}}** points de recherche."
   },

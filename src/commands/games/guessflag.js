@@ -31,7 +31,7 @@ module.exports = class Guessflag extends Command {
           embed = new MayfiEmbed(author)
           if (collected.size > 0) {
             embed
-              .setTitle(t("commands:guessflag.youGotIt", { user: collected.author }))
+              .setTitle(t("commands:guessflag.youGotIt", { user: collected.first().author }))
               .setDescription(t("commands:guessflag.theWordWas", { country }))
 
             return channel.send({ embed }).then(async (msg) => {

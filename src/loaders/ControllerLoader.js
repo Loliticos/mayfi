@@ -10,6 +10,7 @@ module.exports = class CommandLoader  {
 
     async load () {
         try {
+            console.log("Initializing controllers")
             await this.initializeControllers()
             this.client.controllers = this.controllers
 

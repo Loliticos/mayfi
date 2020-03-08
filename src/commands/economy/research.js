@@ -15,7 +15,9 @@ module.exports = class Research extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      let researchRDM = await this.client.controllers.economy.research(author)
+      const researchRDM = await this.client.controllers.economy.research(author)
+
+      console.log(researchRDM)
 
       embed
         .setTitle(t("commands:research.title"))

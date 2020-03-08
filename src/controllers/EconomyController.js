@@ -22,7 +22,7 @@ class BonusController extends Controller {
     return this.client.database.users
   }
 
-  async checkDaily (lastMine) {
+  checkDaily (lastMine) {
     return Date.now() - lastMine < 43200000
   }
 
@@ -34,7 +34,7 @@ class BonusController extends Controller {
     const user = await this._users.findOne({_id: _user.id})
     const { lastMine } = user
 
-    if (checkDaily(lastMine)) {
+    if (this.checkDaily(lastMine)) {
       throw new BonusCooldownError(lastMine, this.formatDailyTime(lastMine))
     }
 

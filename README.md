@@ -47,3 +47,4 @@ If you've seen Mayfi before and you think that it's a nice bot, please consider 
 You can contribute to Mayfi by translating Mayfi to your language. By doing it so, you'll make Mayfi available to more peoples and making she more special :)
 
 <img src="https://top.gg/api/widget/673960641261994014.svg" alt="Mayfi" />
+<img src="https://botsfordiscord.com/api/bot/673960641261994014/widget" title="Visit Mayfi listed on Bots for Discord!" alt="Mayfi" /></a>

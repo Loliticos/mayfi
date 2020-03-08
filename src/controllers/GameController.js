@@ -17,10 +17,6 @@ module.exports = class GameController extends Controller {
     if (user.money < amount) throw new Error("NOT_ENOUGH_MONEY")
   }
 
-  async blackjack (_user, amount) {
-
-  }
-
   async betflip (_user, amount, side) {
     const user = this._users.findOne({ id: _user.id })
 

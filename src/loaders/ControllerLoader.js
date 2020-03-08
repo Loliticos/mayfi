@@ -23,9 +23,9 @@ module.exports = class CommandLoader  {
     initializeControllers (dirPath = "src/controllers") {
         return FileUtils.requireDirectory(dirPath, (NewController) => {
             this.addController(new NewController(this.client))
+        }).then(() => {
+            console.log("Controllers has been initialized")
         })
-
-        console.log("Controllers has been initialized")
     }
 
     addController (controller) {

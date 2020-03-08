@@ -1,5 +1,5 @@
 const EventHandler = require('../structures/EventHandler')
-const fetch = require("node-fetch")
+const DBL = require("dblapi.js");
 
 module.exports = class ClientOnReady extends EventHandler {
     constructor(client) {
@@ -30,15 +30,21 @@ module.exports = class ClientOnReady extends EventHandler {
         console.log(`🤖 Changed presence to "${presence.name}", type "${presence.type}"`)
       }, PRESENCE_INTERVAL)
 
-    setInterval(() => {
-      fetch(`https://discordbots.org/api/bots/${client.user.id}/stats`, {
-        method: "POST",
-        headers: { Authorization: process.env.DBL_TOKEN },
-        body: { server_count: client.guilds.size }
-      })
-        .then(() => console.log("[DBL] Posted statistics successfully"))
-        .catch(() => console.log("[DBL] Failed to post statistics"))
+      const dbl = new DBL(process.env.DBL_TOKEN, this.client)
 
+      dbl.on("posted", () => {
+        console.log("[DBL] Posted statistics successfully")
+      })
+
+      dbl.on("error", e => {
+        console.log("[DBL] Failed to post statistics")
+      }) 
+
+      setInterval(() => {
+        dbl.postStats(this.client.guilds.size, 1, 1)
+      }, 1800000)
+
+    setInterval(() => {
       fetch(`https://botsfordiscord.com/api/bots/${client.user.id}`, {
         method: 'POST',
         headers: { Authorization: process.env.BOTSFORDISCORD_TOKEN },

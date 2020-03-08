@@ -15,16 +15,21 @@ module.exports = class Unblacklist extends Command {
 
   async run ({ channel, author, t }, user) {
     const embed = new MayfiEmbed(author)
-    const userDocument = await this.client.database.users.findOne({_id: user.id})
-    
-    console.log(userDocument)
-    if(!userDocument.blacklisted) {
-      embed.setDescription(t('commands:unblacklist.notBlacklisted'))
-      .setColor(Constants.ERROR_COLOR)
-      return channel.send({embed})  
+
+    try {
+      await this.client.controllers.dev.unblacklist(user)
+
+      embed
+        .setDescription(`**${t('commands:unblacklist.success', { user })}**`)
+    } catch (e) {
+      switch (e.message) {
+        case "USER_NOT_BLACKLISTED":
+        embed
+          setDescription(t('commands:unblacklist.notBlacklisted'))
+          .setColor(Constants.ERROR_COLOR)
+      }
     }
-    await this.client.database.users.updateOne({_id: user.id}, { blacklisted: false })
-    embed.setDescription(`**${t('commands:unblacklist.success', { user })}**`)
-    channel.send({embed})
+
+    channel.send(embed)
   }
 }

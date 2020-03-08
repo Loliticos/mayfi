@@ -232,7 +232,8 @@
     "commandUsage": "<utilisateur> <raison>",
     "missingUser": "Vous devez me donner un utilisateur sur liste noire!",
     "missingReason": "Vous devez me donner une raison pour la liste noire!",
-    "successTitle": "L'utilisateur a été ajouté à la liste noire!"
+    "successTitle": "L'utilisateur a été ajouté à la liste noire!",
+    "userAlreadyBlacklisted": "Cet utilisateur est déjà sur liste noire."
   },
   "unblacklist": {
     "commandDescription": "Supprime un utilisateur de la liste noire.",

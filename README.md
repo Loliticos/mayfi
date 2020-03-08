@@ -4,14 +4,14 @@
   <img src="https://top.gg/api/widget/status/673960641261994014.svg?noavatar=true" alt="Mayfi" />
   <br>
   <br>
-  <strong><a href="https://discordapp.com/oauth2/authorize?client_id=673960641261994014&permissions=0&scope=bot">Add mayfi to your server</a></strong>
+  <strong><a href="https://discordapp.com/oauth2/authorize?client_id=673960641261994014&permissions=0&scope=bot">ADD MAYFI TO YOUR SERVER</a></strong>
 </div>
 
 ---
 
 <h2 align="center">Mayfi</h2>
 
-Mayfi is a bot designed for those who want efficiency without needing to add thousand bots. 
+Mayfi is a multi-propose bot, which has a variety of commands that you can use.
 
 <h3>Index</h3>
 

@@ -1,7 +1,7 @@
 const { Controller } = require('../')
 const moment = require("moment")
 
-class RepCooldown extends Error {
+class RepCooldownError extends Error {
   constructor (lastRep, formattedCooldown) {
     super("ALREADY_REP")
 
@@ -32,7 +32,7 @@ module.exports = class SocialController extends Controller {
   async rep (_from, _to) {
     const { lastRep } = this._users.findOne({_id: _from.id})
 
-    if (checkRep(lastRep)) throw new RepCooldown(lastRep, this.formatRepTime(lastRep))
+    if (checkRep(lastRep)) throw new RepCooldownError(lastRep, this.formatRepTime(lastRep))
 
     await Promise.all([
       this._users.updateOne({_id: _from.id}, { lastRep: Date.now() }),

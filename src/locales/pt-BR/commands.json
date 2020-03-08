@@ -70,10 +70,10 @@
     "missingParameters": "Você precisa informar um nome válido",
     "userNotFound": "Nenhum usuário com o nome '{{user}}' encontrado.",
     "noBio": "Nenhuma descrição encontrada para esse usuário.",
-    "publicRepos": "Repositorios públicos:",
-    "createdAt": "Conta criada:",
-    "followers": "Quantidade de seguidores:",
-    "following": "Esse usuário está seguindo:",
+    "publicRepos": "Repositorios públicos",
+    "createdAt": "Conta criada",
+    "followers": "Quantidade de seguidores",
+    "following": "Esse usuário está seguindo",
     "users": "Usuários",
     "unknownLocation": "Localização desconhecida"
   },
@@ -326,7 +326,7 @@
       "money": {
         "commandDescription": "Mostra um placar de usuários com mais dinheiro.",
         "title": "Placar de dinheiro",
-        "money": "Dinherio"
+        "money": "Dinheiro"
       }
     }
   },

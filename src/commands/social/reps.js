@@ -21,9 +21,15 @@ module.exports = class Reps extends Command {
 
     const userReps = await this.client.controllers.social.getReps(user)
 
+    function checkValue (value) {
+      if (value > 1) return "points"
+      if (value == 0) return "points"
+      if (value == 1) return "point"
+    }
+
     embed
       .setTitle(t("commands:reps.title"))
-      .setDescription(t("commands:reps.howMany", { reps: UserData.reps, user, pointPoints: UserData.reps > 1 ? "points" : "point" }))
+      .setDescription(t("commands:reps.howMany", { reps: userReps, user, pointPoints: checkValue(userReps) }))
  
     channel.send({embed})
   }

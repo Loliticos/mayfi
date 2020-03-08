@@ -41,9 +41,9 @@ module.exports = class SocialController extends Controller {
   }
 
   async getReps (_user) {
-    const user = this._users.findOne({_id: _user.id})
+    const { reps } = await this._users.findOne({_id: _user.id})
 
-    return user.reps
+    return reps
   }
 
   async marry (_requester, _requested) {

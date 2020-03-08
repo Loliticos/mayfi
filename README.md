@@ -11,7 +11,7 @@
 
 <h2 align="center">Mayfi</h2>
 
-Mayfi is a multi-propose bot, which has a variety of commands that you can use.
+Mayfi is a multi-purpose bot, mainly created to moderate your server and bring more life to your server with fun commands that Mayfi provides.
 
 <h3>Index</h3>
 
@@ -24,7 +24,7 @@ Mayfi is a multi-propose bot, which has a variety of commands that you can use.
 
 <h2 align="center">Docs</h2>
 
-Mayfi has a own documentation site, feel free to join and know everything about mayfi. [Join](https://mayfi.gitbook.io/docs/)
+Mayfi has an own documentation site, feel free to join and know everything about mayfi. [Join](https://mayfi.gitbook.io/docs/)
 
 <h2 align="center">Contribute</h2>
 

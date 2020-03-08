@@ -349,16 +349,16 @@
     "commandDescription": "Vous change de moi.",
     "commandUsage": "<texte>",
     "noArguments": "Tu dois me donner un texto!",
-    "changedTo": "Votre nom a été changé pour `{{aboutme}}`"
+    "changedTo": "Votre nom a été changé pour **{{aboutme}}**"
   },
   "commit": {
     "commandDescription": "Transformez vos gemmes en argent.",
     "commandUsage": "<gemmes à vendre>",
     "noArguments": "Vous devez me donner la quantité de gemmes à vendre!",
     "noValue": "Gemmes insuffisantes",
-    "youCantCommit": "Vous n'avez pas `{{gems}}` gemmes!",
+    "youCantCommit": "Vous n'avez pas **{{gems}}** gemmes!",
     "title": "Vendu",
-    "transfered": "Vous avez transféré `{{gems}}` gemmes et gagnés `{{transfered}}` pièces de monnaie."
+    "transfered": "Vous avez transféré **{{gems}}** gemmes et gagnés **{{transfered}}** pièces de monnaie."
   },
   "vote": {
     "commandDescription": "Votez pour moi dans DBL!",
@@ -530,8 +530,8 @@
     "commandUsage": "<montant à parier> <heads ou tails>",
     "noAmount": "Vous devez me donner un montant à parier.",
     "noSide": "Vous devez me donner un côté pour parier.",
-    "won": "La pièce a atterri sur **{{choosenSide}}** et vous avez gagné! Vous avez gagné un total de **{{amount}}** pièces de monnaie.",
-    "loss": "La pièce a atterri sur **{{choosenSide}}** et vous avez perdu! Vous avez perdu un total de **{{amount}}** pièces de monnaie."
+    "won": "La pièce a atterri sur **$t(commons:{{choosenSide}})** et vous avez gagné! Vous avez gagné un total de **{{amount}}** pièces de monnaie.",
+    "loss": "La pièce a atterri sur **$t(commons:{{choosenSide}})** et vous avez perdu! Vous avez perdu un total de **{{amount}}** pièces de monnaie."
   },
   "blackjack": {
     "commandDescription": "Misez une valeur dans un jeu de blackjack!",

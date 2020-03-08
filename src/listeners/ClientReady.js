@@ -44,14 +44,14 @@ module.exports = class ClientOnReady extends EventHandler {
         dbl.postStats(this.client.guilds.size, 1, 1)
       }, 1800000)
 
-    setInterval(() => {
-      fetch(`https://botsfordiscord.com/api/bots/${client.user.id}`, {
-        method: 'POST',
-        headers: { Authorization: process.env.BOTSFORDISCORD_TOKEN },
-        body: { server_count: client.guilds.size }
-      })
-      .then(() => console.log('[BFD] Posted statistics successfully'))
-      .catch(() => console.log('[BFD] Failed to post statistics'))
-    }, 1800000)
+      setInterval(() => {
+        fetch(`https://botsfordiscord.com/api/bots/${client.user.id}`, {
+          method: 'POST',
+          headers: { Authorization: process.env.BOTSFORDISCORD_TOKEN },
+          body: { server_count: client.guilds.size }
+        })
+        .then(() => console.log('[BFD] Posted statistics successfully'))
+        .catch(() => console.log('[BFD] Failed to post statistics'))
+      }, 1800000)
   }
 }

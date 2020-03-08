@@ -27,6 +27,10 @@ module.exports = class Research extends Command {
           embed
             .setColor(Constants.ERROR_COLOR)
             .setDescription(t("commands:research", { howMuchGems: 10 - gems, howMuchFragments: 15 - fragments }))
+        default:
+          embed
+            .setColor(Constants.ERROR_COLOR)
+            .setTitle(t("errors:generic"))
       }
     }
 

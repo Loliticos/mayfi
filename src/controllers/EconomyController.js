@@ -88,7 +88,7 @@ module.exports = class EconomyController extends Controller {
   async research (_user) {
     const user = this._users.findOne({_id: _user.id})
 
-    if (checkResearch(user)) throw new Error("INVALID_MATERIALS")
+    if (this.checkResearch(user)) throw new Error("INVALID_MATERIALS")
 
     const researchRDM = Math.floor(1 + Math.random() * (23 - 1))
 

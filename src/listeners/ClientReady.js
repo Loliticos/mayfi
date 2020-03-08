@@ -30,24 +30,22 @@ module.exports = class ClientOnReady extends EventHandler {
         console.log(`🤖 Changed presence to "${presence.name}", type "${presence.type}"`)
       }, PRESENCE_INTERVAL)
 
-      if (process.env.DBL_TOKEN) {
-        fetch(`https://discordbots.org/api/bots/${client.user.id}/stats`, {
-          method: "POST",
-          headers: { Authorization: process.env.DBL_TOKEN },
-          body: { server_count: client.guilds.size }
-        })
-          .then(() => console.log("[DBL] Posted statistics successfully"))
-          .catch(() => console.log("[DBL] Failed to post statistics"))
-      }
+    setInterval(() => {
+      fetch(`https://discordbots.org/api/bots/${client.user.id}/stats`, {
+        method: "POST",
+        headers: { Authorization: process.env.DBL_TOKEN },
+        body: { server_count: client.guilds.size }
+      })
+        .then(() => console.log("[DBL] Posted statistics successfully"))
+        .catch(() => console.log("[DBL] Failed to post statistics"))
 
-      if (process.env.BOTSFORDISCORD_TOKEN) {
-        fetch(`https://botsfordiscord.com/api/bots/${client.user.id}`, {
-          method: 'POST',
-          headers: { Authorization: process.env.BOTSFORDISCORD_TOKEN },
-          body: { server_count: client.guilds.size }
-        })
-        .then(() => console.log('[BFD] Posted statistics successfully'))
-        .catch(() => console.log('[BFD] Failed to post statistics'))
-      }
-    }
+      fetch(`https://botsfordiscord.com/api/bots/${client.user.id}`, {
+        method: 'POST',
+        headers: { Authorization: process.env.BOTSFORDISCORD_TOKEN },
+        body: { server_count: client.guilds.size }
+      })
+      .then(() => console.log('[BFD] Posted statistics successfully'))
+      .catch(() => console.log('[BFD] Failed to post statistics'))
+    }, 1800000)
+  }
 }

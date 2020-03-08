@@ -15,6 +15,7 @@ module.exports = {
   CommandLoader: require('./loaders/CommandLoader.js'),
   ListenerLoader: require("./loaders/ListenerLoader.js"),
   LocaleLoader: require("./loaders/LocaleLoader.js"),
+  ControllerLoader: require("./loaders/ControllerLoader.js"),
 
   // Utils
   Constants: require("./utils/Constants.js"),

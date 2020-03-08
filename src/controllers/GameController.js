@@ -12,10 +12,14 @@ module.exports = class GameController extends Controller {
     return this.client.database.users
   }
 
-  async checkMoney (_user, amount) {
+  checkMoney (_user, amount) {
     const user = this._users.findOne({_id: _user.id})
 
     if (user.money < amount) throw new Error("NOT_ENOUGH_MONEY")
+  }
+
+  async blackjack (_user, amount) {
+    
   }
 
   async betflip (_user, amount, side) {

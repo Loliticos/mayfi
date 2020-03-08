@@ -20,7 +20,7 @@ module.exports = class CommandLoader  {
     }
 
     initializeControllers (dirPath = "src/controllers") {
-        let success = 0
+        let success = 1
         let failed = 0
         return FileUtils.requireDirectory(dirPath, (NewController) => {
             if (Object.getPrototypeOf(NewController) !== Controller) return

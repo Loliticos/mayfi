@@ -23,14 +23,16 @@ module.exports = class Unblacklist extends Command {
         .setDescription(`**${t('commands:unblacklist.success', { user })}**`)
     } catch (e) {
       switch (e.message) {
-        embed.setColor(Constants.ERROR_COLOR)
-        console.error(e)
         case "USER_NOT_BLACKLISTED":
         embed
           .setDescription(t('commands:unblacklist.notBlacklisted'))
+          .setColor(Constants.ERROR_COLOR)
+          console.error(e)
         default:
           embed
             .setTitle(t("errors:generic"))
+            .setColor(Constants.ERROR_COLOR)
+            console.error(e)
       }
     }
 

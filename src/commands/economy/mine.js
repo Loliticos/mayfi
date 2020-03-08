@@ -33,6 +33,7 @@ module.exports = class Mine extends Command {
         default:
           embed
             .setTitle(t("errors:generic"))
+          console.error(e)
       }
     }
 

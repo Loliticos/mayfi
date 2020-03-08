@@ -9,8 +9,8 @@ module.exports = class MayfiClient extends Client {
 
     this.databaseLoaded = null
 
-    this.initializeDatabase()
-    this.initializeLoaders()
+    await this.initializeDatabase()
+    await this.initializeLoaders()
     this.checkMute(this)
 
     this.database = this.databaseLoaded

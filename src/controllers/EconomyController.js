@@ -11,9 +11,10 @@ class BonusCooldownError extends Error {
 }
 
 class BonusController extends Controller {
-  constructor (client) {
+  constructor (parent, client) {
     super({
-      name: "bonus"
+      name: "bonus",
+      parent
     }, client)
   }
 

@@ -10,7 +10,6 @@ module.exports = class CommandLoader  {
 
     async load () {
         try {
-            console.log("Initializing controllers")
             await this.initializeControllers()
             this.client.controllers = this.controllers
 
@@ -21,10 +20,13 @@ module.exports = class CommandLoader  {
     }
 
     initializeControllers (dirPath = "src/controllers") {
+        let success = 0
+        let failed = 0
         return FileUtils.requireDirectory(dirPath, (NewController) => {
-            this.addController(new NewController(this.client))
+            this.addController(new NewController(this.client)) ? sucess++ : failed++
         }).then(() => {
-            console.log("Controllers has been initialized")
+            if (failed) console.log(`${sucess} controllers loaded, ${failed} failed.`)
+            else console.log(`All ${sucess} controllers loaded without errors.`)
         })
     }
 

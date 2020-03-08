@@ -23,10 +23,10 @@ module.exports = class CommandLoader  {
         let success = 0
         let failed = 0
         return FileUtils.requireDirectory(dirPath, (NewController) => {
-            this.addController(new NewController(this.client)) ? sucess++ : failed++
+            this.addController(new NewController(this.client)) ? success++ : failed++
         }).then(() => {
-            if (failed) console.log(`${sucess} controllers loaded, ${failed} failed.`)
-            else console.log(`All ${sucess} controllers loaded without errors.`)
+            if (failed) console.log(`${success} controllers loaded, ${failed} failed.`)
+            else console.log(`All ${success} controllers loaded without errors.`)
         })
     }
 

@@ -20,7 +20,7 @@ module.exports = class BlacklistController extends Controller {
   }
 
   async unblacklist (_user) {
-    const user = this._users.findOne({_id: _user.id})
+    const user = await this._users.findOne({_id: _user.id})
 
     if (!user.blacklisted) throw new Error("USER_NOT_BLACKLISTED")
 

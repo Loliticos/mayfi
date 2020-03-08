@@ -20,7 +20,7 @@ module.exports = class Unblacklist extends Command {
       await this.client.controllers.dev.unblacklist(user)
 
       embed
-        .setDescription(`**${t('commands:unblacklist.success', { user })}**`)
+        .setDescription(t('commands:unblacklist.success', { user }))
     } catch (e) {
       switch (e.message) {
         case "USER_NOT_BLACKLISTED":

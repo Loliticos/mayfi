@@ -45,7 +45,7 @@ module.exports = class ClientOnReady extends EventHandler {
       }
 
       postStats(this.client)
-      setInterval(postStats, 1800000, client)
+      setInterval(postStats, 1800000, this.client)
 
       setInterval(() => {
         fetch(`https://botsfordiscord.com/api/bots/${client.user.id}`, {

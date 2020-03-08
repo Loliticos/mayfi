@@ -5,7 +5,6 @@ module.exports = class GameController extends Controller {
     super({
       name: "game"
     }, client)
-    this.subcontrollers = [ new BonusController(this, client) ]
   }
 
   get _users () {
@@ -19,7 +18,7 @@ module.exports = class GameController extends Controller {
   }
 
   async blackjack (_user, amount) {
-    
+
   }
 
   async betflip (_user, amount, side) {

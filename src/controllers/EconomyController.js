@@ -94,6 +94,6 @@ module.exports = class EconomyController extends Controller {
 
     await this._users.updateOne({_id: _user.id}, { $inc: { gems: -10, fragments: -15, researchesPoints: researchRDM } })
 
-    return researchRDM
+    return { researchRDM, gems: user.gems, fragments: user.fragments }
   }
 }

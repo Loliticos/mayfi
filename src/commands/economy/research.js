@@ -1,4 +1,4 @@
-const { Command, MayfiEmbed, CommandError } = require('../../')
+const { Command, MayfiEmbed, Constants } = require('../../')
 
 module.exports = class Research extends Command {
   constructor (client) {
@@ -15,28 +15,21 @@ module.exports = class Research extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      let { gems, fragments } = await this.client.database.users.findOne({_id: author.id})
-
-      if(gems < 10 || fragments < 15) {
-        embed
-          .setTitle(t("commands:research.invalidMaterial"))
-          .setDescription(t("commands:research.youNeed"))
-        return channel.send({embed})
-      }
-
-      // You'll get somewhere about 23 researches points
-
-      const researchRDM = Math.floor(1 + Math.random() * (23 - 1))
-
-      await this.client.database.users.updateOne({_id: author.id}, { $inc: { gems: -10, fragments: -15, researchesPoints: researchRDM } })
+      let { researchRDM, gems, fragments } = await this.client.controllers.economy.research(author)
 
       embed
         .setTitle(t("commands:research.title"))
         .setDescription(t("commands:research.howMany", { research: researchRDM }))
  
-      channel.send({embed})
-    } catch(err) {
-      throw new CommandError(`${t("errors:generic")}\n\`${err.message}\``)
+    } catch(e) {
+      switch (e.message) {
+        case "INVALID_MATERIALS":
+          embed
+            .setColor(Constants.ERROR_COLOR)
+            .setDescription(t("commands:research", { howMuchGems: 10 - gems, howMuchFragments: 15 - fragments }))
+      }
     }
+
+    channel.send(embed)
   }
 }

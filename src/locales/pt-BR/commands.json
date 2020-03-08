@@ -419,7 +419,7 @@
   "research": {
     "commandDescription": "Faça uma pesquisa e ganhe pontos!",
     "invalidMaterial": "Materias inválidos",
-    "youNeed": "Você precisa de **15** fragmentos e 10** gemas para pesquisar!",
+    "youNeed": "Você precisa de **{{howMuchGems}}/10** gemas e **{{howMuchFragments}}/15** fragmentos para fazer uma pesquisa.",
     "title": "Pesquisa",
     "howMany": "Você pesquisou e encontrou **{{research}}** pontos de pesquisa."
   },

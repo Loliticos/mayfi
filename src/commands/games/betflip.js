@@ -11,7 +11,7 @@ module.exports = class Betflip extends Command {
       aliases: ['apostar'],
       category: 'games',
       parameters: [{
-        type: 'number', min: 100, max: 2500, missingError: 'commands:betflip.noAmount'
+        type: 'number', min: 50, max: 2500, missingError: 'commands:betflip.noAmount'
       }, {
         type: 'string', full: true, whitelist: ['heads', 'tails'], missingError: 'commands:betflip.noSide'
       }]

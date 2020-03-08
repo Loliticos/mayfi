@@ -1,5 +1,5 @@
 const EventHandler = require('../structures/EventHandler')
-const DBL = require("dblapi.js");
+const DBL = require("dblapi.js")
 
 module.exports = class ClientOnReady extends EventHandler {
     constructor(client) {

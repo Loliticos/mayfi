@@ -16,8 +16,9 @@ module.exports = class Eval extends Command {
     }, client)
   }
 
-  async run ({ channel, message, guild, author, t }, expr) {
+  async run ({ channel, message, guild, author, t, language }, expr) {
     const dbl = new DBL(process.env.DBL_TOKEN, this.client)
+
     try {
       const evaled = await eval(expr.replace(/(^`{3}(\w+)?|`{3}$)/g, ''))
       let cleanEvaled = this.clean(util.inspect(evaled, { depth: 0 }))

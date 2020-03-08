@@ -24,5 +24,6 @@ module.exports = {
 
   // Structures
   EventHandler: require("./structures/EventHandler.js"),
-  MayfiEmbed: require('./structures/MayfiEmbed.js')
+  MayfiEmbed: require('./structures/MayfiEmbed.js'),
+  Controller: require("./structures/Controller.js")
 }

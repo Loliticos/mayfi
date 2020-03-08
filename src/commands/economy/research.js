@@ -15,7 +15,7 @@ module.exports = class Research extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      let { researchRDM, gems, fragments } = await this.client.controllers.economy.research(author)
+      let { researchRDM } = await this.client.controllers.economy.research(author)
 
       embed
         .setTitle(t("commands:research.title"))
@@ -26,7 +26,7 @@ module.exports = class Research extends Command {
         case "INVALID_MATERIALS":
           embed
             .setColor(Constants.ERROR_COLOR)
-            .setDescription(t("commands:research", { howMuchGems: 10 - gems, howMuchFragments: 15 - fragments }))
+            .setDescription(t("commands:research", { howMuchGems: 10 - e.gems, howMuchFragments: 15 - e.fragments }))
         default:
           embed
             .setColor(Constants.ERROR_COLOR)

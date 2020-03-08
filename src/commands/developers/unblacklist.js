@@ -27,12 +27,10 @@ module.exports = class Unblacklist extends Command {
         embed
           .setDescription(t('commands:unblacklist.notBlacklisted'))
           .setColor(Constants.ERROR_COLOR)
-          console.error(e)
         default:
           embed
             .setTitle(t("errors:generic"))
             .setColor(Constants.ERROR_COLOR)
-            console.error(e)
       }
     }
 

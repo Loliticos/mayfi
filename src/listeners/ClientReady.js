@@ -40,9 +40,12 @@ module.exports = class ClientOnReady extends EventHandler {
         console.log("[DBL] Failed to post statistics")
       }) 
 
-      setInterval(() => {
-        dbl.postStats(this.client.guilds.size)
-      }, 1800000)
+      function postStats(client) {
+        dbl.postStats(client.guilds.size)
+      }
+
+      postStats(this.client)
+      setInterval(postStats, 1800000, client)
 
       setInterval(() => {
         fetch(`https://botsfordiscord.com/api/bots/${client.user.id}`, {

@@ -30,7 +30,6 @@ module.exports = class BlacklistCommand extends Command {
           embed
             .setTitle(t("commands:blacklist.userAlreadyBlacklisted"))
         default:
-          console.error(e)
           embed
             .setColor(Constants.ERROR_COLOR)
             .setTitle(t("errors:generic"))

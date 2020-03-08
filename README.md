@@ -45,3 +45,5 @@ If you've seen Mayfi before and you think that it's a nice bot, please consider 
 ### Translation
 
 You can contribute to Mayfi by translating Mayfi to your language. By doing it so, you'll make Mayfi available to more peoples and making she more special :)
+
+<img src="https://top.gg/api/widget/673960641261994014.svg" alt="Mayfi" />

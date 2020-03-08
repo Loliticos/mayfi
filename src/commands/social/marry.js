@@ -11,8 +11,7 @@ module.exports = class Marry extends Command {
         type: 'member', 
         required: true,
         acceptSelf: false,
-        acceptBot: false,
-        missingError: 'commands:marry.invalidUser'
+        acceptBot: false
       }, {
         type: 'string',
         required: true,

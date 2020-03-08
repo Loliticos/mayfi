@@ -527,6 +527,22 @@
     "commandUsage": "[latest]",
     "notFound": "There was an error while trying to find a comic, try again soon."
   },
+  "marry": {
+    "commandDescription": "Ask someone to get engaged!",
+    "commandUsage": "<user> <speech>",
+    "invalidText": "You need to prepare a speech to propose that person!",
+    "alert": "I would like to warn you that your partner tried to betray you! That's right, he just tried to marry someone else, I hope you have a conversation with him.\n\n**Informations:** That occorred on the guild **{{guild.name}}**, channel **#{{channel.name}}** with the user **{{member.user.tag}}**.",
+    "authorAlreadyMarried": "😵 WOW! Eu peguei você no ato! Como você pode trair seu parceiro desse modo ? Isso é tão triste, pode ficar sabendo que eu irei avisar o seu parceiro sobre sua atitude!",
+    "userAlreadyMarried": "The user {{member..userusername}} is already married :(",
+    "noRing": "Buy a ring!",
+    "noRingDescription": "You dont have a ring! To propose to someone you need one, type `{{prefix}}ring buy`",
+    "title": "The user **{{author.username}}** is asking your hand!",
+    "footer": "You have 3 minutes to type \"yes\" or \"no\" in the chat.",
+    "recused": "Recused",
+    "recusedDescription": "Apparently this person doesn't want to marry you. How sad, let’s eat a jar of ice cream together.",
+    "accepted": "Invitation accepted!",
+    "acceptedDescription": "The love is in the air! The user **{{member.user.username}}** accepted the engagement request from **{{author.username}}**"
+  },
   "betflip": {
     "commandDescription": "Bet a value in a coinflip game!",
     "commandUsage": "<amount to bet> <heads or tails>",

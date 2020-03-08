@@ -32,11 +32,11 @@ class BonusController extends Controller {
   }
 
   checkDaily (lastMine) {
-    return Date.now() - lastMine < 43200000
+    return Date.now() - lastMine < 21600000
   }
 
   formatDailyTime (lastMine) {
-    return moment.duration(43200000 - (Date.now() - lastMine)).format('h[h] m[m] s[s]')
+    return moment.duration(21600000 - (Date.now() - lastMine)).format('h[h] m[m] s[s]')
   }
 
   async claimDaily (_user) {

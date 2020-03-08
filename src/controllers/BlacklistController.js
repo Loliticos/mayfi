@@ -14,15 +14,9 @@ module.exports = class BlacklistController extends Controller {
   async blacklist (_user) {
     const user = await this._users.findOne({_id: _user.id})
 
-    if (this.blacklisted(_user)) throw new Error("USER_ALREADY_BLACKLISTED")
+    if (user.blacklisted) throw new Error("USER_ALREADY_BLACKLISTED")
 
     await this._users.updateOne({_id: _user.id}, { blacklisted: true })
-  }
-
-  async blacklisted (_user) {
-    const user = this._users.findOne({_id: _user.id})
-
-    return user.blacklisted ? true : false
   }
 
   async unblacklist (_user) {

@@ -333,7 +333,7 @@
     "commandDescription": "Shows the balance of an user.",
     "commandUsage": "[user]",
     "title": "Balance",
-    "howMany": "**{{user.tag}}**\n\n{{userData.money}} coins **|** {{userData.gems}} gems **|** {{userData.fragments}} fragments **|** {{userData.researchesPoints}} researches points"
+    "howMany": "**{{user.tag}}**\n\n{{balance.money}} coins **|** {{balance.gems}} gems **|** {{balance.fragments}} fragments **|** {{balance.researchesPoints}} researches points"
   },
   "gems": {
     "commandDescription": "Shows the gems of an user.",

@@ -333,7 +333,7 @@
     "commandDescription": "Veja a balança de algum usuário!",
     "commandUsage": "[usuário]",
     "title": "Saldo",
-    "balanceDescription": "**{{user.tag}}**\n\n{{userData.money}} moedas **|** {{userData.gems}} gemas **|** {{userData.fragments}} fragmentos **|** {{userData.researchesPoints}} pontos de pesquisa"
+    "balanceDescription": "**{{user.tag}}**\n\n{{balance.money}} moedas **|** {{balance.gems}} gemas **|** {{balance.fragments}} fragmentos **|** {{balance.researchesPoints}} pontos de pesquisa"
   },
   "gems": {
     "commandDescription": "Veja as gemas de algum usuário!",

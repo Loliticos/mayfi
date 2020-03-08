@@ -21,11 +21,11 @@ module.exports = class Balance extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      let userData = await this.client.database.users.findOne({_id: user.id})
+      let balance = await this.client.controllers.economy.balance(user)
 
       embed
         .setTitle(t("commands:balance.title"))
-        .setDescription(t("commands:balance.balanceDescription", { userData, user }))
+        .setDescription(t("commands:balance.balanceDescription", { balance, user }))
       channel.send({embed})
     } catch(err) {
       throw new CommandError(t("errors:generic"))

@@ -23,7 +23,6 @@ module.exports = class GuildIcon extends Command {
         return channel.send({embed})
       }
 
-
       embed
         .setTitle(guild.name)
         .setImage(guild.iconURL)

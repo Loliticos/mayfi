@@ -19,26 +19,12 @@ module.exports = class Reps extends Command {
   async run ({ channel, guild, author, t }, user = author) {
     const embed = new MayfiEmbed(author)
 
-    try {
-      let UserData = await this.client.database.users.findOne({_id: user.id})
+    const userReps = await this.client.controllers.social.getReps(user)
 
-      if(!UserData) {
-          const newUser = new this.client.database.users({
-            _id: user.id
-          })
-
-          newUser.save()
-
-          UserData.reps = "0"
-      }
-
-      embed
-        .setTitle(t("commands:reps.title"))
-        .setDescription(t("commands:reps.howMany", { reps: UserData.reps, user, pointPoints: UserData.reps > 1 ? "points" : "point" }))
+    embed
+      .setTitle(t("commands:reps.title"))
+      .setDescription(t("commands:reps.howMany", { reps: UserData.reps, user, pointPoints: UserData.reps > 1 ? "points" : "point" }))
  
-      channel.send({embed})
-    } catch(err) {
-      throw new CommandError(t("errors:generic"))
-    }
+    channel.send({embed})
   }
 }

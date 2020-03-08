@@ -37,7 +37,7 @@ module.exports = class ClientOnReady extends EventHandler {
       })
 
       dbl.on("error", e => {
-        console.log("[DBL] Failed to post statistics")
+        console.log("[DBL] Failed to post statistics", e)
       }) 
 
       function postStats(client) {

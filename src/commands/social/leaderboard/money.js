@@ -14,14 +14,7 @@ module.exports = class MoneyLeaderboard extends Command {
   async run ({ channel, author, t }) {
     const embed = new MayfiEmbed(author)
 
-    const dbRes = await this.client.database.users.find({}, "money").sort({ ["money"]: -1 }).limit(5 + 6)
-
-    const users = dbRes.filter(u => {
-      u.user = this.client.users.get(u._id)
-      return !!u.user
-    })
-
-    const top = users.splice(0, 5)
+    const top = await this.client.controllers.social.leaderboard("money", 5)
 
     let description = ""
 

@@ -19,13 +19,8 @@ module.exports = class Personaltext extends Command {
   async run ({ channel, guild, author, t }, aboutme) {
     const embed = new MayfiEmbed(author)
 
-    try {
-      await this.client.database.users.updateOne({_id: author.id}, { personalText: aboutme })
-    
-      channel.send(embed.setDescription(t('commands:personaltext.changedTo', { aboutme })))
-    } catch(err) {
-      console.log(err)
-      throw new CommandError(t("errors:generic"))
-    }
+    await this.client.controllers.social.personalTextChange(author, aboutme)
+
+    channel.send(embed.setDescription(t('commands:personaltext.changedTo', { aboutme })))
   }
 }

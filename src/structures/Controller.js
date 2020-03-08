@@ -1,18 +1,32 @@
-module.exports = class EventHandler {
-    constructor(opts, client) {
-    	
-        this.client = client
+const Utils = require('../utils')
 
-        this.name = opts.name
+module.exports = class Controller {
+  /**
+   * @param {Object} opts
+   * @param {string} opts.name
+   * @param {Controller} [opts.parent]
+   * @param {Client} client
+   */
+  constructor (opts, client) {
+    const options = Utils.createOptionHandler('Controller', opts)
 
-        this.subcontrollers = []
-    }
+    this.name = options.required('name')
+    this.parentController = options.optional('parent')
 
-    load () {
-	    this.subcontrollers.forEach(subcontroller => {
-	      Object.defineProperty(this, subcontroller.name, { get: () => subcontroller })
-	    })
+    this.client = client
 
-	    return this
+    this.subcontrollers = []
+  }
+
+  canLoad () {
+    return true
+  }
+
+  load () {
+    this.subcontrollers.forEach(subcontroller => {
+      Object.defineProperty(this, subcontroller.name, { get: () => subcontroller })
+    })
+
+    return this
   }
 }

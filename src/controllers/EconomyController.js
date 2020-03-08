@@ -9,10 +9,11 @@ class BonusCooldownError extends Error {
     this.formattedCooldown = formattedCooldown
   }
 }
+
 class BonusController extends Controller {
   constructor (client) {
     super({
-      name: 'bonus'
+      name: "bonus"
     }, client)
   }
 

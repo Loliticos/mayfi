@@ -16,7 +16,7 @@ module.exports = class Mine extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      const { gems, fragments: foundFragments } = await this.client.controllers.economy.bonus.claimDaily(author.id)
+      const { gems, fragments: foundFragments } = await this.client.controllers.economy.bonus.claimDaily(author)
 
       embed
         .setDescription(t('commands:mine.mined', { gems, prefix, foundFragments }))

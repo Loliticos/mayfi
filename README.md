@@ -20,7 +20,6 @@ Mayfi is a bot designed for those who want efficiency without needing to add tho
   - [Reporting bugs](#reporting-bugs)
   - [Donating](#donating)
   - [Translation](#translation)
-- [Donate](#donate)
 
 <h2 align="center">Docs</h2>
 
@@ -45,8 +44,3 @@ If you've seen Mayfi before and you think that it's a nice bot, please consider 
 ### Translation
 
 You can contribute to Mayfi by translating Mayfi to your language. By doing it so, you'll make Mayfi available to more peoples and making she more special :)
-
-
-<h2 align="center">Donate</h2>
-
-You can help Mayfi by donating any amount (you can even help Mayfi by giving only love to her). Feel free to help us at any time. I'll be gladd :). [Patron](link)

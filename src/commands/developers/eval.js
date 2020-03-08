@@ -1,7 +1,6 @@
-/* eslint-disable no-eval */
-
 const { Command } = require('../../')
 const util = require('util')
+const DBL = require("dblapi.js")
 
 module.exports = class Eval extends Command {
   constructor (client) {
@@ -18,6 +17,7 @@ module.exports = class Eval extends Command {
   }
 
   async run ({ channel, message, guild, author, t }, expr) {
+    const dbl = new DBL(process.env.DBL_TOKEN, this.client)
     try {
       const evaled = await eval(expr.replace(/(^`{3}(\w+)?|`{3}$)/g, ''))
       let cleanEvaled = this.clean(util.inspect(evaled, { depth: 0 }))

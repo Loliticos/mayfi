@@ -41,7 +41,7 @@ module.exports = class ClientOnReady extends EventHandler {
       }) 
 
       setInterval(() => {
-        dbl.postStats(this.client.guilds.size, 1, 1)
+        dbl.postStats(this.client.guilds.size)
       }, 1800000)
 
       setInterval(() => {

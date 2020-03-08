@@ -40,7 +40,7 @@ module.exports = class UserParameter extends Parameter {
    
     const userData = await client.database.users.findOne({_id: user.id})
 
-    if (!userData) {
+    if (!userData && !user.bot) {
       const newUser = new client.database.users({
         _id: user.id
       })

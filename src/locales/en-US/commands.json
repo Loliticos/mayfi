@@ -258,7 +258,7 @@
     "commandDescription": "See how much reputation an user has",
     "commandUsage": "[user]",
     "title": "Reputation",
-    "howMany": "`{{user.tag}}` has {{reps}} reputation $t(commons:{{pointPoints}})."
+    "howMany": "**{{user.tag}}** has **{{reps}}** reputation $t(commons:{{pointPoints}})."
   }, 
   "hug": {
     "commandDescription": "Hug an user!",

@@ -23,6 +23,8 @@ module.exports = class Betflip extends Command {
 
     const user = await this.client.database.users.findOne({_id: author.id})
 
+    await this.client.controllers
+
     if(user.money < amount) {
       embed
         .setTitle(Constants.ERROR_COLOR)

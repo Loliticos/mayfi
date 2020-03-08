@@ -10,11 +10,29 @@ class RepCooldownError extends Error {
   }
 }
 
+class MarryController extends Controller {
+  constructor (parent, client) {
+    super({
+      name: "marry",
+      parent
+    }, client)
+  }
+
+  async marry (_requester, _requested) {
+
+  }
+
+  async divorce (_divorcer, _requested) {
+
+  }
+}
+
 module.exports = class SocialController extends Controller {
   constructor (client) {
     super({
       name: "social"
     }, client)
+    this.subcontrollers = [ new MarryController(this, client) ]
   }
 
   get _users () {
@@ -44,10 +62,6 @@ module.exports = class SocialController extends Controller {
     const { reps } = await this._users.findOne({_id: _user.id})
 
     return reps
-  }
-
-  async marry (_requester, _requested) {
-
   }
 
   async personalTextChange (_user, text) {

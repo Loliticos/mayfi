@@ -255,7 +255,7 @@
     "commandDescription": "Découvrez la réputation d'un utilisateur",
     "commandUsage": "[utilisateur]",
     "title": "Réputation",
-    "howMany": "`{{user.tag}}` a {{reps}} réputation $t(commons:{{pointPoints}})."
+    "howMany": "**{{user.tag}}** a **{{reps}}** réputation $t(commons:{{pointPoints}})."
   }, 
   "hug": {
     "commandDescription": "Embrassez un utilisateur!",

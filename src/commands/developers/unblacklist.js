@@ -25,7 +25,7 @@ module.exports = class Unblacklist extends Command {
       switch (e.message) {
         case "USER_NOT_BLACKLISTED":
         embed
-          setDescription(t('commands:unblacklist.notBlacklisted'))
+          .setDescription(t('commands:unblacklist.notBlacklisted'))
           .setColor(Constants.ERROR_COLOR)
       }
     }

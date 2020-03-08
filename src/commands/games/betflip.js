@@ -21,26 +21,26 @@ module.exports = class Betflip extends Command {
   async run ({ channel, author, t}, amount, side) {
     const embed = new MayfiEmbed(author)
 
-    const user = await this.client.database.users.findOne({_id: author.id})
+    try {
+      const { choosenSide, won } await this.client.controllers.game.betflip(author, amount, side)
 
-    await this.client.controllers
-
-    if(user.money < amount) {
       embed
-        .setTitle(Constants.ERROR_COLOR)
-        .setTitle(t("errors:notEnoughMoney"))
-      return channel.send(embed)
+        .setDescription(t(`commands:betflip.${side === won ? "won" : "loss"}`, { choosenSide, amount }))
+        .setThumbnail(coins[choosenSide])
+
+    } catch (e) {
+      switch (e.message) {
+        case "NOT_ENOUGH_MONEY":
+          embed
+            .setColor(Constants.ERROR_COLOR)
+            .setTitle(t("errors:notEnoughMoney"))
+        default:
+          embed
+            .setColor(Constants.ERROR_COLOR)
+            .setTitle(t("errors:generic"))
+      }
     }
 
-    const choosenSide = Math.random() > 0.5 ? 'heads' : 'tails'
-
-    const bet = side === choosenSide ? amount : -amount
-
-    await this.client.database.users.update({_id: author.id}, { $inc: { money: bet } })
-
-    embed
-      .setDescription(t(`commands:betflip.${side === choosenSide ? "won" : "loss"}`, { choosenSide, amount }))
-      .setThumbnail(coins[choosenSide])
     channel.send({embed})
     
   }

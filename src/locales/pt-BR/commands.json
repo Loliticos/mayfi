@@ -550,8 +550,8 @@
     "commandUsage": "<quantidade para apostar> <heads ou tails>",
     "noAmount": "Você precisa informar uma quantidade para apostar.",
     "noSide": "Você precisa informar um lado para apostar.",
-    "won": "A moeda parou em **{{choosenSide}}** e você ganhou! Você ganhou um total de **{{amount}}** moedas.",
-    "loss": "A moeda parou em **{{choosenSide}}** e você perdeu! Você perdeu um total de **{{amount}}** moedas."
+    "won": "A moeda parou em **$t(commons:{{choosenSide}})** e você ganhou! Você ganhou um total de **{{amount}}** moedas.",
+    "loss": "A moeda parou em **$t(commons:{{choosenSide}})** e você perdeu! Você perdeu um total de **{{amount}}** moedas."
   },
   "blackjack": {
     "commandDescription": "Faça uma aposta em um jogo de 21!",

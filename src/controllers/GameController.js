@@ -24,8 +24,12 @@ module.exports = class GameController extends Controller {
 
     const choosenSide = Math.random() > 0.5 ? 'heads' : 'tails'
 
-    const bet = side === choosenSide ? amount : -amount
+    const won = choosenSide === side ? true : false
+
+    const bet = won ? amount : -amount
 
     await this._users.updateOne({ _id: _user.id }, { $inc: { money: bet } })
+
+    return { choosenSide, won }
   }
 }

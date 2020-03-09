@@ -50,6 +50,12 @@ module.exports = class MayfiClient extends Client {
 
         if (!member.roles.has(mutedRole.id)) member.addRole(mutedRole.id)
 
+        const informationObject = {
+          type: "unmute",
+          member,
+          reason: "Auto unmute"
+        }
+
         if (Date.now() > time) {
           member.removeRole(mutedRole.id)
           delete this.mutes[i]

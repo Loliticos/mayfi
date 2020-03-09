@@ -23,7 +23,7 @@ module.exports = class Mute extends Command {
     const informationObject = {
       staffer: author,
       type: "mute",
-      user: member,
+      member,
       reason,
       time
     }

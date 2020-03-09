@@ -19,7 +19,7 @@ module.exports = class Ban extends Command {
     const informationObject = {
       staffer: author,
       type: "ban",
-      user: member,
+      member,
       reason
     }
 

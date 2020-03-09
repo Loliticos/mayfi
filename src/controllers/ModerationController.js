@@ -36,7 +36,8 @@ module.exports = class ModerationController extends Controller {
     const embed = new MayfiEmbed(informationObject.staffer)
 
     embed
-      .setTitle(informationObject.user.tag + " " + "-" + " " +  t(`commons:moderation.types.${informationObject.type}`))
+      .setTitle(informationObject.member.user.tag + " " + "-" + " " +  t(`commons:moderation.types.${informationObject.type}`))
+      .addField("ID", informationObject.member.id)
       informationObject.staffer ? embed.addField(t("commons:moderation.messages.punnedByUser"), informationObject.staffer.tag) : ""
     embed
       .setThumbnail(informationObject.staffer.displayAvatarURL)

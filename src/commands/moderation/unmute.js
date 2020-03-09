@@ -20,7 +20,7 @@ module.exports = class Unmute extends Command {
     const informationObject = {
       staffer: author,
       type: "unmute",
-      user: member,
+      member,
       reason
     }
 

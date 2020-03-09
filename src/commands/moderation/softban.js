@@ -19,7 +19,7 @@ module.exports = class Softban extends Command {
     const informationObject = {
       staffer: author,
       type: "softban",
-      user: member,
+      member,
       reason
     }
     

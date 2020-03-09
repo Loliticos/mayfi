@@ -19,7 +19,7 @@ module.exports = class Kick extends Command {
     const informationObject = {
       staffer: author,
       type: "kick",
-      user: member,
+      member,
       reason
     }
 

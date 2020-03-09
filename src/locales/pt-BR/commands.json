@@ -591,8 +591,6 @@
     "commandUsage": "<pacote>",
     "invalidPackage": "Você precisa me informar um pacote válido.",
     "lastPublish": "Última versão",
-    "created": "publicada",
-    "publisher": "publicada por",
-    "date": "no dia"
+    "publisher": "publicada por"
   }
 }

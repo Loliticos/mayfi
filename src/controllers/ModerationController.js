@@ -27,6 +27,8 @@ module.exports = class ModerationController extends Controller {
   async sendMessage(_guild, t, informationObject = {}) {
     const guild = await this._guilds.findOne({_id: _guild.id})
 
+    console.log(guild, informationObject)
+
     if (guild.moderationChannel === "false") return
 
     const channel = this.client.guilds.get(guild.moderationChannel)
@@ -35,10 +37,8 @@ module.exports = class ModerationController extends Controller {
 
     const embed = new MayfiEmbed(informationObject.staffer)
 
-    console.log(informationObject)
-
     embed
-      .setTitle(informationObject.user.tag +  "-" + t(`commons:moderation.types.${informationObject.type}`))
+      .setTitle(informationObject.user.tag + " " + "-" + " " +  t(`commons:moderation.types.${informationObject.type}`))
       informationObject.staffer ? embed.addField(t("commons:moderation.messages.punnedByUser"), informationObject.staffer.tag) : ""
     embed
       .setThumbnail(informationObject.staffer.displayAvatarURL)

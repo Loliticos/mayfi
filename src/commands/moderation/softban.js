@@ -25,7 +25,7 @@ module.exports = class Softban extends Command {
     
     const embed = new MayfiEmbed(author)
     await guild.ban(member, { days: 7, reason }).then(async bannedMember => {
-      await guild.unban(bannedMember).then(softbannedMember => {
+      await guild.unban(bannedMember).then(async softbannedMember => {
         await this.client.controllers.moderation.sendMessage(guild, t, informationObject)
         embed
           .setTitle(t('commands:softban.successTitle'))

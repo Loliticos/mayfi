@@ -16,11 +16,20 @@ module.exports = class Warn extends Command {
     }, client)
   }
 
-  async run ({ channel, author, t }, member, reason) {
+  async run ({ channel, author, t, guild }, member, reason) {
     const embed = new MayfiEmbed(author)
 
     try {
       await this.client.database.users.updateOne({_id: member.user.id}, { $inc: { warns: 1 } })
+
+      const informationObject = {
+        staffer: author,
+        type: "warn",
+        user: member,
+        reason
+      }
+
+      this.client.controllers.moderation.sendMessage(guild, t, informationObject)
 
       embed
         .setTitle(t("commands:warn.warned"))

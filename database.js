@@ -28,7 +28,8 @@ const GuildSchema = new Schema({
 	_id: String,
 	prefix: { type: String, default: "m!" },
 	language: { type: String, default: "en-US" },
-	logsChannel: { type: String, default: "false" }
+	logsChannel: { type: String, default: "false" },
+	moderationChannel: { type: String, default: "false" }
 })
 
 parse = (entity) => {

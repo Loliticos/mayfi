@@ -4,9 +4,24 @@
 	"tails": "Coroa",
 	"point": "ponto",
 	"points": "pontos",
-	"typeAgain": "Digite esse comando novamente, por favor.",
 	"minute": "minuto",
 	"minutes": "minutos",
 	"yes": "Sim",
-	"no": "Não"
+	"no": "Não",
+	"moderation": {
+		"messages": {
+			"punnedByUser": "Punido pelo usuário",
+			"reason": "Motivo",
+			"noReason": "Nenhum motivo especificado",
+			"time": "Duração"
+		},
+		"types": {
+			"warn": "Avisado",
+			"mute": "Silenciado",
+			"ban": "Banido",
+			"softban": "Soft-banido",
+			"kick": "Expulso",
+			"unmute": "Desmutado"
+		}
+	}
 }

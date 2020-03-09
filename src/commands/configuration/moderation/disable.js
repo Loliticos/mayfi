@@ -21,9 +21,9 @@ module.exports = class DisableChannel extends Command {
     } catch (e) {
       switch (e.message) {
         case "ALREADY_DISABLED":
-        embed
-          .setColor(Constants.ERROR_COLOR)
-          .setTitle(t(`commands:${this.path}.alreadyDisabled`))
+          embed
+            .setColor(Constants.ERROR_COLOR)
+            .setTitle(t(`commands:${this.path}.alreadyDisabled`))
         default:
           embed
             .setColor(Constants.ERROR_COLOR)

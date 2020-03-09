@@ -42,7 +42,7 @@ module.exports = class ModerationController extends Controller {
     console.log(informationObject)
 
     embed
-      .setTitle(informationObject.user.tag +  "-" t(`commons:moderation.types.${informationObject.type}`))
+      .setTitle(informationObject.user.tag +  "-" + t(`commons:moderation.types.${informationObject.type}`))
       informationObject.staffer ? embed.addField(t("commons:moderation.messages.punnedByUser"), informationObject.staffer.tag) : ""
     embed
       .setThumbnail(informationObject.staffer.displayAvatarURL)

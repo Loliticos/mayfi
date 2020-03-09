@@ -17,7 +17,9 @@ module.exports = class Npm extends Command {
             
     const embed = new MayfiEmbed(author)
 
-    const pkg = await npm.text(npmPackage).search()
+    const pkg = await npm()
+    .text(npmPackage)
+    .search()
 
     console.log(pkg)
 

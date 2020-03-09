@@ -24,7 +24,7 @@ module.exports = class Ban extends Command {
     }
 
     const embed = new MayfiEmbed(author)
-    await guild.ban(member, { days: 7, reason }).then(bannedMember => {
+    await guild.ban(member, { days: 7, reason }).then(async bannedMember => {
       await this.client.controllers.moderation.sendMessage(guild, t, informationObject)
       embed
         .setTitle(t('commands:ban.successTitle'))

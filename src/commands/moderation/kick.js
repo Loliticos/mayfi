@@ -24,7 +24,7 @@ module.exports = class Kick extends Command {
     }
 
     const embed = new MayfiEmbed(author)
-    await member.kick(reason).then(kickedMember => {
+    await member.kick(reason).then(async kickedMember => {
       await this.client.controllers.moderation.sendMessage(guild, t, informationObject)
 
       embed

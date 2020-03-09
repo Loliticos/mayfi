@@ -568,5 +568,22 @@
   },
   "ifunny": {
     "commandDescription": "Veja um meme aleatorio do webiste ifunny."
+  },
+  "moderation": {
+    "commandDescription": "Configure o sistema de moderação.",
+    "commandUsage": "<sub-comandos>",
+    "subcommands": {
+      "channel": {
+        "commandDescription": "Sete o canal que será avisado quando um membro for punido",
+        "commandUsage": "<canal>",
+        "enabledModerationSystem": "Sistema de moderação habilitado",
+        "channel": "O canal de moderação foi setado para **#{{channel.name}}**"
+      },
+      "disable": {
+        "commandDescription": "Desabilite o sistema de moderação.",
+        "disabledModerationSystem": "Sistema de moderação desabilitado.",
+        "alreadyDisabled": "O sistema de moderação já está desabilitado."
+      }
+    }
   }
 }

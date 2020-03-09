@@ -5,6 +5,7 @@ module.exports = class Instagram extends Command {
   constructor (client) {
     super({
       name: 'instagram',
+      aliases: ["insta"],
       category: 'utility',
       parameters: [{
         type: 'string',

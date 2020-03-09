@@ -24,6 +24,7 @@ module.exports = class DisableChannel extends Command {
           embed
             .setColor(Constants.ERROR_COLOR)
             .setTitle(t(`commands:${this.path}.alreadyDisabled`))
+            break
         default:
           console.error(e)
           embed

@@ -35,6 +35,8 @@ module.exports = class ModerationController extends Controller {
 
     const channel = this.client.guilds.get(guild.moderationChannel)
 
+    console.log(channel.name)
+
     if (!channel) return
 
     const embed = new MayfiEmbed(informationObject.staffer)

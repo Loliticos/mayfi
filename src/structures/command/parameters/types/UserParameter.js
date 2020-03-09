@@ -25,7 +25,7 @@ module.exports = class UserParameter extends Parameter {
     }
   }
 
-  static async parse (arg, { t, client, author, guild, channel }) {
+  static parse (arg, { t, client, author, guild, channel }) {
     if (!arg) return
     const regexResult = MENTION_REGEX.exec(arg)
     const id = regexResult && regexResult[1]
@@ -37,22 +37,6 @@ module.exports = class UserParameter extends Parameter {
     if (!this.acceptBot && user.bot) throw new CommandError(t(this.errors.acceptBot))
     if (!this.acceptUser && !user.bot) throw new CommandError(t(this.errors.acceptUser))
     if (!this.acceptDeveloper && PermissionUtils.isDev(client, user)) throw new CommandError(t(this.errors.acceptDeveloper), false)
-   
-    const userData = await client.database.users.findOne({_id: user.id})
-
-    if (!userData && !user.bot) {
-      const newUser = new client.database.users({
-        _id: user.id
-      })
-
-      newUser.save()
-
-      const embed = new MayfiEmbed(author)
-      .setTitle(t("errors:generic"))
-      .setDescription(t("commands:rep.typeAgain"))
-          
-      return channel.send({embed})
-    }
     
     return user
   }

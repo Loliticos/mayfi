@@ -585,5 +585,15 @@
         "alreadyDisabled": "O sistema de moderação já está desabilitado."
       }
     }
+  },
+  "npm": {
+    "commandDescription": "Veja informações sobre um pacote no npm.",
+    "commandUsage": "<pacote>",
+    "invalidPackage": "Você precisa me informar um pacote válido.",
+    "lastPublish": "Última versão",
+    "created": "publicada",
+    "version": "Versão",
+    "publisher": "publicada por",
+    "date": "no dia"
   }
 }

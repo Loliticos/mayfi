@@ -425,7 +425,7 @@
   },
   "mute": {
     "commandDescription": "Mute  an user for inderteminated time.",
-    "commandUsage": "<member> <time>",
+    "commandUsage": "<member> <time> [reason]",
     "missingUser": "You need to give me an user to be muted!",
     "roleName": "Muted",
     "cantMute": "I couldn't mute the user",

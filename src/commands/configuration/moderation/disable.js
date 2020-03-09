@@ -31,5 +31,7 @@ module.exports = class DisableChannel extends Command {
       }
     }
 
+    channel.send(embed)
+
   }
 }

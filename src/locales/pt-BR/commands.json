@@ -425,7 +425,7 @@
   },
   "mute": {
     "commandDescription": "Mute um usuário por tempo inderteminado",
-    "commandUsage": "<membro> <tempo>",
+    "commandUsage": "<membro> <tempo>´[motivo]",
     "missingUser": "Você precisa informar um usuário para ser mutado!",
     "roleName": "Silenciado",
     "cantMute": "Não foi possível silenciar o usuário",

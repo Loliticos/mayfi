@@ -422,7 +422,7 @@
   },
   "mute": {
     "commandDescription": "Désactiver un utilisateur pendant une durée indéterminée.",
-    "commandUsage": "<membre> <heure>",
+    "commandUsage": "<membre> <heure> [raison]",
     "missingUser": "Vous devez me donner un utilisateur à couper!",
     "roleName": "Muted",
     "cantMute": "Je n'ai pas pu couper le son de l'utilisateur",

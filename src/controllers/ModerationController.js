@@ -31,17 +31,6 @@ module.exports = class ModerationController extends Controller {
   async sendMessage(_guild, t, informationObject = {}) {
     if (!checkModerationChannel(_guild)) return
 
-    /*
-    const exampleInformationObject = {
-      type: "mute",
-      time: "188003221",
-      user: member.id,
-      staffer: author.id,
-      reason: "Divulgação"
-    }
-
-    */
-
     const embed = new MayfiEmbed(informationObject.staffer)
 
     const guild = this._guilds.findOne({_id: _guild.id})

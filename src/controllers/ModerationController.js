@@ -29,7 +29,9 @@ module.exports = class ModerationController extends Controller {
 
     if (guild.moderationChannel === "false") return
 
-    const channel = informationObject.client.guilds.get(guild.moderationChannel)
+    console.log(this.client)
+
+    const channel = this.client.guilds.get(guild.moderationChannel)
 
     if (!channel) return
 

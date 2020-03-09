@@ -24,7 +24,8 @@ module.exports = class Mute extends Command {
       staffer: author,
       type: "mute",
       user: member,
-      reason
+      reason,
+      time
     }
 
     const embed = new MayfiEmbed(author)

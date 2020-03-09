@@ -33,6 +33,7 @@ module.exports = class Rep extends Command {
             .setColor(Constants.ERROR_COLOR)
             .setTitle(t("commands:rep.alreadyGave"))
             .setDescription(t("commands:rep.youCanGiveAgain", { cooldown: e.formattedCooldown }))
+          break
         default:
           embed
             .setColor(Constants)

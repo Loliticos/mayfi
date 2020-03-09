@@ -16,7 +16,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         
         const botMention = this.client.user.toString()
 
-        const mc = (...m) => m.some(st => message.content.startsWith(st))
+        const mc = (...m) => m.some(st => message.content.toLowerCase().startsWith(st))
         const usedPrefix = mc(botMention, `<@!${this.client.user.id}>`) ? `${botMention} ` : mc(prefix) ? prefix : null
        
         if(!usedPrefix) return

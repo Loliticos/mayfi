@@ -567,5 +567,22 @@
   },
   "ifunny": {
     "commandDescription": "See a random meme in the website ifunny."
+  },
+  "moderation": {
+    "commandDescription": "Configurate the moderation system.",
+    "commandUsage": "<sub-commands>",
+    "subcommands": {
+      "channel": {
+        "commandDescription": "Sets the channel that will be warned when a user is punned.",
+        "commandUsage": "<channel>",
+        "enabledModerationSystem": "Moderation system enabled",
+        "channel": "The moderation channel has been setted to **#{{channel.name}}**"
+      },
+      "disable": {
+        "commandDescription": "Disables the moderation system channel.",
+        "disabledModerationSystem": "Moderation system disabled.",
+        "alreadyDisabled": "The moderation system is already disabled."
+      }
+    }
   }
 }

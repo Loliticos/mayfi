@@ -27,13 +27,13 @@ module.exports = class ModerationController extends Controller {
   async sendMessage(_guild, t, informationObject = {}) {
     const guild = await this._guilds.findOne({_id: _guild.id})
 
-    console.log(guild, informationObject)
-
     if (guild.moderationChannel === "false") return
 
     const channel = this.client.guilds.get(guild.moderationChannel)
 
     if (!channel) return
+
+    console.log("work ?")
 
     const embed = new MayfiEmbed(informationObject.staffer)
 

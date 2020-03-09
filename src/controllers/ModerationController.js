@@ -20,7 +20,7 @@ module.exports = class ModerationController extends Controller {
   async disableSystem (_guild) {
     if (!this.checkModerationChannel(_guild)) throw new Error("ALREADY_DISABLED")
 
-    await this._guilds.updateOne({_id: guild.id}, { moderationChannel: "false" })
+    await this._guilds.updateOne({_id: _guild.id}, { moderationChannel: "false" })
   }
 
   async setSystemChannel (guild, channel) {

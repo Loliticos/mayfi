@@ -584,5 +584,12 @@
         "alreadyDisabled": "The moderation system is already disabled."
       }
     }
+  },
+  "npm": {
+    "commandDescription": "Shows informations about a NPM package.",
+    "commandUsage": "<package>",
+    "invalidPackage": "You need to give me a valid package.",
+    "lastPublish": "Last version",
+    "publisher": "published by"
   }
 }

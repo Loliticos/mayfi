@@ -26,7 +26,8 @@ module.exports = class Warn extends Command {
         staffer: author,
         type: "warn",
         user: member,
-        reason
+        reason,
+        client: this.client
       }
 
       await this.client.controllers.moderation.sendMessage(guild, t, informationObject)

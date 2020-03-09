@@ -29,11 +29,11 @@ module.exports = class ModerationController extends Controller {
 
     if (guild.moderationChannel === "false") return
 
+    console.log("work ?")
+
     const channel = this.client.guilds.get(guild.moderationChannel)
 
     if (!channel) return
-
-    console.log("work ?")
 
     const embed = new MayfiEmbed(informationObject.staffer)
 

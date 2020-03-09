@@ -12,12 +12,21 @@ module.exports = class Mute extends Command {
       parameters: [{
         type: 'member', missingError: 'commands:mute.missingUser'
       }, {
-        type: 'time', full: true
+        type: 'time', full: false
+      }, {
+        type: "string", full: true, required: false
       }]
     }, client)
   }
 
-  async run ({ channel, guild, author, t }, member, time) {
+  async run ({ channel, guild, author, t }, member, time, reason) {
+    const informationObject = {
+      staffer: author,
+      type: "mute",
+      user: member,
+      reason
+    }
+
     const embed = new MayfiEmbed(author)
     let mutedRole = guild.roles.find(r => r.name == t("commands:mute.roleName"))
 
@@ -57,6 +66,8 @@ module.exports = class Mute extends Command {
         if (err) console.error
 
         member.addRole(mutedRole.id).then(async user => {
+          this.client.controllers.moderation.sendMessage(guild, t, informationObject)
+          
           channel.send(        
             embed
               .setTitle(t("commands:mute.muted"))

@@ -16,8 +16,17 @@ module.exports = class Kick extends Command {
   }
 
   async run ({ channel, guild, author, t }, member, reason) {
+    const informationObject = {
+      staffer: author,
+      type: "kick",
+      user: member,
+      reason
+    }
+
     const embed = new MayfiEmbed(author)
     await member.kick(reason).then(kickedMember => {
+      this.client.controllers.moderation.sendMessage(guild, t, informationObject)
+
       embed
         .setTitle(t('commands:kick.successTitle'))
         .setDescription(`${kickedMember} - \`${reason}\``)

@@ -10,11 +10,20 @@ module.exports = class Unmute extends Command {
       requirements: { guildOnly: true, botPermissions: ['KICK_MEMBERS'], permissions: ['MANAGE_ROLES'] },
       parameters: [{
         type: 'member', missingError: 'commands:unmute.missingUser'
+      }, {
+        type: "string", full: true, required: false
       }]
     }, client)
   }
 
-  async run ({ channel, guild, author, t }, member) {
+  async run ({ channel, guild, author, t }, member, reason) {
+    const informationObject = {
+      staffer: author,
+      type: "unmute",
+      user: member,
+      reason
+    }
+
     const embed = new MayfiEmbed(author)
     let mutedRole = guild.roles.find(r => r.name == t("commands:unmute.roleName"))
 
@@ -51,6 +60,7 @@ module.exports = class Unmute extends Command {
         if (err) console.error
 
         member.removeRole(mutedRole.id).then(async user => {
+          this.client.controllers.moderation.sendMessage(guild, t, informationObject)
           channel.send(        
             embed
               .setTitle(t("commands:unmute.unmuted"))

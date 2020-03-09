@@ -29,7 +29,7 @@ module.exports = class Warn extends Command {
         reason
       }
 
-      this.client.controllers.moderation.sendMessage(guild, t, informationObject)
+      await this.client.controllers.moderation.sendMessage(guild, t, informationObject)
 
       embed
         .setTitle(t("commands:warn.warned"))

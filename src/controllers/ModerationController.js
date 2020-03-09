@@ -25,9 +25,9 @@ module.exports = class ModerationController extends Controller {
 
 
   async sendMessage(_guild, t, informationObject = {}) {
-    const guild = this._guilds.findOne({_id: _guild.id})
+    const guild = await this._guilds.findOne({_id: _guild.id})
 
-    if (guild.moderationChannel === "false") return
+    if (guild.moderationChannel == "false") return
 
     const channel = this.client.guilds.get(guild.moderationChannel)
 
@@ -45,7 +45,7 @@ module.exports = class ModerationController extends Controller {
       .addField(t("commons:moderation.messages.reason"), informationObject.reason ? informationObject.reason : t("commons:moderation.messages.noReason"))
 
 
-    if(informationObject.type === "mute") embed.addField(t("commons:moderation.messages.time"), informationObject.time)
+    if (informationObject.type === "mute") embed.addField(t("commons:moderation.messages.time"), informationObject.time)
 
     channel.send(embed)
 

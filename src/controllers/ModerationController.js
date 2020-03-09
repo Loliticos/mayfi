@@ -29,9 +29,9 @@ module.exports = class ModerationController extends Controller {
 
     if (guild.moderationChannel === "false") return
 
-    console.log("work ?")
-
     const channel = this.client.guilds.get(guild.moderationChannel)
+
+    console.log(channel)
 
     if (!channel) return
 
@@ -43,7 +43,6 @@ module.exports = class ModerationController extends Controller {
     embed
       .setThumbnail(informationObject.staffer.displayAvatarURL)
       .addField(t("commons:moderation.messages.reason"), informationObject.reason ? informationObject.reason : t("commons:moderation.messages.noReason"))
-
 
     if (informationObject.type === "mute") embed.addField(t("commons:moderation.messages.time"), informationObject.time)
 

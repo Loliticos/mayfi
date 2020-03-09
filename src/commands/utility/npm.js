@@ -17,18 +17,19 @@ module.exports = class Npm extends Command {
             
     const embed = new MayfiEmbed(author)
 
-    const package = await npm.text(npmPackage).search()
+    const pkg = await npm.text(npmPackage).search()
 
-    console.log(package)
+    console.log(pkg)
 
     embed
+      .setAuthor("npm", "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/042013/npm_0.png?itok=0Jst3N3-")
+      .setTitle(pkg.name)
+      .setURL(pkg.links.npm)
+      .setDescription(pkg.description ? pkg.description : "")
       .setDescription(`
-        [${npmPackage.name}](${npmPackage.links.npm})
-        ${npmPackage.description ? npmPackage.description : ""}
+        ${pkg.keywords && pkg.keywords.length > 0 ? pkg.keywords.map(p => `\`${p}\``).join(", ") : ""}
 
-        ${npmPackage.keywords && npmPackage.keywords.length > 0 ? npmPackage.keywords.map(p => `\`${p}\``).join(", ") : ""}
-
-        ${t("commands:npm.published", { npmPackage })}
+        ${t("commands:npm.published", { pkg })}
 
         \`\`\`npm i ${pkg.name}\`\`\`
       `)

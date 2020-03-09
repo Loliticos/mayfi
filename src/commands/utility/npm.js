@@ -25,9 +25,9 @@ module.exports = class Npm extends Command {
 
     embed
       .setAuthor("npm", "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/042013/npm_0.png?itok=0Jst3N3-")
-      .setTitle(pkg.name)
-      .setURL(pkg.links.npm)
-      .setDescription(`${pkg.description ? pkg.description : ""}\n${pkg.keywords && pkg.keywords.length > 0 ? pkg.keywords.map(p => `\`${p}\``).join(", ") : ""}`)
+      .setTitle(pkg[0].name)
+      .setURL(pkg[0].links.npm)
+      .setDescription(`${pkg[0].description ? pkg[0].description : ""}\n${pkg[0].keywords && pkg[0].keywords.length > 0 ? pkg[0].keywords.map(p => `\`${p}\``).join(", ") : ""}`)
 
     channel.send(embed)
 

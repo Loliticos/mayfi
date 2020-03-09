@@ -14,7 +14,7 @@ module.exports = class DisableChannel extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      await this.client.controllers.disableSystem(guild)
+      await this.client.controllers.moderation.disableSystem(guild)
 
       embed
         .setTitle(t(`commands:${this.path}.disabledModerationSystem`))

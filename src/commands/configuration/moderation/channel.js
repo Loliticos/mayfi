@@ -18,7 +18,7 @@ module.exports = class ChannelModeration extends Command {
   async run ({ author, t, message, guild }, channel) {
     const embed = new MayfiEmbed(author)
 
-    await this.client.controllers.setSystemChannel(guild, channel)
+    await this.client.controllers.moderation.setSystemChannel(guild, channel)
 
     embed
       .setTitle(t(`commands:${this.path}.enabledModerationSystem`))

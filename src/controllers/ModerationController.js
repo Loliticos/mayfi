@@ -18,7 +18,7 @@ module.exports = class ModerationController extends Controller {
   }
 
   async disableSystem (_guild) {
-    if (!checkModerationChannel(_guild)) throw new Error("ALREADY_DISABLED")
+    if (!this.checkModerationChannel(_guild)) throw new Error("ALREADY_DISABLED")
 
     await this._guilds.updateOne({_id: guild.id}, { moderationChannel: "false" })
   }
@@ -29,7 +29,7 @@ module.exports = class ModerationController extends Controller {
 
 
   async sendMessage(_guild, t, informationObject = {}) {
-    if (!checkModerationChannel(_guild)) return
+    if (!this.checkModerationChannel(_guild)) return
 
     const embed = new MayfiEmbed(informationObject.staffer)
 

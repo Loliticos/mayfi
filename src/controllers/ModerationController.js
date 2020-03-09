@@ -14,11 +14,11 @@ module.exports = class ModerationController extends Controller {
   async checkModerationChannel (_guild) {
     const guild = await this._guilds.findOne({_id: _guild.id})
 
-    return guild.moderationChannel === "false" ? false : true
+    return guild.moderationChannel === "false" ? true : false
   }
 
   async disableSystem (_guild) {
-    if (!this.checkModerationChannel(_guild)) throw new Error("ALREADY_DISABLED")
+    if (this.checkModerationChannel(_guild)) throw new Error("ALREADY_DISABLED")
 
     await this._guilds.updateOne({_id: _guild.id}, { moderationChannel: "false" })
   }
@@ -29,7 +29,7 @@ module.exports = class ModerationController extends Controller {
 
 
   async sendMessage(_guild, t, informationObject = {}) {
-    if (!this.checkModerationChannel(_guild)) return
+    if (this.checkModerationChannel(_guild)) return
 
     const guild = this._guilds.findOne({_id: _guild.id})
 

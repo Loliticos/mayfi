@@ -12,7 +12,7 @@ module.exports = class ModerationController extends Controller {
   }
 
   async disableSystem (_guild) {
-    const guild = this._guilds.findOne({_id: _guild.id})
+    const guild = await this._guilds.findOne({_id: _guild.id})
 
     if (guild.moderationChannel === "false") throw new Error("ALREADY_DISABLED")
 
@@ -27,7 +27,7 @@ module.exports = class ModerationController extends Controller {
   async sendMessage(_guild, t, informationObject = {}) {
     const guild = await this._guilds.findOne({_id: _guild.id})
 
-    if (guild.moderationChannel == "false") return
+    if (guild.moderationChannel === "false") return
 
     const channel = this.client.guilds.get(guild.moderationChannel)
 

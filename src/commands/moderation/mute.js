@@ -66,7 +66,7 @@ module.exports = class Mute extends Command {
         if (err) console.error
 
         member.addRole(mutedRole.id).then(async user => {
-          this.client.controllers.moderation.sendMessage(guild, t, informationObject)
+          await this.client.controllers.moderation.sendMessage(guild, t, informationObject)
           
           channel.send(        
             embed

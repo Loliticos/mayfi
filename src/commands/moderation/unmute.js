@@ -60,7 +60,7 @@ module.exports = class Unmute extends Command {
         if (err) console.error
 
         member.removeRole(mutedRole.id).then(async user => {
-          this.client.controllers.moderation.sendMessage(guild, t, informationObject)
+          await this.client.controllers.moderation.sendMessage(guild, t, informationObject)
           channel.send(        
             embed
               .setTitle(t("commands:unmute.unmuted"))

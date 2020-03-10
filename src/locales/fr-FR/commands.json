@@ -578,9 +578,9 @@
     "commandUsage": "<info pour rechercher>",
     "invalidDocument": "Vous devez me donner une information valide pour la recherche."
   },
-  "djsdocs": {
-    "commandDescription": "Affiche des informations sur un document sur le site discord.js.",
-    "commandUsage": "<info pour rechercher>",
+  "dcdocs": {
+    "commandDescription": "Consultez les informations sur un document dans la documentation de discord, en particulier discord.js.",
+    "commandUsage": "<info pour rechercher> [stable|master|rpc|commando|akairo|akairo-master|11.5-dev|collection]",
     "invalidDocument": "Vous devez me donner une information de document à rechercher."
   }
 }

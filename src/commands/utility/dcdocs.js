@@ -4,11 +4,11 @@ const fetch = require("node-fetch")
 
 const SOURCES = ['stable', 'master', 'rpc', 'commando', 'akairo', 'akairo-master', '11.5-dev', 'collection']
 
-module.exports = class djsDocs extends Command {
+module.exports = class DCDocs extends Command {
   constructor (client) {
     super({
-      name: 'djsdocs',
-      aliases: ['djs-docs'],
+      name: 'dcdocs',
+      aliases: ['djs-docs', 'akairo-docs'],
       category: 'utility',
       parameters: [{
         type: 'string', full: false, required: true, missingError: "commands:djsdocs.invalidDocument"
@@ -26,9 +26,6 @@ module.exports = class djsDocs extends Command {
 
     const embed = await fetch(`https://djsdocs.sorta.moe/v2/embed?${queryString}`).then(res => res.json())
 
-    console.log(queryString)
-    console.log(embed)
-
     if (!embed) {
       embed
         .setColor(Constants.ERROR_COLOR)
@@ -36,6 +33,6 @@ module.exports = class djsDocs extends Command {
       return channel.send(embed)
     }
 
-      channel.send({embed})
+    channel.send(embed)
   } 
 }

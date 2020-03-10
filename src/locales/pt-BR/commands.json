@@ -598,9 +598,9 @@
     "commandUsage": "<informação para ser procurada>",
     "invalidDocument": "Você precisa informar uma informação válida."
   },
-  "djsdocs": {
-    "commandDescription": "Veja informações sobre um documento no site discord.js",
-    "commandUsage": "<informação para ser procurada>",
+  "dcdocs": {
+    "commandDescription": "Veja informações sobre um documento na documentação do discord, especificamente discord.js.",
+    "commandUsage": "<informação para ser procurada> [stable|master|rpc|commando|akairo|akairo-master|11.5-dev|collection]",
     "invalidDocument": "Você precisa informar um documento válido."
   }
 }

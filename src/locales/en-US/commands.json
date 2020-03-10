@@ -597,9 +597,9 @@
     "commandUsage": "<info to search>",
     "invalidDocument": "You need to give me a valid info to be searched."
   },
-  "djsdocs": {
-    "commandDescription": "Shows information about a document on the site discord.js.",
-    "commandUsage": "<info to search>",
+  "dcdocs": {
+    "commandDescription": "See information about a document in the discord documentation, specifically discord.js.",
+    "commandUsage": "<info to search> [stable|master|rpc|commando|akairo|akairo-master|11.5-dev|collection]",
     "invalidDocument": "You need to give me a document info to be searched."
   }
 }

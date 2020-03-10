@@ -35,7 +35,7 @@ module.exports = class MDN extends Command {
       const turndown = new Turndown();
         turndown.addRule('hyperlink', {
           filter: 'a',
-          replacement: (text, node) => `[${text}](https://developer.mozilla.org${(node as HTMLLinkElement).href})`,
+          replacement: (text, node) => `[${text}](https://developer.mozilla.org${res.URL})`,
       })
 
       console.log(res)

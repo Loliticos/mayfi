@@ -20,7 +20,7 @@ module.exports = class djsDocs extends Command {
 
   async run ({ channel, author, t, message, language}, query, source = "stable") {
 
-    if (!Sources.includes(source)) source = "stable"
+    if (!SOURCES.includes(source)) source = "stable"
         
     const queryString = qs.stringify({ src: source, q: query.split(' ').join(" ") })
 

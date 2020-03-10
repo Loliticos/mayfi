@@ -464,7 +464,7 @@
     "commandDescription": "Seta o tempo que o usuário deve esperar para falar novamente em um canal.",
     "commandUsage": "<tempo> [canal]",
     "noTime": "Você precisa informar o tempo para o slowmode.",
-    "changed": "Alterado o slowmode do canal **#{{channel.name}}** para **{{number}}**"
+    "changed": "Alterado o slowmode do canal **#{{channel.name}}** para **{{number}}** segundos."
   },
   "warns": {
     "commandDescription": "Veja a quantidade de avisos que um membro possui.",

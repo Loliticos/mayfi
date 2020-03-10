@@ -6,6 +6,7 @@ module.exports = class Marry extends Command {
       name: 'marry',
       aliases: ['casar'],
       category: 'social',
+      hidden: true,
       requirements: { databaseOnly: true },
       parameters: [{
         type: 'member', 

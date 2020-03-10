@@ -461,7 +461,7 @@
     "commandDescription": "Sets the amount of time that an user needs to wait before talking again in a channel.",
     "commandUsage": "<heure> [chaîne]",
     "noTime": "Vous devez me donner un temps pour le slowmode.",
-    "changed": "Modification du mode lent du canal **#{{channel.name}}** en **{{number}}**"
+    "changed": "Modification du mode lent du canal **#{{channel.name}}** en **{{number}}** secondes."
   },
   "warns": {
     "commandDescription": "Voir combien d'avertissements un membre a.",

@@ -6,6 +6,7 @@ module.exports = class Divorce extends Command {
       name: 'divorce',
       aliases: ['divorciar'],
       category: 'social',
+      hidden: true,
       requirements: { databaseOnly: true }
     }, client)
   }
@@ -16,7 +17,7 @@ module.exports = class Divorce extends Command {
     const authorData = await this.client.database.users.findOne({_id: author.id})
 
     if (authorData.married == "false") {
-
+      channel.send("Você não está casado!")
     }
 
     const marriedUser = this.client.users.get(authorData.married)
@@ -28,7 +29,7 @@ module.exports = class Divorce extends Command {
       this.client.database.users.updateOne({_id: author.id}, { married: "false" })
     ])
 
-    channel.send("Tudo bem, eu configurei os papeis do divórcio. Triste que mais umc casal não tenha dado certo!")
+    channel.send("Tudo bem, eu configurei os papeis do divórcio. Triste que mais um casal não tenha dado certo!")
 
   }
 }

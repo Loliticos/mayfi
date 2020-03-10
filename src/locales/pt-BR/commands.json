@@ -592,5 +592,10 @@
     "invalidPackage": "Você precisa me informar um pacote válido.",
     "lastPublish": "Última versão",
     "publisher": "publicada por"
+  },
+  "mdn": {
+    "commandDescription": "Veja informações sobre qualquer coisa relacionada á Javascript no site MDN",
+    "commandUsage": "<informação para ser procurada>",
+    "invalidDocument": "Você precisa informar uma informação válida."
   }
 }

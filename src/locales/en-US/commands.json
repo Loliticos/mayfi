@@ -591,5 +591,10 @@
     "invalidPackage": "You need to give me a valid package.",
     "lastPublish": "Last version",
     "publisher": "published by"
+  },
+  "mdn": {
+    "commandDescription": "Show informations about anything related to javascript on MDN.",
+    "commandUsage": "<info to search>",
+    "invalidDocument": "You need to give me a valid info to be searched."
   }
 }

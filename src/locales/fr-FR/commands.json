@@ -548,5 +548,34 @@
   },
   "ifunny": {
     "commandDescription": "Voir un mème aléatoire sur le site Web ifunny."
+  },
+  "moderation": {
+    "commandDescription": "Configurate the moderation system.",
+    "commandUsage": "<sub-commands>",
+    "subcommands": {
+      "channel": {
+        "commandDescription": "Sets the channel that will be warned when a user is punned.",
+        "commandUsage": "<channel>",
+        "enabledModerationSystem": "Moderation system enabled",
+        "channel": "The moderation channel has been setted to **#{{channel.name}}**"
+      },
+      "disable": {
+        "commandDescription": "Disables the moderation system channel.",
+        "disabledModerationSystem": "Moderation system disabled.",
+        "alreadyDisabled": "The moderation system is already disabled."
+      }
+    }
+  },
+  "npm": {
+    "commandDescription": "Shows informations about a NPM package.",
+    "commandUsage": "<package>",
+    "invalidPackage": "You need to give me a valid package.",
+    "lastPublish": "Last version",
+    "publisher": "published by"
+  },
+  "mdn": {
+    "commandDescription": "Afficher des informations sur tout ce qui concerne le javascript sur MDN.",
+    "commandUsage": "<info pour rechercher>",
+    "invalidDocument": "Vous devez me donner une information valide pour la recherche."
   }
 }

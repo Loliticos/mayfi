@@ -70,10 +70,10 @@
     "missingParameters": "Vous devez renseigner le nom d'un utilisateur Github.",
     "userNotFound": "Aucun utilisateur avec le nom '{{user}}' a trouvé.",
     "noBio": "Aucune biographie trouvée pour cet utilisateur.",
-    "publicRepos": "Référentiels publics:",
-    "createdAt": "Compte créé à:",
-    "followers": "Nombre d'abonnés:",
-    "following": "Cet utilisateur suit:",
+    "publicRepos": "Référentiels publics",
+    "createdAt": "Compte créé à",
+    "followers": "Nombre d'abonnés",
+    "following": "Cet utilisateur suit",
     "users": "Utilisateurs",
     "unknownLocation": "Lieu inconnu"
   },
@@ -550,7 +550,7 @@
     "commandDescription": "Voir un mème aléatoire sur le site Web ifunny."
   },
   "moderation": {
-    "commandDescription": "Configurate the moderation system.",
+    "commandDescription": "Configurez le système de modération.",
     "commandUsage": "<sub-commands>",
     "subcommands": {
       "channel": {
@@ -571,7 +571,7 @@
     "commandUsage": "<paquet>",
     "invalidPackage": "Vous devez me donner un colis valide.",
     "lastPublish": "Dernière version",
-    "publisher": "published by"
+    "publisher": "publié par"
   },
   "mdn": {
     "commandDescription": "Afficher des informations sur tout ce qui concerne le javascript sur MDN.",

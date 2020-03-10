@@ -2,6 +2,8 @@ const { Command, Constants } = require('../../')
 const qs = require("querystring")
 const fetch = require("node-fetch")
 
+const SOURCES = ['stable', 'master', 'rpc', 'commando', 'akairo', 'akairo-master', '11.5-dev', 'collection']
+
 module.exports = class djsDocs extends Command {
   constructor (client) {
     super({
@@ -9,14 +11,18 @@ module.exports = class djsDocs extends Command {
       aliases: ['djs-docs'],
       category: 'utility',
       parameters: [{
-        type: 'string', full: true, required: true, missingError: "commands:djsdocs.invalidDocument"
+        type: 'string', full: false, required: true, missingError: "commands:djsdocs.invalidDocument"
+      }, {
+        type: "string", full: true, required: false
       }]
     }, client)
   }
 
-  async run ({ channel, author, t, message, language}, query) {
+  async run ({ channel, author, t, message, language}, query, source = "stable") {
+
+    if (!Sources.includes(source)) source = "stable"
         
-    const queryString = qs.stringify({ q: query })
+    const queryString = qs.stringify({ src: source, q: query.split(' ').join(" ") })
 
     const embed = await fetch(`https://djsdocs.sorta.moe/v2/embed?${queryString}`).then(res => res.json())
 

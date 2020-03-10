@@ -6,7 +6,7 @@ module.exports = class TimeParameter extends Parameter {
   static parseOptions (options = {}) {
     return {
       ...super.parseOptions(options),
-      acceptDate: !!options.clean
+      acceptDate: !!options.acceptDate
     }
   }
 

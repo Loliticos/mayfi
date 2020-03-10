@@ -15,13 +15,15 @@ module.exports = class MDN extends Command {
     }, client)
   }
 
-  async run ({ channel, author, t, message}, query) {
+  async run ({ channel, author, t, message, language}, query) {
         
     const embed = new MayfiEmbed()
 
       const queryString = qs.stringify({ q: query })
 
-      const res = await fetch(`https://mdn.pleb.xyz/search?${queryString}`).then(res => res.json())
+      const documentToFind = await fetch(`https://mdn.pleb.xyz/search?${queryString}`).then(res => res.json())
+
+      const res = documentToFind.Translations.find(o => o.Locale === language.replace("en-US", "en").replace("fr-FR", "fr").replace("pt-BR", "pt"))
 
       if (!res) {
         embed
@@ -32,7 +34,7 @@ module.exports = class MDN extends Command {
 
       const summary = res.Summary.replace(/<code><strong>(.+)<\/strong><\/code>/g, '<strong><code>$1</code></strong>')
 
-      const turndown = new Turndown();
+      const turndown = new Turndown()
         turndown.addRule('hyperlink', {
           filter: 'a',
           replacement: (text, node) => `[${text}](https://developer.mozilla.org${res.URL})`,

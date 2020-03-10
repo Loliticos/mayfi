@@ -27,6 +27,7 @@ module.exports = class djsDocs extends Command {
     const embed = await fetch(`https://djsdocs.sorta.moe/v2/embed?${queryString}`).then(res => res.json())
 
     console.log(queryString)
+    console.log(embed)
 
     if (!embed) {
       embed
@@ -35,6 +36,6 @@ module.exports = class djsDocs extends Command {
       return channel.send(embed)
     }
 
-      channel.send(embed)
+      channel.send({embed})
   } 
 }

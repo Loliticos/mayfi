@@ -95,7 +95,7 @@ module.exports = class EconomyController extends Controller {
   }
 
   async research (_user) {
-    const user = this._users.findOne({_id: _user.id})
+    const user = await this._users.findOne({_id: _user.id})
 
     if (this.checkResearch(user)) {
       throw new ResearchError(user.gems, user.fragments)

@@ -1,5 +1,6 @@
 const EventHandler = require('../structures/EventHandler')
 const DBL = require("dblapi.js")
+const fetch = require("node-fetch")
 
 module.exports = class ClientOnReady extends EventHandler {
     constructor(client) {

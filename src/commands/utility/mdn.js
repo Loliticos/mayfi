@@ -1,6 +1,7 @@
 const { Command, MayfiEmbed, Constants } = require('../../')
 const qs = require("querystring")
 const fetch = require("node-fetch")
+const Turndown = require("turndown")
 
 module.exports = class MDN extends Command {
   constructor (client) {
@@ -29,13 +30,21 @@ module.exports = class MDN extends Command {
         return channel.send(embed)
       }
 
+      const summary = res.Summary.replace(/<code><strong>(.+)<\/strong><\/code>/g, '<strong><code>$1</code></strong>')
+
+      const turndown = new Turndown();
+        turndown.addRule('hyperlink', {
+          filter: 'a',
+          replacement: (text, node) => `[${text}](https://developer.mozilla.org${(node as HTMLLinkElement).href})`,
+      })
+
       console.log(res)
 
       embed
-        .setAuthor("MDN", "https://media.prod.mdn.mozit.cloud/attachments/2013/11/15/6457/5e0f6aa96fb8e4593f143aa803576698/mdn_logo_only_color.pnghttps://media.prod.mdn.mozit.cloud/attachments/2013/11/15/6457/5e0f6aa96fb8e4593f143aa803576698/mdn_logo_only_color.png", 'https://developer.mozilla.org/')
+        .setAuthor("MDN", "https://developer.mozilla.org/static/img/favicon144.png", 'https://developer.mozilla.org/')
         .setURL(`https://developer.mozilla.org${res.URL}`)
         .setTitle(res.Title)
-        .setDescription(res.Summary.replace(/<code><strong>(.+)<\/strong><\/code>/g, '<strong><code>$1</code></strong>'))
+        .setDescription(turndown.turndown(summary))
       channel.send(embed)
 
     

@@ -10,20 +10,20 @@ module.exports = class Remind extends Command {
       category: 'utility',
       requirements: { guildOnly: false },
       parameters: [{
-        type: "string", full: true, required: true
-      }, {
         type: "time", full: true, acceptDate: true, required: true, missingError: "commands:remind.invalidDate"
+      }, {
+        type: "string", full: true, required: true
       }]
     }, client)
   }
 
-  async run ({ channel, guild, author, t }, reason, date) {
+  async run ({ channel, guild, author, t }, date, reason) {
 
     const embed = new MayfiEmbed(author)
 
     try {
       this.client.remind[author.id] = {
-        id: member.id,
+        id: author.id,
         time: Date.now() + date,
         guild: guild.id,
         reason

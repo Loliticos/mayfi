@@ -567,7 +567,7 @@
     }
   },
   "npm": {
-    "commandDescription": "Shows informations about a NPM package.",
+    "commandDescription": "Affiche des informations sur un package NPM.",
     "commandUsage": "<package>",
     "invalidPackage": "You need to give me a valid package.",
     "lastPublish": "Last version",
@@ -577,5 +577,10 @@
     "commandDescription": "Afficher des informations sur tout ce qui concerne le javascript sur MDN.",
     "commandUsage": "<info pour rechercher>",
     "invalidDocument": "Vous devez me donner une information valide pour la recherche."
+  },
+  "djsdocs": {
+    "commandDescription": "Affiche des informations sur un document sur le site discord.js.",
+    "commandUsage": "<info pour rechercher>",
+    "invalidDocument": "Vous devez me donner une information de document à rechercher."
   }
 }

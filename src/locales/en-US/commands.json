@@ -593,8 +593,13 @@
     "publisher": "published by"
   },
   "mdn": {
-    "commandDescription": "Show informations about anything related to javascript on MDN.",
+    "commandDescription": "Shows informations about anything related to javascript on MDN.",
     "commandUsage": "<info to search>",
     "invalidDocument": "You need to give me a valid info to be searched."
+  },
+  "djsdocs": {
+    "commandDescription": "Shows information about a document on the site discord.js.",
+    "commandUsage": "<info to search>",
+    "invalidDocument": "You need to give me a document info to be searched."
   }
 }

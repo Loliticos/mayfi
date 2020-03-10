@@ -597,5 +597,10 @@
     "commandDescription": "Veja informações sobre qualquer coisa relacionada á Javascript no site MDN",
     "commandUsage": "<informação para ser procurada>",
     "invalidDocument": "Você precisa informar uma informação válida."
+  },
+  "djsdocs": {
+    "commandDescription": "Veja informações sobre um documento no site discord.js",
+    "commandUsage": "<informação para ser procurada>",
+    "invalidDocument": "Você precisa informar um documento válido."
   }
 }

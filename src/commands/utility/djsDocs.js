@@ -20,7 +20,7 @@ module.exports = class djsDocs extends Command {
 
     const embed = await fetch(`https://djsdocs.sorta.moe/v2/embed?${queryString}`).then(res => res.json())
 
-    if (!res) {
+    if (!embed) {
       embed
         .setColor(Constants.ERROR_COLOR)
         .setTitle(t("commands:djsdocs.invalidDocument"))

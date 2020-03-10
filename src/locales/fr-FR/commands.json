@@ -568,9 +568,9 @@
   },
   "npm": {
     "commandDescription": "Affiche des informations sur un package NPM.",
-    "commandUsage": "<package>",
-    "invalidPackage": "You need to give me a valid package.",
-    "lastPublish": "Last version",
+    "commandUsage": "<paquet>",
+    "invalidPackage": "Vous devez me donner un colis valide.",
+    "lastPublish": "Dernière version",
     "publisher": "published by"
   },
   "mdn": {

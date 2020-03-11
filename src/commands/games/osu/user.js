@@ -29,6 +29,13 @@ module.exports = class OsuUser extends Command {
 
     console.log(user[0])
 
+    embed
+      .setAuthor("!osu", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Osu%21Logo_%282015%29.png/600px-Osu%21Logo_%282015%29.png")
+      .setDescriptionFromBlockArray([
+        [
+          `:flag_${user.country.toLowerCase()}: **[${userData.username}](https://osu.ppy.sh/u/${userData.user_id})** (${t(`commands:${this.path}.level`, { number: Math.floor(userData.level) })})`
+        ]
+      ])
     channel.send(embed)
 
   }

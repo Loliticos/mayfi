@@ -33,14 +33,12 @@ module.exports = class BeatmapUser extends Command {
       moment.locale(language)
 
       const rate = ((parseInt(data.passcount) / parseInt(data.playcount)) * 100 || 0).toFixed(1)
-      const 
 
       embed
         .setAuthor("!osu", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Osu%21Logo_%282015%29.png/600px-Osu%21Logo_%282015%29.png")
         .setTitle(`${beatmap.artist} - ${beatmap.title} (${beatmap.version})`)
         .setDescriptionFromBlockArray([
           [
-            `:flag_${user.country.toLowerCase()}: **[${user.username}](https://osu.ppy.sh/u/${user.user_id})** (${t(`commands:${this.path}.level`, { number: Math.floor(user.level) })})`,
             t(`commands:${this.path}.difficulty`) + ":" + " " + `**${Number(beatmap.difficultyrating).toFixed(2)}**`,
             t(`commands:${this.path}.successRate`) + ":" + " " + `**${rate}%** (${beatmap.passcount} / ${beatmap.playcount})`
           ]

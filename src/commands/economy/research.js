@@ -9,7 +9,7 @@ module.exports = class Research extends Command {
       cooldown: 5,
       requirements: { databaseOnly: true },
       parameters: [{
-        type: 'string', 
+        type: 'number', 
         required: false,
         full: false
       }]

@@ -94,10 +94,6 @@ module.exports = class EconomyController extends Controller {
   async research (_user, toRepeat = 1) {
     const user = await this._users.findOne({_id: _user.id})
 
-    toRepeat = Number(toRepeat.replace(/%/g, ''))
-
-    if (isNull(toRepeat)) toRepeat = 1
-
     const gemsCheck = user.gems < 10 * toRepeat
     const fragmentsCheck = user.fragments < 15 * toRepeat
 

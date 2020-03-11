@@ -90,14 +90,10 @@ module.exports = class EconomyController extends Controller {
     return { gems, money, fragments, researchesPoints }
   }
 
-  async checkResearch (user) {
-    if (user.gems < 10 || user.fragments < 15) return true
-  }
-
   async research (_user) {
     const user = await this._users.findOne({_id: _user.id})
 
-    if (this.checkResearch(user)) {
+    if (user.gems < 10 || user.fragments < 15) {
       throw new ResearchError(user.gems, user.fragments)
     }
 

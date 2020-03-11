@@ -418,7 +418,7 @@
     "invalidMaterial": "Matériaux invalides",
     "youNeed": "Vous avez besoin de **{{howMuchGems}}/{{rg}}** gemmes et **{{howMuchFragments}}/{{fg}}** fragments pour faire une recherche!",
     "title": "Recherche",
-    "howMany": "Vous avez recherché et trouvé **{{research}}** points de recherche."
+    "howMany": "Vous avez recherché **{{toRepeat}}** $t(commons:{{pluralSingular}}) et trouvé **{{research}}** points de recherche."
   },
   "mute": {
     "commandDescription": "Désactiver un utilisateur pendant une durée indéterminée.",

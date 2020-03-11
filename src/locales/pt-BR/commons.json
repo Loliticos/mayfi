@@ -23,5 +23,7 @@
 			"kick": "Expulso",
 			"unmute": "Desmutado"
 		}
-	}
+	},
+	"plural": "vezes",
+	"singular": "vez"
 }

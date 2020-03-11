@@ -19,6 +19,14 @@ module.exports = class Research extends Command {
   async run ({ channel, author, t }, toRepeat = 1) {
     const embed = new MayfiEmbed(author)
 
+    function pluralSingularCheck() {
+      if (toRepeat == 1) return "singular"
+
+      if (toRepeat == 0) return "plural"
+
+      if (toRepeat > 1) return "plural"
+    }
+
     try {
       const researchRDM = await this.client.controllers.economy.research(author, toRepeat)
 
@@ -33,7 +41,7 @@ module.exports = class Research extends Command {
         case "INVALID_MATERIALS":
           embed
             .setColor(Constants.ERROR_COLOR)
-            .setDescription(t("commands:research", { rg: e.rg, fg: e.fg, requiredGems: e.requiredGems, requiredFragments: e.requiredFragments }))
+            .setDescription(t("commands:research", { rg: e.rg, fg: e.fg, requiredGems: e.requiredGems, requiredFragments: e.requiredFragments, toRepeat, pluralSingular: pluralSingularCheck }))
           break
         default:
           console.error(e)

@@ -421,7 +421,7 @@
     "invalidMaterial": "Materias inválidos",
     "youNeed": "Você precisa de **{{howMuchGems}}/{{rg}}** gemas e **{{howMuchFragments}}/{{fg}}** fragmentos para fazer uma pesquisa.",
     "title": "Pesquisa",
-    "howMany": "Você pesquisou e encontrou **{{research}}** pontos de pesquisa."
+    "howMany": "Você pesquisou **{{toRepeat}}** $t(commons:{{pluralSingular}})  e encontrou **{{research}}** pontos de pesquisa."
   },
   "mute": {
     "commandDescription": "Mute um usuário por tempo inderteminado",

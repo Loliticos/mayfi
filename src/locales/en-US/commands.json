@@ -421,7 +421,7 @@
     "invalidMaterial": "Invalid materials",
     "youNeed": "VYou need **{{howMuchGems}}/{{rg}}** gems and **{{howMuchFragments}}/{{fg}}** fragments in order to do a research.",
     "title": "Research",
-    "howMany": "You researched and found **{{research}}** points of research."
+    "howMany": "You researched **{{toRepeat}}** $t(commons:{{pluralSingular}}) and found **{{research}}** points of research."
   },
   "mute": {
     "commandDescription": "Mute  an user for inderteminated time.",

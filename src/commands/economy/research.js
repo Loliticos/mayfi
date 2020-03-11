@@ -7,7 +7,7 @@ module.exports = class Research extends Command {
       aliases: ['pesquisa', 'pesquisar', 'researches'],
       category: 'economy',
       cooldown: 5,
-      requirements: { databaseOnly: true, }
+      requirements: { databaseOnly: true }
     }, client)
   }
 

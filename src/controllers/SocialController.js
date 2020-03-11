@@ -69,7 +69,7 @@ module.exports = class SocialController extends Controller {
   }
 
   async personalText (_user) {
-    return this._users.findOne({_id: _user})
+    return await this._users.findOne({_id: _user})
   }
 
   async leaderboard (value, size = 5) {

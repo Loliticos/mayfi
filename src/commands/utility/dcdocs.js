@@ -11,7 +11,7 @@ module.exports = class DCDocs extends Command {
       aliases: ['djs-docs', 'akairo-docs'],
       category: 'utility',
       parameters: [{
-        type: 'string', full: false, required: true, missingError: "commands:djsdocs.invalidDocument"
+        type: 'string', full: false, required: true, missingError: "commands:dcdocs.invalidDocument"
       }, {
         type: "string", full: true, required: false
       }]
@@ -29,7 +29,7 @@ module.exports = class DCDocs extends Command {
     if (!embed) {
       embed
         .setColor(Constants.ERROR_COLOR)
-        .setTitle(t("commands:djsdocs.invalidDocument"))
+        .setTitle(t("commands:dcdocs.invalidDocument"))
       return channel.send(embed)
     }
 

@@ -34,7 +34,7 @@ module.exports = class Remind extends Command {
           
         channel.send(        
           embed
-            .setTitle(t("commands:remind.remindYou", { user, time: ms(date) }))
+            .setTitle(t("commands:remind.remindYou", { author, time: ms(date) }))
         )
       })
 

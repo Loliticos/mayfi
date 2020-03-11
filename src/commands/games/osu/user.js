@@ -11,7 +11,8 @@ module.exports = class OsuUser extends Command {
       parameters: [{
         type: 'string', 
         full: true,
-        required: true
+        required: true,
+        missingError: "commands:osu.subcommands.user.userNotFound"
       }]
     }, client)
   }
@@ -34,6 +35,9 @@ module.exports = class OsuUser extends Command {
       .setDescriptionFromBlockArray([
         [
           `:flag_${user.country.toLowerCase()}: **[${user.username}](https://osu.ppy.sh/u/${user.user_id})** (${t(`commands:${this.path}.level`, { number: Math.floor(user.level) })})`
+        ],
+        [
+          `**${user.count_rank_ssh}** ${Constants.OSU_SSH}, **${user.count_rank_ss}** ${Constants.OSU_SS}, **${user.count_rank_sh}** ${Constants.OSU_SH}, **${user.count_rank_s}** ${Constants.OSU_S}, **${user.count_rank_a}** ${Constants.OSU_A}`
         ]
       ])
       .setColor(this.parentCommand.OSU_COLOR)

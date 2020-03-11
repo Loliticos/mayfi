@@ -20,6 +20,8 @@ module.exports = class DCDocs extends Command {
 
   async run ({ channel, author, t, message, language}, query, source = "stable") {
 
+    console.log(query)
+
     if (!SOURCES.includes(source)) source = "stable"
         
     const queryString = qs.stringify({ src: source, q: query.split(" ").join(" ") })

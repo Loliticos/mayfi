@@ -1,10 +1,10 @@
-const { Command, MayfiEmbed } = require('../../')
+const { Command, MayfiEmbed } = require('../../../')
 
 module.exports = class Osu extends Command {
   constructor (client) {
     super({
       name: 'osu',
-      category: 'games',
+      category: 'games'
     }, client)
   }
 

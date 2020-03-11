@@ -35,6 +35,7 @@ module.exports = class Rep extends Command {
             .setDescription(t("commands:rep.youCanGiveAgain", { cooldown: e.formattedCooldown }))
           break
         default:
+          console.error(e)
           embed
             .setColor(Constants.ERROR_COLOR)
             .setTitle(t("errors:generic"))

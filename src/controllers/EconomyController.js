@@ -11,11 +11,14 @@ class BonusCooldownError extends Error {
 }
 
 class ResearchError extends Error {
-  constructor (gems, fragments) {
+  constructor (required, gems, fragments) {
     super("INVALID_MATERIALS")
 
-    this.gems = gems
-    this.fragments = fragments
+    this.rg = required * 10
+    this.fg = required * 15
+
+    this.requiredGems = 10 * required - gems
+    this.requiredFragments = 15 * required - fragments
   }
 }
 
@@ -90,14 +93,14 @@ module.exports = class EconomyController extends Controller {
     return { gems, money, fragments, researchesPoints }
   }
 
-  async research (_user) {
+  async research (_user, toRepeat = 1) {
     const user = await this._users.findOne({_id: _user.id})
 
-    if (user.gems < 10 || user.fragments < 15) throw new ResearchError(user.gems, user.fragments)
+    if (user.gems < 10 * toRepeat || user.fragments < 15 * toRepeat) throw new ResearchError(toRepeat, gems, fragments )
 
-    const researchRDM = Math.floor(1 + Math.random() * (23 - 1))
+    const researchRDM = Math.floor(1 + Math.random() * (23 * toRepeat - 1))
 
-    await this._users.updateOne({_id: _user.id}, { $inc: { gems: -10, fragments: -15, researchesPoints: researchRDM } })
+    await this._users.updateOne({_id: _user.id}, { $inc: { gems: -10 * toRepeat, fragments: -15 * toRepeat, researchesPoints: researchRDM } })
 
     return researchRDM
   }

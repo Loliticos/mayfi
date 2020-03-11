@@ -7,15 +7,19 @@ module.exports = class Research extends Command {
       aliases: ['pesquisa', 'pesquisar', 'researches'],
       category: 'economy',
       cooldown: 5,
-      requirements: { databaseOnly: true }
+      requirements: { databaseOnly: true },
+      parameters: [{
+        type: 'string', 
+        full: false
+      }]
     }, client)
   }
 
-  async run ({ channel, author, t }) {
+  async run ({ channel, author, t }, toRepeat = 1) {
     const embed = new MayfiEmbed(author)
 
     try {
-      const researchRDM = await this.client.controllers.economy.research(author)
+      const researchRDM = await this.client.controllers.economy.research(author, toRepeat)
 
       console.log(researchRDM)
 
@@ -28,7 +32,7 @@ module.exports = class Research extends Command {
         case "INVALID_MATERIALS":
           embed
             .setColor(Constants.ERROR_COLOR)
-            .setDescription(t("commands:research", { howMuchGems: 10 - e.gems, howMuchFragments: 15 - e.fragments }))
+            .setDescription(t("commands:research", { rg: e.rg, fg: e.fg, requiredGems: e.requiredGems, requiredFragments: e.requiredFragments }))
           break
         default:
           console.error(e)

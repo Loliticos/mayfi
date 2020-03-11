@@ -7,7 +7,7 @@ module.exports = class Commit extends Command {
       aliases: ['change', 'trocar'],
       category: 'economy',
       cooldown: 3,
-      requirements: { databaseOnly: true, },
+      requirements: { databaseOnly: true },
       parameters: [{
         type: 'string', 
         required: true,

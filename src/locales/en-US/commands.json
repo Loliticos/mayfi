@@ -419,7 +419,7 @@
   "research": {
     "commandDescription": "Do a research and get researches points!",
     "invalidMaterial": "Invalid materials",
-    "youNeed": "VYou need **{{howMuchGems}}/10** gems and **{{howMuchFragments}}/15** fragments in order to do a research.",
+    "youNeed": "VYou need **{{howMuchGems}}/{{rg}}** gems and **{{howMuchFragments}}/{{fg}}** fragments in order to do a research.",
     "title": "Research",
     "howMany": "You researched and found **{{research}}** points of research."
   },

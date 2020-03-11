@@ -20,17 +20,11 @@ module.exports = class DCDocs extends Command {
 
   async run ({ channel, author, t, message, language}, query, source = "stable") {
 
-    console.log(query)
-
     if (!SOURCES.includes(source)) source = "stable"
         
     const queryString = qs.stringify({ src: source, q: query })
 
-    console.log(queryString)
-
     const embed = await fetch(`https://djsdocs.sorta.moe/v2/embed?${queryString}`).then(res => res.json())
-
-    console.log(embed)
 
     if (!embed) {
       embed

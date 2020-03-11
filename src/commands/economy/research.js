@@ -10,6 +10,7 @@ module.exports = class Research extends Command {
       requirements: { databaseOnly: true },
       parameters: [{
         type: 'string', 
+        required: false,
         full: false
       }]
     }, client)

@@ -11,12 +11,12 @@ class BonusCooldownError extends Error {
 }
 
 class ResearchError extends Error {
-  constructor (required, gems, fragments) {
+  constructor (information) {
     super("INVALID_MATERIALS")
 
-    this.required = required
-    this.gems = gems
-    this.fragments = gems
+    this.required = information.required
+    this.gems = information.gems
+    this.fragments = information.gems
   }
 }
 
@@ -97,7 +97,7 @@ module.exports = class EconomyController extends Controller {
     const gemsCheck = user.gems < 10 * toRepeat
     const fragmentsCheck = user.fragments < 15 * toRepeat
 
-    if (gemsCheck || fragmentsCheck) throw new ResearchError(toRepeat, user.gems, user.fragments)
+    if (gemsCheck || fragmentsCheck) throw new ResearchError({toRepeat, user.gems, user.fragments})
 
     const researchRDM = Math.floor(1 + Math.random() * (23 * toRepeat - 1))
 

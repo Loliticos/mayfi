@@ -26,6 +26,8 @@ module.exports = class DCDocs extends Command {
         
     const queryString = qs.stringify({ src: source, q: query })
 
+    console.log(queryString)
+
     const embed = await fetch(`https://djsdocs.sorta.moe/v2/embed?${queryString}`).then(res => res.json())
 
     if (!embed) {

@@ -97,7 +97,7 @@ module.exports = class EconomyController extends Controller {
     const gemsCheck = user.gems < 10 * toRepeat
     const fragmentsCheck = user.fragments < 15 * toRepeat
 
-    if (gemsCheck || fragmentsCheck) throw new ResearchError({toRepeat, user.gems, user.fragments})
+    if (gemsCheck || fragmentsCheck) throw new ResearchError({toRepeat, gems: user.gems, fragments: user.fragments})
 
     const researchRDM = Math.floor(1 + Math.random() * (23 * toRepeat - 1))
 

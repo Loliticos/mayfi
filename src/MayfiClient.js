@@ -86,14 +86,13 @@ module.exports = class MayfiClient extends Client {
         if (Date.now() > time) {
           member.send(client.remind[i].reason)
 
-          delete this.remind[i]
-
           await fs.writeFile("../remind.json", JSON.stringify(client.remind), err => {
             if (err) console.error
 
             console.log(`I reminded the user ${member.tag} about ${this.remind[i].reason}`)
-          })
 
+            delete this.remind[i]
+          })
         }
       }
     }, 5000)

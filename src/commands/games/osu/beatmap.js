@@ -12,7 +12,6 @@ module.exports = class BeatmapUser extends Command {
       parameters: [{
         type: 'string', 
         full: true,
-        required: true,
         missingError: "commands:osu.subcommands.beatmap.beatmapNotFound"
       }]
     }, client)
@@ -28,14 +27,14 @@ module.exports = class BeatmapUser extends Command {
     })
 
     try {
-      const beatmap = await osu.apiCall('/get_beatmap', { b: _beatmap, limit: 1 }).then(b => b[0])
+      const beatmap = await osuApi.getBeatmaps({ b: _beatmap }).then(b => b[0])
 
       moment.locale(language)
 
       const rate = ((parseInt(data.passcount) / parseInt(data.playcount)) * 100 || 0).toFixed(1)
 
       embed
-        .setAuthor("!osu", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Osu%21Logo_%282015%29.png/600px-Osu%21Logo_%282015%29.png")
+        .setAuthor("!osu", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Osu%21Logo_%282015%29.png/600px-Osu%21Logo_%282015%29.png", `https://osu.ppy.sh/b/${beatmap.beatmap_id}`)
         .setTitle(`${beatmap.artist} - ${beatmap.title} (${beatmap.version})`)
         .setDescriptionFromBlockArray([
           [

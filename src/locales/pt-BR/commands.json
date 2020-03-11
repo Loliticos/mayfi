@@ -614,8 +614,9 @@
         "joined": "Criou a conta",
         "timePlayed": "Jogou por",
         "globalRanking": "Ranking global",
+        "regionalRanking": "Ranking regional",
         "hitAccuracy": "Acerto de hits",
-        "userNotFound": "Não foi possível encontrar o usuário informado."
+        "playerNotFound": "Não foi possível encontrar o usuário informado."
       }
     }
   }

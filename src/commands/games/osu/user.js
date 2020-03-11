@@ -47,8 +47,9 @@ module.exports = class OsuUser extends Command {
         ])
         .addField(t(`commands:${this.path}.joined`), `${moment(user.join_date).format('LLL')} (${moment(user.join_date).fromNow()})`)
         .addField(t(`commands:${this.path}.timePlayed`), `${moment.duration(user.total_seconds_played * 1000).format('d[d] h[h] m[m] s[s]')}`)
-        .addField(t(`commands:${this.path}.globalRanking`), t(`commands:${this.path}.globalRanking`, { rank: user.pp_rank }))
-        .addField(t(`commands:${this.path}.hitAccuracy`), Math.floor(user.accuracy))
+        .addField(t(`commands:${this.path}.globalRanking`), `#${user.pp_rank}`)
+        .addField(t(`commands:${this.path}.regionalRanking`), `#${user.pp_country_rank}`)
+        .addField(t(`commands:${this.path}.hitAccuracy`), `${Math.floor(user.accuracy)}%`)
         .setColor(this.parentCommand.OSU_COLOR)
       channel.send(embed)
     } catch (e) {

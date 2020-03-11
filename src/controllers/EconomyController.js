@@ -17,8 +17,8 @@ class ResearchError extends Error {
     this.rg = required * 10
     this.fg = required * 15
 
-    this.requiredGems = 10 * required - gems
-    this.requiredFragments = 15 * required - fragments
+    this.requiredGems = this.rg - gems
+    this.requiredFragments = this.fg - fragments
   }
 }
 
@@ -99,12 +99,12 @@ module.exports = class EconomyController extends Controller {
     const gemsCheck = user.gems < 10 * toRepeat
     const fragmentsCheck = user.fragments < 15 * toRepeat
 
-    if (gemsCheck || fragmentsCheck) throw new ResearchError(toRepeat, user.gems, user.fragments )
+    if (gemsCheck || fragmentsCheck) throw new ResearchError(toRepeat, user.gems, user.fragments)
 
     const researchRDM = Math.floor(1 + Math.random() * (23 * toRepeat - 1))
 
     await this._users.updateOne({_id: _user.id}, { $inc: { gems: -10 * toRepeat, fragments: -15 * toRepeat, researchesPoints: researchRDM } })
 
-    return researchRDM
+    return { researchRDM }
   }
 }

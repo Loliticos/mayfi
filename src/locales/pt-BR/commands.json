@@ -611,7 +611,9 @@
         "commandDescription": "Veja informações sobre um usuário no jogo Osu",
         "commandUsage": "<usuário>",
         "userNotFound": "Você precisa me informar um usuário válido.",
-        "level": "Level **{{number}}**"
+        "level": "Level **{{number}}**",
+        "joined": "Criou a conta",
+        "timePlayed": "Jogou por"
       }
     }
   }

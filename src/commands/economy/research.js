@@ -30,8 +30,6 @@ module.exports = class Research extends Command {
     try {
       const researchRDM = await this.client.controllers.economy.research(author, toRepeat)
 
-      console.log(researchRDM)
-
       embed
         .setTitle(t("commands:research.title"))
         .setDescription(t("commands:research.howMany", { research: researchRDM, toRepeat, pluralSingular: pluralSingularCheck() }))

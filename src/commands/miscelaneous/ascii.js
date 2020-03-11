@@ -14,6 +14,7 @@ module.exports = class Ascii extends Command {
   }
 
   async run ({ channel, t, author }, text) {
+    const embed = new MayfiEmbed(author)
     try {
       const result = figlet.textSync(text, {
         font: 'Big',
@@ -21,7 +22,11 @@ module.exports = class Ascii extends Command {
         verticalLayout: 'universal smushing'
       })
 
-      channel.send(`\`\`\`${result}\`\`\``)
+      channel.send(
+        embed
+          .setTitle("Ascii")
+          .setDescription(`\`\`\`${result}\`\`\``)
+      )
     } catch (err) {
       throw new CommandError(`${t("errors:generic")}\n \`${err}\``)
     }

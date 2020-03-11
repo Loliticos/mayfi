@@ -30,6 +30,8 @@ module.exports = class DCDocs extends Command {
 
     const embed = await fetch(`https://djsdocs.sorta.moe/v2/embed?${queryString}`).then(res => res.json())
 
+    console.log(embed)
+
     if (!embed) {
       embed
         .setColor(Constants.ERROR_COLOR)

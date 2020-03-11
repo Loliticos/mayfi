@@ -17,6 +17,10 @@ class ResearchError extends Error {
     this.rg = required * 10
     this.fg = required * 15
 
+    this.required = required
+    this.gems = gems
+    this.fragments = gems
+
     this.requiredGems = this.rg - gems
     this.requiredFragments = this.fg - fragments
   }
@@ -105,6 +109,6 @@ module.exports = class EconomyController extends Controller {
 
     await this._users.updateOne({_id: _user.id}, { $inc: { gems: -10 * toRepeat, fragments: -15 * toRepeat, researchesPoints: researchRDM } })
 
-    return { researchRDM }
+    return researchRDM
   }
 }

@@ -39,7 +39,9 @@ module.exports = class Research extends Command {
         case "INVALID_MATERIALS":
           embed
             .setColor(Constants.ERROR_COLOR)
-            .setDescription(t("commands:research", { rg: e.rg, fg: e.fg, requiredGems: e.requiredGems, requiredFragments: e.requiredFragments }))
+            .setDescription(t("commands:research", { 
+              rg: e.required * 10, fg: e.required * 10, requiredGems: e.required * 10 - e.gems, requiredFragments: e.required * 15 - e.fragments 
+            }))
           break
         default:
           console.error(e)

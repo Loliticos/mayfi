@@ -27,7 +27,7 @@ module.exports = class BeatmapUser extends Command {
     })
 
     try {
-      const beatmap = await osuApi.getBeatmaps({ b: _beatmap }).then(b => b[0])
+      const beatmap = await osu.getBeatmaps({ b: _beatmap }).then(b => b[0])
 
       moment.locale(language)
 

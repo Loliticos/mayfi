@@ -27,7 +27,7 @@ module.exports = class BeatmapUser extends Command {
     })
 
     try {
-      const beatmapData = await osu.getBeatmaps({ b: _beatmap })
+      const beatmapData = await osu.apiCall("/get_beatmaps", { b: _beatmap })
 
       const beatmap = beatmapData[0]
 

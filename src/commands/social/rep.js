@@ -36,7 +36,7 @@ module.exports = class Rep extends Command {
           break
         default:
           embed
-            .setColor(Constants)
+            .setColor(Constants.ERROR_COLOR)
             .setTitle(t("errors:generic"))
       }
     }

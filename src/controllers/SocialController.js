@@ -48,7 +48,7 @@ module.exports = class SocialController extends Controller {
   }
 
   async rep (_from, _to) {
-    const { lastRep } = this._users.findOne({_id: _from.id})
+    const { lastRep } = await this._users.findOne({_id: _from.id})
 
     if (checkRep(lastRep)) throw new RepCooldownError(lastRep, this.formatRepTime(lastRep))
 

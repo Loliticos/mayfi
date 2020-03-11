@@ -604,7 +604,7 @@
     "invalidDocument": "Você precisa informar um documento válido."
   },
   "osu": {
-    "commandDescription": "Veja informações sobre dados no osu.",
+    "commandDescription": "Veja informações sobre dados de usuário ou de beatmaps no jogo Osu.",
     "commandUsage": "<sub-comandos>",
     "subcommands": {
       "user": {

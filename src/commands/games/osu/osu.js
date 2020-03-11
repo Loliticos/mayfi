@@ -6,6 +6,7 @@ module.exports = class Osu extends Command {
       name: 'osu',
       category: 'games'
     }, client)
+    this.OSU_COLOR = '#E7669F'
   }
 
   run ({ channel, author, t}) {

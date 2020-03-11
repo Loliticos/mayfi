@@ -28,7 +28,7 @@ module.exports = class OsuUser extends Command {
     })
 
     try {
-      const userData = await osu.apiCall('/get_user', { u: _user })
+      const userData = await osuApi.getUser({ u: _user })
 
       const user = userData[0]
 

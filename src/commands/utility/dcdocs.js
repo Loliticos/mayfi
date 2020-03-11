@@ -39,6 +39,6 @@ module.exports = class DCDocs extends Command {
       return channel.send(embed)
     }
 
-    channel.send(embed)
+    channel.send({embed})
   } 
 }

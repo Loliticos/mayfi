@@ -11,18 +11,18 @@
 	"no": "No",
 	"moderation": {
 		"messages": {
-			"punnedByUser": "Punido pelo usuário",
-			"reason": "Motivo",
-			"noReason": "Nenhum motivo especificado",
-			"time": "Duração"
+			"punnedByUser": "Punned by the user",
+			"reason": "Reason",
+			"noReason": "No reason given.",
+			"time": "Duration"
 		},
 		"types": {
-			"warn": "Avisado",
-			"mute": "Silenciado",
-			"ban": "Banido",
-			"softban": "Soft-banido",
-			"kick": "Expulso",
-			"unmute": "Desmutado"
+			"warn": "Warned",
+			"mute": "Muted",
+			"ban": "Banned",
+			"softban": "Softbanned",
+			"kick": "Kicked",
+			"unmute": "Unmuted"
 		}
 	},
 	"plural": "times",

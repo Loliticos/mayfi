@@ -34,14 +34,14 @@ module.exports = class Research extends Command {
 
       embed
         .setTitle(t("commands:research.title"))
-        .setDescription(t("commands:research.howMany", { research: researchRDM }))
+        .setDescription(t("commands:research.howMany", { research: researchRDM, toRepeat, pluralSingular: pluralSingularCheck }))
  
     } catch(e) {
       switch (e.message) {
         case "INVALID_MATERIALS":
           embed
             .setColor(Constants.ERROR_COLOR)
-            .setDescription(t("commands:research", { rg: e.rg, fg: e.fg, requiredGems: e.requiredGems, requiredFragments: e.requiredFragments, toRepeat, pluralSingular: pluralSingularCheck }))
+            .setDescription(t("commands:research", { rg: e.rg, fg: e.fg, requiredGems: e.requiredGems, requiredFragments: e.requiredFragments }))
           break
         default:
           console.error(e)

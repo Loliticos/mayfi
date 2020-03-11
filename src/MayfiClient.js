@@ -40,7 +40,7 @@ module.exports = class MayfiClient extends Client {
 
   async checkMute (client) {
     this.setInterval(async () => {
-      for (let i in client.remind) {
+      for (let i in client.mutes) {
         const guild = client.guilds.get(client.mutes[i].guild)
 
         if (!guild) return
@@ -76,7 +76,7 @@ module.exports = class MayfiClient extends Client {
   async checkReminds (client) {
     this.setInterval(async () => {
       for (let i in client.remind) {
-        const guild = client.guilds.get(client.mutes[i].guild)
+        const guild = client.guilds.get(client.remind[i].guild)
 
         if (!guild) return
 
@@ -84,11 +84,11 @@ module.exports = class MayfiClient extends Client {
         const member = guild.members.get(i)
 
         if (Date.now() > time) {
-          member.send(this.remind[i].reason)
+          member.send(client.remind[i].reason)
 
           delete this.remind[i]
 
-          await fs.writeFile("../remind.json", JSON.stringify(client.mutes), err => {
+          await fs.writeFile("../remind.json", JSON.stringify(client.remind), err => {
             if (err) console.error
 
             console.log(`I reminded the user ${member.tag} about ${this.remind[i].reason}`)

@@ -34,7 +34,7 @@ module.exports = class Research extends Command {
 
       embed
         .setTitle(t("commands:research.title"))
-        .setDescription(t("commands:research.howMany", { research: researchRDM, toRepeat, pluralSingular: pluralSingularCheck }))
+        .setDescription(t("commands:research.howMany", { research: researchRDM, toRepeat, pluralSingular: pluralSingularCheck() }))
  
     } catch(e) {
       switch (e.message) {

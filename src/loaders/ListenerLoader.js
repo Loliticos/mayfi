@@ -9,7 +9,7 @@ module.exports = class ListenerLoader {
   load () {
     try {
       console.log("Events are initializing")
-      this.client.events = new Collection();
+      this.client.events = new Collection()
       this.initializeEvents()
       return true
     } catch (err) {

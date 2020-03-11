@@ -93,9 +93,7 @@ module.exports = class EconomyController extends Controller {
   async research (_user) {
     const user = await this._users.findOne({_id: _user.id})
 
-    if (user.gems < 10 || user.fragments < 15) {
-      throw new ResearchError(user.gems, user.fragments)
-    }
+    if (user.gems < 10 || user.fragments < 15) throw new ResearchError(user.gems, user.fragments)
 
     const researchRDM = Math.floor(1 + Math.random() * (23 - 1))
 

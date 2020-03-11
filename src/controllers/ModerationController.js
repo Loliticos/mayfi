@@ -1,4 +1,5 @@
 const { Controller, MayfiEmbed } = require('../')
+const ms = require("ms")
 
 module.exports = class ModerationController extends Controller {
   constructor (client) {
@@ -43,7 +44,7 @@ module.exports = class ModerationController extends Controller {
       .setThumbnail(informationObject.staffer.displayAvatarURL)
       .addField(t("commons:moderation.messages.reason"), informationObject.reason ? informationObject.reason : t("commons:moderation.messages.noReason"))
 
-    if (informationObject.type === "mute") embed.addField(t("commons:moderation.messages.time"), informationObject.time)
+    if (informationObject.type === "mute") embed.addField(t("commons:moderation.messages.time"), ms(informationObject.time))
 
     channel.send(embed)
 

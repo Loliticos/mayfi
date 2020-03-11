@@ -1,14 +1,4 @@
-const _ = require('lodash')
-
 module.exports = class DatabaseCheck {
-
-  static _guilds (client) {
-    return client.database.guilds
-  }
-
-  static _users (client) {
-  	return client.database.users
-  }
 
   static checkGuild (client, guild, guildID) {
 	if(!client.database) return false

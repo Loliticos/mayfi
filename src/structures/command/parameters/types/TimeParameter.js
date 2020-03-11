@@ -13,6 +13,8 @@ module.exports = class TimeParameter extends Parameter {
   static parse (arg, { t }) {
     if(!arg) return
 
+   	console.log(arg)
+
     let time = ms(arg)
 
 	if (this.acceptDate && !time) {
@@ -20,6 +22,8 @@ module.exports = class TimeParameter extends Parameter {
 
 		time = date.getTime()
 	}
+
+	console.log(time)
 
     if(!time) throw new CommandError(t("errors:invalidTime"))
     return time

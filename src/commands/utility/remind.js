@@ -10,7 +10,7 @@ module.exports = class Remind extends Command {
       category: 'utility',
       requirements: { guildOnly: false },
       parameters: [{
-        type: "time", full: true, acceptDate: true, required: true, missingError: "commands:remind.invalidDate"
+        type: "time", full: false, acceptDate: true, required: true, missingError: "commands:remind.invalidDate"
       }, {
         type: "string", full: true, required: true
       }]

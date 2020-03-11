@@ -40,7 +40,7 @@ module.exports = class Research extends Command {
           embed
             .setColor(Constants.ERROR_COLOR)
             .setDescription(t("commands:research", { 
-              rg: e.required * 10, fg: e.required * 10, requiredGems: e.required * 10 - e.gems, requiredFragments: e.required * 15 - e.fragments 
+              rg: e.required * 10, fg: e.required * 15, requiredGems: e.required * 10 - e.gems, requiredFragments: e.required * 15 - e.fragments 
             }))
           break
         default:

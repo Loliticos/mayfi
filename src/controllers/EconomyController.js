@@ -14,15 +14,9 @@ class ResearchError extends Error {
   constructor (required, gems, fragments) {
     super("INVALID_MATERIALS")
 
-    this.rg = required * 10
-    this.fg = required * 15
-
     this.required = required
     this.gems = gems
     this.fragments = gems
-
-    this.requiredGems = this.rg - gems
-    this.requiredFragments = this.fg - fragments
   }
 }
 

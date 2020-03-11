@@ -608,7 +608,7 @@
     "commandUsage": "<sub-comandos>",
     "subcommands": {
       "user": {
-        "commandDescription": "Veja informações sobre um usuário no jogo Osu",
+        "commandDescription": "Veja informações sobre um usuário no jogo Osu.",
         "commandUsage": "<usuário>",
         "level": "Level **{{number}}**",
         "joined": "Criou a conta",
@@ -616,7 +616,12 @@
         "globalRanking": "Ranking global",
         "regionalRanking": "Ranking regional",
         "hitAccuracy": "Acerto de hits",
-        "playerNotFound": "Não foi possível encontrar o usuário informado."
+        "playerNotFound": "Você precisa me informar um usuário válido."
+      },
+      "beatmap": {
+        "commandDescription": "Veja informações sobre um beatmap no jogo Osu.",
+        "commandUsage": "<beatmap>",
+        "beatmapNotFound": "Você precisa me informar um beatmap válido."
       }
     }
   }

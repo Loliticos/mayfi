@@ -16,7 +16,7 @@ module.exports = class OsuUser extends Command {
     }, client)
   }
 
-  async run ({ author, t, channel, guild }, userInfo) {
+  async run ({ author, t, channel, guild }, _user) {
     const embed = new MayfiEmbed(author)
 
     const osu = new Osu.Api(process.env.OSU_API_KEY, {
@@ -25,9 +25,9 @@ module.exports = class OsuUser extends Command {
         parseNumeric: false 
     })
 
-    const userInfo = await osu.apiCall('/get_user', { u: _user })
+    const userData = await osu.apiCall('/get_user', { u: _user })
 
-    const user = userInfo[0]
+    const user = userData[0]
 
     embed
       .setAuthor("!osu", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Osu%21Logo_%282015%29.png/600px-Osu%21Logo_%282015%29.png")

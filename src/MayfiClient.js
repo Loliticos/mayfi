@@ -12,11 +12,9 @@ module.exports = class MayfiClient extends Client {
     this.initializeDatabase()
     this.initializeLoaders()
     this.checkMute(this)
-    this.checkReminds(this)
 
     this.database = this.databaseLoaded
     this.mutes = require("../mute.json")
-    this.remind = require("../remind.json")
 
 	}
 
@@ -68,31 +66,6 @@ module.exports = class MayfiClient extends Client {
             if (err) console.error
           })
 
-        }
-      }
-    }, 5000)
-  }
-
-  async checkReminds (client) {
-    this.setInterval(async () => {
-      for (let i in client.remind) {
-        const guild = client.guilds.get(client.remind[i].guild)
-
-        if (!guild) return
-
-        const time = client.remind[i].time
-        const member = guild.members.get(i)
-
-        if (Date.now() > time) {
-          member.send(client.remind[i].reason)
-
-          await fs.writeFile("../remind.json", JSON.stringify(client.remind), err => {
-            if (err) console.error
-
-            console.log(`I reminded the user ${member.tag} about ${this.remind[i].reason}`)
-
-            delete this.remind[i]
-          })
         }
       }
     }, 5000)

@@ -608,4 +608,8 @@
   },
   "shiba": {
     "commandDescription": "Montrez une jolie photo d'un shiba!"
+  },
+  "adorable": {
+    "commandDescription": "Montre comment tu es en ce moment."
   }
+}

@@ -626,5 +626,8 @@
   },
   "shiba": {
     "commandDescription": "Show a random image of a shiba!"
+  },
+  "adorable": {
+    "commandDescription": "Shows how you are in this moment."
   }
 }

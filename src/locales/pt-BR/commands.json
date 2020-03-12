@@ -627,5 +627,8 @@
   },
   "shiba": {
     "commandDescription": "Veja fotos fofas de um shiba!"
+  },
+  "adorable": {
+    "commandDescription": "Mostra como você está nesse momento."
   }
 }

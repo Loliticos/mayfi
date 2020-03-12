@@ -624,5 +624,8 @@
         "beatmapNotFound": "Você precisa me informar um beatmap válido."
       }
     }
+  },
+  "shiba": {
+    "commandDescription": "Veja fotos fofas de um shiba!"
   }
 }

@@ -583,4 +583,29 @@
     "commandUsage": "<info pour rechercher> [stable|master|rpc|commando|akairo|akairo-master|11.5-dev|collection]",
     "invalidDocument": "Vous devez me donner une information de document à rechercher."
   }
-}
+},
+  "osu": {
+    "commandDescription": "Shows informations about a user or a betmap in the game Osu.",
+    "commandUsage": "<sub-commands>",
+    "subcommands": {
+      "user": {
+        "commandDescription": "Shows informations about a player in Osu.",
+        "commandUsage": "<player>",
+        "level": "Level **{{number}}**",
+        "joined": "Created the account",
+        "timePlayed": "Played a total of",
+        "globalRanking": "Ranking global",
+        "regionalRanking": "Ranking regional",
+        "hitAccuracy": "Hit accuracy",
+        "playerNotFound": "You need to give me a valid Osu player."
+      },
+      "beatmap": {
+        "commandDescription": "Shows informations about a beatmap in Osu.",
+        "commandUsage": "<beatmap>",
+        "beatmapNotFound": "You need to give me a valid beatmap."
+      }
+    }
+  },
+  "shiba": {
+    "commandDescription": "Montrez une jolie photo d'un shiba!"
+  }

@@ -623,5 +623,8 @@
         "beatmapNotFound": "You need to give me a valid beatmap."
       }
     }
+  },
+  "shiba": {
+    "commandDescription": "Show a random image of a shiba!"
   }
 }

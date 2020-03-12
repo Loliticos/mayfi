@@ -9,6 +9,4 @@ assignees: ''
 
 **Feature**
 
-**Why we should accept it**
-
 **Referencial links (API ETC)**

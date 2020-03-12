@@ -1,16 +1,14 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Feature request
+about: Suggest an idea for this project
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-**Suggestion**
+**Feature**
 
 **Why we should accept it**
-
-**How it would work**
 
 **Referencial links (API ETC)**

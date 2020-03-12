@@ -2,12 +2,11 @@
 ---
 name: Suggestion
 about: Suggest a idea for an implementation in mayfi
-
 ---
 
 **Suggestion**
 
-**Why**
+**Why we should accept it**
 
 **How it would work**
 

@@ -1,7 +1,7 @@
 
 ---
-name: Suggestion
-about: Suggest a idea for an implementation in mayfi
+name: Feature request
+about: Suggest an idea for this project
 ---
 
 **Suggestion**

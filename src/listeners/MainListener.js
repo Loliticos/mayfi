@@ -1,4 +1,4 @@
-const { EventHandler, CommandContext }  = require('../')
+const { EventHandler, CommandContext, MayfiEmbed }  = require('../')
 const DatabaseCheck = require("../utils/DatabaseCheck.js")
 
 module.exports = class ClientOnMessage extends EventHandler {
@@ -40,8 +40,11 @@ module.exports = class ClientOnMessage extends EventHandler {
         if (!message.channel.permissionsFor(message.guild.me).has("SEND_MESSAGES")) {
             if (!message.guild.owner || guild.noPermissions === true) return
 
-            message.guild.owner.send(`:flag_en: I don't have the permission **"SEND_MESSAGES"** on the guild **${message.guild.id}**, please give me this permission so i'm able to send messages.`)
-
+            message.guild.owner.send(
+                new MayfiEmbed(message.guild.owner)
+                .setTitle("An error occurred")
+                .setDescription(`:flag_us: Take note that i need the permission **"SEND_MESSAGES"** in order to send messages, please consider adding me this permission.`)
+                
             await this.client.database.guilds.updateOne({_id: message.guild.id}, { noPermissions: true })
         }
 

@@ -32,18 +32,18 @@ module.exports = class ClientOnMessage extends EventHandler {
         if(user && user.blacklisted) return   
         const language = guild ? guild.language : "en-US"
 
-        if (!message.channel.permissionsFor(this.client).has("SEND_MESSAGES")) {
+        const cmd = fullCmd[0].toLowerCase().trim()
+        const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))
+        
+        if(!command) return
+
+        if (!message.channel.permissionsFor(message.guild.me).has("SEND_MESSAGES")) {
             if (!message.guild.owner || guild.noPermissions === true) return
 
             message.guild.owner.send(`:flag_en: I don't have the permission **"SEND_MESSAGES"** on the guild **${message.guild.id}**, please give me this permission so i'm able to send messages.`)
 
             await this.client.database.guilds.updateOne({_id: message.guild.id}, { noPermissions: true })
         }
-
-        const cmd = fullCmd[0].toLowerCase().trim()
-        const command = this.client.commands.get(cmd) || this.client.commands.get(this.client.aliases.get(cmd))
-        
-        if(!command) return
 
         const context = new CommandContext({ 
             client: this.client,

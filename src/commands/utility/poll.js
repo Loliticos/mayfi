@@ -14,7 +14,7 @@ module.exports = class Poll extends Command {
 
   async run ({ channel, author, t, message}, question) {
     
-    message.delete()
+    if (message.deletable) await message.delete()
     
     const embed = new MayfiEmbed()
     

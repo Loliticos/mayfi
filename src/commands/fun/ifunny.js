@@ -13,6 +13,8 @@ module.exports = class Ifunny extends Command {
   async run ({ channel, author, t}) {
     const embed = new MayfiEmbed(author)
 
+    channel.startTyping()
+
     ifunny({ shuffle: false }, (err, res) => {
       if (err) console.error(err)
 
@@ -21,7 +23,7 @@ module.exports = class Ifunny extends Command {
       embed
         .setTitle(data.tags)
         .setImage(data.src)
-      channel.send(embed)
+      channel.send(embed).then(() => channel.stopTyping())
     })  
   }
 }

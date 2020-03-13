@@ -6,6 +6,7 @@ module.exports = class GuildLogging extends EventHandler {
     }
 
     run(guild) {
+      if (!guild.available) return
       const CHANNEL_ID = process.env.LOGGING_CHANNEL_ID
       console.log(`[Guilds] Added to "${guild.name}" (${guild.id})`)
       if (CHANNEL_ID) {

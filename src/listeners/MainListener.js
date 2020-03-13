@@ -44,7 +44,7 @@ module.exports = class ClientOnMessage extends EventHandler {
                 new MayfiEmbed(message.guild.owner)
                 .setTitle("An error occurred")
                 .setDescription(`:flag_us: Take note that i need the permission **"SEND_MESSAGES"** in order to send messages, please consider adding me this permission.`)
-                
+            )
             await this.client.database.guilds.updateOne({_id: message.guild.id}, { noPermissions: true })
         }
 

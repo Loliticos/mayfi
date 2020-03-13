@@ -32,7 +32,7 @@ module.exports = class ClientOnMessage extends EventHandler {
         if(user && user.blacklisted) return   
         const language = guild ? guild.language : "en-US"
 
-        if (!message.channel.permissionsFor(member).has("SEND_MESSAGES")) {
+        if (!message.channel.permissionsFor(this.client).has("SEND_MESSAGES")) {
             if (!message.guild.owner || guild.noPermissions === true) return
 
             message.guild.owner.send(`:flag_en: I don't have the permission **"SEND_MESSAGES"** on the guild **${message.guild.id}**, please give me this permission so i'm able to send messages.`)

@@ -248,7 +248,7 @@
     "repYourself": "Vous ne pouvez pas vous faire une réputation!",
     "repSuccess": "Vous avez donné **1** réputation à**{{user.tag}}**",
     "alreadyGave": "Vous ne pouvez pas donner une autre réputation",
-    "youCanGiveAgain": "Tu dois attendre `{{cooldown}}` avant d'envoyer une autre réputation.",
+    "youCanGiveAgain": "Tu dois attendre **{{cooldown}}** avant d'envoyer une autre réputation.",
     "typeAgain": "Oups ... Vous devez taper à nouveau cette commande :( L'utilisateur que vous venez de mentionner n'avait pas de base de données: c"
   },
   "reps": {

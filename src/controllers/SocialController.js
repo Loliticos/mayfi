@@ -52,8 +52,6 @@ module.exports = class SocialController extends Controller {
       throw new RepCooldownError(lastRep, moment.duration(REP_INTERVAL - (Date.now() - lastRep)).format('h[h] m[m] s[s]'))
     }
 
-    if (this.checkRep(lastRep)) throw new RepCooldownError(lastRep, this.formatRepTime(lastRep))
-
     await Promise.all([
       this._users.updateOne({_id: _from.id}, { lastRep: Date.now() }),
       this._users.updateOne({_id: _to.id}, { $inc: { reps: 1 } })

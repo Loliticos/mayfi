@@ -251,7 +251,7 @@
     "repYourself": "You cant give reputation to yourself!",
     "repSuccess": "You gave **1** reputation to **{{user.tag}}**",
     "alreadyGave": "You can't give another reputation",
-    "youCanGiveAgain": "You need to wait `{{cooldown}}` before sending another reputation",
+    "youCanGiveAgain": "You need to wait **{{cooldown}}** before sending another reputation",
     "typeAgain": "Oops... You need to type this command again :( The user that you just mentioned didn't had a database perfil :c"
   },
   "reps": {

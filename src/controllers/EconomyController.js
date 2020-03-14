@@ -41,7 +41,7 @@ class BonusController extends Controller {
   }
 
   async betflip (_user, amount, side) {
-    const user = this._users.findOne({ id: _user.id })
+    const user = await this._users.findOne({ id: _user.id })
 
     if (user.money < amount) throw new Error("NOT_ENOUGH_MONEY")
 
@@ -87,7 +87,7 @@ module.exports = class EconomyController extends Controller {
   }
 
   async transfer (_from, _to, amount) {
-    const from = this._users.findOne({_id: _from.id})
+    const from = await this._users.findOne({_id: _from.id})
 
     if (from.money < amount) throw new Error("NOT_ENOUGH_MONEY")
 

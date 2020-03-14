@@ -630,5 +630,14 @@
   },
   "adorable": {
     "commandDescription": "Mostra como você está nesse momento."
+  },
+  "weather": {
+    "commandDescription": "Veja informações sobre o clima de uma cidade.",
+    "commandUsage": "<nome da cidade>",
+    "invalidCity": "Você precisa me informar uma cidade válida.",
+    "temperature": "Temperatura da região",
+    "info": "Pôr do sol e nascer do sol",
+    "sunRise":" Nascer do sol",
+    "sunSet": "Pôr do sol"
   }
 }

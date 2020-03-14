@@ -1,6 +1,4 @@
-const { Collection } = require('discord.js');
 const { readdirSync } = require('fs');
-const chalk = require('chalk')
 const i18next = require('i18next');
 const translationBackend = require('i18next-node-fs-backend');
 
@@ -11,7 +9,7 @@ module.exports = class EventLoader  {
 
     load () {
         try {
-            console.log(chalk.green("Locales are initializing"))
+            console.log("Locales are initializing")
             this.initializeLocales()
             this.client.i18next = i18next
             return true

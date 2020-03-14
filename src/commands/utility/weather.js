@@ -21,7 +21,7 @@ module.exports = class Weather extends Command {
 
     console.log(info)
 
-    if (info.cod == "404") {
+    if (info.cod == "404" || !info.sys.country) {
       embed
         .setColor(Constants.ERROR_COLOR)
         .setTitle(t("commands:weather.invalidCity"))

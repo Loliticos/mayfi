@@ -629,5 +629,20 @@
   },
   "adorable": {
     "commandDescription": "Shows how you are in this moment."
+  },
+  "weather": {
+    "commandDescription": "See information about a city's climate.",
+    "commandUsage": "<city name>",
+    "invalidCity": "You need to give me a valid city name.",
+    "temperatureAndMore": "Temperature informations",
+    "temperature": "Temperature",
+    "feelsLike": "Feels like",
+    "temp_min": "Minimum temperature",
+    "temp_max": "Maximum temperature",
+    "humidity": "Humidity",
+    "info": "Informations",
+    "sunRise": "Sun rise",
+    "sunSet": "Sun set",
+    "windSpeed": "Wind speed"
   }
 }

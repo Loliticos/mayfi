@@ -29,6 +29,7 @@
     "transform-props": "^1.0.1",
     "turndown": "^5.0.3",
     "xkcd-node": "^1.0.0",
+    "yahoo-weather": "^2.2.2",
     "ytdl-core": "^2.0.0"
   },
   "devDependencies": {},

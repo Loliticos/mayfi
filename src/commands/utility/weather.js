@@ -28,14 +28,24 @@ module.exports = class Weather extends Command {
       return channel.send(embed)
     }
 
+    function convertTemperature (temperature) {
+      return (temperature - 273.15).toFixed(2)
+    }
+
     moment.locale(language)
 
     embed
       .setTitle(`:flag_${info.sys.country.toLowerCase()}: ${info.name} - ${info.weather[0].main}`)
       .setDescription(info.weather[0].description[0].toUpperCase() + info.weather[0].description.slice(1))
-      .addField(t("commands:weather.temperature"), (info.main.temp - 273.15).toFixed(2))
-      .addField(t("commands:weather.info"), `**${t("commands:weather.sunRise")}**: ${moment(info.sys.sunrise).format('LTS')}\n**${t("commands:weather.sunSet")}**: ${moment(info.sys.sunset).format('LTS')}`)
-
+      .addField(
+        t("commands:weather.temperatureAndMore"),
+        `**${t("commands:weather.temperature")}**: ${convertTemperature(info.main.temp)}°C
+        **${t("commands:weather.feelsLike")}**: ${convertTemperature(info.main.feels_like)}°C
+        **${t("commands:weather.temp_min")}**: ${convertTemperature(info.main.temp_min)}°C
+        **${t("commands:weather.temp_max")}**: ${convertTemperature(info.main.temp_max)}°C
+        **${t("commands:weather.humidity")}**: ${info.main.humidity}%
+        `, true)
+      .addField(t("commands:weather.info"), `**${t("commands:weather.sunRise")}**: ${moment(info.sys.sunrise).format('LTS')}\n**${t("commands:weather.sunSet")}**: ${moment(info.sys.sunset).format('LTS')}`, true)
     channel.send({embed})
   } 
 }

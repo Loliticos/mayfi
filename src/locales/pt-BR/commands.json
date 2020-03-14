@@ -635,7 +635,12 @@
     "commandDescription": "Veja informações sobre o clima de uma cidade.",
     "commandUsage": "<nome da cidade>",
     "invalidCity": "Você precisa me informar uma cidade válida.",
-    "temperature": "Temperatura da região",
+    "temperatureAndMore": "Informações de temperatura",
+    "temperature": "Temperatura",
+    "feelsLike": "Sensação de temperatura",
+    "temp_min": "Temperatura mínima",
+    "tem_max": "Temperatura máxima",
+    "humidity": "Umidade",
     "info": "Pôr do sol e nascer do sol",
     "sunRise":" Nascer do sol",
     "sunSet": "Pôr do sol"

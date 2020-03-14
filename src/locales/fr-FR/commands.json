@@ -547,7 +547,8 @@
     "tie": "Quelle honte ... Cravate."
   },
   "ifunny": {
-    "commandDescription": "Voir un mème aléatoire sur le site Web ifunny."
+    "commandDescription": "Voir un mème aléatoire sur le site Web ifunny.",
+    "imageNotLoading": "L'image ne se charge pas? Cliquez sur **[ici]({{link}})** pour afficher l'image."
   },
   "moderation": {
     "commandDescription": "Configurez le système de modération.",
@@ -611,5 +612,20 @@
   },
   "adorable": {
     "commandDescription": "Montre comment tu es en ce moment."
+  },
+  "weather": {
+    "commandDescription": "See information about a city's climate.",
+    "commandUsage": "<city name>",
+    "invalidCity": "You need to give me a valid city name.",
+    "temperatureAndMore": "Temperature informations",
+    "temperature": "Temperature",
+    "feelsLike": "Feels like",
+    "temp_min": "Minimum temperature",
+    "temp_max": "Maximum temperature",
+    "humidity": "Humidity",
+    "info": "Informations",
+    "sunRise": "Sun rise",
+    "sunSet": "Sun set",
+    "windSpeed": "Wind speed"
   }
 }

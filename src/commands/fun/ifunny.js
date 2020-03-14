@@ -1,4 +1,4 @@
-const { Command, MayfiEmbed, MiscUtils } = require('../../')
+const { Command, MayfiEmbed, MiscUtils, CommandError } = require('../../')
 const ifunny = require("ifunny-web-api")
 
 module.exports = class Ifunny extends Command {
@@ -15,18 +15,22 @@ module.exports = class Ifunny extends Command {
 
     channel.startTyping()
 
-    ifunny({ shuffle: false }, (err, res) => {
-      if (err) console.error(err)
+    try {
+      ifunny({ shuffle: false }, (err, res) => {
+        if (err) console.error(err)
 
-      const data = res[Math.floor(Math.random() * res.length)]
+        const data = res[Math.floor(Math.random() * res.length)]
 
-      console.log(data)
+        console.log(data)
 
-      embed
-        .setTitle(data.tags)
-        .setDescription(t("commands:ifunny.imageNotLoading", { link: data.url }))
-        .setImage(data.src)
-      channel.send(embed).then(() => channel.stopTyping())
-    })  
+        embed
+          .setTitle(data.tags)
+          .setDescription(t("commands:ifunny.imageNotLoading", { link: data.url }))
+          .setImage(data.src)
+        channel.send(embed).then(() => channel.stopTyping())
+      })  
+    } catch (e) {
+      throw new CommandError(t("errors:generic")).then(() => channel.stopTyping())
+    }
   }
 }

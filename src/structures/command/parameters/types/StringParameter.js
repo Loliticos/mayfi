@@ -1,5 +1,5 @@
 const Parameter = require('./Parameter.js')
-const DiscordUtils = require('../../../../utils/DiscordUtils.js')
+const { Discord } = require('discord.js')
 const CommandError = require('../../CommandError.js')
 
 module.exports = class StringParameter extends Parameter {
@@ -16,7 +16,7 @@ module.exports = class StringParameter extends Parameter {
     arg = arg ? (typeof arg === 'string' ? arg : String(arg)) : undefined
     if (!arg) return
 
-    if (this.clean) arg = DiscordUtils.cleanContent(arg, message)
+    if (this.clean) arg = Discord.clean(arg, message)
 
     if (this.maxLength > 0 && arg.length > this.maxLength) {
       if (!this.truncate) throw new CommandError(t('errors:needSmallerString', { number: this.maxLength }))

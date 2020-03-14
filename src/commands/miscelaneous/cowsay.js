@@ -8,7 +8,7 @@ module.exports = class Cowsay extends Command {
       aliases: ['muu'],
       category: 'miscelaneous',
       parameters: [{
-        type: 'string', clean: true, full: true, missingError: 'commands:cowsay.noText', 
+        type: 'string', full: true, missingError: 'commands:cowsay.noText', 
       }]
     }, client)
   }

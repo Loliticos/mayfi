@@ -8,7 +8,7 @@ module.exports = class Weather extends Command {
       aliases: ['clima'],
       category: 'utility',
       parameters: [{
-        type: 'string', full: true, required: true, missingError: "commands:weather.invalidCity"
+        type: 'string', full: true, missingError: "commands:weather.invalidCity"
       }]
     }, client)
   }
@@ -19,6 +19,10 @@ module.exports = class Weather extends Command {
     const info = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}`).then(res => res.json())
 
     console.log(info)
+
+    embed
+      .setTitle(`${info.name} - ${info.weather.main}`)
+      .setDescription(info.weather.description)
         
     if (!info) {
       embed

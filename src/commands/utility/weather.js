@@ -20,16 +20,16 @@ module.exports = class Weather extends Command {
 
     console.log(info)
 
-    embed
-      .setTitle(`${info.name} - ${info.weather[0].main}`)
-      .setDescription(info.weather[0].description[0].toUpperCase() + info.weather[0].description.slice(1))
-        
-    if (!info) {
+    if (info.cod == "404") {
       embed
         .setColor(Constants.ERROR_COLOR)
         .setTitle(t("commands:weather.invalidCity"))
       return channel.send(embed)
     }
+
+    embed
+      .setTitle(`${info.name} - ${info.weather[0].main}`)
+      .setDescription(info.weather[0].description[0].toUpperCase() + info.weather[0].description.slice(1))
 
     channel.send({embed})
   } 

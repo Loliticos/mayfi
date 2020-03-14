@@ -91,7 +91,7 @@ module.exports = class EconomyController extends Controller {
   }
 
   async betflip (_user, amount, side) {
-    const user = await this._users.findOne({ id: _user.id })
+    const user = await this._users.findOne({ _id: _user.id })
 
     if (user.money < amount) throw new Error("NOT_ENOUGH_MONEY")
 

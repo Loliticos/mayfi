@@ -22,7 +22,7 @@ module.exports = class Betflip extends Command {
     const embed = new MayfiEmbed(author)
 
     try {
-      const { choosenSide, won } = await this.client.controllers.game.betflip(author, amount, side)
+      const { choosenSide, won } = await this.client.controllers.economy.betflip(author, amount, side)
 
       embed
         .setDescription(t(`commands:betflip.${side === won ? "won" : "loss"}`, { choosenSide, amount }))

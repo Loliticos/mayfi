@@ -566,7 +566,8 @@
     "tie": "What a shame... Tie."
   },
   "ifunny": {
-    "commandDescription": "See a random meme in the website ifunny."
+    "commandDescription": "See a random meme in the website ifunny.",
+    "imageNotLoading": "Image not loading ? Click **[here]({{link}})** to view the image."
   },
   "moderation": {
     "commandDescription": "Configurate the moderation system.",

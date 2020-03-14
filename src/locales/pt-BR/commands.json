@@ -567,7 +567,8 @@
     "tie": "Que pena... Deu empate."
   },
   "ifunny": {
-    "commandDescription": "Veja um meme aleatorio do webiste ifunny."
+    "commandDescription": "Veja um meme aleatorio do webiste ifunny.",
+    "imageNotLoading": "A imagem não está carregando ? Clique **[aqui]({{link}})** para visualizar a imagem."
   },
   "moderation": {
     "commandDescription": "Configure o sistema de moderação.",

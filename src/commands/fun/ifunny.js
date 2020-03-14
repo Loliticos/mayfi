@@ -24,7 +24,7 @@ module.exports = class Ifunny extends Command {
 
       embed
         .setTitle(data.tags)
-        .setDescription(t("commands:ifunny.imageNotLoading", { link: "hi" }))
+        .setDescription(t("commands:ifunny.imageNotLoading", { link: data.url }))
         .setImage(data.src)
       channel.send(embed).then(() => channel.stopTyping())
     })  

@@ -352,7 +352,7 @@
     "commandDescription": "Mude o seu sobre mim",
     "commandUsage": "<texto>",
     "noArguments": "Você precisa informar o texto á ser mudado!",
-    "changedTo": "O seu sobre mim foi alterado para**{{aboutme}}**"
+    "changedTo": "O seu sobre mim foi alterado para **{{aboutme}}**"
   },
   "commit": {
     "commandDescription": "Troque as suas gemas por dinheiro!",

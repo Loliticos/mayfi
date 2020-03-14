@@ -42,7 +42,7 @@ module.exports = class OsuUser extends Command {
             `:flag_${user.country.toLowerCase()}: **[${user.username}](https://osu.ppy.sh/u/${user.user_id})** (${t(`commands:${this.path}.level`, { number: Math.floor(user.level) })})`
           ],
           [
-            `**${user.count_rank_ssh ? user.count_rank_ssh : "0"}** ${Constants.OSU_SSH}, **${user.count_rank_ss ? user.count_rank_ss : "0"}}** ${Constants.OSU_SS}, **${user.count_rank_sh ? user.count_rank_sh : "0"}}** ${Constants.OSU_S}, **${user.count_rank_s ? user.count_rank_s : "0"}}** ${Constants.OSU_S}, **${user.count_rank_a ? user.count_rank_a : "0"}}** ${Constants.OSU_A}`
+            `**${user.count_rank_ssh ? user.count_rank_ssh : "0"}** ${Constants.OSU_SSH}, **${user.count_rank_ss ? user.count_rank_ss : "0"}** ${Constants.OSU_SS}, **${user.count_rank_sh ? user.count_rank_sh : "0"}** ${Constants.OSU_S}, **${user.count_rank_s ? user.count_rank_s : "0"}** ${Constants.OSU_S}, **${user.count_rank_a ? user.count_rank_a : "0"}** ${Constants.OSU_A}`
           ]
         ])
         .addField(t(`commands:${this.path}.joined`), `${moment(user.join_date).format('LLL')} (${moment(user.join_date).fromNow()})`)

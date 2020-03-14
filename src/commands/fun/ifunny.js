@@ -1,4 +1,4 @@
-const { Command, MayfiEmbed, MiscUtils, CommandError } = require('../../')
+const { Command, MayfiEmbed, CommandError } = require('../../')
 const ifunny = require("ifunny-web-api")
 
 module.exports = class Ifunny extends Command {
@@ -6,8 +6,7 @@ module.exports = class Ifunny extends Command {
     super({
       name: 'ifunny',
       aliases: ['if'],
-      category: 'fun',
-      requirements: { nsfwOnly: true }
+      category: 'fun'
     }, client)
   }
 
@@ -21,8 +20,6 @@ module.exports = class Ifunny extends Command {
         if (err) console.error(err)
 
         const data = res[Math.floor(Math.random() * res.length)]
-
-        console.log(data)
 
         embed
           .setTitle(data.tags)

@@ -43,9 +43,10 @@ module.exports = class Weather extends Command {
         **${t("commands:weather.feelsLike")}**: ${convertTemperature(info.main.feels_like)}°C
         **${t("commands:weather.temp_min")}**: ${convertTemperature(info.main.temp_min)}°C
         **${t("commands:weather.temp_max")}**: ${convertTemperature(info.main.temp_max)}°C
-        **${t("commands:weather.humidity")}**: ${info.main.humidity}%
-        `, true)
-      .addField(t("commands:weather.info"), `**${t("commands:weather.sunRise")}**: ${moment(info.sys.sunrise).format('LTS')}\n**${t("commands:weather.sunSet")}**: ${moment(info.sys.sunset).format('LTS')}`, true)
+        **${t("commands:weather.humidity")}**: ${info.main.humidity}%`)
+      .addField(t("commands:weather.info"),
+      `**${t("commands:weather.sunRise")}**: ${moment(info.sys.sunrise).format('LTS')}
+      **${t("commands:weather.sunSet")}**: ${moment(info.sys.sunset).format('LTS')}`)
     channel.send({embed})
   } 
 }

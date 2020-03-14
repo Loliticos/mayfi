@@ -34,7 +34,9 @@ module.exports = class Betflip extends Command {
           embed
             .setColor(Constants.ERROR_COLOR)
             .setTitle(t("errors:notEnoughMoney"))
+          break
         default:
+          console.error(e)
           embed
             .setColor(Constants.ERROR_COLOR)
             .setTitle(t("errors:generic"))

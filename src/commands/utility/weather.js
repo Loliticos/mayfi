@@ -1,5 +1,5 @@
 const { Command, Constants, MayfiEmbed } = require('../../')
-const weather = require("yahoo-weather")
+const fetch = require("node-fetch")
 
 module.exports = class Weather extends Command {
   constructor (client) {
@@ -13,9 +13,10 @@ module.exports = class Weather extends Command {
     }, client)
   }
 
-  async run ({ channel, author, t, message, language}, city) {
+  async run ({ channel, author, t}, city) {
+    const embed = new MayfiEmbed(author)
 
-    const info = await weather(city)
+    const info = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}`)
 
     console.log(info)
         

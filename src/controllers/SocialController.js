@@ -1,6 +1,8 @@
 const { Controller } = require('../')
 const moment = require("moment")
 
+const REP_INTERVAL = 24 * 60 * 60 * 1000
+
 class RepCooldownError extends Error {
   constructor (lastRep, formattedCooldown) {
     super("ALREADY_REP")
@@ -40,15 +42,15 @@ module.exports = class SocialController extends Controller {
   }
 
   formatRepTime (lastRep) {
-    return moment.duration(86400000 - (Date.now() - lastRep)).format("h[h] m[m] s[s]")
-  }
-
-  async checkRep (lastRep) {
-    return Date.now() - lastRep < 86400000
+    return moment.duration(REP_INTERVAL - (Date.now() - lastRep)).format("h[h] m[m] s[s]")
   }
 
   async rep (_from, _to) {
     const { lastRep } = await this._users.findOne({_id: _from.id})
+
+    if (Date.now() - lastRep < REP_INTERVAL) {
+      throw new RepCooldownError(lastRep, moment.duration(REP_INTERVAL - (Date.now() - lastRep)).format('h[h] m[m] s[s]'))
+    }
 
     if (this.checkRep(lastRep)) throw new RepCooldownError(lastRep, this.formatRepTime(lastRep))
 

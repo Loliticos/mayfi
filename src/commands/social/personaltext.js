@@ -1,4 +1,4 @@
-const { Command, MayfiEmbed, CommandError, Constants } = require('../../')
+const { Command, MayfiEmbed } = require('../../')
 
 module.exports = class Personaltext extends Command {
   constructor (client) {

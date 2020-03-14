@@ -20,7 +20,7 @@ module.exports = class Inversetext extends Command {
       const reversedText = reverse(text)
 
       embed
-        .setTitle(t("inversedText"))
+        .setTitle(t("commands:inversetext.inversedText"))
         .setDescription(t("commands:inversetext.heresYourText", { reversedText }))
     } catch(e) {
       embed

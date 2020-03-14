@@ -28,7 +28,7 @@ module.exports = class Weather extends Command {
     }
 
     embed
-      .setTitle(`${info.name} - ${info.weather[0].main}`)
+      .setTitle(`:flag_${info.sys.country.toLowerCase()}:${info.name} - ${info.weather[0].main}`)
       .setDescription(info.weather[0].description[0].toUpperCase() + info.weather[0].description.slice(1))
 
     channel.send({embed})

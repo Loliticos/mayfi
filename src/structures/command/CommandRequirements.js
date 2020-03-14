@@ -14,7 +14,8 @@ module.exports = class CommandRequirements {
       sameVoiceChannelOnly: !!options.sameVoiceChannelOnly,
 
       onlyGuild: !!options.onlyGuild || true,
-      onlyDevs: !!options.onlyDevs || false 
+      onlyDevs: !!options.onlyDevs || false ,
+      nsfwOnly: !!options.nsfwOnly || false
     }
   }
 

@@ -19,8 +19,6 @@ module.exports = class Weather extends Command {
 
     const info = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}`).then(res => res.json())
 
-    console.log(info)
-
     if (info.cod == "404" || !info.sys.country) {
       embed
         .setColor(Constants.ERROR_COLOR)

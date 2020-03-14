@@ -20,8 +20,11 @@ module.exports = class Ifunny extends Command {
 
       const data = res[Math.floor(Math.random() * res.length)]
 
+      console.log(data)
+
       embed
         .setTitle(data.tags)
+        .setDescription(t("commands:ifunny.imageNotLoading", { link: "hi" }))
         .setImage(data.src)
       channel.send(embed).then(() => channel.stopTyping())
     })  

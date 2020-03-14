@@ -39,23 +39,6 @@ class BonusController extends Controller {
   formatDailyTime (lastMine) {
     return moment.duration(21600000 - (Date.now() - lastMine)).format('h[h] m[m] s[s]')
   }
-
-  async betflip (_user, amount, side) {
-    const user = await this._users.findOne({ id: _user.id })
-
-    if (user.money < amount) throw new Error("NOT_ENOUGH_MONEY")
-
-    const choosenSide = Math.random() > 0.5 ? 'heads' : 'tails'
-
-    const won = choosenSide === side ? true : false
-
-    const bet = won ? amount : -amount
-
-    await this._users.updateOne({ _id: _user.id }, { $inc: { money: bet } })
-
-    return { choosenSide, won }
-  }
-
   async claimDaily (_user) {
     const user = await this._users.findOne({_id: _user.id})
     const { lastMine } = user
@@ -106,6 +89,23 @@ module.exports = class EconomyController extends Controller {
 
     return { gems, money, fragments, researchesPoints }
   }
+
+  async betflip (_user, amount, side) {
+    const user = await this._users.findOne({ id: _user.id })
+
+    if (user.money < amount) throw new Error("NOT_ENOUGH_MONEY")
+
+    const choosenSide = Math.random() > 0.5 ? 'heads' : 'tails'
+
+    const won = choosenSide === side ? true : false
+
+    const bet = won ? amount : -amount
+
+    await this._users.updateOne({ _id: _user.id }, { $inc: { money: bet } })
+
+    return { choosenSide, won }
+  }
+
 
   async research (_user, toRepeat = 1) {
     const user = await this._users.findOne({_id: _user.id})

@@ -12,6 +12,7 @@
   "missingMultiplePermissions": "Vous avez besoin du {{permission}} autorisations pour ce faire.",
   "cooldown": "Vous devez **{{time}}** avant d'exécuter à nouveau une commande.",
   "notPlaying": "Je ne joue rien!",
+  "nsfwOnly": "Cette commande ne peut être exécutée que sur les canaux NSFW.",
   "missingParameters": "Vous devez me donner des paramètres!",
   "notTrueOrFalse": "Vous devez me donner une valeur vraie ou fausse.",
   "noSentence": "Tu dois me donner une phrase.",

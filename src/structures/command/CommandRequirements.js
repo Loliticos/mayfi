@@ -38,6 +38,10 @@ module.exports = class CommandRequirements {
       throw new CommandError(t("errors:sameVoiceChannelOnly"))
     }
 
+    if (opts.nsfwOnly && !channel.nsfw) {
+      throw new CommandError(t("errors:nsfwOnly"))
+    }
+
     if (opts.voiceChannelOnly && !voiceChannel) {
       throw new CommandError(t("errors:voiceChannelOnly"))
     }

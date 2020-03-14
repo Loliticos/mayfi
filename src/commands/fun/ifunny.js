@@ -7,6 +7,7 @@ module.exports = class Ifunny extends Command {
       name: 'ifunny',
       aliases: ['if'],
       category: 'fun',
+      requirements: { nsfwOnly: true }
     }, client)
   }
 

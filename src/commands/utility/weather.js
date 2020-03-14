@@ -46,7 +46,10 @@ module.exports = class Weather extends Command {
         **${t("commands:weather.humidity")}**: ${info.main.humidity}%`)
       .addField(t("commands:weather.info"),
       `**${t("commands:weather.sunRise")}**: ${moment(info.sys.sunrise).format('LTS')}
-      **${t("commands:weather.sunSet")}**: ${moment(info.sys.sunset).format('LTS')}`)
+      **${t("commands:weather.sunSet")}**: ${moment(info.sys.sunset).format('LTS')}
+      **${t("commands:weather.windSpeed")}**: ${info.wind.speed}
+      `)
+
     channel.send({embed})
   } 
 }

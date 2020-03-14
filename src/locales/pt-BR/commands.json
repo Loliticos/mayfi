@@ -641,8 +641,9 @@
     "temp_min": "Temperatura mínima",
     "temp_max": "Temperatura máxima",
     "humidity": "Umidade",
-    "info": "Pôr do sol e nascer do sol",
+    "info": "Informações",
     "sunRise":" Nascer do sol",
-    "sunSet": "Pôr do sol"
+    "sunSet": "Pôr do sol",
+    "windSpeed": "Velocidade do vento"
   }
 }

@@ -28,8 +28,9 @@ module.exports = class Weather extends Command {
     }
 
     embed
-      .setTitle(`:flag_${info.sys.country.toLowerCase()}:${info.name} - ${info.weather[0].main}`)
+      .setTitle(`:flag_${info.sys.country.toLowerCase()}: ${info.name} - ${info.weather[0].main}`)
       .setDescription(info.weather[0].description[0].toUpperCase() + info.weather[0].description.slice(1))
+      .addField(t("commands:weather.temperature"), (info.main.temp - 273.15).toFixed(2))
 
     channel.send({embed})
   } 

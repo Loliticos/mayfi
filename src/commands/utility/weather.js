@@ -21,8 +21,8 @@ module.exports = class Weather extends Command {
     console.log(info)
 
     embed
-      .setTitle(`${info.name} - ${info.weather.main}`)
-      .setDescription(info.weather.description)
+      .setTitle(`${info.name} - ${info.weather[0].main}`)
+      .setDescription(info.weather[0].description)
         
     if (!info) {
       embed

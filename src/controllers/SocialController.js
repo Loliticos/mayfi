@@ -50,7 +50,7 @@ module.exports = class SocialController extends Controller {
   async rep (_from, _to) {
     const { lastRep } = await this._users.findOne({_id: _from.id})
 
-    if (checkRep(lastRep)) throw new RepCooldownError(lastRep, this.formatRepTime(lastRep))
+    if (this.checkRep(lastRep)) throw new RepCooldownError(lastRep, this.formatRepTime(lastRep))
 
     await Promise.all([
       this._users.updateOne({_id: _from.id}, { lastRep: Date.now() }),

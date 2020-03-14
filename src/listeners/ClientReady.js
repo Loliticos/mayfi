@@ -10,7 +10,7 @@ module.exports = class ClientOnReady extends EventHandler {
     run() {
       const PRESENCE_INTERVAL = 60 * 1000
 
-      this.client.user.setPresenc({
+      this.client.user.setPresence({
         status: "dnd"
       })
       

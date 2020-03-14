@@ -16,7 +16,7 @@ module.exports = class Weather extends Command {
   async run ({ channel, author, t}, city) {
     const embed = new MayfiEmbed(author)
 
-    const info = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}`)
+    const info = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.WEATHER_API_KEY}`).then(res => res.json())
 
     console.log(info)
         

@@ -16,8 +16,6 @@ module.exports = class MayfiClient extends Client {
     this.initializeLoaders()
     this.checkMute(this)
 
-    a
-
     this.database = this.databaseLoaded
     this.mutes = require("../mute.json")
 

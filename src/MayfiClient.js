@@ -2,6 +2,7 @@ const { Client } = require("discord.js")
 const { readdir } = require("fs")
 const Loaders = require('./loaders/')
 const fs = require('fs')
+const { init } = require('@sentry/node');
 
 module.exports = class MayfiClient extends Client {
 	constructor(CLIENT_OPTIONS = {}) {
@@ -9,12 +10,16 @@ module.exports = class MayfiClient extends Client {
 
     this.databaseLoaded = null
 
+    this.setup()
+
     this.initializeDatabase()
     this.initializeLoaders()
     this.checkMute(this)
 
     this.database = this.databaseLoaded
     this.mutes = require("../mute.json")
+
+    a
 
 	}
 
@@ -80,5 +85,9 @@ module.exports = class MayfiClient extends Client {
         console.log(`There was an error while initializing the Loaders\n${err}`)
       }
     }
+  }
+
+  setup () {
+    init({ dsn: process.env.SENTRY_DSN })
   }
 }

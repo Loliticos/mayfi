@@ -4,6 +4,7 @@
   "description": "Version 2 of Mayfi",
   "main": "shard.js",
   "dependencies": {
+    "@sentry/node": "^5.14.2",
     "chalk": "^3.0.0",
     "cowsay": "^1.4.0",
     "dblapi.js": "^2.3.1",

@@ -19,8 +19,6 @@ module.exports = class MayfiClient extends Client {
     this.database = this.databaseLoaded
     this.mutes = require("../mute.json")
 
-    a
-
 	}
 
 	login (token = process.env.DISCORD_TOKEN) {

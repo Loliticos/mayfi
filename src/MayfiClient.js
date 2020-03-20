@@ -10,11 +10,13 @@ module.exports = class MayfiClient extends Client {
 
     this.databaseLoaded = null
 
-    this.setup()
+    init({ dsn: process.env.SENTRY_DSN })
 
     this.initializeDatabase()
     this.initializeLoaders()
     this.checkMute(this)
+
+    a
 
     this.database = this.databaseLoaded
     this.mutes = require("../mute.json")
@@ -83,9 +85,5 @@ module.exports = class MayfiClient extends Client {
         console.log(`There was an error while initializing the Loaders\n${err}`)
       }
     }
-  }
-
-  setup () {
-    init({ dsn: process.env.SENTRY_DSN })
   }
 }

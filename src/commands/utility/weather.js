@@ -1,19 +1,33 @@
+<<<<<<< HEAD
 const { Command, Constants, MayfiEmbed } = require('../../')
 const fetch = require("node-fetch")
 const moment = require("moment")
+=======
+const { Command, MayfiEmbed } = require('../../')
+let moment = require("moment")
+>>>>>>> 22fc91ea458d3a39276c86f185cae8a565941425
 
 module.exports = class Weather extends Command {
   constructor (client) {
     super({
       name: 'weather',
+<<<<<<< HEAD
       aliases: ['clima'],
       category: 'utility',
       parameters: [{
         type: 'string', full: true, missingError: "commands:weather.invalidCity"
+=======
+      aliases: ['clima', 'clime'],
+      category: 'utility',
+      requirements: { guildOnly: true},
+      parameters: [{
+        type: 'city', missingError: "commands:weather.invalidCity"
+>>>>>>> 22fc91ea458d3a39276c86f185cae8a565941425
       }]
     }, client)
   }
 
+<<<<<<< HEAD
   async run ({ channel, author, t, language}, city) {
     const embed = new MayfiEmbed(author)
 
@@ -50,4 +64,19 @@ module.exports = class Weather extends Command {
 
     channel.send({embed})
   } 
+=======
+  async run ({ message, author, t, language }, city) {
+
+      moment.locale(language)
+
+      let embed = new MayfiEmbed(author)
+      .setAuthor(author.username, author.displayavatarURL)
+      .addField("ID", channel.id, true)
+      .addField(t("commands:channelinfo.createdAt"), `${moment(channel.createdTimestamp).format('LLL')}\n(${moment(channel.createdTimestamp).fromNow()})`, true)   
+      .addField(t("commands:channelinfo.position"), channel.position)
+      .addField("NSFW", channel.nsfw ? t("commands:channelinfo.nsfwYes") : t("commands:channelinfo.nsfwNo"))
+      .addField(t("commands:channelinfo.topic"), channel.topic ? channel.topic : t("commands:channelinfo.noTopic"))
+      message.channel.send({embed})
+  }
+>>>>>>> 22fc91ea458d3a39276c86f185cae8a565941425
 }

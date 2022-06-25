@@ -21,7 +21,7 @@
     "moment": "^2.24.0",
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.9.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "node-osu": "^2.2.0",
     "openweather-apis": "^4.2.0",
     "querystring": "^0.2.0",
